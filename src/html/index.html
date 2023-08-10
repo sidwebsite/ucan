@@ -7,10 +7,271 @@
     <title>大專校院就業職能平台</title>
 </head>
 <body>
-    <main>
-        <header class="header"></header>
-        <div class="content"></div>
-        <footer class="footer"></footer>
-    </main>
+    <div>
+        <header class="header">
+            <!-- header-top start -->
+            <div class="header-top bg-primary d-flex justify-content-end align-items-center px-5 py-3">
+                <div>
+                    <a href="index.html" title="回首頁"><i class="fa-solid fa-house"></i> 回首頁</a>
+                    <a href="#" title="網站導覽"><i class="fa-solid fa-sitemap"></i> 網站導覽</a>
+                    <a href="#" title="UCAN使用指南">UCAN使用指南</a>
+                    <a href="#" title="常見問題">常見問題</a>
+                    <a href="#" title="聯絡我們">聯絡我們</a>
+                </div>
+                <div class="search">
+                    <form>
+                        <div class="input-group bg-white rounded-pill overflow-hidden">
+                            <input type="text" class="form-control border-0" placeholder="關鍵字搜尋" aria-label="關鍵字搜尋" >
+                            <button class="btn" type="button" id="search-btn" title="搜尋"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- header-top end -->
+            <!-- navbar start -->
+            <nav class="py-3 px-5">
+                <div class="header-main">
+                    <div class="logo">
+                        <a class="navbar-brand" href="index.html" title="連結到首頁">
+                            <h1><img src="../images/logo.svg" alt="大專校院就業職能平台logo"></h1>
+                        </a>
+                    </div>
+                    <div class="open-nav-menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <div class="menu-overlay">
+                    </div>
+                    <div class="nav-menu ms-auto">
+                        <div class="close-nav-menu">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        <ul class="menu">
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu" title="認識UCAN">認識UCAN <i class="plus"></i></a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="#" title="平台緣起及建置目的">平台緣起及建置目的</a></li>
+                                    <li class="menu-item"><a href="#" title="平台發展與依據">平台發展與依據</a></li>
+                                    <li class="menu-item"><a href="#" title="主要功能簡介">主要功能簡介</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu" title="職能介紹">職能介紹 <i class="plus"></i></a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="#" title="職能定義">職能定義</a></li>
+                                    <li class="menu-item"><a href="#" title="職能效用">職能效用</a></li>
+                                    <li class="menu-item"><a href="#" title="職能資源">職能資源</a></li>
+                                    <li class="menu-item"><a href="#" title="職能應用">職能應用</a></li>
+                                    
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu" title="職能與職業查詢">職能與職業查詢 <i class="plus"></i></a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="#" title="職場共通職能查詢">職場共通職能查詢</a></li>
+                                    <li class="menu-item"><a href="#" title="專業職能查詢">專業職能查詢</a></li>
+                                    <li class="menu-item"><a href="#" title="職業查詢">職業查詢</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">職能興趣探索</a>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu" title="職能診斷">職能診斷 <i class="plus"></i></a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="#" title="職場共通職能">職場共通職能</a></li>
+                                    <li class="menu-item"><a href="#" title="專業職能">專業職能</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu" title="能力養成計劃">能力養成計劃 <i class="plus"></i></a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="#" title="職場共通職能能力養成計劃">職場共通職能能力養成計劃</a></li>
+                                    <li class="menu-item"><a href="#" title="專業職能能力養成計劃">專業職能能力養成計劃</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu" title="諮詢及診斷紀錄">諮詢及診斷紀錄 <i class="plus"></i></a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="#" title="歷經診斷結果">歷經診斷結果</a></li>
+                                    <li class="menu-item"><a href="#" title="諮詢服務">諮詢服務</a></li>
+                                    <li class="menu-item"><a href="#" title="諮詢紀錄">諮詢紀錄</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- navbar end -->
+            <!-- login start -->
+            <div class="login-warpper bg-danger">
+                <div class="login bg-danger">
+                    <div class="text-center py-3 text-white fs-5"><i class="fa-solid fa-user"></i> 使用者登入 <i class="fa-solid fa-circle-arrow-down"></i></div>
+                    <form action="" class="login-form">
+                        
+                    </form>
+                </div>
+            </div>
+            <!-- login end -->
+        </header>
+        <!-- header end -->
+        <!-- main start -->
+        <main class="main">
+            <section class="section bg-light">
+                <div class="container">
+                    <div class="row">
+                        <!-- banner start -->
+                        <div class="col-lg-6"></div>
+                        <!-- banner end -->
+                        <!-- news start -->
+                        <div class="col-lg-6">
+                            <h4 class="h4 text-primary mb-4">最新消息 / <span class="font-family-Arial">News</span></h4>
+                            <ul class="list list-unstyled">
+                                <li>
+                                    <span class="me-2"><img src="../images/icon/list_icon.svg" alt=""></span>
+                                    <a href="#" title="">《系統公告》112學年度_UCAN學校總管理者資料確認作業</a>
+                                </li>
+                                <li>
+                                    <span class="me-2"><img src="../images/icon/list_icon.svg" alt=""></span>
+                                    <a href="#" title="">【活動通知】「教學實踐研究計畫撰寫與統計分析研習交流：以UCAN為例」熱烈報名中！ 歡迎師長參加~</a>
+                                </li>
+                                <li>
+                                    <span class="me-2"><img src="../images/icon/list_icon.svg" alt=""></span>
+                                    <a href="#" title="">《停機公告》本平台將於112/5/31(三)18:00~24:00暫停服務，造成不便，敬請見諒!</a>
+                                </li>
+                                <li>
+                                    <span class="me-2"><img src="../images/icon/list_icon.svg" alt=""></span>
+                                    <a href="#" title="">【活動通知】「教學實踐研究計畫撰寫與統計分析研習交流：以UCAN為例」熱烈報名中！ 歡迎師長參加~</a>
+                                </li>
+                                <li>
+                                    <span class="me-2"><img src="../images/icon/list_icon.svg" alt=""></span>
+                                    <a href="#" title="">《停機公告》本平台將於112/5/31(三)18:00~24:00暫停服務，造成不便，敬請見諒!</a>
+                                </li>
+                            </ul>
+                            <div></div>
+                        </div>
+                        <!-- news end -->
+                    </div>
+                </div>
+            </section>
+            <!-- font size print shart start -->
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- font size print shart end -->
+            <!-- testing start -->
+            <section class="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- testing end -->
+            <section class="section">
+                <div class="container">
+                    <div class="row">
+                        <!-- links start -->
+                        <div class="col-lg-6 links pe-0 pe-lg-4">
+                            <div class="d-flex flex-column h-100">
+                                <h4 class="h4 text-primary mb-4">相關連結 / <span class="font-family-Arial">Links</span></h4>
+                                <div class="p-5 bg-light rounded-15 flex-grow-1">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <span class="me-2"><img src="../images/icon/list_icon.svg" alt=""></span>
+                                                <a href="#" title="" target="_blank" class="fw-bolder">UCAN 懶人包</a>
+                                            </div>
+                                            <div class="mb-3">
+                                                <span class="me-2"><img src="../images/icon/list_icon.svg" alt=""></span>
+                                                <a href="#" title="" target="_blank" class="fw-bolder">UCAN 應用教學規劃發展工具</a>
+                                            </div>
+                                            <div class="mb-3">
+                                                <span class="me-2"><img src="../images/icon/list_icon.svg" alt=""></span>
+                                                <a href="#" title="" target="_blank" class="fw-bolder">教育部全球資訊網</a>
+                                            </div>
+                                            <div class="mb-3">
+                                                <span class="me-2"><img src="../images/icon/list_icon.svg" alt=""></span>
+                                                <a href="#" title="" target="_blank" class="fw-bolder">教育部高等教育司</a>
+                                            </div>
+                                            <div class="mb-3">
+                                                <span class="me-2"><img src="../images/icon/list_icon.svg" alt=""></span>
+                                                <a href="#" title="" target="_blank" class="fw-bolder">大學課程資源網</a>
+                                            </div>
+                                            <div class="mb-3">
+                                                <span class="me-2"><img src="../images/icon/list_icon.svg" alt=""></span>
+                                                <a href="#" title="" target="_blank" class="fw-bolder">技職課程資源網</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <span class="me-2"><img src="../images/icon/list_icon.svg" alt=""></span>
+                                                <a href="#" title="" target="_blank" class="fw-bolder">台灣通識網</a>
+                                            </div>
+                                            <div class="mb-3">
+                                                <span class="me-2"><img src="../images/icon/list_icon.svg" alt=""></span>
+                                                <a href="#" title="" target="_blank" class="fw-bolder">教育部Rich職場體驗網</a>
+                                            </div>
+                                            <div class="mb-3">
+                                                <span class="me-2"><img src="../images/icon/list_icon.svg" alt=""></span>
+                                                <a href="#" title="" target="_blank" class="fw-bolder">台灣就業通</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- links end -->
+                        <!-- download start -->
+                        <div class="col-lg-6 ps-0 ps-lg-4">
+                            <div class="d-flex flex-column h-100">
+                                <h4 class="h4 text-primary mb-4">檔案下載 / <span class="font-family-Arial">Download</span></h4>
+                                <div class="p-5 bg-light rounded-15 flex-grow-1">
+                                    <ul class="list list-unstyled">
+                                        <li>
+                                            <span class="me-2"><img src="../images/icon/list_icon.svg" alt=""></span>
+                                            <a href="#" title="" download>《活動講義》【111年UCAN線上研習會】場次1：運用UCAN於學習成效與教學回饋 講義下載</a>
+                                        </li>
+                                        <li>
+                                            <span class="me-2"><img src="../images/icon/list_icon.svg" alt=""></span>
+                                            <a href="#" title="" download>《活動講義》【111年UCAN線上研習會】場次1：運用UCAN於學習成效與教學回饋 講義下載</a>
+                                        </li>
+                                        <li>
+                                            <span class="me-2"><img src="../images/icon/list_icon.svg" alt=""></span>
+                                            <a href="#" title="" download>《活動講義》【110年UCAN線上研習會】場次1：教學發展應用與交流 講義下載</a>
+                                        </li>
+                                        <li>
+                                            <span class="me-2"><img src="../images/icon/list_icon.svg" alt=""></span>
+                                            <a href="#" title="" download>《活動講義》【110年UCAN線上研習會】場次1：教學發展應用與交流 講義下載</a>
+                                        </li>
+                                        <li>
+                                            <span class="me-2"><img src="../images/icon/list_icon.svg" alt=""></span>
+                                            <a href="#" title="" download>UCAN團體施測通知表單</a>
+                                        </li>
+                                    </ul>
+                                    <div></div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                        <!-- download end -->
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- main end -->
+        <!-- footer start -->
+        <footer class="footer">
+
+        </footer>
+        <!-- footer end -->
+    </div>
 </body>
 </html>

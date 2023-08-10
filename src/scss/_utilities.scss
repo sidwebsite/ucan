@@ -1,0 +1,22 @@
+.section {
+    padding: {
+        top: 60px;
+        bottom: 60px
+    };
+}
+.font-family-Arial {
+    font-family: $font-family-Arial;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+.rounded-15 {
+    border-radius: 15px;
+}
+a {
+    color: var(--bs-dark);
+    transition: .3s ease;
+    &:hover {
+        color: var(--bs-primary);
+    }
+}
