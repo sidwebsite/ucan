@@ -1,0 +1,19 @@
+.social_share {
+    display: flex;
+    justify-content: flex-end;
+    > button {
+        background-color: var(--bs-primary);
+        color: var(--bs-white);
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 5px;
+        &:hover {
+            background-color: var(--bs-danger);
+            color: var(--bs-white);
+        }
+    }
+}

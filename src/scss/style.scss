@@ -1,8 +1,13 @@
 // font awesome
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css);
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+// iconmoon
+@import '../css/icon.css';
 // bootstrap
 @import "custom";
 @import "~bootstrap/scss/bootstrap";
 // page
+@import 'variables';
 @import 'utilities';
+@import 'buttom';
+@import 'share';
 @import 'main';

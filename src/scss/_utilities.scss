@@ -16,6 +16,7 @@
 a {
     color: var(--bs-dark);
     transition: .3s ease;
+    text-decoration: none;
     &:hover {
         color: var(--bs-primary);
     }

@@ -1,0 +1,15 @@
+// custom button style
+.custom-btn-primary {
+    background-color: var(--bs-primary);
+    color: var(--bs-white);
+    font-family: $font-family-Arial;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: $custom-box-shadow-bese;
+    &:hover {
+        background-color: var(--bs-danger);
+        color: var(--bs-white);
+    }
+}

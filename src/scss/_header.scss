@@ -13,12 +13,46 @@
     height: 6px;
     position: relative;
     .login {
-        width: 250px;
+        width: 230px;
         border-bottom-left-radius: 36px;
         border-bottom-right-radius: 36px;
         position: absolute;
         top: 6px;
         right: 3rem;
         z-index: 2;
+        box-shadow: none;
+        .login-form {
+            background-color: var(--bs-white);
+            border-radius: 12px;
+            margin: 8px;
+            padding: 10px;
+            label {
+                width: 42px;
+                text-align: justify;
+                text-align-last: justify;
+            }
+            input {
+                border-radius: 0;
+                border: 0;
+                background-color: #efefef;
+                box-shadow: 2px 2px 2px rgba($black, $alpha: 0.16) inset;
+            }
+            .verification {
+                font-size: 1.125rem;
+            }
+            .samll {
+                font-size: 0.75rem;
+            }
+            .login-btn {
+                background-color: #DDD9D8;
+                border: 1px solid #707070;
+                border-radius: 0;
+            }
+        }
+        &.open {
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            box-shadow: 0 3px 6px rgba($black, $alpha: 0.6);
+        }
     }
 }

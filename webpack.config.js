@@ -4,7 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        'main': './src/js/main.js'
+        'main': './src/js/main.js',
+        'index': './src/js/index.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -46,6 +47,13 @@ module.exports = {
                 }
             },
             {
+                test: /\.(svg|eot|woff|woff2|ttf)$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'fonts/[hash:8][ext][query]'
+                }
+            },
+            {
                 test: /\.html$/i,
                 loader: "html-loader",
                 options: {
@@ -62,7 +70,7 @@ module.exports = {
             template: './src/html/index.html',
             filename: 'index.html',
             minify: false,
-            chunks: ['main']
+            chunks: ['main', 'index']
         }),
     ],
     devServer: {
