@@ -1,6 +1,5 @@
 // custom button style
-.custom-btn-primary {
-    background-color: var(--bs-primary);
+%custom-btn {
     color: var(--bs-white);
     font-family: $font-family-Arial;
     padding: 12px 28px;
@@ -9,7 +8,21 @@
     text-decoration: none;
     box-shadow: $custom-box-shadow-bese;
     &:hover {
-        background-color: var(--bs-danger);
         color: var(--bs-white);
+        box-shadow: none;
+    }
+}
+.custom-btn-primary {
+    @extend %custom-btn;
+    background-color: var(--bs-primary);
+    &:hover {
+        background-color: var(--bs-danger);
+    }
+}
+.custom-btn-red {
+    @extend %custom-btn;
+    background-color: var(--bs-danger);
+    &:hover {
+        background-color: var(--bs-primary);
     }
 }

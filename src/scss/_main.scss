@@ -2,23 +2,7 @@
 @import 'navbar';
 @import 'content';
 @import 'footer';
-// index
-.testing-card {
-    text-decoration: none;
-    height: 210px;
-    .testing-body {
-        height: 120px;
-    }
-    .testing-bg {
-        height: 90px;
-        background-image: url('../images/testing-img.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    &.backstage {
-        color: var(--bs-danger);
-        &:hover {
-            color: var(--bs-primary);
-        }
-    }
+
+.main {
+    padding-bottom: 80px;
 }

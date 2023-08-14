@@ -1,10 +1,7 @@
 .list {
     > li {
         display: flex;
-        padding: {
-            top: 10px;
-            bottom: 10px;
-        };
+        padding-bottom: 10px;
         > a {
             display: inline-block;
             width: 100%;

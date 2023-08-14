@@ -2,9 +2,44 @@ $blue:    #0074A5;
 $red:     #D02204;
 $dark:          #3D3C3C;
 $light:         #F5F5F5;
-
+$black: #000;
 // $secondary:     $red;
 
 // font-family
 $font-family-base: "Microsoft JhengHei", sans-serif;
 $font-family-Arial: Arial, sans-serif;
+// box-shadow
+$box-shadow:                  0 3px 6px rgba($black, .16);
+// $box-shadow-sm:               0  .25rem rgba($black, .075);
+// $box-shadow-lg:               0 1rem 3rem rgba($black, .175);
+
+$border-widths: (
+    1: 1px,
+    2: 2px,
+    3: 3px,
+    4: 4px,
+    5: 5px,
+    6: 6px
+);
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1500px
+);
+
+$spacer: 1rem;
+$spacers: (
+    0: 0,
+    1: $spacer * .25,
+    2: $spacer * .5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 3,
+    6: $spacer * 4.5,
+    7: $spacer * 6,
+);
+$enable-negative-margins: true;

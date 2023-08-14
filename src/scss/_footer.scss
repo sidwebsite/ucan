@@ -1,0 +1,41 @@
+.footer-menu-btn {
+    > button {
+        border-radius: 36px 36px 0 0;
+    }
+}
+.footer-menu {
+    padding: {
+        top: 80px;
+        bottom: 80px;
+    };
+}
+.footer-menu-links {
+    > a {
+        color: var(--bs-white);
+        display: block;
+        padding: {
+            top: 8px;
+            bottom: 8px;
+        };
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+.footer-Information {
+    background-color: $footer-bg;
+    color: var(--bs-white);
+    padding: {
+        top: 80px;
+        bottom: 80px;
+    };
+    a {
+        color: var(--bs-white);
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .footer-text-light {
+        color: $footer-light;
+    }
+}

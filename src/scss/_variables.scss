@@ -1,6 +1,26 @@
 
-// custom variables
+// footer
 $footer-bg: #696969;
-
+$footer-light: #adadad;
 // box-shadow
 $custom-box-shadow-bese: 0 3px 6px rgba($black, 0.16);
+// navbar 
+$nav-sub-menu-bg: #EBEAEA;
+
+// login color
+$login-input-bg-light: #efefef;
+$login-input-shadow-inset: 2px 2px 2px rgba($black, 0.16) inset;
+$login-button-bg: #DDD9D8;
+$login-button-border-color: #707070;
+$login-button-border: 1px solid $login-button-border-color;
+
+$box-shadow: 0 3px 6px rgba($black, .16);
+// icon 
+$icons: (
+    chevron-down: "\f078",
+    angle-left: "\f104",
+    angle-right: "\f105",
+    plus: "\2b",
+    minus: "\f068",
+    right-triangle: "\e909"
+);

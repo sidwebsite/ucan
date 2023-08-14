@@ -78,4 +78,5 @@ module.exports = {
         port: '4545',
         open: true
     },
+    devtool: 'source-map'
 };
