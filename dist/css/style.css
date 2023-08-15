@@ -17331,7 +17331,7 @@ a:hover {
   font-size: calc(var(--bs-body-font-size) * 1.125);
 }
 .header-main .nav-menu > .menu > .menu-item-has-children > a {
-  padding-left: 22px;
+  padding-left: 20px;
   padding-right: 26px;
   position: relative;
 }
