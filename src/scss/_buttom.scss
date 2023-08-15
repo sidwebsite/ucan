@@ -26,3 +26,17 @@
         background-color: var(--bs-primary);
     }
 }
+// download
+.download-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--bs-primary);
+    color: var(--bs-white); 
+    &:hover {
+        color: var(--bs-danger);
+    }
+}

@@ -70,11 +70,6 @@
         width: 230px;        
     }
 }
-@include media-breakpoint-up(xxl) {
-    .login-warpper .login {
-        right: 3rem;
-    }
-}
 @include media-breakpoint-up(lg) {
     .header {
         background-color: var(--bs-white);
@@ -85,6 +80,12 @@
         width: 230px;
     }
 }
+@include media-breakpoint-up(xxl) {
+    .login-warpper .login {
+        right: 3rem;
+    }
+}
+
 // @include media-breakpoint-down(lg) {
 //     .header {
 //         background-color: #ededed;
