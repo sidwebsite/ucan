@@ -35,6 +35,8 @@
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.1",
+    "print-js": "^1.6.0",
+    "sharer.js": "^0.5.1",
     "swiper": "^10.1.0"
   }
 }

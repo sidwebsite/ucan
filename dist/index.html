@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>大專校院就業職能平台</title>
+    <!-- <link rel="stylesheet" href="https://printjs-4de6.kxcdn.com/print.min.css">
+    <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script> -->
 <script defer src="js/main.js"></script><script defer src="js/index.js"></script><link href="css/style.css" rel="stylesheet"></head>
 <body>
     <div class="warpper">
@@ -174,7 +176,7 @@
         <!-- header end -->
         <!-- main start -->
         <main class="main" id="content">
-            <section class="section bg-light border-bottom">
+            <section class="section bg-light border-bottom d-print-none">
                 <div class="container">
                     <div class="row">
                         <!-- banner start -->
@@ -246,10 +248,10 @@
                                 <button class="btn font-size" type="button" title="小">小</button>
                                 <button class="btn font-size active" type="button" title="中">中</button>
                                 <button class="btn font-size" type="button" title="大">大</button>
-                                <button class="btn" type="button" title="列印"><i class="fa-solid fa-print"></i></button>
-                                <button class="btn" type="button" title="facebook"><i class="fa-brands fa-facebook-f"></i></button>
-                                <button class="btn" type="button" title="line"><i class="icon-icons8-line"></i></button>
-                                <button class="btn" type="button" title="twitter"><i class="fa-brands fa-twitter"></i></button>
+                                <button class="btn" type="button" title="列印" id="print"><i class="fa-solid fa-print"></i></button>
+                                <button class="btn" type="button" data-sharer="facebook" title="facebook"><i class="fa-brands fa-facebook-f"></i></button>
+                                <button class="btn" type="button" data-sharer="line" title="line"><i class="icon-icons8-line"></i></button>
+                                <button class="btn" type="button" data-sharer="twitter" title="twitter"><i class="fa-brands fa-twitter"></i></button>
                             </div>
                         </div>
                     </div>
@@ -584,7 +586,7 @@
                                         <a href="#" title="職業查詢">職業查詢</a>
                                     </div>
                                 </div>
-                                <div class="flex-fill text-center"><h4 class="text-white text-decoration-underline mb-4">職能興趣探索</h4></div>
+                                <div class="flex-fill text-center"><a href="#" title=""><h4 class="text-white text-decoration-underline mb-4">職能興趣探索</h4></a></div>
                                 <div class="flex-fill text-center">
                                     <h4 class="text-white text-decoration-underline mb-4">職能診斷</h4>
                                     <div class="footer-menu-links">
