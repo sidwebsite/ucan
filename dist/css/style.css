@@ -17624,7 +17624,7 @@ a:hover {
 .swiper-pagination-bullet {
   width: 22px;
   height: 6px;
-  background-color: #D9D7D2;
+  background-color: var(--bs-dark);
   border-radius: 6px;
 }
 
