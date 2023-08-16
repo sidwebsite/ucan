@@ -17332,7 +17332,7 @@ a:hover {
 }
 .header-main .nav-menu > .menu > .menu-item-has-children > a {
   padding-left: 20px;
-  padding-right: 26px;
+  padding-right: 25px;
   position: relative;
 }
 .header-main .nav-menu > .menu > .menu-item-has-children > a::after {
