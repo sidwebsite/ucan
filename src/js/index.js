@@ -1,3 +1,7 @@
+// 
+import AOS from 'aos';
+AOS.init();
+// Swiper
 import Swiper from 'swiper/bundle';
 // banner
 const bannerSwiper = new Swiper(".bannerSwiper", {

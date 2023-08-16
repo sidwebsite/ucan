@@ -72,6 +72,12 @@ module.exports = {
             minify: false,
             chunks: ['main', 'index']
         }),
+        new HtmlWebpackPlugin({
+            template: './src/html/index_login.html',
+            filename: 'index_login.html',
+            minify: false,
+            chunks: ['main', 'index']
+        }),
     ],
     devServer: {
         host: 'localhost',
