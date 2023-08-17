@@ -9146,8 +9146,18 @@ print.addEventListener('click', () => {
 });
 // social share
 
-// navbar
-
+// footer
+const footerMenuBtn =  document.querySelector('#footerMenuBtn'),
+footerMenu = document.querySelector('#footerMenu');
+var footerMenuCollapse = new bootstrap__WEBPACK_IMPORTED_MODULE_0__.Collapse(footerMenu, {
+    toggle: false
+});
+footerMenuBtn.addEventListener('click', function () {
+    footerMenuCollapse.toggle();
+});
+footerMenuBtn.addEventListener('focus', function () {
+    footerMenuCollapse.show();
+});
 // go top
 
 (0,_js_modules_goTop__WEBPACK_IMPORTED_MODULE_4__["default"])();

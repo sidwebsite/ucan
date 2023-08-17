@@ -64,7 +64,7 @@
             margin-bottom: 0;
             > .menu-item {
                 display: inline-block;
-                margin: 24px 0;
+                padding: 24px 0;
                 position: relative;
                 > a {
                     padding: {
@@ -98,10 +98,10 @@
                         transform-origin: center;
                     }
                 }
-                > .sub-menu {
+                > .sub-menu {           
                     position: absolute;
                     left: 0;
-                    top: 50px;
+                    top: 100%;
                     background-color: $nav-sub-menu-bg;
                     transform: translateY(20px);
                     transition: all .3s ease;
@@ -110,9 +110,9 @@
                     padding: 0;
                     box-shadow: $box-shadow;
                     z-index: 10;
-                    > .menu-item {
+                    .menu-item {
                         display: block;
-                        > a {
+                        a {
                             display: block;
                             padding: 15px 20px;
                             font-size: calc(var(--bs-body-font-size) * 1.125);
@@ -121,7 +121,7 @@
                             text-transform: capitalize;
                             transition: all .3s ease;
                             white-space: nowrap;
-                            &:hover {
+                            &:hover, &:focus {
                                 background-color: var(--bs-primary);
                                 color: var(--bs-white);
                             }
@@ -168,27 +168,39 @@
     }
 }
 @include media-breakpoint-up(lg)  {    
-    .header-main .nav-menu > .menu > .menu-item-has-children:hover > .sub-menu {
-        transform: translateY(0);
-        opacity: 1;
-        visibility: visible;
-    }
-    .header-main .nav-menu > .menu > .menu-item a {
-        &:hover {
-            color: var(--bs-primary);
-            font-weight: $font-weight-bold;
-        }
-    }
     .header-main .nav-menu > .menu {
+        > .menu-item a {
+            &:hover, &:focus {
+                color: var(--bs-primary);
+                font-weight: $font-weight-bold;
+            }
+        }
         > .menu-item-has-children {
+            &:hover > .sub-menu {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            &:focus-within > .sub-menu {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
             > a {
                 &::after {
                     right: 7px;
                 }
-                &:hover::after {
-                    color: var(--bs-primary);
-                    transform-origin: center;
-                    transform: translateY(-50%) rotate(180deg);
+                &:hover, &:focus {
+                    &::after {
+                        color: var(--bs-primary);
+                        transform-origin: center;
+                        transform: translateY(-50%) rotate(180deg);
+                    }
+                }
+                &:focus-within + .sub-menu {
+                    transform: translateY(0);
+                    opacity: 1;
+                    visibility: visible;
                 }
             }
         }   
@@ -222,9 +234,10 @@
                     display: block;
                     margin: 0;
                     padding-right: 0;
+                    padding: 0;
                     > a {
                         color: var(--white);
-                        padding: 20px 40px;
+                        padding: 24px 40px;
                         border-bottom: 1px solid #AFAFAF;
                         &::before {
                             font-family: 'icomoon';

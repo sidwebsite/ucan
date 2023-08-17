@@ -1,4 +1,4 @@
-// 
+// aos
 import AOS from 'aos';
 AOS.init();
 // Swiper

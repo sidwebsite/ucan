@@ -9,7 +9,7 @@
 <body>
     <noscript>您的瀏覽器不支援JavaScript功能，若本網站功能無法正常使用，請開啟瀏覽器JavaScript狀態</noscript>
     <div class="warpper">
-        <a href="#content" title="移到主要內容" class="visually-hidden visually-hidden-focusable">移到主要內容</a>
+        <a href="#content" title="移到主要內容" class="visually-hidden-focusable" tabindex="0">移到主要內容</a>
         <!-- header-top start -->
         <div class="header-top bg-primary d-none d-lg-flex justify-content-end align-items-center px-4 px-xxl-5 py-3">
             <div>
@@ -35,7 +35,7 @@
             <nav class="px-4 px-xxl-5 py-3 py-lg-0" id="">
                 <div class="header-main">
                     <div class="logo">
-                        <a class="navbar-brand" href="index.html" title="連結到首頁">
+                        <a class="navbar-brand d-block" href="index.html" title="連結到首頁">
                             <h1><img src="fonts/47f9dd8e.svg" alt="大專校院就業職能平台logo"></h1>
                         </a>
                     </div>
@@ -557,7 +557,7 @@
             <!-- footer menu start -->
             <div class="footer-menu-wrapper d-none d-lg-block">
                 <div class="footer-menu-btn border-bottom border-6 border-danger text-center">
-                    <button type="button" class="btn btn-danger px-5" data-bs-toggle="collapse" data-bs-target="#footerMenu" aria-expanded="false" aria-controls="footerMenu">點選收合 <i class="fa-solid fa-circle-arrow-down"></i></button>
+                    <button type="button" id="footerMenuBtn" class="btn btn-danger px-5">點選收合 <i class="fa-solid fa-circle-arrow-down"></i></button>
                 </div>
                 <div class="collapse" id="footerMenu">
                     <div class="bg-danger footer-menu">

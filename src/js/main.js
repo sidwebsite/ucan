@@ -45,8 +45,18 @@ print.addEventListener('click', () => {
 });
 // social share
 import sharer from 'sharer.js';
-// navbar
-
+// footer
+const footerMenuBtn =  document.querySelector('#footerMenuBtn'),
+footerMenu = document.querySelector('#footerMenu');
+var footerMenuCollapse = new bootstrap.Collapse(footerMenu, {
+    toggle: false
+});
+footerMenuBtn.addEventListener('click', function () {
+    footerMenuCollapse.toggle();
+});
+footerMenuBtn.addEventListener('focus', function () {
+    footerMenuCollapse.show();
+});
 // go top
 import goTop from '../js/modules/goTop';
 goTop();

@@ -3,6 +3,7 @@
         top: 60px;
         bottom: 60px
     };
+    overflow: hidden;
 }
 .font-family-Arial {
     font-family: $font-family-Arial;
@@ -19,5 +20,9 @@ a {
     text-decoration: none;
     &:hover {
         color: var(--bs-primary);
+    }
+    &:focus-visible {
+        border: 0;
+        outline: 2px dashed var(--bs-warning);
     }
 }
