@@ -2,7 +2,10 @@
 @import 'navbar';
 @import 'content';
 @import 'footer';
-
+.form-control:focus, button:focus:not(:focus-visible), a:focus-visible {
+    border: 0;
+    outline: 4px dashed var(--bs-warning);
+}
 .main {
     padding-bottom: 80px;
 }

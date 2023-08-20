@@ -21,8 +21,4 @@ a {
     &:hover {
         color: var(--bs-primary);
     }
-    &:focus-visible {
-        border: 0;
-        outline: 2px dashed var(--bs-warning);
-    }
 }

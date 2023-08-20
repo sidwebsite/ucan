@@ -1,0 +1,13 @@
+.list-style-star {
+    list-style: none;
+    > li {
+        padding-left: 15px;
+        position: relative;
+        &::before {
+            content: "★";
+            position: absolute;
+            left: 0;
+        }
+    }
+}
+ol.list-style-cjk-ideographic {list-style-type: cjk-ideographic;}

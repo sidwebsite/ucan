@@ -58,6 +58,10 @@
                 background-color: $login-button-bg;
                 border: $login-button-border;
                 border-radius: 0;
+                &:hover, &:focus {
+                    background-color: $login-button-hover-bg;
+                    color: var(--bs-white);
+                }
             }
         }
         &.open {
@@ -69,6 +73,10 @@
     .login-whide, .login-w {
         width: 230px;        
     }
+}
+#search-btn:focus {
+    background-color: var(--bs-dark);
+    color: var(--bs-white);
 }
 @include media-breakpoint-up(lg) {
     .header {

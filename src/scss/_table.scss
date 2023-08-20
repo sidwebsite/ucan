@@ -1,0 +1,14 @@
+
+.table-primary {
+    --bs-table-bg: #{$primary};
+    --bs-table-color: #{$white};
+    color: var(--bs-white);
+}
+// .table {
+//     > thead > tr > th {
+//         &:first-child {
+//             width: 1%;
+//             white-space: nowrap;
+//         }
+//     }
+// }

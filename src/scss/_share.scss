@@ -15,5 +15,10 @@
             background-color: var(--bs-danger);
             color: var(--bs-white);
         }
+        &:focus {
+            background-color: var(--bs-danger);
+            color: var(--bs-white);
+            outline: 4px dashed var(--bs-warning);
+        }
     }
 }

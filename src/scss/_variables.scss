@@ -11,6 +11,7 @@ $nav-sub-menu-bg: #EBEAEA;
 $login-input-bg-light: #efefef;
 $login-input-shadow-inset: 2px 2px 2px rgba($black, 0.16) inset;
 $login-button-bg: #DDD9D8;
+$login-button-hover-bg: #707070;
 $login-button-border-color: #707070;
 $login-button-border: 1px solid $login-button-border-color;
 
@@ -24,3 +25,9 @@ $icons: (
     minus: "\f068",
     right-triangle: "\e909"
 );
+// 
+$page-header-gradient-bg: linear-gradient(to right, #EBF3FA 0%, #DDEDFA 70%, #CFE8FA 100%);
+// page-link
+$pagination-custom-bg: #E0DFDF;
+// shareFeedbackModal
+$shareFeedbackModal-bg: #E5F0FA;

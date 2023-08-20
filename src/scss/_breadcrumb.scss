@@ -1,0 +1,5 @@
+.breadcrumb-item + .breadcrumb-item::before {
+    font: var(--fa-font-solid);
+    content: map-get($icons, angle-right);
+    margin-top: 4px;
+}

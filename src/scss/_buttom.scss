@@ -5,7 +5,7 @@
     padding: 12px 28px;
     border-radius: 50px;
     font-weight: bold;
-    text-decoration: none;
+    text-decoration: none !important;
     box-shadow: $custom-box-shadow-bese;
     &:hover {
         color: var(--bs-white);
@@ -28,15 +28,14 @@
 }
 // download
 .download-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
     width: 24px;
     height: 24px;
     border-radius: 50%;
     background-color: var(--bs-primary);
     color: var(--bs-white); 
     &:hover {
-        color: var(--bs-danger);
+        background-color: var(--bs-danger);
+        color: var(--bs-white); 
     }
 }

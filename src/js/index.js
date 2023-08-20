@@ -1,6 +1,9 @@
 // aos
 import AOS from 'aos';
 AOS.init();
+// login
+import login from './modules/login';
+login();
 // Swiper
 import Swiper from 'swiper/bundle';
 // banner

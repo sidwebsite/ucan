@@ -5,7 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: {
         'main': './src/js/main.js',
-        'index': './src/js/index.js'
+        'index': './src/js/index.js',
+        'shareFeedback': './src/js/shareFeedback.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -77,6 +78,33 @@ module.exports = {
             filename: 'index_login.html',
             minify: false,
             chunks: ['main', 'index']
+        }),
+        // 最新消息
+        new HtmlWebpackPlugin({
+            template: './src/html/8_1.html',
+            filename: '8_1.html',
+            minify: false,
+            chunks: ['main']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/8_2.html',
+            filename: '8_2.html',
+            minify: false,
+            chunks: ['main']
+        }),
+        // 學校案例分享
+        new HtmlWebpackPlugin({
+            template: './src/html/9.html',
+            filename: '9.html',
+            minify: false,
+            chunks: ['main', 'shareFeedback']
+        }),
+        // 檔案下載
+        new HtmlWebpackPlugin({
+            template: './src/html/10.html',
+            filename: '10.html',
+            minify: false,
+            chunks: ['main']
         }),
     ],
     devServer: {
