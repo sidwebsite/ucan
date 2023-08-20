@@ -7529,6 +7529,9 @@ function login() {
     loginFormBtn.addEventListener('focus', function () {
         loginFormCollapse.show();
     });
+    loginForm.querySelector('#loginBtn').addEventListener('focusout', function () {
+        loginFormCollapse.hide();
+    });
 }
 
 /***/ }),
