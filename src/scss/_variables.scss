@@ -6,7 +6,12 @@ $footer-light: #adadad;
 $custom-box-shadow-bese: 0 3px 6px rgba($black, 0.16);
 // navbar 
 $nav-sub-menu-bg: #EBEAEA;
-
+$nav-border-color: #C0C1C1;
+$nav-border: 1px solid $nav-border-color;
+$nav-menu-phone-bg: #ededed;
+$nav-menu-phone-border-color: #AFAFAF;
+$nav-menu-phone-border: 1px solid $nav-menu-phone-border-color;
+$open-nav-menu-bg: #6E6567;
 // login color
 $login-input-bg-light: #efefef;
 $login-input-shadow-inset: 2px 2px 2px rgba($black, 0.16) inset;

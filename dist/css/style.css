@@ -16647,6 +16647,22 @@ ol.list-style-cjk-ideographic {
     color: var(--white);
     padding: 12px 45px;
     border-bottom: 1px solid #AFAFAF;
+    position: relative;
+  }
+  .header-main .nav-menu .menu > .menu-item-has-children > .sub-menu > .menu-item > a::before {
+    font-family: "icomoon";
+    content: "\e909";
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 15px;
+    color: var(--bs-primary);
+    font-size: 0.875rem;
+  }
+  .header-main .nav-menu .menu > .menu-item-has-children > .sub-menu > .menu-item > a:focus::before {
+    color: var(--bs-white);
   }
   .header-main .nav-menu .menu > .menu-item-has-children.active > a::after {
     content: "\f068";
