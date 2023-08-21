@@ -16729,16 +16729,13 @@ ol.list-style-cjk-ideographic {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-.shareFeedbackModal > .close {
+.shareFeedbackModal .close {
   border: 0;
   background-color: transparent;
   font-size: 1.125rem;
   padding: 0;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
 }
-.shareFeedbackModal > .close:focus {
+.shareFeedbackModal .close:focus {
   border: 0;
   outline: 4px dashed var(--bs-warning);
 }
@@ -16766,6 +16763,11 @@ ol.list-style-cjk-ideographic {
   }
   .page-header h2, .page-header .h2 {
     font-size: 3rem;
+  }
+  .shareFeedbackModal .close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
   }
 }
 .footer-menu-btn > button {

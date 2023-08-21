@@ -45,14 +45,11 @@
     opacity: 0;
     visibility: hidden;
     transition: .3s ease;
-    > .close {
+    .close {
         border: 0;
         background-color: transparent;
         font-size: 1.125rem;
         padding: 0;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
         &:focus {
             border: 0;
             outline: 4px dashed var(--bs-warning);
@@ -85,5 +82,10 @@
         h2 {
             font-size: 3rem;
         }
+    }
+    .shareFeedbackModal .close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
     }
 }
