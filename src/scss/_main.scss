@@ -9,3 +9,12 @@
 .main {
     padding-bottom: 80px;
 }
+.message {
+    background-color: rgba($message-bg, 0.64);
+    margin-top: 82px;
+}
+@include media-breakpoint-up(lg) {
+    .message {
+        margin-top: 0;
+    }
+}

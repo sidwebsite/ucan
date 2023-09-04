@@ -1,7 +1,13 @@
-
+// button color 
+$btn-font-color: #2A2828;
+// header
+$header-bg: #F0F2F4;
+// message
+$message-bg: #F0F2F4;
 // footer
-$footer-bg: #696969;
+$footer-bg: #EBE8E8;
 $footer-light: #adadad;
+$footer-font-color: #141313;
 // box-shadow
 $custom-box-shadow-bese: 0 3px 6px rgba($black, 0.16);
 // navbar 
@@ -19,6 +25,7 @@ $login-button-bg: #DDD9D8;
 $login-button-hover-bg: #707070;
 $login-button-border-color: #707070;
 $login-button-border: 1px solid $login-button-border-color;
+$login-links-color: #0074A5;
 
 $box-shadow: 0 3px 6px rgba($black, .16);
 // icon 
@@ -36,3 +43,5 @@ $page-header-gradient-bg: linear-gradient(to right, #EBF3FA 0%, #DDEDFA 70%, #CF
 $pagination-custom-bg: #E0DFDF;
 // shareFeedbackModal
 $shareFeedbackModal-bg: #E5F0FA;
+// feedback
+$feedback-button-color: #DCDBDB;

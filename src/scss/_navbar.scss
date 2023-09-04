@@ -3,7 +3,9 @@
     justify-content: space-between;
     align-items: center;
     .logo {
-        width: 137px;
+        width: 347px;
+        transform: scale(1);
+        transition: .3s ease;
         img {
             width: 100%;
         }
@@ -72,11 +74,12 @@
                         right: 12px;
                     };
                     display: block;
-                    color: var(--bs-dark);
+                    color: $black;
                     text-decoration: none;
                     text-transform: capitalize;
                     transition: .3s ease;
-                    font-size: calc(var(--bs-body-font-size) * 1.125);
+                    font-size: calc(var(--bs-body-font-size) * 1.25);
+                    transform: scale(1);
                 }                
             }      
             > .menu-item-has-children {
@@ -115,10 +118,11 @@
                         a {
                             display: block;
                             padding: 15px 20px;
-                            font-size: calc(var(--bs-body-font-size) * 1.125);
+                            font-size: calc(var(--bs-body-font-size) * 1.25);
                             color: var(--bs-dark);
                             text-decoration: none;
                             text-transform: capitalize;
+                            transform: scale(1);
                             transition: all .3s ease;
                             white-space: nowrap;
                             &:hover, &:focus {
@@ -224,7 +228,7 @@
             right: -100%;
             height: calc(100vh - 80px);
             width: 80%;
-            background-color: $nav-menu-phone-bg;
+            background-color: $header-bg;
             padding: 0;
             z-index: 1000;
             transition: all 0.5s ease;
@@ -319,5 +323,28 @@
             right: 0;
             visibility: visible;
         }
+    }
+}
+@include media-breakpoint-down(sm) {
+    .header-main .logo {
+        width: 250px;
+    }
+}
+@include media-breakpoint-up(lg) {
+    .sticky {
+        .header-main {
+            .logo {
+                transform: scale(0.8);
+            }
+            .nav-menu > .menu > .menu-item > a {
+                font-size: var(--bs-body-font-size);
+            }
+            .header-main .nav-menu > .menu > .menu-item-has-children > a::after {
+                font-size: 0.75rem;
+            }
+            .nav-menu > .menu > .menu-item-has-children > .sub-menu .menu-item a {
+                font-size: var(--bs-body-font-size);
+            }
+        }    
     }
 }

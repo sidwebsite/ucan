@@ -11,13 +11,14 @@
         justify-content: center;
         align-items: center;
         margin-left: 5px;
+        border: 0;
         &:hover, &.active {
-            background-color: var(--bs-danger);
-            color: var(--bs-white);
+            background-color: var(--bs-warning);
+            color: $btn-font-color;
         }
         &:focus {
-            background-color: var(--bs-danger);
-            color: var(--bs-white);
+            background-color: var(--bs-warning);
+            color: $btn-font-color;
             outline: 4px dashed var(--bs-warning);
         }
     }

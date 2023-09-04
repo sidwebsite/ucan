@@ -73,12 +73,12 @@ module.exports = {
             minify: false,
             chunks: ['main', 'index']
         }),
-        new HtmlWebpackPlugin({
-            template: './src/html/index_login.html',
-            filename: 'index_login.html',
-            minify: false,
-            chunks: ['main', 'index']
-        }),
+        // new HtmlWebpackPlugin({
+        //     template: './src/html/index_login.html',
+        //     filename: 'index_login.html',
+        //     minify: false,
+        //     chunks: ['main', 'index']
+        // }),
         // 最新消息
         new HtmlWebpackPlugin({
             template: './src/html/8_1.html',

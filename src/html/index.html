@@ -11,16 +11,9 @@
     <div class="warpper">
         <a href="#content" title="移到主要內容" class="visually-hidden-focusable" tabindex="0">移到主要內容</a>
         <!-- header-top start -->
-        <div class="header-top bg-primary d-none d-lg-flex justify-content-end align-items-center px-4 px-xxl-5 py-3">
-            <div>
-                <a href="#U" accesskey="U" name="U" class="alt-u d-lg-inline-block" title="上方功能區塊">:::</a>
-                <a href="index.html" title="回首頁"><span class="icon-home"></span> 回首頁</a>
-                <a href="#" title="網站導覽"><span class="icon-sitemap"></span> 網站導覽</a>
-                <a href="#" title="UCAN使用指南"><span class="icon-guidance"></span> UCAN使用指南</a>
-                <a href="#" title="常見問題"><span class="icon-question"></span> 常見問題</a>
-                <a href="#" title="聯絡我們"><span class="icon-message"></span> 聯絡我們</a>
-            </div>
-            <div class="search">
+        <div class="header-top bg-primary d-none d-lg-flex justify-content-between align-items-center px-4 px-xxl-5 py-3 position-relative">
+            <a href="#U" accesskey="U" name="U" class="alt-u d-lg-inline-block position-absolute top-0 start-0" title="上方功能區塊">:::</a>
+            <div class="search">                
                 <form>
                     <div class="input-group bg-white rounded-pill overflow-hidden">
                         <label for="tagsKeyWords" class="visually-hidden " aria-label="關鍵字搜尋">關鍵字</label>
@@ -28,6 +21,58 @@
                         <button class="btn" type="button" id="search-btn" title="搜尋"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </div>
                 </form>
+            </div>
+            <div class="d-flex">
+                <a href="index.html" title="回首頁"><span class="icon-home"></span> 回首頁</a>
+                <a href="#" title="網站導覽"><span class="icon-sitemap"></span> 網站導覽</a>
+                <a href="#" title="UCAN使用指南"><span class="icon-guidance"></span> UCAN使用指南</a>
+                <a href="#" title="聯絡我們"><span class="icon-message"></span> 聯絡我們</a>
+                <div class="position-relative">
+                    <a href="#" title="登入" id="loginFormBtn" role="button"><span class="fa-solid fa-user"></span> 登入</a>
+                    <div class="login collapse" id="loginForm">
+                        <div class="text-center text-white py-2">
+                            <i class="fa-solid fa-user me-2 me-lg-0"></i>
+                            <span class="mx-3">使用者登入</span> 
+                            <i class="fa-solid fa-circle-arrow-down ms-2 ms-lg-0"></i>
+                        </div>
+                        <form action="" class="login-form">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="me-2">
+                                    <label for="userName" class="col-form-label col-form-label-sm text-nowrap" aria-label="帳號">帳號</label>
+                                </div>
+                                <div>
+                                    <input type="text" id="userName" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="me-2">
+                                    <label for="userPassword" class="col-form-label col-form-label-sm text-nowrap" aria-label="密碼">密碼</label>
+                                </div>
+                                <div>
+                                    <input type="password" id="userPassword" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="me-2">
+                                    <label for="captcha" class="col-form-label col-form-label-sm text-nowrap" aria-label="驗證碼">驗證碼</label>
+                                </div>
+                                <div>
+                                    <input type="number" id="captcha" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="verification font-family-Arial fw-bold">1234</div>
+                                <div class="flex-grow-1">
+                                    <a href="#" class="text-center samll d-block login-links" title="帳號申請">帳號申請</a>
+                                    <a href="#" class="text-center samll d-block login-links" title="忘記帳號/密碼">記帳號/密碼</a>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-sm login-btn" id="loginBtn" title="登入">登入</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>                    
+                </div>
             </div>
         </div>
         <!-- header-top end -->
@@ -62,24 +107,6 @@
                                 </div>
                             </li>
                             <li class="menu-item menu-item-has-children">
-                                <a href="#" class=" nav-border-left" data-toggle="sub-menu" title="認識UCAN">認識UCAN</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item"><a href="#" title="平台緣起及建置目的">平台緣起及建置目的</a></li>
-                                    <li class="menu-item"><a href="#" title="平台發展與依據">平台發展與依據</a></li>
-                                    <li class="menu-item"><a href="#" title="主要功能簡介">主要功能簡介</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item menu-item-has-children">
-                                <a href="#" class="nav-border-right" data-toggle="sub-menu" title="職能介紹">職能介紹</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item"><a href="#" title="職能定義">職能定義</a></li>
-                                    <li class="menu-item"><a href="#" title="職能效用">職能效用</a></li>
-                                    <li class="menu-item"><a href="#" title="職能資源">職能資源</a></li>
-                                    <li class="menu-item"><a href="#" title="職能應用">職能應用</a></li>
-                                    
-                                </ul>
-                            </li>
-                            <li class="menu-item menu-item-has-children">
                                 <a href="#" data-toggle="sub-menu" title="職能與職業查詢">職能與職業查詢</a>
                                 <ul class="sub-menu">
                                     <li class="menu-item"><a href="#" title="職場共通職能查詢">職場共通職能查詢</a></li>
@@ -87,8 +114,13 @@
                                     <li class="menu-item"><a href="#" title="職業查詢">職業查詢</a></li>
                                 </ul>
                             </li>
-                            <li class="menu-item">
-                                <a href="#">職能興趣探索</a>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu" title="職能應用">職能應用</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="#" title="職場共通職能查詢">職場共通職能查詢</a></li>
+                                    <li class="menu-item"><a href="#" title="專業職能查詢">專業職能查詢</a></li>
+                                    <li class="menu-item"><a href="#" title="職業查詢">職業查詢</a></li>
+                                </ul>
                             </li>
                             <li class="menu-item menu-item-has-children">
                                 <a href="#" data-toggle="sub-menu" title="職能診斷">職能診斷</a>
@@ -98,90 +130,49 @@
                                 </ul>
                             </li>
                             <li class="menu-item menu-item-has-children">
-                                <a href="#" data-toggle="sub-menu" title="能力養成計劃">能力養成計劃</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item"><a href="#" title="職場共通職能能力養成計劃">職場共通職能能力養成計劃</a></li>
-                                    <li class="menu-item"><a href="#" title="專業職能能力養成計劃">專業職能能力養成計劃</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item menu-item-has-children">
-                                <a href="#" data-toggle="sub-menu" title="諮詢及診斷紀錄">諮詢及診斷紀錄</a>
+                                <a href="#" data-toggle="sub-menu" title="諮詢及診斷紀錄">診斷紀錄</a>
                                 <ul class="sub-menu">
                                     <li class="menu-item"><a href="#" title="歷經診斷結果">歷經診斷結果</a></li>
                                     <li class="menu-item"><a href="#" title="諮詢服務">諮詢服務</a></li>
                                     <li class="menu-item"><a href="#" title="諮詢紀錄">諮詢紀錄</a></li>
                                 </ul>
                             </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu" title="認識UCAN">認識UCAN</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="#" title="平台緣起及建置目的">平台緣起及建置目的</a></li>
+                                    <li class="menu-item"><a href="#" title="平台發展與依據">平台發展與依據</a></li>
+                                    <li class="menu-item"><a href="#" title="主要功能簡介">主要功能簡介</a></li>
+                                </ul>
+                            </li>
                             <!--  -->
                             <li class="menu-item d-block d-lg-none"><a href="#" title="網站導覽">網站導覽</a></li>
                             <li class="menu-item d-block d-lg-none"><a href="#" title="UCAN使用指南">UCAN使用指南</a></li>
-                            <li class="menu-item d-block d-lg-none"><a href="#" title="常見問題">常見問題</a></li>
                             <li class="menu-item d-block d-lg-none"><a href="#" title="聯絡我們">聯絡我們</a></li>
+                            <li class="menu-item d-block d-lg-none"><a href="#" title="登入">登入</a></li>
                             <!--  -->
                         </ul>
                     </div>
                 </div>
             </nav>
             <!-- navbar end -->
-            <!-- login start -->
-            <div class="login-warpper bg-danger">
-                <div class="login bg-danger">
-                    <div class="login-w">
-                        <div class="d-grid">
-                            <button type="button" class="btn btn-danger fs-5" id="loginFormBtn" title="使用者登入">
-                                <i class="fa-solid fa-user me-2 me-lg-0"></i>
-                                <span class="mx-3">使用者登入</span> 
-                                <i class="fa-solid fa-circle-arrow-down ms-2 ms-lg-0"></i>
-                            </button>
-                        </div>
-                        <div class="collapse" id="loginForm">
-                            <form action="" class="login-form">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="me-2">
-                                        <label for="userName" class="col-form-label col-form-label-sm text-nowrap" aria-label="帳號">帳號</label>
-                                    </div>
-                                    <div>
-                                        <input type="text" id="userName" class="form-control form-control-sm">
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="me-2">
-                                        <label for="userPassword" class="col-form-label col-form-label-sm text-nowrap" aria-label="密碼">密碼</label>
-                                    </div>
-                                    <div>
-                                        <input type="password" id="userPassword" class="form-control form-control-sm">
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="me-2">
-                                        <label for="captcha" class="col-form-label col-form-label-sm text-nowrap" aria-label="驗證碼">驗證碼</label>
-                                    </div>
-                                    <div>
-                                        <input type="number" id="captcha" class="form-control form-control-sm">
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center">
-                                    <div class="verification font-family-Arial fw-bold">1234</div>
-                                    <div class="flex-grow-1">
-                                        <a href="#" class="text-center samll text-primary d-block" title="帳號申請">帳號申請</a>
-                                        <a href="#" class="text-center samll text-primary d-block" title="忘記帳號/密碼">記帳號/密碼</a>
-                                    </div>
-                                    <div>
-                                        <button type="button" class="btn btn-sm login-btn" id="loginBtn" title="登入">登入</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- login end -->
         </header>
         <!-- header end -->
         <!-- main start -->
         <main class="main position-relative" id="content">
+            <section class="message">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="py-4 text-center">
+                                <a href="" title="★感謝支持，再度額滿★【活動通知】「教學實踐研究計畫撰寫與統計分析研習交流：以UCAN為例」" class="link-primary">★感謝支持，再度額滿★【活動通知】「教學實踐研究計畫撰寫與統計分析研習交流：以UCAN為例」</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <a href="#C" title="中央內容區塊" accesskey="C" name="C" class="alt-c position-absolute top-0 start-0">:::</a>
-            <section class="section bg-light border-bottom d-print-none">
+            <section class="section">
                 <div class="container">
                     <div class="row">
                         <!-- banner start -->
@@ -248,10 +239,10 @@
             </section>
             <!-- font size print social share start -->
             <section class="py-4">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="col-12">
-                            <div class="social_share me-auto">
+                            <div class="social_share me-auto pe-lg-6 pe-md-4 pe-0">
                                 <button class="btn font-size" id="font-small" type="button" title="小">小</button>
                                 <button class="btn font-size active" id="font-normal" type="button" title="中">中</button>
                                 <button class="btn font-size" id="font-large" type="button" title="大">大</button>
@@ -266,18 +257,10 @@
             </section>
             <!-- font size print social share end -->
             <!-- testing start -->
-            <section class="section pt-0">
+            <section class="section">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 ps-0 ps-lg-3 mb-3">
-                            <div class="d-flex mb-4">
-                                <span class="me-3"><img src="../images/icon/heading-icon.svg" alt=""></span>
-                                <h4 class="h4 text-primary">我要施測 / <span class="font-family-Arial">Testing</span></h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg col-md-6">
+                        <div class="col-md-6">
                             <a href="#" title="職業興趣探索" class="d-block border rounded-15 testing-card overflow-hidden mb-3 mb-lg-0">
                                 <div class="px-3 d-flex flex-column pt-4 testing-body">
                                     <div class="d-flex align-items-center justify-content-between">
@@ -289,7 +272,7 @@
                                 <div class="testing-bg"></div>
                             </a>
                         </div>
-                        <div class="col-lg col-md-6">
+                        <div class="col-md-6">
                             <a href="#" title="職場共通職能診斷" class="d-block border rounded-15 testing-card overflow-hidden mb-3 mb-lg-0">
                                 <div class="px-3 d-flex flex-column pt-4 testing-body">
                                     <div class="d-flex align-items-center justify-content-between">
@@ -301,153 +284,104 @@
                                 <div class="testing-bg"></div>
                             </a>
                         </div>
-                        <div class="col-lg col-md-6">
-                            <a href="#" title="專業職能診斷" class="d-block border rounded-15 testing-card overflow-hidden mb-3 mb-lg-0">
-                                <div class="px-3 d-flex flex-column pt-4 testing-body">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <h4>專業職能診斷</h4>
-                                        <i class="fa-solid fa-circle-arrow-right fs-4"></i>
-                                    </div>
-                                    <p class="mb-0">從事特定職業領域需要的知識與技能</p>
-                                </div>
-                                <div class="testing-bg"></div>
-                            </a>
-                        </div>
-                        <!-- 後台 start -->
-                        <div class="col-lg col-md-6">
-                            <a href="#" title="後台管理" class="d-block border border-3 border-danger rounded-15 testing-card overflow-hidden backstage mb-3 mb-lg-0">
-                                <div class="px-3 d-flex flex-column pt-4 testing-body">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <h4>後台管理</h4>
-                                        <i class="fa-solid fa-circle-arrow-right fs-4"></i>
-                                    </div>
-                                </div>
-                                <div class="testing-bg"></div>
-                            </a>
-                        </div>
-                        <!-- 後台 end -->
                     </div>
                 </div>
             </section>
             <!-- testing end -->
             <!-- Share and Feedback start -->
-            <section class="section bg-light">
+            <section class="Feedback">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 ps-0 ps-lg-3">
-                            <div class="d-flex">
-                                <span class="me-3"><img src="../images/icon/heading-icon.svg" alt=""></span>
-                                <h4 class="h4 text-primary">學校案例分享 / <span class="font-family-Arial">Share and Feedback</span></h4>
-                            </div>
+                        <div class="col-12">
+                            <h2 class="text-primary text-center">學校案例分享 / <span class="font-family-Arial">Share and Feedback</span></h2>
                         </div>
                         <div class="col-12 position-relative">
-                            <!-- navigation prev -->
-                            <button type="button" class="btn feedback-button-prev" title="上一個學校案例分享"></button>
                             <div class="swiper feedbackSwiper py-5">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide px-6 px-md-0">
-                                        <a href="#" title="國立成功大學案例分享" class="feedback-card d-block text-center shadow bg-white rounded-15">
+                                        <a href="#" title="國立高雄大學學案例分享" class="feedback-card d-block text-center shadow bg-white rounded-15">
                                             <figure class="mx-auto mb-4">
-                                                <img src="../images/feedback-img01.png" alt="國立成功大學logo">
+                                                <img src="../images/feedback/feedback_img01.png" alt="logo">
                                             </figure>
-                                            <h5>國立成功大學</h5>
-                                            <p>2023/02/24</p>
-                                            <p class="download mb-0"><span><i class="icon-download-file"></i></span>下載案例分享</p>
+                                            <p>國立高雄大學</p>
                                         </a>
                                     </div>
                                     <div class="swiper-slide px-6 px-md-0">
                                         <a href="#" title="國立臺灣科技大學案例分享" class="feedback-card d-block text-center shadow bg-white rounded-15">
                                             <figure class="mx-auto mb-4">
-                                                <img src="../images/feedback-img02.png" alt="國立臺灣科技大學logo">
+                                                <img src="../images/feedback/feedback_img02.png" alt="國立臺灣科技大學logo">
                                             </figure>
-                                            <h5>國立臺灣科技大學</h5>
-                                            <p>2023/02/24</p>
-                                            <p class="download mb-0"><span><i class="icon-download-file"></i></span>下載案例分享</p>
+                                            <p>國立臺灣科技大學</p>
                                         </a>
                                     </div>
                                     <div class="swiper-slide px-6 px-md-0">
                                         <a href="#" title="國立成功大學案例分享" class="feedback-card d-block text-center shadow bg-white rounded-15">
                                             <figure class="mx-auto mb-4">
-                                                <img src="../images/feedback-img01.png" alt="國立成功大學logo">
+                                                <img src="../images/feedback/feedback_img03.png" alt="國立成功大學logo">
                                             </figure>
-                                            <h5>國立成功大學</h5>
-                                            <p>2023/02/24</p>
-                                            <p class="download mb-0"><span><i class="icon-download-file"></i></span>下載案例分享</p>
+                                            <p>國立成功大學</p>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide px-6 px-md-0">
+                                        <a href="#" title="國立屏東大學案例分享" class="feedback-card d-block text-center shadow bg-white rounded-15">
+                                            <figure class="mx-auto mb-4">
+                                                <img src="../images/feedback/feedback_img04.png" alt="國立屏東大學logo">
+                                            </figure>
+                                            <p>國立屏東大學</p>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide px-6 px-md-0">
+                                        <a href="#" title="大仁科技大學案例分享" class="feedback-card d-block text-center shadow bg-white rounded-15">
+                                            <figure class="mx-auto mb-4">
+                                                <img src="../images/feedback/feedback_img05.png" alt="大仁科技大學logo">
+                                            </figure>
+                                            <p>大仁科技大學</p>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide px-6 px-md-0">
+                                        <a href="#" title="國立高雄大學學案例分享" class="feedback-card d-block text-center shadow bg-white rounded-15">
+                                            <figure class="mx-auto mb-4">
+                                                <img src="../images/feedback/feedback_img01.png" alt="logo">
+                                            </figure>
+                                            <p>國立高雄大學</p>
                                         </a>
                                     </div>
                                     <div class="swiper-slide px-6 px-md-0">
                                         <a href="#" title="國立臺灣科技大學案例分享" class="feedback-card d-block text-center shadow bg-white rounded-15">
                                             <figure class="mx-auto mb-4">
-                                                <img src="../images/feedback-img02.png" alt="國立臺灣科技大學logo">
+                                                <img src="../images/feedback/feedback_img02.png" alt="國立臺灣科技大學logo">
                                             </figure>
-                                            <h5>國立臺灣科技大學</h5>
-                                            <p>2023/02/24</p>
-                                            <p class="download mb-0"><span><i class="icon-download-file"></i></span>下載案例分享</p>
+                                            <p>國立臺灣科技大學</p>
                                         </a>
                                     </div>
                                     <div class="swiper-slide px-6 px-md-0">
                                         <a href="#" title="國立成功大學案例分享" class="feedback-card d-block text-center shadow bg-white rounded-15">
                                             <figure class="mx-auto mb-4">
-                                                <img src="../images/feedback-img01.png" alt="國立成功大學logo">
+                                                <img src="../images/feedback/feedback_img03.png" alt="國立成功大學logo">
                                             </figure>
-                                            <h5>國立成功大學</h5>
-                                            <p>2023/02/24</p>
-                                            <p class="download mb-0"><span><i class="icon-download-file"></i></span>下載案例分享</p>
+                                            <p>國立成功大學</p>
                                         </a>
                                     </div>
                                     <div class="swiper-slide px-6 px-md-0">
-                                        <a href="#" title="國立成功大學案例分享" class="feedback-card d-block text-center shadow bg-white rounded-15">
+                                        <a href="#" title="國立屏東大學案例分享" class="feedback-card d-block text-center shadow bg-white rounded-15">
                                             <figure class="mx-auto mb-4">
-                                                <img src="../images/feedback-img01.png" alt="國立成功大學logo">
+                                                <img src="../images/feedback/feedback_img04.png" alt="國立屏東大學logo">
                                             </figure>
-                                            <h5>國立成功大學</h5>
-                                            <p>2023/02/24</p>
-                                            <p class="download mb-0"><span><i class="icon-download-file"></i></span>下載案例分享</p>
+                                            <p>國立屏東大學</p>
                                         </a>
                                     </div>
                                     <div class="swiper-slide px-6 px-md-0">
-                                        <a href="#" title="國立臺灣科技大學案例分享" class="feedback-card d-block text-center shadow bg-white rounded-15">
+                                        <a href="#" title="大仁科技大學案例分享" class="feedback-card d-block text-center shadow bg-white rounded-15">
                                             <figure class="mx-auto mb-4">
-                                                <img src="../images/feedback-img02.png" alt="國立臺灣科技大學logo">
+                                                <img src="../images/feedback/feedback_img05.png" alt="大仁科技大學logo">
                                             </figure>
-                                            <h5>國立臺灣科技大學</h5>
-                                            <p>2023/02/24</p>
-                                            <p class="download mb-0"><span><i class="icon-download-file"></i></span>下載案例分享</p>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide px-6 px-md-0">
-                                        <a href="#" title="國立成功大學案例分享" class="feedback-card d-block text-center shadow bg-white rounded-15">
-                                            <figure class="mx-auto mb-4">
-                                                <img src="../images/feedback-img01.png" alt="國立成功大學logo">
-                                            </figure>
-                                            <h5>國立成功大學</h5>
-                                            <p>2023/02/24</p>
-                                            <p class="download mb-0"><span><i class="icon-download-file"></i></span>下載案例分享</p>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide px-6 px-md-0">
-                                        <a href="#" title="國立臺灣科技大學案例分享" class="feedback-card d-block text-center shadow bg-white rounded-15">
-                                            <figure class="mx-auto mb-4">
-                                                <img src="../images/feedback-img02.png" alt="國立臺灣科技大學logo">
-                                            </figure>
-                                            <h5>國立臺灣科技大學</h5>
-                                            <p>2023/02/24</p>
-                                            <p class="download mb-0"><span><i class="icon-download-file"></i></span>下載案例分享</p>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide px-6 px-md-0">
-                                        <a href="#" title="國立成功大學案例分享" class="feedback-card d-block text-center shadow bg-white rounded-15">
-                                            <figure class="mx-auto mb-4">
-                                                <img src="../images/feedback-img01.png" alt="國立成功大學logo">
-                                            </figure>
-                                            <h5>國立成功大學</h5>
-                                            <p>2023/02/24</p>
-                                            <p class="download mb-0"><span><i class="icon-download-file"></i></span>下載案例分享</p>
+                                            <p>大仁科技大學</p>
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                            <!-- navigation next -->
+                            <!-- navigation -->
+                            <button type="button" class="btn feedback-button-prev" title="上一個學校案例分享"></button>
                             <button type="button" class="btn feedback-button-next" title="下一個學校案例分享"></button>
                         </div>
                         <div class="col-12">
@@ -459,10 +393,59 @@
                 </div>
             </section>
             <!-- Share and Feedback end -->
+            <!--  -->
             <section class="section">
                 <div class="container">
                     <div class="row">
-                        <!-- links start -->
+                        <div class="col-12">
+                            <h2 class="text-primary text-center mb-5">應用分享 / <span class="font-family-Arial">News</span></h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 index-video h-10">
+                            <div class="d-flex align-items-center p-5">
+                                <div class="w-100">
+                                    <div class="ratio ratio-16x9 mb-3">
+                                        <iframe src="https://www.youtube.com/embed/DvDrHtDdejI?si=TjGHgUwBe-a9iSE7" title="YouTube video" allowfullscreen></iframe>
+                                    </div>
+                                    <h3 class="text-primary">運用UCAN於學習成效與教學回饋</h3>
+                                    <p>影片說明文字影片說明文字影片說明文字影片說明文字影片說明文字</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 index-download p-5">
+                            <div class="row mb-3">
+                                <div class="text-center col"><h4><span class="icon-essence"></span> 研習會精華</h4></div>
+                                <div class="text-center col"><h4><span class="icon-circle-download"></span> 講義下載</h4></div>
+                            </div>
+                            <ul class="list list-unstyled">
+                                <li>
+                                    <a href="#" title="《活動講義》【111年UCAN線上研習會】場次1：運用UCAN於學習成效與教學回饋 講義下載.pdf(另開新視窗)" target="_blank" download="《活動講義》【111年UCAN線上研習會】場次1：運用UCAN於學習成效與教學回饋 講義下載.pdf">《活動講義》【111年UCAN線上研習會】場次1：運用UCAN於學習成效與教學回饋 講義下載.pdf</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="《活動講義》【111年UCAN線上研習會】場次1：運用UCAN於學習成效與教學回饋 講義下載.pdf(另開新視窗)" target="_blank" download="《活動講義》【111年UCAN線上研習會】場次1：運用UCAN於學習成效與教學回饋 講義下載.pdf">《活動講義》【111年UCAN線上研習會】場次1：運用UCAN於學習成效與教學回饋 講義下載.pdf</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="《活動講義》【110年UCAN線上研習會】場次1：教學發展應用與交流 講義下載.pdf(另開新視窗)" target="_blank" download="《活動講義》【110年UCAN線上研習會】場次1：教學發展應用與交流 講義下載.pdf">《活動講義》【110年UCAN線上研習會】場次1：教學發展應用與交流 講義下載.pdf</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="《活動講義》【110年UCAN線上研習會】場次1：教學發展應用與交流 講義下載.pdf(另開新視窗)" target="_blank" download="《活動講義》【110年UCAN線上研習會】場次1：教學發展應用與交流 講義下載.pdf">《活動講義》【110年UCAN線上研習會】場次1：教學發展應用與交流 講義下載.pdf</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="UCAN團體施測通知表單.pdf(另開新視窗)" target="_blank" download="UCAN團體施測通知表單.pdf">UCAN團體施測通知表單.pdf</a>
+                                </li>
+                            </ul>
+                            <div class="text-center mt-3">
+                                <a href="10.html" title="更多檔案下載" class="custom-btn-primary">VIEW MORE <i class="fa-solid fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--  -->
+            <!-- <section class="section">
+                <div class="container">
+                    <div class="row">
                         <div class="col-lg-6 links ps-0 ps-lg-3 pe-3 pe-lg-4 mb-4 mb-lg-0">
                             <div class="d-flex flex-column h-100">
                                 <div class="d-flex mb-4">
@@ -515,8 +498,6 @@
                                 </div>
                             </div>                            
                         </div>
-                        <!-- links end -->
-                        <!-- download start -->
                         <div class="col-lg-6 ps-0 ps-lg-4">
                             <div class="d-flex flex-column h-100">
                                 <div class="d-flex mb-4">
@@ -552,10 +533,9 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- download end -->
                     </div>
                 </div>
-            </section>
+            </section> -->
         </main>
         <!-- main end -->
         <!-- footer start -->
@@ -563,59 +543,50 @@
             <a href="#B" title="下方功能區塊" accesskey="B" name="B" class="alt-b position-absolute top-0 start-0">:::</a>
             <!-- footer menu start -->
             <div class="footer-menu-wrapper d-none d-lg-block">
-                <div class="footer-menu-btn border-bottom border-6 border-danger text-center">
-                    <button type="button" id="footerMenuBtn" class="btn btn-danger px-5">點選收合 <i class="fa-solid fa-circle-arrow-down"></i></button>
+                <div class="footer-menu-btn border-bottom border-6 border-primary text-center">
+                    <button type="button" id="footerMenuBtn" class="btn btn-primary px-5">點選收合 <i class="fa-solid fa-circle-arrow-down"></i></button>
                 </div>
                 <div class="collapse" id="footerMenu">
-                    <div class="bg-danger footer-menu">
+                    <div class="bg-primary footer-menu">
                         <div class="container">
                             <div class="d-flex">
                                 <div class="flex-fill text-center">
-                                    <h4 class="text-white text-decoration-underline mb-4">認識UCAN</h4>
-                                    <div class="footer-menu-links">
-                                        <a href="#" title="平台緣起及建置目的">平台緣起及建置目的</a>
-                                        <a href="#" title="平台發展與依據">平台發展與依據</a>
-                                        <a href="#" title="主要功能簡介">主要功能簡介</a>
-                                    </div>
-                                </div>
-                                <div class="flex-fill text-center">
-                                    <h4 class="text-white text-decoration-underline mb-4">職能介紹</h4>
-                                    <div class="footer-menu-links">
-                                        <a href="#" title="職能定義">職能定義</a>
-                                        <a href="#" title="職能效用">職能效用</a>
-                                        <a href="#" title="職能資源">職能資源</a>
-                                        <a href="#" title="職能應用">職能應用</a>
-                                    </div>
-                                </div>
-                                <div class="flex-fill text-center">
-                                    <h4 class="text-white text-decoration-underline mb-4">職能與職業查詢</h4>
+                                    <h4 class="text-white mb-4">職能與職業查詢</h4>
                                     <div class="footer-menu-links">
                                         <a href="#" title="職場共通職能查詢">職場共通職能查詢</a>
                                         <a href="#" title="專業職能查詢">專業職能查詢</a>
                                         <a href="#" title="職業查詢">職業查詢</a>
                                     </div>
                                 </div>
-                                <div class="flex-fill text-center"><a href="#" title="職能興趣探索" class="d-block"><h4 class="text-white text-decoration-underline mb-4">職能興趣探索</h4></a></div>
                                 <div class="flex-fill text-center">
-                                    <h4 class="text-white text-decoration-underline mb-4">職能診斷</h4>
+                                    <h4 class="text-white mb-4">職能應用</h4>
+                                    <div class="footer-menu-links">
+                                        <a href="#" title="職場共通職能查詢">職場共通職能查詢</a>
+                                        <a href="#" title="專業職能查詢">專業職能查詢</a>
+                                        <a href="#" title="職業查詢">職業查詢</a>
+                                    </div>
+                                </div>
+                                <div class="flex-fill text-center">
+                                    <h4 class="text-white mb-4">職能診斷</h4>
                                     <div class="footer-menu-links">
                                         <a href="#" title="職場共通職能">職場共通職能</a>
                                         <a href="#" title="專業職能">專業職能</a>
                                     </div>
                                 </div>
                                 <div class="flex-fill text-center">
-                                    <h4 class="text-white text-decoration-underline mb-4">能力養成計劃</h4>
-                                    <div class="footer-menu-links">
-                                        <a href="#" title="職場共通職能能力養成計劃">職場共通職能能力養成計劃</a>
-                                        <a href="#" title="專業職能能力養成計劃">專業職能能力養成計劃</a>
-                                    </div>
-                                </div>
-                                <div class="flex-fill text-center">
-                                    <h4 class="text-white text-decoration-underline mb-4">諮詢及診斷紀錄</h4>
+                                    <h4 class="text-white mb-4">診斷紀錄</h4>
                                     <div class="footer-menu-links">
                                         <a href="#" title="歷經診斷結果">歷經診斷結果</a>
                                         <a href="#" title="諮詢服務">諮詢服務</a>
                                         <a href="#" title="諮詢紀錄">諮詢紀錄</a>
+                                    </div>
+                                </div>
+                                <div class="flex-fill text-center">
+                                    <h4 class="text-white mb-4">認識UCAN</h4>
+                                    <div class="footer-menu-links">
+                                        <a href="#" title="平台緣起及建置目的">平台緣起及建置目的</a>
+                                        <a href="#" title="平台發展與依據">平台發展與依據</a>
+                                        <a href="#" title="主要功能簡介">主要功能簡介</a>
                                     </div>
                                 </div>
                             </div>                        
@@ -627,18 +598,16 @@
             <!-- footer menu end -->
             <!-- footer Information start -->
             <div class="footer-Information">
-                <div class="container">
+                <div class="container px-5 px-md-0">
                     <div class="row">
-                        <div class="col-lg-6 col-md-12 mb-lg-0 mb-4">
-                            <article class="h1">
-                                <p>使用上遇到困難？</p>
-                                <p>希望洽談學校功能介接？</p>
-                                <p>請聯絡我們！</p>
-                            </article>
+                        <div class="col-md mb-lg-0 mb-4">
+                            <figure>
+                                <img src="../images/footer_logo.svg" alt="" class="img-fluid">
+                            </figure>
                         </div>
-                        <div class="col-lg col-md-6 pe-3 pe-xxl-4 mb-5 mb-lg-0">
-                            <h3 class="mb-4">UCAN計畫辦公室</h3>
-                            <address class="border-start border-4 border-white ps-3 mb-4">
+                        <div class="col-md pe-3 pe-xxl-4 mb-5 mb-lg-0">
+                            <h3 class="mb-4 text-center text-md-start">UCAN計畫辦公室</h3>
+                            <address class="border-start border-4 border-dark ps-3 mb-3">
                                 <ul class="list-inline">
                                     <li class="list-inline-item">諮詢信箱：</li>
                                     <li class="list-inline-item"><a href="mailto:ucan@itri.org.tw" title="寄信至ucan@itri.org.tw">ucan@itri.org.tw</a></li>
@@ -648,25 +617,27 @@
                                     <li class="list-inline-item">02-2701-6565#343</li>
                                 </ul>
                             </address>
-                            <a href="#" title="或填寫聯絡表單" class="custom-btn-red px-4">或填寫聯絡表單 <i class="fa-solid fa-circle-arrow-right"></i></a>
-                        </div>
-                        <div class="col-lg col-md-6">
-                            <h3 class="mb-4">服務時間</h3>
-                            <div class="border-start border-4 border-white ps-3 mb-4">
-                                <p>周一~周五(非假日)</p>
-                                <p>上午8:30-12:00</p>
-                                <p class="mb-0">下午13:00-17:30</p>
+                            <div class="text-center text-md-start">
+                                <a href="#" title="或填寫聯絡表單" class="footer-btn px-4">或填寫聯絡表單 <i class="fa-solid fa-circle-arrow-right"></i></a>
                             </div>
                         </div>
-                    </div>
-                    <div class="row pt-5 align-items-center">
-                        <div class="col-md">
-                            <p class="text-light mb-0">版權所有 ©教育部 All Rights Reserved.<br />本平台使用者端電腦環境瀏覽器請務必使用IE10以上的版本，始能正常瀏覽使用，請將螢幕解析度設定為1024x768將可得到最佳效果</p>
-                        </div>
-                        <div class="col-auto">
-                            <a href="#" target="_blank" title="本網站通過無障礙AA檢測(另開新視窗)">
+                        <div class="col-md mb-5 mb-lg-0">
+                            <h3 class="mb-4 text-center text-md-start">服務時間</h3>
+                            <div class="border-start border-4 border-dark ps-3 mb-3">
+                                <p>周一~周五(非假日)</p>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">上午8:30-12:00</li>
+                                    <li class="list-inline-item">下午13:00-17:30</li>
+                                </ul>
+                            </div>
+                            <a href="#" class="text-center text-md-start d-block" target="_blank" title="本網站通過無障礙AA檢測(另開新視窗)">
                                 <img src="../images/accessibility.png" alt="本網站通過無障礙AA檢測" title="本網站通過無障礙AA檢測(另開新視窗)">
                             </a>
+                        </div>
+                        <div class="col-lg d-none d-lg-block">
+                            <figure>
+                                <img src="../images/footer_img.svg" alt="" class="img-fluid">
+                            </figure>
                         </div>
                     </div>
                 </div>

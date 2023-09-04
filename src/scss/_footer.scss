@@ -24,18 +24,33 @@
 }
 .footer-Information {
     background-color: $footer-bg;
-    color: var(--bs-white);
+    color: $footer-font-color;
     padding: {
         top: 80px;
         bottom: 80px;
     };
     a {
-        color: var(--bs-white);
+        color: $footer-font-color;
         &:hover {
+            color: var(--bs-primary);
             text-decoration: underline;
         }
     }
     .footer-text-light {
         color: $footer-light;
+    }
+    .footer-btn {
+        color: var(--bs-white);
+        background-color: var(--bs-primary);
+        font-family: $font-family-Arial;
+        padding: 8px 30px;
+        border-radius: 50px;
+        font-weight: bold;
+        text-decoration: none !important;
+        box-shadow: $custom-box-shadow-bese;
+        &:hover {
+            background-color: var(--bs-warning);
+            color: $btn-font-color;
+        }
     }
 }
