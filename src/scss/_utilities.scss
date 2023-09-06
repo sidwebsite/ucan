@@ -12,7 +12,13 @@
     font-weight: bold;
 }
 .rounded-15 {
-    border-radius: 15px;
+    border-radius: 15px !important;
+}
+.rounded-12 {
+    border-radius: 12px !important;
+}
+.rounded-7 {
+    border-radius: 7px !important;
 }
 a {
     color: var(--bs-dark);
@@ -21,4 +27,7 @@ a {
     &:hover {
         color: var(--bs-primary);
     }
+}
+.custom-bg-gray {
+    background-color: $custom-gray !important;
 }

@@ -1,0 +1,42 @@
+@mixin swiperButton($className, $bgColor, $removing) {
+    .#{$className}-button-prev, .#{$className}-button-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: $bgColor;
+        z-index: 1;
+        transition: .3s ease;
+        &::after {
+            font: var(--fa-font-solid);
+            color: var(--bs-dark);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5rem;
+        }
+        &:hover {
+            background-color: var(--bs-primary);
+            &::after {
+                color: var(--bs-white);
+            }
+        }
+    }
+    .#{$className}-button-prev {
+        left:  #{$removing};
+        right: auto;
+        &::after {
+            content: map-get($icons, angle-left);
+        }
+    }
+    .#{$className}-button-next {
+        right: #{$removing};   
+        left: auto;
+        &::after {
+            content: map-get($icons, angle-right);
+        }
+    }
+}

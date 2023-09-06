@@ -10,12 +10,15 @@
     };
 }
 .footer-menu-links {
-    > a {
+    > p {
+        color: var(--bs-white);
+    }
+    a {
         color: var(--bs-white);
         display: block;
         padding: {
-            top: 8px;
-            bottom: 8px;
+            top: 4px;
+            bottom: 4px;
         };
         &:hover {
             text-decoration: underline;
