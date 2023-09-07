@@ -16644,7 +16644,7 @@ ol.list-style-cjk-ideographic {
     width: 100%;
     position: relative;
     opacity: 1;
-    visibility: visible;
+    visibility: hidden;
     border: none;
     background-color: transparent;
     -webkit-box-shadow: none;
