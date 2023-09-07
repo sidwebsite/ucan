@@ -13,8 +13,30 @@
     background-color: rgba($message-bg, 0.64);
     margin-top: 78px;
 }
+.title {
+    span {
+        display: block;
+        &:nth-child(2) {
+            display: none;
+            padding: {
+                left: 8px;
+                right: 8px;
+            };
+        }
+    }
+}
 @include media-breakpoint-up(lg) {
     .message {
         margin-top: 0;
+    }
+}
+@include media-breakpoint-up(md) {
+    .title {
+        span {
+            display: inline-block;
+            &:nth-child(2) {
+                display: inline-block;
+            }
+        }
     }
 }

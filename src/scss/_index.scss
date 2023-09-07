@@ -120,9 +120,9 @@
         --bs-nav-tabs-border-radius: 0;
         --bs-nav-link-color: #2F2F2F;
         --bs-nav-tabs-link-active-border-color: var(--bs-warning);
-        .nav-link {
+        .nav-link {            
             border: 0;
-            border-bottom: var(--bs-nav-tabs-border-width) solid transparent;
+            border-bottom: var(--bs-nav-tabs-border-width) solid var(--bs-nav-tabs-border-color);
             &.active {
                 border-color: var(--bs-nav-tabs-link-active-border-color);
             }
@@ -299,6 +299,16 @@
             border-radius: 22px;
             &.swiper-slide-active {
                 box-shadow: 0 3px 6px rgba($black, 0.16);
+            }
+        }
+    }
+}
+@include media-breakpoint-down(md) {
+    #newsTabs {
+        &.nav-tabs {
+            border: 0;
+            .nav-link {
+                margin-bottom: 15px;
             }
         }
     }
