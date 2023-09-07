@@ -18925,6 +18925,12 @@ button.swiper-pagination-bullet {
   .index-news-content .index-news-list > div:last-child {
     border-bottom: 0;
   }
+  .index-tabs-block h2, .index-tabs-block .h2 {
+    font-size: 1.5rem;
+  }
+  .index-tabs-block h3, .index-tabs-block .h3 {
+    font-size: 1.375rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map*/
