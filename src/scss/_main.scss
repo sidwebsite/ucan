@@ -11,7 +11,7 @@
 }
 .message {
     background-color: rgba($message-bg, 0.64);
-    margin-top: 82px;
+    margin-top: 78px;
 }
 @include media-breakpoint-up(lg) {
     .message {
