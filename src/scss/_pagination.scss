@@ -3,7 +3,7 @@
     .page-link {
         border: 0;
         &:focus-visible {
-            outline: 4px dashed var(--bs-warning);
+            outline: 2px dashed var(--bs-warning);
             box-shadow: none;
         }
     }
