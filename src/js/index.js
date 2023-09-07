@@ -55,16 +55,16 @@ const feedbackSwiper = new Swiper(".feedbackSwiper", {
     },
     breakpoints: {
         640: {
-            slidesPerView: 1,     
-            slidesPerGroup: 1,       
+            slidesPerView: 1,
+            // slidesPerGroup: 1,
         },
         768: {
             slidesPerView: 3,
-            slidesPerGroup: 3,
+            // slidesPerGroup: 3,
         },
         1024: {
             slidesPerView: 5,
-            slidesPerGroup: 5,
+            // slidesPerGroup: 5,
         },
     },
 });

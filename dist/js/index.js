@@ -17530,16 +17530,16 @@ const feedbackSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_2__["default"]
     },
     breakpoints: {
         640: {
-            slidesPerView: 1,     
-            slidesPerGroup: 1,       
+            slidesPerView: 1,
+            // slidesPerGroup: 1,
         },
         768: {
             slidesPerView: 3,
-            slidesPerGroup: 3,
+            // slidesPerGroup: 3,
         },
         1024: {
             slidesPerView: 5,
-            slidesPerGroup: 5,
+            // slidesPerGroup: 5,
         },
     },
 });

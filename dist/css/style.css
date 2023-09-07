@@ -18763,6 +18763,10 @@ button.swiper-pagination-bullet {
   pointer-events: none;
 }
 
+.index-feedback-phone-img {
+  width: 40px;
+}
+
 .index-video {
   background-color: var(--bs-light);
 }
