@@ -16601,6 +16601,7 @@ ol.list-style-cjk-ideographic {
     padding-left: 0;
   }
   .header-main .nav-menu .menu > .menu-item {
+    overflow: hidden;
     display: block;
     margin: 0;
     padding-right: 0;
@@ -16678,6 +16679,9 @@ ol.list-style-cjk-ideographic {
   }
   .header-main .nav-menu .menu > .menu-item-has-children > .sub-menu > .menu-item > a:focus::before {
     color: var(--bs-white);
+  }
+  .header-main .nav-menu .menu > .menu-item-has-children.active > .sub-menu {
+    visibility: visible;
   }
   .header-main .nav-menu .menu > .menu-item-has-children.active > a::after {
     content: "\f068";

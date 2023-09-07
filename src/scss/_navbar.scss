@@ -235,6 +235,7 @@
             .menu {
                 padding-left: 0;
                 > .menu-item {
+                    overflow: hidden;
                     display: block;
                     margin: 0;
                     padding-right: 0;
@@ -300,6 +301,9 @@
                         }
                     }
                     &.active {
+                        > .sub-menu {
+                            visibility: visible;
+                        } 
                         > a {
                             &::after {
                                 content: map-get($icons, minus);
