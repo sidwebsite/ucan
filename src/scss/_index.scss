@@ -285,10 +285,7 @@
     }
 }
 // media
-@include media-breakpoint-down(lg) {
-    .links {
-        border-right: 0;
-    }
+@media (max-width: 1250px) {
     .feedback-button-prev, .links-button-prev  {
         left: 15px;
     }
@@ -296,6 +293,11 @@
         right: 15px;
     }
 }
+// @include media-breakpoint-down(lg) {
+//     .links {
+//         border-right: 0;
+//     }
+// }
 @include media-breakpoint-up(lg) {
     .bannerSwiper {
         .swiper-slide {
