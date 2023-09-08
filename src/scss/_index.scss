@@ -323,6 +323,9 @@
                 font-size: 1.25rem;
             }
         }
+        img {
+            width: 125px;
+        }
     }
     .index-news-content  {
         .index-news-list {
@@ -345,5 +348,18 @@
         h3 {
             font-size: 1.375rem;
         }
+    }
+    .phone-swiper-slide {
+        > a {
+            > div {
+                border-bottom: 1px solid #C7C6C6;
+            }
+            &:last-child {
+                > div {
+                    border-bottom: 0;
+                }
+            }
+        } 
+        
     }
 }
