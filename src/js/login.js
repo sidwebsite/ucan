@@ -1,6 +1,6 @@
 // bootstrap
 import * as bootstrap from 'bootstrap';
-export default function login() {
+;(function() {
     const loginFormBtn =  document.querySelector('#loginFormBtn');
     const loginForm = document.querySelector('#loginForm');
     const login = document.querySelector('.login');
@@ -21,4 +21,4 @@ export default function login() {
     loginForm.querySelector('#loginBtn').addEventListener('focusout', function () {
         loginFormCollapse.hide();
     });
-}
+})();

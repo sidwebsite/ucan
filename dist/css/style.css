@@ -16678,7 +16678,7 @@ a:hover {
 .social_share > button:focus {
   background-color: var(--bs-warning);
   color: #2A2828;
-  outline: 2px dashed var(--bs-warning);
+  outline: 2px dashed #ff5900;
 }
 
 .list-style-star {
@@ -16713,7 +16713,7 @@ ol.list-style-cjk-ideographic {
 }
 #goTop:focus {
   border: 0;
-  outline: 4px dashed var(--bs-warning);
+  outline: 2px dashed #ff5900;
 }
 #goTop.show {
   right: 15px;
@@ -17404,7 +17404,7 @@ ol.list-style-cjk-ideographic {
 
 .form-control:focus, button:focus:not(:focus-visible), a:focus-visible {
   border: 0;
-  outline: 2px dashed var(--bs-warning);
+  outline: 2px dashed #ff5900;
 }
 
 .main {
@@ -18490,19 +18490,26 @@ button.swiper-pagination-bullet {
   background: var(--bs-primary);
 }
 
-.bannerSwiper .swiper-slide {
-  border-radius: 0;
-  overflow: hidden;
-}
 .bannerSwiper .swiper-slide > a {
   display: block;
+  border-radius: 0;
+  overflow: hidden;
 }
 .bannerSwiper .swiper-slide > a img {
   width: 100%;
 }
-.bannerSwiper .swiper-slide.swiper-slide-active {
+.bannerSwiper .swiper-slide.swiper-slide-active > a {
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.swiper button:focus-visible {
+  background-color: #DCDBDB;
+  outline: 2px dashed #ff5900;
+}
+
+.swiper-slide a:focus {
+  outline: 2px dashed #ff5900;
 }
 
 .banner-button-prev, .banner-button-next {
@@ -18558,7 +18565,7 @@ button.swiper-pagination-bullet {
 }
 
 .index-testing {
-  background-image: url(../fonts/7ae6f43b.svg);
+  background-image: url(../images/index_testing_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -18598,7 +18605,7 @@ button.swiper-pagination-bullet {
 }
 
 .index-news {
-  background-image: url(../fonts/f79fd2ab.svg);
+  background-image: url(../images/index_news_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -18867,6 +18874,17 @@ button.swiper-pagination-bullet {
   color: var(--bs-primary);
 }
 
+.nav-link:focus-visible {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: 2px dashed #ff5900;
+}
+
+.feedback-button-prev:focus-visible, .links-button-prev:focus-visible, .feedback-button-next:focus-visible, .links-button-next:focus-visible {
+  background-color: #DCDBDB;
+  outline: 2px dashed #ff5900;
+}
+
 @media (max-width: 1250px) {
   .feedback-button-prev, .links-button-prev {
     left: 15px;
@@ -18876,10 +18894,10 @@ button.swiper-pagination-bullet {
   }
 }
 @media (min-width: 992px) {
-  .bannerSwiper .swiper-slide {
+  .bannerSwiper .swiper-slide > a {
     border-radius: 22px;
   }
-  .bannerSwiper .swiper-slide.swiper-slide-active {
+  .bannerSwiper .swiper-slide.swiper-slide-active > a {
     -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   }

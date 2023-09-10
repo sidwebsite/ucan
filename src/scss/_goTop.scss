@@ -11,7 +11,7 @@
     }
     &:focus {
         border: 0;
-        outline: 4px dashed var(--bs-warning);
+        outline: 2px dashed $custom-focus-color;
     }
     &.show {
         right: 15px;

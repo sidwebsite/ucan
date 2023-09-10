@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>大專校院就業職能平台</title>
-<script defer src="js/main.js"></script><script defer src="js/index.js"></script><link href="css/style.css" rel="stylesheet"></head>
+<script defer src="js/main.js"></script><script defer src="js/index.js"></script><script defer src="js/login.js"></script><link href="css/style.css" rel="stylesheet"></head>
 <body>
     <noscript>您的瀏覽器不支援JavaScript功能，若本網站功能無法正常使用，請開啟瀏覽器JavaScript狀態</noscript>
     <div class="warpper">
@@ -160,18 +160,18 @@
         <!-- header end -->
         <!-- main start -->
         <main class="main position-relative" id="content">
+            <a href="#C" title="中央內容區塊" accesskey="C" name="C" class="alt-c position-absolute top-0 start-0">:::</a>
             <section class="message">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
                             <div class="py-3 text-center">
-                                <a href="" title="★感謝支持，再度額滿★【活動通知】「教學實踐研究計畫撰寫與統計分析研習交流：以UCAN為例」" class="link-primary">★感謝支持，再度額滿★【活動通知】「教學實踐研究計畫撰寫與統計分析研習交流：以UCAN為例」</a>
+                                <a href="#" title="★感謝支持，再度額滿★【活動通知】「教學實踐研究計畫撰寫與統計分析研習交流：以UCAN為例」" class="link-primary">★感謝支持，再度額滿★【活動通知】「教學實踐研究計畫撰寫與統計分析研習交流：以UCAN為例」</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <a href="#C" title="中央內容區塊" accesskey="C" name="C" class="alt-c position-absolute top-0 start-0">:::</a>
             <!-- banner start -->
             <section class="section pt-0 pt-lg-3">
                 <div class="swiper bannerSwiper pb-6">
@@ -285,16 +285,16 @@
                                         <!-- Nav tabs -->
                                         <ul class="nav nav-pills nav-fill px-4 px-md-0" id="indexTabs" role="tablist">
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link active" id="careerInquiry-tab" data-bs-toggle="tab" data-bs-target="#careerInquiry" type="button" role="tab" aria-controls="home" aria-selected="true">職業查詢</button>
+                                                <button class="nav-link active" id="careerInquiry-tab" data-bs-toggle="tab" data-bs-target="#careerInquiry" type="button" role="tab" aria-controls="careerInquiry" aria-selected="true">職業查詢</button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="functionQuery-tab" data-bs-toggle="tab" data-bs-target="#functionQuery" type="button" role="tab" aria-controls="profile" aria-selected="false">職能查詢</button>
+                                                <button class="nav-link" id="functionQuery-tab" data-bs-toggle="tab" data-bs-target="#functionQuery" type="button" role="tab" aria-controls="functionQuery" aria-selected="false">職能查詢</button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="recordQuery-tab" data-bs-toggle="tab" data-bs-target="#recordQuery" type="button" role="tab" aria-controls="messages" aria-selected="false">診斷紀錄查詢 </button>
+                                                <button class="nav-link" id="recordQuery-tab" data-bs-toggle="tab" data-bs-target="#recordQuery" type="button" role="tab" aria-controls="recordQuery" aria-selected="false">診斷紀錄查詢 </button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="abilityDevelopment-tab" data-bs-toggle="tab" data-bs-target="#abilityDevelopment" type="button" role="tab" aria-controls="settings" aria-selected="false">能力養成計劃</button>
+                                                <button class="nav-link" id="abilityDevelopment-tab" data-bs-toggle="tab" data-bs-target="#abilityDevelopment" type="button" role="tab" aria-controls="abilityDevelopment" aria-selected="false">能力養成計劃</button>
                                             </li>
                                         </ul>
                                         <!-- Tab panes -->
@@ -387,7 +387,7 @@
                                             <button class="nav-link" id="eventNotification-tab" data-bs-toggle="tab" data-bs-target="#eventNotification" type="button" role="tab" aria-controls="eventNotification" aria-selected="false">活動通知</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="OtherAnnouncements-tab" data-bs-toggle="tab" data-bs-target="#OtherAnnouncements" type="button" role="tab" aria-controls="OtherAnnouncements" aria-selected="false">其他公告</button>
+                                            <button class="nav-link" id="otherAnnouncements-tab" data-bs-toggle="tab" data-bs-target="#otherAnnouncements" type="button" role="tab" aria-controls="otherAnnouncements" aria-selected="false">其他公告</button>
                                         </li>
                                     </ul>
                                     <div class="tab-content" id="newsTabContent">
@@ -499,7 +499,7 @@
                                                 <a href="#" title="更多活動通知" class="custom-btn-primary">VIEW MORE <i class="fa-solid fa-plus"></i></a>
                                             </div>
                                         </div>
-                                        <div class="tab-pane fade" id="OtherAnnouncements" role="tabpanel" aria-labelledby="OtherAnnouncements-tab">
+                                        <div class="tab-pane fade" id="otherAnnouncements" role="tabpanel" aria-labelledby="otherAnnouncements-tab">
                                             <div class="index-news-list">
                                                 <div class="d-flex mb-3">
                                                     <span class="date me-3">2023/08/09</span>
@@ -543,7 +543,7 @@
                             <h2 class="text-primary text-center title"><span>學校案例分享</span><span>/</span><span class="font-family-Arial">Share and Feedback</span></h2>
                         </div>
                         <div class="col-12 position-relative">
-                            <div class="swiper feedbackSwiper pb-5" data-aos="fade-up">
+                            <div class="swiper feedbackSwiper pb-5 pt-2 px-2" data-aos="fade-up">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide d-none d-md-block px-6 px-md-0">
                                         <a href="#" title="國立高雄大學學案例分享" class="feedback-card d-block text-center shadow bg-white rounded-15">
@@ -816,7 +816,7 @@
                             <h2 class="text-primary text-center mb-5 title"><span>相關連結</span><span>/</span><span class="font-family-Arial">Links</span></h2>
                         </div>
                         <div class="col-12 position-relative">
-                            <div class="swiper linksSwiper pb-5">
+                            <div class="swiper linksSwiper pb-5 pt-2">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <a href="https://www.edu.tw/Default.aspx" class="d-block text-center" title="教育部全球資訊網(另開新視窗)" target="_blank">

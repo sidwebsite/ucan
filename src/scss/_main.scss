@@ -4,7 +4,7 @@
 @import 'footer';
 .form-control:focus, button:focus:not(:focus-visible), a:focus-visible {
     border: 0;
-    outline: 2px dashed var(--bs-warning);
+    outline: 2px dashed $custom-focus-color;
 }
 .main {
     padding-bottom: 80px;

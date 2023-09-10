@@ -1,9 +1,8 @@
+// bootstrap
+import * as bootstrap from 'bootstrap';
 // aos
 import AOS from 'aos';
 AOS.init();
-// login
-import login from './modules/login';
-login();
 // Swiper
 import Swiper from 'swiper/bundle';
 // banner
@@ -15,8 +14,7 @@ const bannerSwiper = new Swiper(".bannerSwiper", {
         disableOnInteraction: false,
     },
     pagination: {
-        el: ".swiper-pagination",
-        clickable: true
+        el: ".swiper-pagination"
     },
     breakpoints: {
         640: {
@@ -77,8 +75,7 @@ const linksSwiper = new Swiper(".linksSwiper", {
         prevEl: ".links-button-prev",
     },
     pagination: {
-        el: ".swiper-pagination",
-        clickable: true
+        el: ".swiper-pagination"
     },
     centeredSlides: true,
     breakpoints: {
@@ -96,3 +93,32 @@ const linksSwiper = new Swiper(".linksSwiper", {
         },
     }
 });
+// function
+function tabsFoucs(tabNavId, tabContentId) {
+    if(document.querySelector(tabNavId)) {
+        const tabNav = document.querySelector(tabNavId);
+        const tab = new bootstrap.Tab(tabNav);
+        const tabContent = document.querySelector(tabContentId);
+        tabContent.querySelector('.custom-btn-primary').addEventListener('blur', () => {
+            tabNav.focus();
+            tab.show();
+        });
+    } else {
+        return false;
+    }
+    
+}
+// 
+tabsFoucs('#functionQuery-tab', '#careerInquiry');
+tabsFoucs('#recordQuery-tab', '#functionQuery');
+tabsFoucs('#abilityDevelopment-tab', '#recordQuery');
+// 
+tabsFoucs('#academicAffairs-tab', '#career');
+tabsFoucs('#schoolAffairs-tab', '#academicAffairs');
+// 最新消息
+tabsFoucs('#importantNotice-tab', '#news');
+tabsFoucs('#systemNotification-tab', '#importantNotice');
+tabsFoucs('#eventNotification-tab', '#systemNotification');
+tabsFoucs('#otherAnnouncements-tab', '#eventNotification');
+// 應用分享
+tabsFoucs('#pills-download-tab', '#pills-seminar');

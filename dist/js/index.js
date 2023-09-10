@@ -7497,45 +7497,6 @@ defineJQueryPlugin(Toast);
 
 /***/ }),
 
-/***/ "./src/js/modules/login.js":
-/*!*********************************!*\
-  !*** ./src/js/modules/login.js ***!
-  \*********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ login)
-/* harmony export */ });
-/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
-// bootstrap
-
-function login() {
-    const loginFormBtn =  document.querySelector('#loginFormBtn');
-    const loginForm = document.querySelector('#loginForm');
-    const login = document.querySelector('.login');
-    const mediaSize = 991;   
-    const loginFormCollapse = new bootstrap__WEBPACK_IMPORTED_MODULE_0__.Collapse(loginForm, {
-        toggle: false
-    });
-    loginFormBtn.addEventListener('click', function () {
-        loginFormCollapse.toggle();
-        login.classList.toggle('open');
-        if(window.innerWidth < mediaSize) {
-            login.classList.toggle('login-whide');
-        }
-    });
-    loginFormBtn.addEventListener('focus', function () {
-        loginFormCollapse.show();
-    });
-    loginForm.querySelector('#loginBtn').addEventListener('focusout', function () {
-        loginFormCollapse.hide();
-    });
-}
-
-/***/ }),
-
 /***/ "./node_modules/swiper/modules/a11y.mjs":
 /*!**********************************************!*\
   !*** ./node_modules/swiper/modules/a11y.mjs ***!
@@ -17469,16 +17430,15 @@ var __webpack_exports__ = {};
   !*** ./src/js/index.js ***!
   \*************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _modules_login__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/login */ "./src/js/modules/login.js");
+/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.mjs");
+// bootstrap
+
 // aos
 
-aos__WEBPACK_IMPORTED_MODULE_0___default().init();
-// login
-
-(0,_modules_login__WEBPACK_IMPORTED_MODULE_1__["default"])();
+aos__WEBPACK_IMPORTED_MODULE_1___default().init();
 // Swiper
 
 // banner
@@ -17490,8 +17450,7 @@ const bannerSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_2__["default"]("
         disableOnInteraction: false,
     },
     pagination: {
-        el: ".swiper-pagination",
-        clickable: true
+        el: ".swiper-pagination"
     },
     breakpoints: {
         640: {
@@ -17552,8 +17511,7 @@ const linksSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_2__["default"](".
         prevEl: ".links-button-prev",
     },
     pagination: {
-        el: ".swiper-pagination",
-        clickable: true
+        el: ".swiper-pagination"
     },
     centeredSlides: true,
     breakpoints: {
@@ -17571,7 +17529,35 @@ const linksSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_2__["default"](".
         },
     }
 });
-
+// function
+function tabsFoucs(tabNavId, tabContentId) {
+    if(document.querySelector(tabNavId)) {
+        const tabNav = document.querySelector(tabNavId);
+        const tab = new bootstrap__WEBPACK_IMPORTED_MODULE_0__.Tab(tabNav);
+        const tabContent = document.querySelector(tabContentId);
+        tabContent.querySelector('.custom-btn-primary').addEventListener('blur', () => {
+            tabNav.focus();
+            tab.show();
+        });
+    } else {
+        return false;
+    }
+    
+}
+// 
+tabsFoucs('#functionQuery-tab', '#careerInquiry');
+tabsFoucs('#recordQuery-tab', '#functionQuery');
+tabsFoucs('#abilityDevelopment-tab', '#recordQuery');
+// 
+tabsFoucs('#academicAffairs-tab', '#career');
+tabsFoucs('#schoolAffairs-tab', '#academicAffairs');
+// 最新消息
+tabsFoucs('#importantNotice-tab', '#news');
+tabsFoucs('#systemNotification-tab', '#importantNotice');
+tabsFoucs('#eventNotification-tab', '#systemNotification');
+tabsFoucs('#otherAnnouncements-tab', '#eventNotification');
+// 應用分享
+tabsFoucs('#pills-download-tab', '#pills-seminar');
 })();
 
 /******/ })()

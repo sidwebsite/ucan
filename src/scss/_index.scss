@@ -44,19 +44,28 @@
     background: var(--bs-primary);
 }
 .bannerSwiper {
-    .swiper-slide {
-        border-radius: 0;
-        overflow: hidden;
+    .swiper-slide {        
         > a {
             display: block;
+            border-radius: 0;
+            overflow: hidden;
             img {
                 width: 100%;
             }
         }
         &.swiper-slide-active {
-            box-shadow: none;
+            > a {
+                box-shadow: none;
+            }
         }
     }
+}
+.swiper button:focus-visible {
+    background-color: $swiper-button-color;
+    outline: 2px dashed $custom-focus-color;
+}
+.swiper-slide  a:focus {
+    outline: 2px dashed $custom-focus-color;
 }
 @include swiperButton('banner',rgba($swiper-button-color, 0.6) , 45px);
 // 
@@ -69,7 +78,7 @@
 }
 // testing card
 .index-testing {
-    @include backgroundImage('index_testing_bg.svg');
+    @include backgroundImage('index_testing_bg.jpg');
 }
 .index-testing-card {
     max-width: 310px;
@@ -111,7 +120,7 @@
 
 // news
 .index-news {
-    @include backgroundImage('index_news_bg.svg');
+    @include backgroundImage('index_news_bg.jpg');
 }
 #newsTabs {
     &.nav-tabs {
@@ -284,6 +293,18 @@
         }
     }
 }
+// 
+.nav-link:focus-visible {
+    box-shadow: none;
+    outline: 2px dashed $custom-focus-color;
+}
+.feedback-button-prev, .links-button-prev, .feedback-button-next, .links-button-next {
+    &:focus-visible {
+        background-color: $swiper-button-color;
+        outline: 2px dashed $custom-focus-color;
+    }
+    
+}
 // media
 @media (max-width: 1250px) {
     .feedback-button-prev, .links-button-prev  {
@@ -300,10 +321,14 @@
 // }
 @include media-breakpoint-up(lg) {
     .bannerSwiper {
-        .swiper-slide {
-            border-radius: 22px;
+        .swiper-slide { 
+            > a {
+                border-radius: 22px;
+            }
             &.swiper-slide-active {
-                box-shadow: 0 3px 6px rgba($black, 0.16);
+                > a {
+                    box-shadow: 0 3px 6px rgba($black, 0.16);
+                }
             }
         }
     }

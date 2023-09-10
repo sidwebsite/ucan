@@ -6,6 +6,7 @@ module.exports = {
     entry: {
         'main': './src/js/main.js',
         'index': './src/js/index.js',
+        "login": './src/js/login.js',
         'shareFeedback': './src/js/shareFeedback.js'
     },
     output: {
@@ -71,7 +72,7 @@ module.exports = {
             template: './src/html/index.html',
             filename: 'index.html',
             minify: false,
-            chunks: ['main', 'index']
+            chunks: ['main', 'index', 'login']
         }),
         new HtmlWebpackPlugin({
             template: './src/html/index_login.html',

@@ -19,7 +19,7 @@
         &:focus {
             background-color: var(--bs-warning);
             color: $btn-font-color;
-            outline: 2px dashed var(--bs-warning);
+            outline: 2px dashed $custom-focus-color;
         }
     }
 }
