@@ -8,6 +8,14 @@
     right: 0;
     z-index: 999;
 }
+#search-btn {
+    margin-right: 0;
+    color: var(--bs-dark);
+    &:hover, &:focus-visible {
+        background-color: var(--bs-dark);
+        color: var(--bs-white);
+    }
+}
 .header-top {
     a {
         color: var(--bs-white);
@@ -19,7 +27,7 @@
 }
 // login
 .login {
-    width: 230px;
+    width: 280px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     position: absolute;
@@ -46,12 +54,29 @@
             border: 0;
             background-color: $login-input-bg-light;
             box-shadow: $login-input-shadow-inset;
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+        input[type="number"] {
+            -moz-appearance: textfield;
         }
         .verification {
             font-size: 1.125rem;
         }
         .samll {
             font-size: 0.75rem;
+        }
+        .vcode-regen > button {
+            width: 40px;
+            border-radius: 0;
+            padding: {
+                left: 0;
+                right: 0;
+            };
+            text-align: center;
         }
         .login-btn {
             background-color: $login-button-bg;

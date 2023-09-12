@@ -16758,6 +16758,15 @@ ol.list-style-cjk-ideographic {
   z-index: 999;
 }
 
+#search-btn {
+  margin-right: 0;
+  color: var(--bs-dark);
+}
+#search-btn:hover, #search-btn:focus-visible {
+  background-color: var(--bs-dark);
+  color: var(--bs-white);
+}
+
 .header-top a {
   color: var(--bs-white);
   margin-right: 15px;
@@ -16767,7 +16776,7 @@ ol.list-style-cjk-ideographic {
 }
 
 .login {
-  width: 230px;
+  width: 280px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   position: absolute;
@@ -16803,11 +16812,25 @@ ol.list-style-cjk-ideographic {
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16) inset;
           box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16) inset;
 }
+.login .login-form input::-webkit-outer-spin-button, .login .login-form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.login .login-form input[type=number] {
+  -moz-appearance: textfield;
+}
 .login .login-form .verification {
   font-size: 1.125rem;
 }
 .login .login-form .samll {
   font-size: 0.75rem;
+}
+.login .login-form .vcode-regen > button {
+  width: 40px;
+  border-radius: 0;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
 }
 .login .login-form .login-btn {
   background-color: #DDD9D8;

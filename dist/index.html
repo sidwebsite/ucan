@@ -16,9 +16,9 @@
             <div class="search">                
                 <form>
                     <div class="input-group bg-white rounded-pill overflow-hidden">
-                        <label for="tagsKeyWords" class="visually-hidden " aria-label="關鍵字搜尋">關鍵字</label>
+                        <label for="tagsKeyWords" class="visually-hidden" aria-label="關鍵字搜尋">關鍵字</label>
                         <input type="text" id="tagsKeyWords" class="form-control border-0" placeholder="關鍵字搜尋" >
-                        <button class="btn" type="button" id="search-btn" title="搜尋"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <button type="button" class="btn" id="search-btn" title="搜尋" aria-label="送出搜尋"><i class="fa-solid fa-magnifying-glass" title="搜尋"></i></button>
                     </div>
                 </form>
             </div>
@@ -40,7 +40,7 @@
                                 <div class="me-2">
                                     <label for="userName" class="col-form-label col-form-label-sm text-nowrap" aria-label="帳號">帳號</label>
                                 </div>
-                                <div>
+                                <div class="flex-grow-1">
                                     <input type="text" id="userName" class="form-control form-control-sm">
                                 </div>
                             </div>
@@ -48,7 +48,7 @@
                                 <div class="me-2">
                                     <label for="userPassword" class="col-form-label col-form-label-sm text-nowrap" aria-label="密碼">密碼</label>
                                 </div>
-                                <div>
+                                <div class="flex-grow-1">
                                     <input type="password" id="userPassword" class="form-control form-control-sm">
                                 </div>
                             </div>
@@ -56,13 +56,19 @@
                                 <div class="me-2">
                                     <label for="captcha" class="col-form-label col-form-label-sm text-nowrap" aria-label="驗證碼">驗證碼</label>
                                 </div>
-                                <div>
+                                <div class="flex-grow-1">
                                     <input type="number" id="captcha" class="form-control form-control-sm">
                                 </div>
                             </div>
                             <div class="d-flex align-items-center">
-                                <div class="verification font-family-Arial fw-bold">1234</div>
-                                <div class="flex-grow-1">
+                                <div class="verification font-family-Arial fw-bold">
+                                    <sapn class="d-block text-center">1234</sapn>
+                                    <div class="vcode-regen">
+                                        <button type="button" class="btn btn-secondary btn-sm" aria-label="重新產生驗證碼"><i class="fa-solid fa-repeat"></i></button>
+                                        <button type="button" class="btn btn-secondary btn-sm" aria-label="語音服務"><i class="fa-solid fa-volume-high"></i></button>
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1 px-3">
                                     <a href="#" class="text-center samll d-block login-links" title="帳號申請">帳號申請</a>
                                     <a href="#" class="text-center samll d-block login-links" title="忘記帳號/密碼">記帳號/密碼</a>
                                 </div>
@@ -100,8 +106,9 @@
                                 <div class="search">
                                     <form>
                                         <div class="input-group bg-white rounded-pill overflow-hidden phone-search">
-                                            <input type="text" class="form-control border-0" placeholder="關鍵字搜尋" aria-label="關鍵字搜尋" >
-                                            <button class="btn btn-dark" type="button" id="phone-search-btn" title="搜尋"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                            <label for="phoneTagsKeyWords" class="visually-hidden" aria-label="關鍵字搜尋">關鍵字</label>
+                                            <input type="text" id="phoneTagsKeyWords" class="form-control border-0" placeholder="關鍵字搜尋" aria-label="關鍵字搜尋" >
+                                            <button type="button" class="btn btn-dark" id="phone-search-btn" title="搜尋" aria-label="關鍵字搜尋"><i class="fa-solid fa-magnifying-glass"></i></button>
                                         </div>
                                     </form>
                                 </div>
@@ -195,8 +202,8 @@
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
-                    <button type="button" class="btn banner-button-prev" title="上一個banner"></button>
-                    <button type="button" class="btn banner-button-next" title="下一個banner"></button>
+                    <button type="button" class="btn banner-button-prev" title="上一個banner" aria-label="上一個banner"></button>
+                    <button type="button" class="btn banner-button-next" title="下一個banner" aria-label="下一個banner"></button>
                 </div>
             </section>
             <!-- banner end -->
@@ -209,10 +216,10 @@
                                 <button class="btn font-size" id="font-small" type="button" title="小">小</button>
                                 <button class="btn font-size active" id="font-normal" type="button" title="中">中</button>
                                 <button class="btn font-size" id="font-large" type="button" title="大">大</button>
-                                <button class="btn d-none" type="button" title="列印" id="print"><i class="fa-solid fa-print"></i></button>
-                                <button class="btn sharer" type="button" data-sharer="facebook" data-title="" data-url="" title="facebook"><i class="fa-brands fa-facebook-f"></i></button>
-                                <button class="btn sharer" type="button" data-sharer="line" data-title="" data-url="" title="line"><i class="icon-icons8-line"></i></button>
-                                <button class="btn sharer" type="button" data-sharer="twitter" data-title="" data-url="" title="twitter"><i class="fa-brands fa-twitter"></i></button>
+                                <button class="btn d-none" type="button" title="列印" aria-label="列印" id="print"><i class="fa-solid fa-print"></i></button>
+                                <button class="btn sharer" type="button" title="facebook" aria-label="facebook" data-sharer="facebook" data-title="" data-url="" title="facebook"><i class="fa-brands fa-facebook-f"></i></button>
+                                <button class="btn sharer" type="button" title="line" aria-label="line" data-sharer="line" data-title="" data-url="" title="line"><i class="icon-icons8-line"></i></button>
+                                <button class="btn sharer" type="button" title="twitter" aria-label="twitter" data-sharer="twitter" data-title="" data-url="" title="twitter"><i class="fa-brands fa-twitter"></i></button>
                             </div>
                         </div>
                     </div>
@@ -718,12 +725,12 @@
                                 </div>
                             </div>
                             <!-- navigation -->
-                            <button type="button" class="btn feedback-button-prev" title="上一個學校案例分享"></button>
-                            <button type="button" class="btn feedback-button-next" title="下一個學校案例分享"></button>
+                            <button type="button" class="btn feedback-button-prev" title="上一個學校案例分享" aria-label="上一個學校案例分享"></button>
+                            <button type="button" class="btn feedback-button-next" title="下一個學校案例分享" aria-label="下一個學校案例分享"></button>
                         </div>
                         <div class="col-12">
                             <div class="text-center mt-3">
-                                <a href="9.html" title="更多學校案例分享" class="custom-btn-primary">VIEW MORE <i class="fa-solid fa-plus"></i></a>
+                                <a href="#" title="更多學校案例分享" class="custom-btn-primary">VIEW MORE <i class="fa-solid fa-plus"></i></a>
                             </div>
                         </div>
                     </div>                    
@@ -821,7 +828,7 @@
                                     <div class="swiper-slide">
                                         <a href="https://www.edu.tw/Default.aspx" class="d-block text-center" title="教育部全球資訊網(另開新視窗)" target="_blank">
                                             <figure class="mb-4 d-flex justify-content-center align-items-center">
-                                                <img src="images/education.png" alt="教育部全球資訊網">
+                                                <img src="images/education.png" alt="教育部全球資訊網logo">
                                             </figure>
                                             <p><strong>教育部全球資訊網</strong></p>
                                         </a>
@@ -829,7 +836,7 @@
                                     <div class="swiper-slide">
                                         <a href="https://www.ipas.org.tw/Star/Enterprise.aspx" class="d-block text-center" title="經濟部能力鑑定菁英故事館網站名稱(另開新視窗)" target="_blank">
                                             <figure class="mb-4 d-flex justify-content-center align-items-center">
-                                                <img src="images/ipas.png" alt="經濟部能力鑑定菁英故事館網站名稱">
+                                                <img src="images/ipas.png" alt="經濟部能力鑑定菁英故事館網站名稱logo">
                                             </figure>
                                             <p><strong>經濟部能力鑑定菁英故事館網站名稱</strong></p>
                                         </a>
@@ -837,7 +844,7 @@
                                     <div class="swiper-slide">
                                         <a href="https://rich.yda.gov.tw/rich/#/" class="d-block text-center" title="教育部青年署職場體驗網(另開新視窗)" target="_blank">
                                             <figure class="mb-4 d-flex justify-content-center align-items-center">
-                                                <img src="images/education.png" alt="教育部青年署職場體驗網">
+                                                <img src="images/education.png" alt="教育部青年署職場體驗網logo">
                                             </figure>
                                             <p><strong>教育部青年署職場體驗網</strong></p>
                                         </a>
@@ -845,7 +852,7 @@
                                     <div class="swiper-slide">
                                         <a href="#" class="d-block text-center" title="教育部全球資訊網(另開新視窗)" target="_blank">
                                             <figure class="mb-4 d-flex justify-content-center align-items-center">
-                                                <img src="images/education.png" alt="教育部全球資訊網">
+                                                <img src="images/education.png" alt="教育部全球資訊網logo">
                                             </figure>
                                             <p><strong>教育部全球資訊網</strong></p>
                                         </a>
@@ -853,7 +860,7 @@
                                     <div class="swiper-slide">
                                         <a href="#" class="d-block text-center" title="教育部全球資訊網(另開新視窗)" target="_blank">
                                             <figure class="mb-4 d-flex justify-content-center align-items-center">
-                                                <img src="images/education.png" alt="教育部全球資訊網">
+                                                <img src="images/education.png" alt="教育部全球資訊網logo">
                                             </figure>
                                             <p><strong>教育部全球資訊網</strong></p>
                                         </a>
@@ -861,7 +868,7 @@
                                     <div class="swiper-slide">
                                         <a href="#" class="d-block text-center" title="教育部全球資訊網(另開新視窗)" target="_blank">
                                             <figure class="mb-4 d-flex justify-content-center align-items-center">
-                                                <img src="images/education.png" alt="教育部全球資訊網">
+                                                <img src="images/education.png" alt="教育部全球資訊網logo">
                                             </figure>
                                             <p><strong>教育部全球資訊網</strong></p>
                                         </a>
@@ -869,7 +876,7 @@
                                     <div class="swiper-slide">
                                         <a href="#" class="d-block text-center" title="教育部全球資訊網(另開新視窗)" target="_blank">
                                             <figure class="mb-4 d-flex justify-content-center align-items-center">
-                                                <img src="images/education.png" alt="教育部全球資訊網">
+                                                <img src="images/education.png" alt="教育部全球資訊網logo">
                                             </figure>
                                             <p><strong>教育部全球資訊網</strong></p>
                                         </a>
@@ -877,7 +884,7 @@
                                     <div class="swiper-slide">
                                         <a href="#" class="d-block text-center" title="教育部全球資訊網(另開新視窗)" target="_blank">
                                             <figure class="mb-4 d-flex justify-content-center align-items-center">
-                                                <img src="images/education.png" alt="教育部全球資訊網">
+                                                <img src="images/education.png" alt="教育部全球資訊網logo">
                                             </figure>
                                             <p><strong>教育部全球資訊網</strong></p>
                                         </a>
@@ -886,8 +893,8 @@
                                 <div class="swiper-pagination"></div>
                             </div>
                             <!-- navigation -->
-                            <button type="button" class="btn links-button-prev" title="上一個連結"></button>
-                            <button type="button" class="btn links-button-next" title="下一個連結"></button>
+                            <button type="button" class="btn links-button-prev" title="上一個連結" aria-label="上一個連結"></button>
+                            <button type="button" class="btn links-button-next" title="下一個連結" aria-label="下一個連結"></button>
                         </div>
                     </div>
                 </div>
