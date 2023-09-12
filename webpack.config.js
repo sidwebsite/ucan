@@ -66,7 +66,7 @@ module.exports = {
     },
     plugins:[
         new MiniCssExtractPlugin({
-            filename: 'css/style.css'
+            filename: 'css/style_rwd.css'
         }),
         new HtmlWebpackPlugin({
             template: './src/html/index.html',
