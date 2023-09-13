@@ -31,6 +31,15 @@
 .links {
     border-right: 1px solid #BCB8B8;
 }
+.marquee {
+    overflow: hidden;
+    display: flex;
+    > p {
+        white-space: nowrap;
+        margin-bottom: 0;
+    }
+}
+
 // import styles bundle
 @import 'swiper/css/bundle';
 // swiper

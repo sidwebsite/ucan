@@ -3,6 +3,9 @@ import * as bootstrap from 'bootstrap';
 // aos
 import AOS from 'aos';
 AOS.init();
+// marquee
+import Marquee from './modules/marquee';
+window.addEventListener('load', Marquee('.marquee', 15))
 // Swiper
 import Swiper from 'swiper/bundle';
 // banner

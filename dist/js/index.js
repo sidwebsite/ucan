@@ -7497,6 +7497,55 @@ defineJQueryPlugin(Toast);
 
 /***/ }),
 
+/***/ "./src/js/modules/marquee.js":
+/*!***********************************!*\
+  !*** ./src/js/modules/marquee.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Marquee)
+/* harmony export */ });
+function Marquee(selector, speed) {
+    const parentSelector = document.querySelector(selector);
+    const el = parentSelector.firstElementChild;
+    let autoPlay = false;
+    let i = parentSelector.clientWidth;
+    let marquee = null;
+    const max = -el.clientWidth;
+    marquee = setInterval(marqueeFun, speed);
+    // stop
+    function marqueeStop() {
+        autoPlay = false;
+        clearInterval(marquee)
+        
+    };
+    // play
+    function marqueePlay() {
+        if(!autoPlay) {
+            autoPlay = true;
+            marquee = setInterval(marqueeFun, speed);
+        }
+    };
+
+    function marqueeFun() {
+        el.style.marginLeft = `${i}px`;
+        if (i < max) {
+            i = parentSelector.clientWidth;
+        }
+        i-- ;
+    }
+    el.style.marginLeft = `${parentSelector.clientWidth}px`;
+    // mouse
+    el.addEventListener('mouseover', marqueeStop);
+    el.addEventListener('mouseout', marqueePlay);
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/swiper/modules/a11y.mjs":
 /*!**********************************************!*\
   !*** ./node_modules/swiper/modules/a11y.mjs ***!
@@ -17433,16 +17482,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
 /* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
 /* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.mjs");
+/* harmony import */ var _modules_marquee__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/marquee */ "./src/js/modules/marquee.js");
+/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.mjs");
 // bootstrap
 
 // aos
 
 aos__WEBPACK_IMPORTED_MODULE_1___default().init();
-// Swiper
+// marquee
 
+window.addEventListener('load', (0,_modules_marquee__WEBPACK_IMPORTED_MODULE_2__["default"])('.marquee', 15))
+// Swiper
+;
 // banner
-const bannerSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_2__["default"](".bannerSwiper", {
+const bannerSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_3__["default"](".bannerSwiper", {
     lazy: true,
     loop: true,
     autoplay: {
@@ -17481,7 +17534,7 @@ const bannerSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_2__["default"]("
 });
 
 // Share and Feedback
-const feedbackSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_2__["default"](".feedbackSwiper", {
+const feedbackSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_3__["default"](".feedbackSwiper", {
     spaceBetween: 30,
     navigation: {
         nextEl: ".feedback-button-next",
@@ -17504,7 +17557,7 @@ const feedbackSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_2__["default"]
 });
 
 // links
-const linksSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_2__["default"](".linksSwiper", {
+const linksSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_3__["default"](".linksSwiper", {
     loop: true,    
     navigation: {
         nextEl: ".links-button-next",
