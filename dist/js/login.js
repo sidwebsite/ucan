@@ -7530,28 +7530,29 @@ __webpack_require__.r(__webpack_exports__);
     
     loginBtn.addEventListener('click', () => {
         const strArr = [];
+        let bool = false;
         // 
         if(userName.value === '' || userName.value === null) {
             strArr.push('帳號');
-            invalid.classList.remove('d-none');
+            bool = true;
         } else {
-            invalid.classList.add('d-none')
+            bool = false;
         }
         // 
         if(userPassword.value === '' || userPassword.value === null) {
             strArr.push('密碼');
-            invalid.classList.remove('d-none');
+            bool = true;
         } else {
-            invalid.classList.add('d-none')
+            bool = false;
         }
         // 
         if(captcha.value === '' || captcha.value === null ) {
             strArr.push('驗證碼');
-            invalid.classList.remove('d-none');
+            bool = true;
         } else {
-            invalid.classList.add('d-none')
+            bool = false;
         }
-        invalid.textContent = `*請輸入${strArr.join('、')}`;
+        bool === false ? invalid.textContent = '*號為必填欄位' : invalid.textContent = `*請輸入${strArr.join('、')}`;
     });
     
 })();
