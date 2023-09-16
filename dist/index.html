@@ -35,10 +35,11 @@
                             <span class="mx-3">使用者登入</span> 
                             <i class="fa-solid fa-circle-arrow-down ms-2 ms-lg-0"></i>
                         </div>
-                        <form action="" class="login-form">
+                        <div class="login-form">
+                            <p class="text-center text-danger mb-2">*號為必填欄位</p>
                             <div class="d-flex align-items-center mb-3">
                                 <div class="me-2">
-                                    <label for="userName" class="col-form-label col-form-label-sm text-nowrap" aria-label="帳號">帳號</label>
+                                    <label for="userName" class="col-form-label col-form-label-sm text-nowrap" aria-label="帳號"><span class="text-danger">*</span>帳&emsp;號</label>
                                 </div>
                                 <div class="flex-grow-1">
                                     <input type="text" id="userName" class="form-control form-control-sm">
@@ -46,37 +47,38 @@
                             </div>
                             <div class="d-flex align-items-center mb-3">
                                 <div class="me-2">
-                                    <label for="userPassword" class="col-form-label col-form-label-sm text-nowrap" aria-label="密碼">密碼</label>
+                                    <label for="userPassword" class="col-form-label col-form-label-sm text-nowrap" aria-label="密碼"><span class="text-danger">*</span>密&emsp;碼</label>
                                 </div>
                                 <div class="flex-grow-1">
                                     <input type="password" id="userPassword" class="form-control form-control-sm">
                                 </div>
                             </div>
-                            <div class="d-flex align-items-center mb-3">
+                            <div class="d-flex align-items-center mb-2">
                                 <div class="me-2">
-                                    <label for="captcha" class="col-form-label col-form-label-sm text-nowrap" aria-label="驗證碼">驗證碼</label>
+                                    <label for="captcha" class="col-form-label col-form-label-sm text-nowrap" aria-label="驗證碼"><span class="text-danger">*</span>驗證碼</label>
                                 </div>
                                 <div class="flex-grow-1">
                                     <input type="number" id="captcha" class="form-control form-control-sm">
                                 </div>
                             </div>
-                            <div class="d-flex align-items-center">
-                                <div class="verification font-family-Arial fw-bold">
-                                    <sapn class="d-block text-center">1234</sapn>
+                            <p id="invalid" class="text-danger mb-2 d-none"></p>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="flex-grow-1 d-flex  align-items-center">
+                                    <sapn class="text-center font-family-Arial fw-bold me-2 verification">1234</sapn>
                                     <div class="vcode-regen">
-                                        <button type="button" class="btn btn-secondary btn-sm" aria-label="重新產生驗證碼"><i class="fa-solid fa-repeat"></i></button>
-                                        <button type="button" class="btn btn-secondary btn-sm" aria-label="語音服務"><i class="fa-solid fa-volume-high"></i></button>
+                                            <button type="button" class="btn btn-secondary btn-sm" aria-label="重新產生驗證碼"><i class="fa-solid fa-repeat"></i></button>
+                                            <button type="button" class="btn btn-secondary btn-sm" aria-label="語音服務"><i class="fa-solid fa-volume-high"></i></button>
                                     </div>
-                                </div>
-                                <div class="flex-grow-1 px-3">
-                                    <a href="#" class="text-center samll d-block login-links" title="帳號申請">帳號申請</a>
-                                    <a href="#" class="text-center samll d-block login-links" title="忘記帳號/密碼">記帳號/密碼</a>
                                 </div>
                                 <div>
                                     <button type="button" class="btn btn-sm login-btn" id="loginBtn" title="登入">登入</button>
                                 </div>
                             </div>
-                        </form>
+                            <div class="text-center mt-3">
+                                <a href="#" class="text-center samll login-links" title="帳號申請">帳號申請/</a>
+                                <a href="#" class="text-center samll login-links" title="忘記帳號/密碼">忘記帳號/密碼</a>
+                            </div>
+                        </div>
                     </div>                    
                 </div>
             </div>
@@ -173,7 +175,10 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="py-3 text-center marquee">
-                                <p><a href="" title="★感謝支持，再度額滿★【活動通知】「教學實踐研究計畫撰寫與統計分析研習交流：以UCAN為例」" class="link-primary">★感謝支持，再度額滿★【活動通知】「教學實踐研究計畫撰寫與統計分析研習交流：以UCAN為例」</a></p>
+                                <p>
+                                    <a href="" title="★感謝支持，再度額滿★【活動通知】「教學實踐研究計畫撰寫與統計分析研習交流：以UCAN為例」" class="link-primary">★感謝支持，再度額滿★【活動通知】「教學實踐研究計畫撰寫與統計分析研習交流：以UCAN為例」</a>
+                                    <a href="" title="★報名已截止★【活動通知】112年UCAN應用交流研習會-「運用UCAN評估學習成效」開放報名！惠請各校派員參加~" class="link-primary">★報名已截止★【活動通知】112年UCAN應用交流研習會-「運用UCAN評估學習成效」開放報名！惠請各校派員參加~</a>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -756,14 +761,20 @@
                             </div>
                         </div>
                         <div class="col-lg-6 index-download py-5 px-3 px-md-5" data-aos="fade-left">
+
                             <ul class="nav nav-fill mb-3" id="ApplicationSharing-tab" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="pills-seminar-tab" data-bs-toggle="pill" data-bs-target="#pills-seminar" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><span class="icon-essence"></span> 研習會精華</h4></button>
+                                    <button class="nav-link active" id="pills-seminar-tab" data-bs-toggle="pill" data-bs-target="#pills-seminar" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                                        <h4><span class="icon-essence"></span> 研習會精華</h4>
+                                    </button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="pills-download-tab" data-bs-toggle="pill" data-bs-target="#pills-download" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><span class="icon-circle-download"></span> 講義下載</h4></button>
+                                    <button class="nav-link" id="pills-download-tab" data-bs-toggle="pill" data-bs-target="#pills-download" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                        <h4><span class="icon-circle-download"></span> 講義下載</h4>
+                                    </button>
                                 </li>
                             </ul>
+
                             <div class="tab-content" id="ApplicationSharing-tabContent">
                                 <div class="tab-pane fade show active" id="pills-seminar" role="tabpanel" aria-labelledby="pills-seminar-tab">
                                     <ul class="list list-unstyled">

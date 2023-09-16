@@ -16746,37 +16746,8 @@ ol.list-style-cjk-ideographic {
     right: 30px;
   }
 }
-.header {
-  background-color: #F0F2F4;
-  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.33);
-          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.33);
-  margin-bottom: 3px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
-}
-
-#search-btn {
-  margin-right: 0;
-  color: var(--bs-dark);
-}
-#search-btn:hover, #search-btn:focus-visible {
-  background-color: var(--bs-dark);
-  color: var(--bs-white);
-}
-
-.header-top a {
-  color: var(--bs-white);
-  margin-right: 15px;
-}
-.header-top a:hover {
-  text-decoration: underline;
-}
-
 .login {
-  width: 280px;
+  width: 250px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   position: absolute;
@@ -16798,12 +16769,10 @@ ol.list-style-cjk-ideographic {
   border-radius: 12px;
   margin: 8px;
   padding: 15px;
+  font-size: 0.875rem;
 }
 .login .login-form label {
-  width: 42px;
-  text-align: justify;
-  -moz-text-align-last: justify;
-       text-align-last: justify;
+  width: 50px;
 }
 .login .login-form input {
   border-radius: 0;
@@ -16820,7 +16789,7 @@ ol.list-style-cjk-ideographic {
   -moz-appearance: textfield;
 }
 .login .login-form .verification {
-  font-size: 1.125rem;
+  font-size: 1.5rem;
 }
 .login .login-form .samll {
   font-size: 0.75rem;
@@ -16849,6 +16818,35 @@ ol.list-style-cjk-ideographic {
 #search-btn:focus {
   background-color: var(--bs-dark);
   color: var(--bs-white);
+}
+
+.header {
+  background-color: #F0F2F4;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.33);
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.33);
+  margin-bottom: 3px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+#search-btn {
+  margin-right: 0;
+  color: var(--bs-dark);
+}
+#search-btn:hover, #search-btn:focus-visible {
+  background-color: var(--bs-dark);
+  color: var(--bs-white);
+}
+
+.header-top a {
+  color: var(--bs-white);
+  margin-right: 15px;
+}
+.header-top a:hover {
+  text-decoration: underline;
 }
 
 @media (min-width: 992px) {
@@ -17504,6 +17502,9 @@ ol.list-style-cjk-ideographic {
 .marquee > p {
   white-space: nowrap;
   margin-bottom: 0;
+}
+.marquee > p a {
+  margin-right: 100px;
 }
 
 /**

@@ -1,3 +1,4 @@
+@import 'login';
 .header {
     background-color: $header-bg;
     box-shadow: 0 3px 3px rgba($black, 0.33);
@@ -24,78 +25,6 @@
             text-decoration: underline;
         }
     }
-}
-// login
-.login {
-    width: 280px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    position: absolute;
-    background-color: var(--bs-primary);
-    top: 47px;
-    right: 0;
-    z-index: 2;
-    box-shadow: none;
-    overflow: hidden;
-    transition: width .3s ease;
-    transform-origin: right;
-    .login-form {
-        background-color: var(--bs-white);
-        border-radius: 12px;
-        margin: 8px;
-        padding: 15px;
-        label {
-            width: 42px;
-            text-align: justify;
-            text-align-last: justify;
-        }
-        input {
-            border-radius: 0;
-            border: 0;
-            background-color: $login-input-bg-light;
-            box-shadow: $login-input-shadow-inset;
-            &::-webkit-outer-spin-button,
-            &::-webkit-inner-spin-button {
-                -webkit-appearance: none;
-                margin: 0;
-            }
-        }
-        input[type="number"] {
-            -moz-appearance: textfield;
-        }
-        .verification {
-            font-size: 1.125rem;
-        }
-        .samll {
-            font-size: 0.75rem;
-        }
-        .vcode-regen > button {
-            width: 40px;
-            border-radius: 0;
-            padding: {
-                left: 0;
-                right: 0;
-            };
-            text-align: center;
-        }
-        .login-btn {
-            background-color: $login-button-bg;
-            border: $login-button-border;
-            border-radius: 0;
-            &:hover, &:focus {
-                background-color: $login-button-hover-bg;
-                color: var(--bs-white);
-            }
-        }
-        .login-links {
-            color: $login-links-color;
-            margin-right: 0;
-        }
-    }
-}
-#search-btn:focus {
-    background-color: var(--bs-dark);
-    color: var(--bs-white);
 }
 @include media-breakpoint-up(lg) {
     .header {
