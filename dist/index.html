@@ -14,13 +14,13 @@
         <div class="header-top bg-primary d-none d-lg-flex justify-content-between align-items-center px-4 px-xxl-5 py-3 position-relative">
             <a href="#U" accesskey="U" name="U" class="alt-u d-lg-inline-block position-absolute top-0 start-0" title="上方功能區塊">:::</a>
             <div class="search">                
-                <form>
+                <!-- <form>
                     <div class="input-group bg-white rounded-pill overflow-hidden">
                         <label for="tagsKeyWords" class="visually-hidden" aria-label="關鍵字搜尋">關鍵字</label>
                         <input type="text" id="tagsKeyWords" class="form-control border-0" placeholder="關鍵字搜尋" >
                         <button type="button" class="btn" id="search-btn" title="搜尋" aria-label="送出搜尋"><i class="fa-solid fa-magnifying-glass" title="搜尋"></i></button>
                     </div>
-                </form>
+                </form> -->
             </div>
             <div class="d-flex">
                 <a href="index.html" title="回首頁"><span class="icon-home"></span> 回首頁</a>
@@ -36,7 +36,7 @@
                             <i class="fa-solid fa-circle-arrow-down ms-2 ms-lg-0"></i>
                         </div>
                         <div class="login-form">
-                            <p class="text-center text-danger mb-2">*號為必填欄位</p>
+                            <p id="invalid" class="text-danger mb-2 d-none">*號為必填欄位</p>
                             <div class="d-flex align-items-center mb-3">
                                 <div class="me-2">
                                     <label for="userName" class="col-form-label col-form-label-sm text-nowrap" aria-label="帳號"><span class="text-danger">*</span>帳&emsp;號</label>
@@ -61,7 +61,6 @@
                                     <input type="number" id="captcha" class="form-control form-control-sm">
                                 </div>
                             </div>
-                            <p id="invalid" class="text-danger mb-2 d-none"></p>
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="flex-grow-1 d-flex  align-items-center">
                                     <sapn class="text-center font-family-Arial fw-bold me-2 verification">1234</sapn>
@@ -104,7 +103,7 @@
                             <i class="fa-solid fa-xmark"></i>
                         </div> -->
                         <ul class="menu">
-                            <li class="menu-item px-3 py-4 d-block d-lg-none">
+                            <!-- <li class="menu-item px-3 py-4 d-block d-lg-none">
                                 <div class="search">
                                     <form>
                                         <div class="input-group bg-white rounded-pill overflow-hidden phone-search">
@@ -114,7 +113,7 @@
                                         </div>
                                     </form>
                                 </div>
-                            </li>
+                            </li> -->
                             <li class="menu-item menu-item-has-children">
                                 <a href="#" data-toggle="sub-menu" title="職能與職業查詢">職能與職業查詢</a>
                                 <ul class="sub-menu">

@@ -7551,7 +7551,7 @@ __webpack_require__.r(__webpack_exports__);
         } else {
             invalid.classList.add('d-none')
         }
-        invalid.textContent = `請輸入${strArr.join('、')}`;
+        invalid.textContent = `*請輸入${strArr.join('、')}`;
     });
     
 })();

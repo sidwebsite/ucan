@@ -56,7 +56,7 @@ import * as bootstrap from 'bootstrap';
         } else {
             invalid.classList.add('d-none')
         }
-        invalid.textContent = `請輸入${strArr.join('、')}`;
+        invalid.textContent = `*請輸入${strArr.join('、')}`;
     });
     
 })();
