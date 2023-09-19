@@ -17589,35 +17589,49 @@ const linksSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_3__["default"](".
         },
     }
 });
+
 // function
-function tabsFoucs(tabNavId, tabContentId) {
-    if(document.querySelector(tabNavId)) {
-        const tabNav = document.querySelector(tabNavId);
-        const tab = new bootstrap__WEBPACK_IMPORTED_MODULE_0__.Tab(tabNav);
-        const tabContent = document.querySelector(tabContentId);
-        tabContent.querySelector('.custom-btn-primary').addEventListener('blur', () => {
-            tabNav.focus();
-            tab.show();
-        });
-    } else {
-        return false;
-    }
-    
-}
-// 
-tabsFoucs('#functionQuery-tab', '#careerInquiry');
-tabsFoucs('#recordQuery-tab', '#functionQuery');
-tabsFoucs('#abilityDevelopment-tab', '#recordQuery');
-// 
-tabsFoucs('#academicAffairs-tab', '#career');
-tabsFoucs('#schoolAffairs-tab', '#academicAffairs');
-// 最新消息
-tabsFoucs('#importantNotice-tab', '#news');
-tabsFoucs('#systemNotification-tab', '#importantNotice');
-tabsFoucs('#eventNotification-tab', '#systemNotification');
-tabsFoucs('#otherAnnouncements-tab', '#eventNotification');
-// 應用分享
-tabsFoucs('#pills-download-tab', '#pills-seminar');
+// function tabsFoucs(tabNavId, tabContentId) {    
+//     const tabNav = document.querySelector(tabNavId);
+//     const tabContent = document.querySelector(tabContentId);        
+//     const tabNavLinks = tabNav.querySelectorAll('.nav-link');
+//     const links = tabContent.querySelectorAll('.tab-pane');
+
+//     const triggerTabList = [].slice.call(tabNavLinks);
+//     triggerTabList.forEach((triggerEl, triggerindex) => {
+//         const tabTrigger = new bootstrap.Tab(triggerEl);
+//         triggerEl.addEventListener('focus', () => {
+//             tabTrigger.show();
+//         });
+//         // triggerEl.addEventListener('keyup, keypress', (e) => {
+//         //     if(e.keyCode === 9 && e.shiftKey === true){
+//         //         tabNavLinks[triggerindex - 1].focus();
+//         //         tabTrigger.show();
+//         //     }
+//         // });
+//     });
+
+//     links.forEach((pane, num, paneArr) => {
+//         const a = pane.querySelectorAll('a');
+//         a.forEach((a, i ,arr) => {
+//             a.addEventListener('focusout', () => {
+//                 if(i === arr.length - 1) {
+//                     if (num !== (paneArr.length - 1)) {
+//                         tabNavLinks[num + 1].focus();
+//                     } else {
+//                         return false;
+//                     };
+//                 }
+//             });
+//         }); 
+//     });
+// };
+// // 
+// tabsFoucs('#indexTabs', '#indexTabContent');
+// // 最新消息
+// tabsFoucs('#newsTabs', '#newsTabContent');
+// // 研習會精華和講義下載
+// tabsFoucs('#ApplicationSharingTab', '#ApplicationSharingTabContent');
 })();
 
 /******/ })()

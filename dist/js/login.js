@@ -7553,8 +7553,7 @@ __webpack_require__.r(__webpack_exports__);
             bool = false;
         }
         bool === false ? invalid.textContent = '*號為必填欄位' : invalid.textContent = `*請輸入${strArr.join('、')}`;
-    });
-    
+    });    
 })();
 })();
 
