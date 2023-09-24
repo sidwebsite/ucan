@@ -20,8 +20,8 @@
             justify-content: center;
             align-items: center;
             &:hover {
-                background-color: var(--bs-dark);
-                color: var(--bs-white);
+                background-color: var(--bs-warning);
+                color: $pagination-dark;
             }
         }
     } 
@@ -29,13 +29,14 @@
         .page-link {
             width: 42px;
             height: 42px;
-            background-color: var(--bs-primary);
+            background-color: $pagination-dark;
             color: var(--bs-white);
             border-radius: 50%;
             display: flex;
             align-items: center;
             &:hover {
-                background-color: var(--bs-danger);
+                background-color: var(--bs-warning);
+                color: $pagination-dark;
             }
         }
     }
@@ -44,8 +45,8 @@
     }
     &.active, .active {
         > .page-link {
-            background-color: var(--bs-dark);
-            color: var(--bs-white);
+            background-color: var(--bs-warning);
+            color: $pagination-dark;
         }
     } 
     &.disabled {

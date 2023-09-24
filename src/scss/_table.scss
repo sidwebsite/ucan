@@ -4,11 +4,11 @@
     --bs-table-color: #{$white};
     color: var(--bs-white);
 }
-// .table {
-//     > thead > tr > th {
-//         &:first-child {
-//             width: 1%;
-//             white-space: nowrap;
-//         }
-//     }
-// }
+.custom-table {
+    > thead > tr > th:not(:last-child) {
+        border-right: 1px solid var(--bs-white);
+    }
+    > tbody > tr > td:not(:last-child) {
+        border-right: 1px solid #A8A7A7;
+    }
+}

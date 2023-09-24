@@ -30,10 +30,10 @@
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background-color: var(--bs-primary);
+    background-color: var(--bs-dark);
     color: var(--bs-white); 
     &:hover {
-        background-color: var(--bs-danger);
+        background-color: var(--bs-primary);
         color: var(--bs-white); 
     }
 }

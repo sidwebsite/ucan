@@ -2,6 +2,9 @@
     display: flex;
     justify-content: flex-end;
     > button {
+        &.font-size {
+            display: none;
+        }
         background-color: var(--bs-primary);
         color: var(--bs-white);
         border-radius: 50%;
@@ -21,5 +24,13 @@
             color: $btn-font-color;
             outline: 2px dashed $custom-focus-color;
         }
+    }
+}
+#print {
+    display: none;
+}
+@include media-breakpoint-up(lg) {
+    #print, .social_share > button.font-size {
+        display: flex;
     }
 }

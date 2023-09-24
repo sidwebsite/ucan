@@ -12,23 +12,24 @@
     <div class="warpper">
         <a href="#content" title="移到主要內容" class="visually-hidden-focusable" tabindex="0">移到主要內容</a>
         <!-- header-top start -->
-        <div class="header-top bg-primary d-none d-lg-flex justify-content-end align-items-center px-4 px-xxl-5 py-3">
-            <div>
-                <a href="#U" accesskey="U" name="U" class="alt-u d-lg-inline-block" title="上方功能區塊">:::</a>
+        <div class="header-top bg-primary d-none d-lg-flex justify-content-between align-items-center px-4 px-xxl-5 py-3 position-relative">
+            <a href="#U" accesskey="U" name="U" class="alt-u d-lg-inline-block position-absolute top-0 start-0" title="上方功能區塊">:::</a>
+            <div class="search">                
+                <!-- <form>
+                    <div class="input-group bg-white rounded-pill overflow-hidden">
+                        <label for="tagsKeyWords" class="visually-hidden" aria-label="關鍵字搜尋">關鍵字</label>
+                        <input type="text" id="tagsKeyWords" class="form-control border-0" placeholder="關鍵字搜尋" >
+                        <button type="button" class="btn" id="search-btn" title="搜尋" aria-label="送出搜尋"><i class="fa-solid fa-magnifying-glass" title="搜尋"></i></button>
+                    </div>
+                </form> -->
+            </div>
+            <div class="d-flex">
                 <a href="index.html" title="回首頁"><span class="icon-home"></span> 回首頁</a>
                 <a href="#" title="網站導覽"><span class="icon-sitemap"></span> 網站導覽</a>
                 <a href="#" title="UCAN使用指南"><span class="icon-guidance"></span> UCAN使用指南</a>
-                <a href="#" title="常見問題"><span class="icon-question"></span> 常見問題</a>
                 <a href="#" title="聯絡我們"><span class="icon-message"></span> 聯絡我們</a>
-            </div>
-            <div class="search">
-                <form>
-                    <div class="input-group bg-white rounded-pill overflow-hidden">
-                        <label for="tagsKeyWords" class="visually-hidden " aria-label="關鍵字搜尋">關鍵字</label>
-                        <input type="text" id="tagsKeyWords" class="form-control border-0" placeholder="關鍵字搜尋" >
-                        <button class="btn" type="button" id="search-btn" title="搜尋"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </div>
-                </form>
+                <span class="text-white"><span class="fa-solid fa-user"></span> 王XX</span>
+                <a href="#" class="ms-3" title="登出"><i class="fa-solid fa-right-from-bracket"></i> 登出</a>
             </div>
         </div>
         <!-- header-top end -->
@@ -37,8 +38,8 @@
             <nav class="px-4 px-xxl-5 py-3 py-lg-0" id="">
                 <div class="header-main">
                     <div class="logo">
-                        <a class="navbar-brand d-block" href="index.html" title="連結到首頁">
-                            <h1><img src="../images/logo.svg" alt="大專校院就業職能平台logo"></h1>
+                        <a class="navbar-brand d-block" href="../index.html" title="連結到首頁">
+                            <h1><img src="../../images/logo.svg" alt="大專校院就業職能平台logo"></h1>
                         </a>
                     </div>
                     <div class="open-nav-menu">
@@ -52,34 +53,17 @@
                             <i class="fa-solid fa-xmark"></i>
                         </div> -->
                         <ul class="menu">
-                            <li class="menu-item px-3 py-4 d-block d-lg-none">
+                            <!-- <li class="menu-item px-3 py-4 d-block d-lg-none">
                                 <div class="search">
                                     <form>
                                         <div class="input-group bg-white rounded-pill overflow-hidden phone-search">
-                                            <input type="text" class="form-control border-0" placeholder="關鍵字搜尋" aria-label="關鍵字搜尋" >
-                                            <button class="btn btn-dark" type="button" id="phone-search-btn" title="搜尋"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                            <label for="phoneTagsKeyWords" class="visually-hidden" aria-label="關鍵字搜尋">關鍵字</label>
+                                            <input type="text" id="phoneTagsKeyWords" class="form-control border-0" placeholder="關鍵字搜尋" aria-label="關鍵字搜尋" >
+                                            <button type="button" class="btn btn-dark" id="phone-search-btn" title="搜尋" aria-label="關鍵字搜尋"><i class="fa-solid fa-magnifying-glass"></i></button>
                                         </div>
                                     </form>
                                 </div>
-                            </li>
-                            <li class="menu-item menu-item-has-children">
-                                <a href="#" class=" nav-border-left" data-toggle="sub-menu" title="認識UCAN">認識UCAN</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item"><a href="#" title="平台緣起及建置目的">平台緣起及建置目的</a></li>
-                                    <li class="menu-item"><a href="#" title="平台發展與依據">平台發展與依據</a></li>
-                                    <li class="menu-item"><a href="#" title="主要功能簡介">主要功能簡介</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item menu-item-has-children">
-                                <a href="#" class="nav-border-right" data-toggle="sub-menu" title="職能介紹">職能介紹</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item"><a href="#" title="職能定義">職能定義</a></li>
-                                    <li class="menu-item"><a href="#" title="職能效用">職能效用</a></li>
-                                    <li class="menu-item"><a href="#" title="職能資源">職能資源</a></li>
-                                    <li class="menu-item"><a href="#" title="職能應用">職能應用</a></li>
-                                    
-                                </ul>
-                            </li>
+                            </li> -->
                             <li class="menu-item menu-item-has-children">
                                 <a href="#" data-toggle="sub-menu" title="職能與職業查詢">職能與職業查詢</a>
                                 <ul class="sub-menu">
@@ -88,8 +72,13 @@
                                     <li class="menu-item"><a href="#" title="職業查詢">職業查詢</a></li>
                                 </ul>
                             </li>
-                            <li class="menu-item">
-                                <a href="#">職能興趣探索</a>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu" title="職能應用">職能應用</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="#" title="職場共通職能查詢">職場共通職能查詢</a></li>
+                                    <li class="menu-item"><a href="#" title="專業職能查詢">專業職能查詢</a></li>
+                                    <li class="menu-item"><a href="#" title="職業查詢">職業查詢</a></li>
+                                </ul>
                             </li>
                             <li class="menu-item menu-item-has-children">
                                 <a href="#" data-toggle="sub-menu" title="職能診斷">職能診斷</a>
@@ -99,34 +88,32 @@
                                 </ul>
                             </li>
                             <li class="menu-item menu-item-has-children">
-                                <a href="#" data-toggle="sub-menu" title="能力養成計劃">能力養成計劃</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item"><a href="#" title="職場共通職能能力養成計劃">職場共通職能能力養成計劃</a></li>
-                                    <li class="menu-item"><a href="#" title="專業職能能力養成計劃">專業職能能力養成計劃</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item menu-item-has-children">
-                                <a href="#" data-toggle="sub-menu" title="諮詢及診斷紀錄">諮詢及診斷紀錄</a>
+                                <a href="#" data-toggle="sub-menu" title="諮詢及診斷紀錄">診斷紀錄</a>
                                 <ul class="sub-menu">
                                     <li class="menu-item"><a href="#" title="歷經診斷結果">歷經診斷結果</a></li>
                                     <li class="menu-item"><a href="#" title="諮詢服務">諮詢服務</a></li>
                                     <li class="menu-item"><a href="#" title="諮詢紀錄">諮詢紀錄</a></li>
                                 </ul>
                             </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu" title="認識UCAN">認識UCAN</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="#" title="平台緣起及建置目的">平台緣起及建置目的</a></li>
+                                    <li class="menu-item"><a href="#" title="平台發展與依據">平台發展與依據</a></li>
+                                    <li class="menu-item"><a href="#" title="主要功能簡介">主要功能簡介</a></li>
+                                </ul>
+                            </li>
                             <!--  -->
                             <li class="menu-item d-block d-lg-none"><a href="#" title="網站導覽">網站導覽</a></li>
                             <li class="menu-item d-block d-lg-none"><a href="#" title="UCAN使用指南">UCAN使用指南</a></li>
-                            <li class="menu-item d-block d-lg-none"><a href="#" title="常見問題">常見問題</a></li>
                             <li class="menu-item d-block d-lg-none"><a href="#" title="聯絡我們">聯絡我們</a></li>
+                            <li class="menu-item d-block d-lg-none"><a href="#" title="登入">登入</a></li>
                             <!--  -->
                         </ul>
                     </div>
                 </div>
             </nav>
             <!-- navbar end -->
-            <!-- login start -->
-            <div class="login-warpper bg-danger"></div>
-            <!-- login end -->
         </header>
         <!-- header end -->
         <!-- main start -->
@@ -134,8 +121,13 @@
             <section class="page-header-bg">
                 <div class="container page-header">
                     <div class="row">
-                        <div class="col-auto">
-                            <h2 class="text-primary">最新消息</h2>
+                        <div class="col-md-6">
+                            <div class="d-md-flex align-items-center h-100 text-center text-md-start">
+                                <h2 class="text-primary d-inline-block mb-5 mb-md-0">最新消息</h2>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="../../images/page_bg.png" class="img-fluid" alt="">
                         </div>
                     </div>
                 </div>
@@ -144,8 +136,8 @@
                 <div class="container">
                     <div class="row pt-5 d-print-none">
                         <div class="col-12">
-                            <div class="border-bottom border-3 border-primary">
-                                <div class="row align-items-center flex-md-row flex-column-reverse pb-2">
+                            <div class="border-bottom border-3 border-primary breadcrumb-bg p-2">
+                                <div class="row align-items-center flex-md-row flex-column-reverse">
                                     <div class="col-md">
                                         <div class="d-flex">
                                             <a href="#C" title="中央內容區塊" accesskey="C" name="C" class="alt-c me-2">:::</a>
@@ -175,11 +167,10 @@
                     <!--  -->
                     <div class="row">
                         <div class="col-12">
-                            <div class="d-flex pt-5 pb-3 d-print-none">
-                                <span class="me-3"><img src="../images/icon/heading-icon.svg" alt=""></span>
-                                <h4 class="h4 text-primary">最新消息 / <span class="font-family-Arial">News</span></h4>
+                            <div class="d-flex pt-5 pb-3 justify-content-center justify-content-md-start d-print-none">
+                                <h2 class="text-primary text-center text-lg-start title"><span>最新消息</span><span>/</span><span class="font-family-Arial">News</span></h2>
                             </div>
-                            <article>
+                            <article class="page-content">
                                 <!-- heading -->
                                 <div class="bg-light p-3 fw-bolder mb-4">
                                     <div class="d-md-flex mb-2 d-print-flex">
@@ -228,7 +219,7 @@
                                     </li>
                                     <li class="mb-4">報名方式
                                         <ul class="list-unstyled">
-                                            <li>(一)本次研習活動採用線上報名，報名網址如下：<a href="https://forms.gle/fukkzcsAr1CL5Gdg6" class="link-primary" title="【報名表】教學實踐研究計畫撰寫與統計分析研習交流：以UCAN為例(另開新視窗)" target="_blank">https://forms.gle/fukkzcsAr1CL5Gdg6</a> </li>
+                                            <li>(一)本次研習活動採用線上報名，報名網址如下：<a href="https://forms.gle/fukkzcsAr1CL5Gdg6" title="【報名表】教學實踐研究計畫撰寫與統計分析研習交流：以UCAN為例(另開新視窗)" target="_blank">https://forms.gle/fukkzcsAr1CL5Gdg6</a> </li>
                                             <li>(二)報名日期自即日起至112年8月21日(一)中午12：00止。</li>
                                             <li>(三)本研習因場地座位有限，額滿後將會提早關閉報名表單。UCAN辦公室將於8月23日(三)前寄發報名成功通知信，請留意信件通知。</li>
                                             <li>(四)研習會當天請持「報名成功通知信」辦理報到。為免影響他人權益，如師長因故不克出席，請於8月24日(四)中午12：00前來電告知，以利備取者依序遞補。</li>
@@ -246,8 +237,8 @@
                                             <li>(四)有關研習活動及報名事宜請洽UCAN計畫辦公室：
                                                 <ul class="list-unstyled ms-3">
                                                     <li>聯絡電話：(02) 2701-6565分機343</li>
-                                                    <li>E-mail： <a href="mailto:ucan@itri.org.tw" class="link-primary" title="寄信至ucan@itri.org.tw">ucan@itri.org.tw</a></li>
-                                                    <li>大專校院就業職能平台：<a href="：https://ucan.moe.edu.tw" class="link-primary" title="大專校院就業職能平台">https://ucan.moe.edu.tw</a></li>
+                                                    <li>E-mail： <a href="mailto:ucan@itri.org.tw" title="寄信至ucan@itri.org.tw">ucan@itri.org.tw</a></li>
+                                                    <li>大專校院就業職能平台：<a href="：https://ucan.moe.edu.tw" title="大專校院就業職能平台">https://ucan.moe.edu.tw</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -260,16 +251,16 @@
                                 <!-- 附件 stsrt -->
                                 <div class="accessory mb-5 d-print-none">
                                     <div class="d-md-flex align-items-center mb-3">
-                                        <span class="bg-primary rounded-pill px-4 py-1 text-white fw-bolder me-2 shadow">附件一</span>
-                                        <a href="#" class="link-primary" title="(研習地點更新)20230831教學實踐研究計畫撰寫與統計分析研習交流：以UCAN為例 研習會議程.pdf(另開新視窗)" target="_blank" download=" (研習地點更新)20230831教學實踐研究計畫撰寫與統計分析研習交流：以UCAN為例 研習會議程.pdf">(研習地點更新)20230831教學實踐研究計畫撰寫與統計分析研習交流：以UCAN為例 研習會議程.pdf</a>
+                                        <span class="bg-warning rounded-pill px-4 py-1 fw-bolder me-2 shadow">附件一</span>
+                                        <a href="#" title="(研習地點更新)20230831教學實踐研究計畫撰寫與統計分析研習交流：以UCAN為例 研習會議程.pdf(另開新視窗)" target="_blank" download=" (研習地點更新)20230831教學實踐研究計畫撰寫與統計分析研習交流：以UCAN為例 研習會議程.pdf">(研習地點更新)20230831教學實踐研究計畫撰寫與統計分析研習交流：以UCAN為例 研習會議程.pdf</a>
                                     </div> 
                                     <div class="d-md-flex align-items-center mb-3">
-                                        <span class="bg-primary rounded-pill px-4 py-1 text-white fw-bolder me-2 shadow">附件二</span>
-                                        <a href="#" class="link-primary" title="議程海報-a1-o_01.jpg(另開新視窗)" target="_blank" download="議程海報-a1-o_01.jpg">議程海報-a1-o_01.jpg</a>
+                                        <span class="bg-warning rounded-pill px-4 py-1 fw-bolder me-2 shadow">附件二</span>
+                                        <a href="#" title="議程海報-a1-o_01.jpg(另開新視窗)" target="_blank" download="議程海報-a1-o_01.jpg">議程海報-a1-o_01.jpg</a>
                                     </div> 
                                 </div>
                                 <!-- 附件 end -->
-                                <a href="8_1.html" class="custom-btn-primary px-4 py-2 d-print-none" title="回總表"><i class="fa-solid fa-reply"></i> 回總表</a>
+                                <a href="news.html" class="custom-btn-primary px-4 py-2 d-print-none" title="回總表"><i class="fa-solid fa-reply"></i> 回總表</a>
                                 
                             </article>
                         </div>
@@ -284,82 +275,26 @@
             <a href="#B" title="下方功能區塊" accesskey="B" name="B" class="alt-b position-absolute top-0 start-0">:::</a>
             <!-- footer menu start -->
             <div class="footer-menu-wrapper d-none d-lg-block">
-                <div class="footer-menu-btn border-bottom border-6 border-danger text-center">
-                    <button type="button" id="footerMenuBtn" class="btn btn-danger px-5">點選收合 <i class="fa-solid fa-circle-arrow-down"></i></button>
+                <div class="footer-menu-btn border-bottom border-6 border-primary text-center">
+                    <button type="button" id="footerMenuBtn" class="btn btn-primary px-5">點選收合 <i class="fa-solid fa-circle-arrow-down"></i></button>
                 </div>
                 <div class="collapse" id="footerMenu">
-                    <div class="bg-danger footer-menu">
-                        <div class="container">
-                            <div class="d-flex">
-                                <div class="flex-fill text-center">
-                                    <h4 class="text-white text-decoration-underline mb-4">認識UCAN</h4>
-                                    <div class="footer-menu-links">
-                                        <a href="#" title="平台緣起及建置目的">平台緣起及建置目的</a>
-                                        <a href="#" title="平台發展與依據">平台發展與依據</a>
-                                        <a href="#" title="主要功能簡介">主要功能簡介</a>
-                                    </div>
-                                </div>
-                                <div class="flex-fill text-center">
-                                    <h4 class="text-white text-decoration-underline mb-4">職能介紹</h4>
-                                    <div class="footer-menu-links">
-                                        <a href="#" title="職能定義">職能定義</a>
-                                        <a href="#" title="職能效用">職能效用</a>
-                                        <a href="#" title="職能資源">職能資源</a>
-                                        <a href="#" title="職能應用">職能應用</a>
-                                    </div>
-                                </div>
-                                <div class="flex-fill text-center">
-                                    <h4 class="text-white text-decoration-underline mb-4">職能與職業查詢</h4>
-                                    <div class="footer-menu-links">
-                                        <a href="#" title="職場共通職能查詢">職場共通職能查詢</a>
-                                        <a href="#" title="專業職能查詢">專業職能查詢</a>
-                                        <a href="#" title="職業查詢">職業查詢</a>
-                                    </div>
-                                </div>
-                                <div class="flex-fill text-center"><a href="#" title="職能興趣探索" class="d-block"><h4 class="text-white text-decoration-underline mb-4">職能興趣探索</h4></a></div>
-                                <div class="flex-fill text-center">
-                                    <h4 class="text-white text-decoration-underline mb-4">職能診斷</h4>
-                                    <div class="footer-menu-links">
-                                        <a href="#" title="職場共通職能">職場共通職能</a>
-                                        <a href="#" title="專業職能">專業職能</a>
-                                    </div>
-                                </div>
-                                <div class="flex-fill text-center">
-                                    <h4 class="text-white text-decoration-underline mb-4">能力養成計劃</h4>
-                                    <div class="footer-menu-links">
-                                        <a href="#" title="職場共通職能能力養成計劃">職場共通職能能力養成計劃</a>
-                                        <a href="#" title="專業職能能力養成計劃">專業職能能力養成計劃</a>
-                                    </div>
-                                </div>
-                                <div class="flex-fill text-center">
-                                    <h4 class="text-white text-decoration-underline mb-4">諮詢及診斷紀錄</h4>
-                                    <div class="footer-menu-links">
-                                        <a href="#" title="歷經診斷結果">歷經診斷結果</a>
-                                        <a href="#" title="諮詢服務">諮詢服務</a>
-                                        <a href="#" title="諮詢紀錄">諮詢紀錄</a>
-                                    </div>
-                                </div>
-                            </div>                        
-                        </div>
-                    </div>
-                    
+                    <div class="bg-primary footer-menu"></div>
                 </div>
             </div>
             <!-- footer menu end -->
             <!-- footer Information start -->
             <div class="footer-Information">
-                <div class="container">
+                <div class="container px-5 px-md-0">
                     <div class="row">
-                        <div class="col-lg-6 col-md-12 mb-lg-0 mb-4">
-                            <article class="h1">
-                                <p>使用上遇到困難？</p>
-                                <p>希望洽談學校功能介接？</p>
-                                <p>請聯絡我們！</p>
-                            </article>
+                        <div class="col-md mb-lg-0 mb-4">
+                            <figure>
+                                <img src="../../images/footer_logo.svg" alt="" class="img-fluid">
+                            </figure>
                         </div>
-                        <div class="col-lg col-md-6 pe-3 pe-xxl-4 mb-5 mb-lg-0">
-                            <h3 class="mb-4">UCAN計畫辦公室</h3>
-                            <address class="border-start border-4 border-white ps-3 mb-4">
+                        <div class="col-md pe-3 pe-xxl-4 mb-5 mb-lg-0">
+                            <h3 class="mb-4 text-center text-md-start">UCAN計畫辦公室</h3>
+                            <address class="border-start border-4 border-dark ps-3 mb-3">
                                 <ul class="list-inline">
                                     <li class="list-inline-item">諮詢信箱：</li>
                                     <li class="list-inline-item"><a href="mailto:ucan@itri.org.tw" title="寄信至ucan@itri.org.tw">ucan@itri.org.tw</a></li>
@@ -369,25 +304,27 @@
                                     <li class="list-inline-item">02-2701-6565#343</li>
                                 </ul>
                             </address>
-                            <a href="#" title="或填寫聯絡表單" class="custom-btn-red px-4">或填寫聯絡表單 <i class="fa-solid fa-circle-arrow-right"></i></a>
-                        </div>
-                        <div class="col-lg col-md-6">
-                            <h3 class="mb-4">服務時間</h3>
-                            <div class="border-start border-4 border-white ps-3 mb-4">
-                                <p>周一~周五(非假日)</p>
-                                <p>上午8:30-12:00</p>
-                                <p class="mb-0">下午13:00-17:30</p>
+                            <div class="text-center text-md-start">
+                                <a href="#" title="或填寫聯絡表單" class="footer-btn px-4">或填寫聯絡表單 <i class="fa-solid fa-circle-arrow-right"></i></a>
                             </div>
                         </div>
-                    </div>
-                    <div class="row pt-5 align-items-center">
-                        <div class="col-md">
-                            <p class="text-light mb-0">版權所有 ©教育部 All Rights Reserved.<br />本平台使用者端電腦環境瀏覽器請務必使用IE10以上的版本，始能正常瀏覽使用，請將螢幕解析度設定為1024x768將可得到最佳效果</p>
-                        </div>
-                        <div class="col-auto">
-                            <a href="#" target="_blank" title="本網站通過無障礙AA檢測(另開新視窗)">
-                                <img src="../images/accessibility.png" alt="本網站通過無障礙AA檢測(另開新視窗)" title="本網站通過無障礙AA檢測(另開新視窗)">
+                        <div class="col-md mb-5 mb-lg-0">
+                            <h3 class="mb-4 text-center text-md-start">服務時間</h3>
+                            <div class="border-start border-4 border-dark ps-3 mb-3">
+                                <p>周一~周五(非假日)</p>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">上午8:30-12:00</li>
+                                    <li class="list-inline-item">下午13:00-17:30</li>
+                                </ul>
+                            </div>
+                            <a href="#" class="text-center text-md-start d-block" target="_blank" title="本網站通過無障礙AA檢測(另開新視窗)">
+                                <img src="../../images/accessibility.png" alt="本網站通過無障礙AA檢測" title="本網站通過無障礙AA檢測(另開新視窗)">
                             </a>
+                        </div>
+                        <div class="col-lg d-none d-lg-block">
+                            <figure>
+                                <img src="../../images/footer_img.svg" alt="" class="img-fluid">
+                            </figure>
                         </div>
                     </div>
                 </div>

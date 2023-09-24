@@ -7,11 +7,16 @@ module.exports = {
         'main': './src/js/main.js',
         'index': './src/js/index.js',
         "login": './src/js/login.js',
-        'shareFeedback': './src/js/shareFeedback.js'
+        'shareFeedback': './src/js/shareFeedback.js',
+        'footer': './src/js/footer.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'js/[name].js',
+        assetModuleFilename: pathData => {
+            const filepath = path.dirname(pathData.filename).split('/').slice(1).join('/');
+            return `${filepath}/[name][ext]`;
+        },
     },
     module: {
         rules: [
@@ -38,15 +43,7 @@ module.exports = {
             },
             {
                 test: /\.(png|jpe?g|gif|webp|svg|ico)$/i,
-                type: 'asset/resource',
-                parser: {
-                    dataUrlCondition: {
-                        maxSize: 1024
-                    }
-                },
-                generator: {
-                    filename: 'images/[name][ext]'
-                }
+                type: 'asset/resource'
             },
             {
                 test: /\.(svg|eot|woff|woff2|ttf)$/,
@@ -81,32 +78,39 @@ module.exports = {
             chunks: ['main', 'index']
         }),
         // 最新消息
-        // new HtmlWebpackPlugin({
-        //     template: './src/html/8_1.html',
-        //     filename: '8_1.html',
-        //     minify: false,
-        //     chunks: ['main']
-        // }),
-        // new HtmlWebpackPlugin({
-        //     template: './src/html/8_2.html',
-        //     filename: '8_2.html',
-        //     minify: false,
-        //     chunks: ['main']
-        // }),
-        // // 學校案例分享
-        // new HtmlWebpackPlugin({
-        //     template: './src/html/9.html',
-        //     filename: '9.html',
-        //     minify: false,
-        //     chunks: ['main', 'shareFeedback']
-        // }),
-        // // 檔案下載
-        // new HtmlWebpackPlugin({
-        //     template: './src/html/10.html',
-        //     filename: '10.html',
-        //     minify: false,
-        //     chunks: ['main']
-        // }),
+        new HtmlWebpackPlugin({
+            template: './src/html/others/news.html',
+            filename: 'others/news.html',
+            minify: false,
+            chunks: ['main', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/others/news_content.html',
+            filename: 'others/news_content.html',
+            minify: false,
+            chunks: ['main', 'footer']
+        }),
+        // 學校案例分享
+        new HtmlWebpackPlugin({
+            template: './src/html/others/ShareAndFeedback.html',
+            filename: 'others/ShareAndFeedback.html',
+            minify: false,
+            chunks: ['main', 'footer', 'shareFeedback']
+        }),
+        // 檔案下載
+        new HtmlWebpackPlugin({
+            template: './src/html/others/download.html',
+            filename: 'others/download.html',
+            minify: false,
+            chunks: ['main', 'footer']
+        }),
+        // 
+        new HtmlWebpackPlugin({
+            template: './src/html/aboutUACN/competency.html',
+            filename: 'aboutUACN/competency.html',
+            minify: false,
+            chunks: ['main', 'footer']
+        })
     ],
     devServer: {
         host: 'localhost',

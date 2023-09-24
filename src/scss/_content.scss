@@ -1,17 +1,16 @@
 
 .page-header-bg {
-    background-image: $page-header-gradient-bg;
-    background-repeat: no-repeat;
+    @include backgroundImage('index_news_bg.jpg');
     margin-top: 80px;
 }
 .page-header {
-    background-image: url('../images/page_bg.png');
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: 40%;
+    // background-image: url('../images/page_bg.png');
+    // background-repeat: no-repeat;
+    // background-position: right bottom;
+    // background-size: 40%;
     padding: {
-        top: 60px;
-        bottom: 60px;
+        top: 30px;
+        bottom: 0;
     };
     h2 {
         position: relative;
@@ -33,6 +32,27 @@
         &::after {
             right: 0;
         }
+    }
+}
+.page-content {
+    p {
+        margin-bottom: 1.5rem;
+        text-align: justify;
+        line-height: 1.5;
+    }
+    figure {
+        margin-bottom: 1.5rem;
+    }
+}
+.breadcrumb-bg {
+    background-color: rgba($breadcrumb-bg, 0.7);
+}
+.title-icon {
+    margin-left: -1.5rem;
+    > span {
+        display: inline-block;
+        font-size: 0.5rem;
+        margin-right: 8px;
     }
 }
 // 學校案例分享
@@ -69,16 +89,17 @@
         }
     }
 }
+@import 'aboutUACN';
 @include media-breakpoint-up(lg) {
     .page-header-bg {
         margin-top: 0;
     }
     .page-header {
-        background-size: auto;
-        padding: {
-            top: 100px;
-            bottom: 100px;
-        };
+        // background-size: auto;
+        // padding: {
+        //     top: 120px;
+        //     bottom: 120px;
+        // };
         h2 {
             font-size: 3rem;
         }
@@ -87,5 +108,17 @@
         position: absolute;
         top: 1rem;
         right: 1rem;
+    }
+}
+@include media-breakpoint-down(sm) {
+    #newsTabs.nav-tabs {
+        .nav-link {
+            margin: 0 auto;
+            width: 47px;
+            padding: {
+                left: 0;
+                right: 0;
+            };
+        }
     }
 }

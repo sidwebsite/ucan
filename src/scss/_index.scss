@@ -144,6 +144,8 @@
         .nav-link {            
             border: 0;
             border-bottom: var(--bs-nav-tabs-border-width) solid var(--bs-nav-tabs-border-color);
+            font-size: 1.5rem;
+            font-weight: bolder;
             &.active {
                 border-color: var(--bs-nav-tabs-link-active-border-color);
             }
@@ -359,6 +361,7 @@
         &.nav-tabs {
             border: 0;
             .nav-link {
+                font-size: 1rem;
                 margin-bottom: 15px;
             }
         }
