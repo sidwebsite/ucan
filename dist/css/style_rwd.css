@@ -17512,6 +17512,12 @@ ol.list-style-cjk-ideographic {
   }
 }
 @media (max-width: 575.98px) {
+  .page-header figure {
+    width: 260px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   #newsTabs.nav-tabs .nav-link {
     margin: 0 auto;
     width: 47px;
@@ -19105,6 +19111,7 @@ button.swiper-pagination-bullet {
   #newsTabs.nav-tabs .nav-link {
     font-size: 1rem;
     margin-bottom: 15px;
+    border-color: transparent;
   }
 }
 @media (max-width: 575.98px) {

@@ -111,6 +111,17 @@
     }
 }
 @include media-breakpoint-down(sm) {
+    .page-header {
+        figure {
+            width: 260px;
+            margin: {
+                bottom: 30px;
+                left: auto;
+                right: auto;
+            };
+            
+        }
+    }
     #newsTabs.nav-tabs {
         .nav-link {
             margin: 0 auto;
