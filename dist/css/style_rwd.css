@@ -7,11 +7,11 @@
   \********************************************************************/
 @font-face {
   font-family: 'icomoon';
-  src:  url(../fonts/83f93544.eot?t58282);
-  src:  url(../fonts/83f93544.eot?t58282#iefix) format('embedded-opentype'),
-    url(../fonts/526b314a.ttf?t58282) format('truetype'),
-    url(../fonts/b03d4531.woff?t58282) format('woff'),
-    url(../fonts/4d90d84e.svg?t58282#icomoon) format('svg');
+  src:  url(../fonts/icomoon.eot);
+  src:  url(../fonts/icomoon.eot#iefix) format('embedded-opentype'),
+    url(../fonts/icomoon.ttf) format('truetype'),
+    url(../fonts/icomoon.woff) format('woff'),
+    url(../fonts/icomoon.svg#icomoon) format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -17396,7 +17396,7 @@ ol.list-style-cjk-ideographic {
 }
 
 .competency-utility {
-  background-image: url(../fonts/4fe25f16.svg);
+  background-image: url(../images/aboutUACN/competency_utility_bg.svg);
   background-position: left center;
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -18841,7 +18841,7 @@ button.swiper-pagination-bullet {
 }
 
 .Feedback {
-  background-image: url(../fonts/8a93d9df.svg);
+  background-image: url(../images/index_feedback_bg.svg);
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 120px;

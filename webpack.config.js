@@ -46,11 +46,8 @@ module.exports = {
                 type: 'asset/resource'
             },
             {
-                test: /\.(svg|eot|woff|woff2|ttf)$/,
-                type: 'asset/resource',
-                generator: {
-                    filename: 'fonts/[hash:8][ext][query]'
-                }
+                test: /\.(eot|woff|woff2|ttf)$/,
+                type: 'asset/resource'
             },
             {
                 test: /\.html$/i,
