@@ -7503,6 +7503,12 @@ __webpack_require__.r(__webpack_exports__);
     const loginFormCollapse = new bootstrap__WEBPACK_IMPORTED_MODULE_0__.Collapse(loginForm, {
         toggle: false
     });
+    loginFormBtn.addEventListener('keydown', (e) => {
+        let keycode = e.keyCode || e.which;
+        if(e.shiftKey && keycode === 9) {
+            loginFormCollapse.hide();
+        }
+    })
     loginFormBtn.addEventListener('click', function (e) {
         e.preventDefault();
         loginFormCollapse.toggle();

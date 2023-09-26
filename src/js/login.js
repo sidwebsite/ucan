@@ -8,6 +8,12 @@ import * as bootstrap from 'bootstrap';
     const loginFormCollapse = new bootstrap.Collapse(loginForm, {
         toggle: false
     });
+    loginFormBtn.addEventListener('keydown', (e) => {
+        let keycode = e.keyCode || e.which;
+        if(e.shiftKey && keycode === 9) {
+            loginFormCollapse.hide();
+        }
+    })
     loginFormBtn.addEventListener('click', function (e) {
         e.preventDefault();
         loginFormCollapse.toggle();
