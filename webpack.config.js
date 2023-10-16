@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -102,13 +103,60 @@ module.exports = {
             minify: false,
             chunks: ['main', 'footer']
         }),
-        // 
+        // 職能概念
         new HtmlWebpackPlugin({
             template: './src/html/aboutUACN/competency.html',
             filename: 'aboutUACN/competency.html',
             minify: false,
             chunks: ['main', 'footer']
-        })
+        }),
+        // 聯絡我們
+        new HtmlWebpackPlugin({
+            template: './src/html/others/contactUs.html',
+            filename: 'others/contactUs.html',
+            minify: false,
+            chunks: ['main', 'footer']
+        }),
+        // 修改密碼 
+        new HtmlWebpackPlugin({
+            template: './src/html/member/editPassword.html',
+            filename: 'member/editPassword.html',
+            minify: false,
+            chunks: ['main', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/member/editPasswordExpiry.html',
+            filename: 'member/editPasswordExpiry.html',
+            minify: false,
+            chunks: ['main', 'footer']
+        }),
+        // 忘記密碼
+        new HtmlWebpackPlugin({
+            template: './src/html/member/forgotPassword.html',
+            filename: 'member/forgotPassword.html',
+            minify: false,
+            chunks: ['main', 'footer']
+        }),
+        // 帳號復用 
+        new HtmlWebpackPlugin({
+            template: './src/html/member/reuseAccount.html',
+            filename: 'member/reuseAccount.html',
+            minify: false,
+            chunks: ['main', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/member/reuseAccountPassword.html',
+            filename: 'member/reuseAccountPassword.html',
+            minify: false,
+            chunks: ['main', 'footer']
+        }),
+        // 忘記帳號、密碼
+        new HtmlWebpackPlugin({
+            template: './src/html/member/forgotAccountAndPassword.html',
+            filename: 'member/forgotAccountAndPassword.html',
+            minify: false,
+            chunks: ['main', 'footer']
+        }),
     ],
     devServer: {
         host: 'localhost',

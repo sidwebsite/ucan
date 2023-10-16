@@ -4,7 +4,7 @@
   "description": "",
   "main": "./src/js/main.js",
   "scripts": {
-    "start": "webpack --mode development",
+    "start": "webpack --mode none",
     "depoly": "webpack --mode production",
     "serve": "webpack serve --mode none"
   },
@@ -36,6 +36,7 @@
     "@popperjs/core": "^2.11.8",
     "aos": "^3.0.0-beta.6",
     "bootstrap": "^5.3.1",
+    "jquery": "^3.7.1",
     "print-js": "^1.6.0",
     "sharer.js": "^0.5.1",
     "swiper": "^10.1.0"

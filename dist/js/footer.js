@@ -1,8 +1,5 @@
 /******/ (() => { // webpackBootstrap
 var __webpack_exports__ = {};
-/*!**************************!*\
-  !*** ./src/js/footer.js ***!
-  \**************************/
 ;(function(){
     const footerMune = document.querySelector('.footer-menu');
     footerMune.innerHTML = `<div class="container">

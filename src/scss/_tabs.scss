@@ -1,0 +1,21 @@
+#forgot-tab {
+    &.nav-pills .nav-link {
+        border-radius: 12px 12px 0 0;
+        background-color: #E2E0E0;
+        color: var(--bs-dark);
+        font-size: 1.125rem;
+        font-weight: bold;
+        &.active {
+            background-color: var(--bs-primary);
+            color: var(--bs-white);
+        }
+    }
+}
+#forgot-tabContent {
+    .tab-pane {
+        > div {
+            border: 2px solid var(--bs-primary);
+            border-radius: 0 16px 16px 16px;
+        }
+    }
+}

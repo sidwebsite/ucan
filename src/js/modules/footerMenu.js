@@ -1,5 +1,3 @@
-// bootstrap
-import * as bootstrap from 'bootstrap';
 export default function footerMenu() {
     const footerMenuBtn =  document.querySelector('#footerMenuBtn'),
     footerMenu = document.querySelector('#footerMenu');

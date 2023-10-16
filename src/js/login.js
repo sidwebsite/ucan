@@ -1,5 +1,3 @@
-// bootstrap
-import * as bootstrap from 'bootstrap';
 ;(function() {
     const loginFormBtn =  document.querySelector('#loginFormBtn');
     const loginForm = document.querySelector('#loginForm');

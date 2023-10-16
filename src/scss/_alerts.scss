@@ -1,0 +1,9 @@
+.custom-alert {
+    background-color: rgba($custom-gray, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba($black, 0.13);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}

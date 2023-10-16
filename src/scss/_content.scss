@@ -43,6 +43,12 @@
     figure {
         margin-bottom: 1.5rem;
     }
+    pre {
+        font-size: inherit;
+        font-family: inherit;
+        white-space:pre-wrap;
+        margin-bottom: 0;
+    }
 }
 .breadcrumb-bg {
     background-color: rgba($breadcrumb-bg, 0.7);

@@ -1,6 +1,8 @@
-
 // scss
 import '../scss/style.scss';
+// bootstrap
+import * as bootstrap from 'bootstrap';
+window.bootstrap = bootstrap;
 // header 
 import header from './modules/header';
 header();
@@ -10,8 +12,8 @@ navbar();
 // font size
 import fontSize from './modules/fontSize';
 fontSize();
-// print 
-import print from './modules/print ';
+// // print 
+import print from './modules/print';
 print();
 // social share
 import socialShare from './modules/socialShare';

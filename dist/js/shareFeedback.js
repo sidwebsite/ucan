@@ -1,8 +1,5 @@
 /******/ (() => { // webpackBootstrap
 var __webpack_exports__ = {};
-/*!*********************************!*\
-  !*** ./src/js/shareFeedback.js ***!
-  \*********************************/
 ;(function() {
     const shareFeedbackLink = document.querySelectorAll('.shareFeedback-link');
     const shareFeedbackModal = document.querySelectorAll('.shareFeedbackModal');

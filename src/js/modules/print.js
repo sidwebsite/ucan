@@ -5,7 +5,7 @@ export default function print() {
         printJS({
             printable: 'content',
             type: 'html',
-            css: 'css/style.css',
+            css: '../css/style_rwd.css',
             scanStyles: false
         });
     });

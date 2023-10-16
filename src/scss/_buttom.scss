@@ -37,3 +37,19 @@
         color: var(--bs-white); 
     }
 }
+// submit
+.custom-btn-submit {
+    border-radius: 0;
+    background-color: var(--bs-warning);
+    color: var(--bs-dark);
+    font-weight: bold;
+    &:hover, &:focus:not(:focus-visible) {
+        background-color: var(--bs-primary);
+        color: var(--bs-white);
+    }
+    &:focus {
+        background-color: var(--bs-primary);
+        color: var(--bs-white);
+        outline: 2px dashed $custom-focus-color;
+    }
+}

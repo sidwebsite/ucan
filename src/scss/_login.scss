@@ -37,20 +37,8 @@
         input[type="number"] {
             -moz-appearance: textfield;
         }
-        .verification {
-            font-size: 1.5rem;
-        }
         .samll {
             font-size: 0.75rem;
-        }
-        .vcode-regen > button {
-            width: 40px;
-            border-radius: 0;
-            padding: {
-                left: 0;
-                right: 0;
-            };
-            text-align: center;
         }
         .login-btn {
             background-color: $login-button-bg;
@@ -67,7 +55,23 @@
         }
     }
 }
+.vcode-regen > button {
+    width: 40px;
+    border-radius: 0;
+    padding: {
+        left: 0;
+        right: 0;
+    };
+    text-align: center;
+}
+.verification {
+    font-size: 1.5rem;
+}
 #search-btn:focus {
     background-color: var(--bs-dark);
     color: var(--bs-white);
+}
+.replay-captcha {
+    font-size: .5rem;
+    color: $login-links-color;
 }
