@@ -10,6 +10,7 @@ module.exports = {
         "login": './src/js/login.js',
         'shareFeedback': './src/js/shareFeedback.js',
         'news': './src/js/news.js',
+        'aboutUACN': './src/js/aboutUACN.js',
         'footer': './src/js/footer.js'
     },
     output: {
@@ -108,25 +109,19 @@ module.exports = {
             template: './src/html/aboutUACN/aboutUACN_1.html',
             filename: 'aboutUACN/aboutUACN_1.html',
             minify: false,
-            chunks: ['main', 'footer']
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/html/aboutUACN/aboutUACN_1.html',
-            filename: 'aboutUACN/aboutUACN_1.html',
-            minify: false,
-            chunks: ['main', 'footer']
+            chunks: ['main', 'aboutUACN', 'footer']
         }),
         new HtmlWebpackPlugin({
             template: './src/html/aboutUACN/aboutUACN_2.html',
             filename: 'aboutUACN/aboutUACN_2.html',
             minify: false,
-            chunks: ['main', 'footer']
+            chunks: ['main', 'aboutUACN', 'footer']
         }),
         new HtmlWebpackPlugin({
             template: './src/html/aboutUACN/aboutUACN_3.html',
             filename: 'aboutUACN/aboutUACN_3.html',
             minify: false,
-            chunks: ['main', 'footer']
+            chunks: ['main', 'aboutUACN', 'footer']
         }),
         // 職能概念
         new HtmlWebpackPlugin({

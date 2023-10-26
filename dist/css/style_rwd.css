@@ -17586,6 +17586,15 @@ ol.list-style-cjk-ideographic {
           align-items: center;
 }
 
+.aboutUACN {
+  position: relative;
+}
+.aboutUACN .iterm-hight {
+  height: 0;
+}
+.aboutUACN .item {
+  position: relative;
+}
 .aboutUACN .item p {
   margin-bottom: 2.4rem;
 }
