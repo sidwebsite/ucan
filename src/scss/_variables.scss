@@ -35,7 +35,8 @@ $icons: (
     angle-right: "\f105",
     plus: "\2b",
     minus: "\f068",
-    right-triangle: "\e909"
+    right-triangle: "\e909",
+    circle: "\f111"
 );
 // 
 $page-header-gradient-bg: linear-gradient(to right, #EBF3FA 0%, #DDEDFA 70%, #CFE8FA 100%);
@@ -49,4 +50,7 @@ $swiper-button-color: #DCDBDB;
 $custom-gray: #F4F4F4;
 $custom-focus-color: #ff5900;
 $breadcrumb-bg: #DBECF4;
-$pagination-dark: #4A4C4D
+$pagination-dark: #4A4C4D;
+$custom-small-color: #919191;
+
+$custom-accordion-border-color: #B9B2B2;

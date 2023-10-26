@@ -17,6 +17,16 @@
         color: var(--bs-white);
     }
 }
+.custom-link-primary {
+    display: inline-block;
+    @extend %custom-btn;
+    background-color: var(--bs-primary);
+    color: var(--bs-white);
+    &:hover {
+        background-color: var(--bs-warning);
+        color: $btn-font-color;
+    }
+}
 .custom-btn-red {
     @extend %custom-btn;
     background-color: var(--bs-danger);

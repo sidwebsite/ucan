@@ -60,9 +60,9 @@ var __webpack_exports__ = {};
             <div class="footer-menu-links">
                 <p class="mb-0">認識UCAN</p>
                 <ul class="list-unstyled ps-3">
-                    <li><a href="#" title="平台緣起及建置目的">平台緣起及建置目的</a></li>
-                    <li><a href="#" title="平台發展與依據">平台發展與依據</a></li>
-                    <li><a href="#" title="UCAN主要功能簡介">UCAN主要功能簡介</a></li>
+                    <li><a href="../aboutUACN/aboutUACN_1.html" title="平台緣起及建置目的">平台緣起及建置目的</a></li>
+                    <li><a href="../aboutUACN/aboutUACN_2.html" title="平台發展與依據">平台發展與依據</a></li>
+                    <li><a href="../aboutUACN/aboutUACN_3.html" title="UCAN主要功能簡介">UCAN主要功能簡介</a></li>
                 </ul>
                 <p class="mb-0">職能介紹</p>
                 <ul class="list-unstyled ps-3">

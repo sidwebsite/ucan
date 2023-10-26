@@ -95,6 +95,11 @@
         }
     }
 }
+.content-title {
+    display: inline-block;
+    background-color: var(--bs-warning);
+    padding: 5px 15px;
+}
 @import 'aboutUACN';
 @include media-breakpoint-up(lg) {
     .page-header-bg {

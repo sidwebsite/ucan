@@ -54,6 +54,32 @@
         }
     }
 }
+.aboutUACN {
+    // height: 500px;
+    // overflow-y: auto;
+    // padding-right: 8px;
+    // // width
+    // &::-webkit-scrollbar {
+    //     width: 2px;
+    // }
+    
+    // // Track
+    // &::-webkit-scrollbar-track {
+    //     background: #f1f1f1;
+    // }
+    // // Handle
+    // &::-webkit-scrollbar-thumb {
+    //     background: var(--bs-primary);
+    // }
+    .item {
+        p {
+            margin-bottom: 2.4rem;
+        }
+    }
+    .small {
+        color: $custom-small-color;
+    }
+}
 @include media-breakpoint-down(lg) {
     .competency-utility {
         background-image: none;
@@ -63,6 +89,40 @@
             }
             .col-6:nth-child(2) {
                 margin-bottom: 4.5rem;
+            }
+        }
+    }
+}
+.custom-nav-list {
+    > .nav-item {
+        .nav-link {
+            position: relative;
+            &::after {
+                font: var(--fa-font-solid);
+                content: map-get($icons, circle);
+                position: absolute;
+                top: 50%; 
+                transform: translateY(-50%);
+                left: 0;
+                font-size: 0.5rem;
+            }
+            &.active {
+                &::after {
+                    color: var(--bs-primary);
+                }
+            }
+        }
+        &:not(:first-child) {
+            .nav-link {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 1px;
+                    height: 35px;
+                    background-color: var(--bs-dark);
+                    top: -17px;
+                    left: 0.25rem;
+                }
             }
         }
     }

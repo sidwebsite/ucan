@@ -103,6 +103,31 @@ module.exports = {
             minify: false,
             chunks: ['main', 'footer']
         }),
+        // 認識UCAN
+        new HtmlWebpackPlugin({
+            template: './src/html/aboutUACN/aboutUACN_1.html',
+            filename: 'aboutUACN/aboutUACN_1.html',
+            minify: false,
+            chunks: ['main', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/aboutUACN/aboutUACN_1.html',
+            filename: 'aboutUACN/aboutUACN_1.html',
+            minify: false,
+            chunks: ['main', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/aboutUACN/aboutUACN_2.html',
+            filename: 'aboutUACN/aboutUACN_2.html',
+            minify: false,
+            chunks: ['main', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/aboutUACN/aboutUACN_3.html',
+            filename: 'aboutUACN/aboutUACN_3.html',
+            minify: false,
+            chunks: ['main', 'footer']
+        }),
         // 職能概念
         new HtmlWebpackPlugin({
             template: './src/html/aboutUACN/competency.html',

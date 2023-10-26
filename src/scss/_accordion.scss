@@ -1,0 +1,30 @@
+.custom-accordion {
+    --bs-accordion-border-radius: 0;
+    .accordion-item {
+        border: 0;
+        border-bottom: 1px solid $custom-accordion-border-color;
+        &:first-child {
+            border-top: 1px solid $custom-accordion-border-color;
+        }
+    }
+    .accordion-button, .accordion-button:not(.collapsed) {
+        color: var(--bs-primary);
+    }
+    .accordion-button {
+        font-weight: bolder;
+        &::after {
+            background-image: none;
+            font: var(--fa-font-solid);
+            content: map-get($icons, plus);
+            color: $login-button-border-color;
+        }
+    }
+    .accordion-button:not(.collapsed) {
+        background-color: var(--bs-white);
+        box-shadow: none;
+        &::after {
+            content: map-get($icons, minus);
+            transform: none;
+        }
+    }
+}

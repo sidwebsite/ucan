@@ -11,3 +11,20 @@
     }
 }
 ol.list-style-cjk-ideographic {list-style-type: cjk-ideographic;}
+.custom-arrow-list {
+    list-style: none;
+    padding-left: 0;
+    > li {
+        padding-left: 30px;
+        position: relative;
+        &::before {
+            content: "\e90e";
+            font-family: 'icomoon';
+            position: absolute;
+            left: 0;
+            top: 3px;
+            font-size: 0.625rem;
+
+        }
+    }
+}

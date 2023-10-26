@@ -1,0 +1,8 @@
+#navbarRight {
+    .nav-link {
+        color: var(--bs-dark);
+        &.active {
+            color: var(--bs-primary);
+        }
+    }
+}
