@@ -128,7 +128,7 @@ module.exports = {
             template: './src/html/aboutUACN/competency.html',
             filename: 'aboutUACN/competency.html',
             minify: false,
-            chunks: ['main', 'footer']
+            chunks: ['main', 'aboutUACN', 'footer']
         }),
         // 聯絡我們
         new HtmlWebpackPlugin({

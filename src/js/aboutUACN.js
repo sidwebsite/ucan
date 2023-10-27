@@ -1,3 +1,6 @@
+const Sticky = require('sticky-js');
+if(window.innerWidth > 992) {const sticky = new Sticky('[data-sticky]', {})};
+
 const navBtn = document.querySelectorAll('#navbarRight .nav-link');
 function scrollToTargetAdjusted(id) {
     const element = document.querySelector(id);
