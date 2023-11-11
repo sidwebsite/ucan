@@ -28,3 +28,19 @@ ol.list-style-cjk-ideographic {list-style-type: cjk-ideographic;}
         }
     }
 }
+.custom-arrow-right-list {
+    list-style: none;
+    padding-left: 0;
+    > li {
+        padding-left: 15px;
+        position: relative;
+        &::before {
+            content: "\e904";
+            font-family: 'icomoon';
+            position: absolute;
+            left: 0;
+            top: 4px;
+            font-size: 0.625rem;
+        }
+    }
+}

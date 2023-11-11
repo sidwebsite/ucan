@@ -16725,6 +16725,13 @@ a:hover {
   color: #0074A5 !important;
 }
 
+.custom-links-gray {
+  color: #919191;
+  -webkit-text-decoration-color: #919191;
+          text-decoration-color: #919191;
+  text-decoration: underline;
+}
+
 #forgot-tab.nav-pills .nav-link {
   border-radius: 12px 12px 0 0;
   background-color: #E2E0E0;
@@ -16784,6 +16791,23 @@ ol.list-style-cjk-ideographic {
   position: absolute;
   left: 0;
   top: 3px;
+  font-size: 0.625rem;
+}
+
+.custom-arrow-right-list {
+  list-style: none;
+  padding-left: 0;
+}
+.custom-arrow-right-list > li {
+  padding-left: 15px;
+  position: relative;
+}
+.custom-arrow-right-list > li::before {
+  content: "\e904";
+  font-family: "icomoon";
+  position: absolute;
+  left: 0;
+  top: 4px;
   font-size: 0.625rem;
 }
 
@@ -17766,6 +17790,23 @@ ol.list-style-cjk-ideographic {
   display: none;
   padding-left: 8px;
   padding-right: 8px;
+}
+
+.sticky-content .item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+.sticky-content .item p {
+  margin-bottom: 2.4rem;
+}
+.sticky-content .item p:last-child {
+  margin-bottom: 0;
+}
+.sticky-content .item .link-dark:hover, .sticky-content .item .link-dark:focus, .sticky-content .item a:hover, .sticky-content .item a:focus {
+  color: var(--bs-primary) !important;
+}
+.sticky-content .small, .sticky-content .figure-caption {
+  color: #919191;
 }
 
 @media (min-width: 992px) {

@@ -10,7 +10,7 @@ module.exports = {
         "login": './src/js/login.js',
         'shareFeedback': './src/js/shareFeedback.js',
         'news': './src/js/news.js',
-        'aboutUACN': './src/js/aboutUACN.js',
+        'sticky': './src/js/sticky.js',
         'footer': './src/js/footer.js'
     },
     output: {
@@ -20,6 +20,7 @@ module.exports = {
             const filepath = path.dirname(pathData.filename).split('/').slice(1).join('/');
             return `${filepath}/[name][ext]`;
         },
+        clean: true
     },
     module: {
         rules: [
@@ -106,29 +107,54 @@ module.exports = {
         }),
         // 認識UCAN
         new HtmlWebpackPlugin({
-            template: './src/html/aboutUACN/aboutUACN_1.html',
-            filename: 'aboutUACN/aboutUACN_1.html',
+            template: './src/html/aboutUACN/aboutUACN_5_2.html',
+            filename: 'aboutUACN/aboutUACN_5_2.html',
             minify: false,
-            chunks: ['main', 'aboutUACN', 'footer']
+            chunks: ['main', 'sticky', 'footer']
         }),
         new HtmlWebpackPlugin({
-            template: './src/html/aboutUACN/aboutUACN_2.html',
-            filename: 'aboutUACN/aboutUACN_2.html',
+            template: './src/html/aboutUACN/aboutUACN_5_3.html',
+            filename: 'aboutUACN/aboutUACN_5_3.html',
             minify: false,
-            chunks: ['main', 'aboutUACN', 'footer']
+            chunks: ['main', 'sticky', 'footer']
         }),
         new HtmlWebpackPlugin({
-            template: './src/html/aboutUACN/aboutUACN_3.html',
-            filename: 'aboutUACN/aboutUACN_3.html',
+            template: './src/html/aboutUACN/aboutUACN_5_4.html',
+            filename: 'aboutUACN/aboutUACN_5_4.html',
             minify: false,
-            chunks: ['main', 'aboutUACN', 'footer']
+            chunks: ['main', 'sticky', 'footer']
         }),
         // 職能概念
         new HtmlWebpackPlugin({
-            template: './src/html/aboutUACN/competency.html',
-            filename: 'aboutUACN/competency.html',
+            template: './src/html/aboutUACN/aboutUACN_5_6.html',
+            filename: 'aboutUACN/aboutUACN_5_6.html',
             minify: false,
-            chunks: ['main', 'aboutUACN', 'footer']
+            chunks: ['main', 'sticky', 'footer']
+        }),
+        // 職能應用
+        new HtmlWebpackPlugin({
+            template: './src/html/application/application_2_2_1.html',
+            filename: 'application/application_2_2_1.html',
+            minify: false,
+            chunks: ['main', 'sticky', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/application/application_2_2_2.html',
+            filename: 'application/application_2_2_2.html',
+            minify: false,
+            chunks: ['main', 'sticky', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/application/application_2_3_1.html',
+            filename: 'application/application_2_3_1.html',
+            minify: false,
+            chunks: ['main', 'sticky', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/application/application_2_3_2.html',
+            filename: 'application/application_2_3_2.html',
+            minify: false,
+            chunks: ['main', 'sticky', 'footer']
         }),
         // 聯絡我們
         new HtmlWebpackPlugin({
@@ -179,7 +205,7 @@ module.exports = {
         }),
     ],
     devServer: {
-        host: 'localhost',
+        host: '192.168.50.10',
         port: '4545',
         open: true
     },

@@ -26,6 +26,24 @@
         }
     }
 }
+.sticky-content {
+    .item {
+        position: relative;
+        p {
+            margin-bottom: 2.4rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .link-dark:hover, .link-dark:focus, a:hover, a:focus {
+            color: var(--bs-primary) !important;
+        }
+        margin-bottom: 3rem;
+    }
+    .small, .figure-caption {
+        color: $custom-small-color;
+    }
+}
 @include media-breakpoint-up(lg) {
     .message {
         margin-top: 0;
