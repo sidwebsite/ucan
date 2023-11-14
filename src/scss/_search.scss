@@ -1,0 +1,50 @@
+#characterTab {
+    a {
+        &.active {
+            color: var(--bs-primary);
+        }
+    }
+    .nav-phone {
+        text-align: center;
+        color: var(--bs-dark);
+        transition: .3s ease;
+        &:hover, &.active {
+            color: var(--bs-dark);
+            background-color: $custom-characterTab-bg;
+            box-shadow: 2px 2px 2px rgba($black, 0.2);
+        }
+    }
+}
+#commonFunctions {
+    .nav {
+        --bs-nav-link-padding-x: 0;
+        --bs-nav-link-color: var(--bs-dark);
+        @include row-cols(3);
+        .nav-link {
+            img {
+                filter: grayscale(100%);
+            }
+            &.active, &:hover {
+                img {
+                    filter: grayscale(0);
+                }
+            }
+        }
+        @include media-breakpoint-up(md) {
+            @include row-cols(4);
+        }
+        @include media-breakpoint-up(lg) {
+            @include row-cols(8);
+        }
+        
+    }
+}
+
+#customAccordionId {
+    .accordion-button, .accordion-body {
+        padding-left: 0;
+    }
+    .accordion-button {
+        color: var(--bs-dark);
+    }
+}

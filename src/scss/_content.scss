@@ -101,6 +101,7 @@
     padding: 5px 15px;
 }
 @import 'aboutUACN';
+@import 'search';
 @include media-breakpoint-up(lg) {
     .page-header-bg {
         margin-top: 0;

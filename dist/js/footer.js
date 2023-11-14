@@ -8,8 +8,8 @@ var __webpack_exports__ = {};
             <h4 class="text-white text-decoration-underline mb-3">職能與職業查詢</h4>
             <div class="footer-menu-links">
                 <a href="#" title="職業查詢">職業查詢</a>
-                <a href="#" title="職業性格類型查詢">職業性格類型查詢</a>
-                <a href="#" title="共通職能查詢">共通職能查詢</a>
+                <a href="../search/search_1_2.html" title="職業性格類型查詢">職業性格類型查詢</a>
+                <a href="../search/search_1_3.html" title="共通職能查詢">共通職能查詢</a>
                 <a href="#" title="專業職能查詢">專業職能查詢</a>
             </div>
         </div>

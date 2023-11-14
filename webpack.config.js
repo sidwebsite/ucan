@@ -11,6 +11,7 @@ module.exports = {
         'shareFeedback': './src/js/shareFeedback.js',
         'news': './src/js/news.js',
         'sticky': './src/js/sticky.js',
+        'search_1_2': './src/js/search_1_2.js',
         'footer': './src/js/footer.js'
     },
     output: {
@@ -105,31 +106,18 @@ module.exports = {
             minify: false,
             chunks: ['main', 'footer']
         }),
-        // 認識UCAN
+        // 職能職業查詢
         new HtmlWebpackPlugin({
-            template: './src/html/aboutUACN/aboutUACN_5_2.html',
-            filename: 'aboutUACN/aboutUACN_5_2.html',
+            template: './src/html/search/search_1_2.html',
+            filename: 'search/search_1_2.html',
             minify: false,
-            chunks: ['main', 'sticky', 'footer']
+            chunks: ['main', 'search_1_2', 'footer']
         }),
         new HtmlWebpackPlugin({
-            template: './src/html/aboutUACN/aboutUACN_5_3.html',
-            filename: 'aboutUACN/aboutUACN_5_3.html',
+            template: './src/html/search/search_1_3.html',
+            filename: 'search/search_1_3.html',
             minify: false,
-            chunks: ['main', 'sticky', 'footer']
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/html/aboutUACN/aboutUACN_5_4.html',
-            filename: 'aboutUACN/aboutUACN_5_4.html',
-            minify: false,
-            chunks: ['main', 'sticky', 'footer']
-        }),
-        // 職能概念
-        new HtmlWebpackPlugin({
-            template: './src/html/aboutUACN/aboutUACN_5_6.html',
-            filename: 'aboutUACN/aboutUACN_5_6.html',
-            minify: false,
-            chunks: ['main', 'sticky', 'footer']
+            chunks: ['main', 'footer']
         }),
         // 職能應用
         new HtmlWebpackPlugin({
@@ -156,6 +144,33 @@ module.exports = {
             minify: false,
             chunks: ['main', 'sticky', 'footer']
         }),
+        // 認識UCAN
+        new HtmlWebpackPlugin({
+            template: './src/html/aboutUACN/aboutUACN_5_2.html',
+            filename: 'aboutUACN/aboutUACN_5_2.html',
+            minify: false,
+            chunks: ['main', 'sticky', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/aboutUACN/aboutUACN_5_3.html',
+            filename: 'aboutUACN/aboutUACN_5_3.html',
+            minify: false,
+            chunks: ['main', 'sticky', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/aboutUACN/aboutUACN_5_4.html',
+            filename: 'aboutUACN/aboutUACN_5_4.html',
+            minify: false,
+            chunks: ['main', 'sticky', 'footer']
+        }),
+        // 職能概念
+        new HtmlWebpackPlugin({
+            template: './src/html/aboutUACN/aboutUACN_5_6.html',
+            filename: 'aboutUACN/aboutUACN_5_6.html',
+            minify: false,
+            chunks: ['main', 'sticky', 'footer']
+        }),
+        
         // 聯絡我們
         new HtmlWebpackPlugin({
             template: './src/html/others/contactUs.html',
