@@ -17749,6 +17749,15 @@ ol.list-style-cjk-ideographic {
   color: var(--bs-dark);
 }
 
+@media (max-width: 991.98px) {
+  .commonFunctions-title {
+    display: inline-block;
+    background-color: var(--bs-warning);
+    padding: 5px 15px;
+    font-size: 1.25rem;
+  }
+}
+
 @media (min-width: 992px) {
   .page-header-bg {
     margin-top: 0;

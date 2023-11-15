@@ -48,3 +48,11 @@
         color: var(--bs-dark);
     }
 }
+.commonFunctions-title {
+    @include media-breakpoint-down(lg) {
+        display: inline-block;
+        background-color: var(--bs-warning);
+        padding: 5px 15px;
+        font-size: 1.25rem;
+    }
+}
