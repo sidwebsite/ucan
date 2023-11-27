@@ -12,7 +12,7 @@
     @extend %custom-btn;
     background-color: var(--bs-warning);
     color: $btn-font-color;
-    &:hover {
+    &:hover, &:focus-visible  {
         background-color: var(--bs-primary);
         color: var(--bs-white);
     }

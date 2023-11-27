@@ -2,6 +2,8 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
 // iconmoon
 @import '../css/icon.css';
+// nice-select
+@import "~nice-select2/src/scss/nice-select2.scss";
 // bootstrap
 @import "custom";
 @import "~bootstrap/scss/bootstrap";
@@ -20,6 +22,7 @@
 @import 'alerts';
 @import 'lists';
 @import 'accordion';
+@import 'model';
 @import 'goTop';
 @import 'main';
 @import 'index';

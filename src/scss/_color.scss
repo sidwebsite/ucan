@@ -1,3 +1,11 @@
 .text-custom-blue {
     color: $login-links-color !important;
 }
+.text-custom-dark-blue {
+    color: $custom-dark-blue !important;
+}
+@each $val, $colorName in $custom-search-tag-color {
+    .bg-custom-#{$val} {
+        background-color: $colorName;
+    }
+}

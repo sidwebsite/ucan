@@ -11,7 +11,9 @@ module.exports = {
         'shareFeedback': './src/js/shareFeedback.js',
         'news': './src/js/news.js',
         'sticky': './src/js/sticky.js',
+        'customSelect': './src/js/customSelect.js',
         'search_1_2': './src/js/search_1_2.js',
+        'search_1_5': './src/js/search_1_5.js',
         'footer': './src/js/footer.js'
     },
     output: {
@@ -108,6 +110,12 @@ module.exports = {
         }),
         // 職能職業查詢
         new HtmlWebpackPlugin({
+            template: './src/html/search/search_1_1.html',
+            filename: 'search/search_1_1.html',
+            minify: false,
+            chunks: ['main', 'customSelect', 'footer']
+        }),
+        new HtmlWebpackPlugin({
             template: './src/html/search/search_1_2.html',
             filename: 'search/search_1_2.html',
             minify: false,
@@ -118,6 +126,12 @@ module.exports = {
             filename: 'search/search_1_3.html',
             minify: false,
             chunks: ['main', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/search/search_1_5.html',
+            filename: 'search/search_1_5.html',
+            minify: false,
+            chunks: ['main','search_1_5', 'footer']
         }),
         // 職能應用
         new HtmlWebpackPlugin({

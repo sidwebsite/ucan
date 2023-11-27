@@ -56,3 +56,317 @@
         font-size: 1.25rem;
     }
 }
+// 職業查詢
+.career-inquiry-warapper {
+    @include media-breakpoint-up(lg) {
+        background-color: var(--bs-light);
+        border-radius: 15px;
+    }
+}
+.search-input {
+    > .form-control {
+        background-color: $custom-search-bg;
+        padding-left: 30px;
+        border-top-left-radius: var(--bs-border-radius-pill) !important;
+        border-bottom-left-radius: var(--bs-border-radius-pill) !important;
+    }
+    > .input-group-text {
+        background-color: $custom-search-bg;
+        border-top-right-radius: var(--bs-border-radius-pill) !important;
+        border-bottom-right-radius: var(--bs-border-radius-pill) !important;
+    }
+}
+.nice-select {
+    width: 100%;
+    background-color: $custom-search-bg;
+    border-radius: 50px;
+    
+    .nice-select-dropdown {
+        width: 100%;
+        border: 1px solid $custom-search-border;
+        border-radius: 11px;
+        .list {
+            padding: 15px;
+            > li {
+                padding: {
+                    top: 8px;
+                    bottom: 8px;
+                };
+            }
+        }
+    }
+    .option {
+        line-height: normal;
+        &:hover, &.focus, &.selected.focus {
+            background-color: $custom-search-bg;
+            border-radius: 50px;
+        }
+    }
+    &:focus {
+        border-color: transparent;
+        outline: 2px dashed $custom-focus-color;
+    }
+    &:after {
+        width: 8px;
+        height: 8px;
+        right: 15px;
+    }
+}
+.career-inquiry-title {
+    background-color: #D9D8D8;
+    border-radius: 10px;
+    align-items: center;
+    font-weight: bolder;
+}
+.career-inquiry-content {
+    .grid {
+        --bs-columns: 6;        
+    }
+    .career-inquiry-link {
+        color: $custom-search-link-colr;
+        &:hover {
+            color: var(--bs-primary);
+            text-decoration: underline;
+        }
+    }
+    .tr {
+        @include media-breakpoint-down(lg) {
+            --bs-gap:1rem;
+            display: block;
+            
+            .td {
+                display: inline-block;
+                margin-bottom: 15px;
+            }
+            .td:nth-child(1) {
+                display: block;
+                > a {
+                    color: var(--bs-dark);
+                    text-decoration: underline;
+                    font-weight: bold;
+                }
+            }
+            .td:nth-child(2) {
+                float: left;
+                padding-right: 20px;
+                position: relative;
+                &::before {
+                    font: var(--fa-font-solid);
+                    content: map-get($icons, angle-right);
+                    clear: both;
+                    position: absolute;
+                    right: 5px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            .td:nth-child(3) {
+                display: block;
+                > a {
+                    text-decoration: underline;
+                }
+            }
+            border-radius: 11px;
+            box-shadow: 2px 2px 2px rgba($black, 0.2);
+            &:nth-child(odd) {
+                background-color: #EFEFEF;
+            }
+            &:nth-child(even) {
+                background-color: #F9F9F9;
+            }
+            .tag-null {
+                display: none;
+            }
+        }
+    }
+}
+// tag color class
+.search-tag-null {
+    display: inline-block;
+    background-color: $custom-tag-light-gray;
+    border-radius: 50px;
+    padding: 5px 12px;
+}
+@each $name, $color in $custom-search-tag-color {
+    .search-tag-#{$name} {
+        display: inline-block;
+        border: 1px solid;
+        border-color: $color;
+        border-radius: 50px;
+        padding: 5px 12px;
+        transition: .3s ease;
+        &:hover {
+            background-color: $color;
+            color: var(--bs-dark);
+        }
+        @if($name == 'lightGreenIcon') {
+            @include media-breakpoint-up(lg) {
+                display: none;
+            }
+        }
+    }
+}
+// 專業職能查詢
+.professionalFunctions-navbar {
+    > .row {       
+        @include row-cols(4);
+        @include media-breakpoint-up(lg) {
+            @include row-cols(8);            
+        }
+    }
+}
+
+.img-icon {    
+    width: 65px;
+    height: 65px;
+    background-repeat: no-repeat;
+}
+// icon
+@for $i from 1 through 16 {
+    .img-icon-#{$i} {
+        @include professionalFunctionsNavbar(map-get($professionalFunctionsNavbarBg, img#{$i}));
+    }
+}
+
+.professionalFunctions-navbar {
+    @include media-breakpoint-up(lg) {
+        background-color: $professionalFunctions-navbar-bg;
+    }
+    .navbar-link {
+        display: block;
+    }
+}
+.professionalFunctions-accordion {
+    > .accordion-item {
+        border-bottom: 1px solid $custom-accordion-border-color;
+        &:first-child {
+            @include media-breakpoint-up(lg) {
+                border-top: 0;
+            }
+        }
+        .accordion-button {
+            font-size: inherit;
+        }
+        .accordion-button, .accordion-button:not(.collapsed) {
+            color: var(--bs-dark);
+        } 
+    }
+}
+
+.professionalFunctions-item-accordion {
+    > .accordion-item {
+        border-color: var(--bs-border-color);
+        &:first-child {
+            border-top: 0;
+        }
+        &:last-child {
+            border-bottom: 0;
+        }
+        .accordion-button {
+            font-size: 1.25rem !important;
+            font-weight: 400;
+            > span {
+                color: $custom-accordion-header-color;
+                display: inline-block;
+                padding: 3px 5px;
+                transition: .3s ease;
+                
+            }
+            &:hover {
+                > span {
+                    color: var(--bs-dark);
+                    background-color: $custom-accordion-header-hover-color;
+                }
+            }
+        }
+    }
+    .no-icon:not(.collapsed)::after {
+        content: "";
+    }
+}
+.links-group {
+    > a {
+        display: block;
+        color: $custom-accordion-header-color;
+        padding: {
+            top: 8px;
+            bottom: 8px;
+        };
+        &:not(:last-child) {
+            border-bottom: 1px solid var(--bs-dark);
+        }
+        &:hover {
+            color: var(--bs-primary);
+        }
+    }
+}
+.relatedOccupationsList {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    > li {
+        padding-left: 24px;
+        position: relative;
+        &::after {
+            content: "";
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 6px;
+        }
+        &:nth-child(1) {
+            &::after  {
+                background-color: map-get($custom-search-tag-color , lightGreenIcon);
+            }
+        }
+        &:nth-child(2) {
+            &::after  {
+                background-color: map-get($custom-search-tag-color , lightPurpleIcon);
+            }
+        }
+        &:nth-child(3) {
+            &::after  {
+                background-color: map-get($custom-search-tag-color , lightOrangeIcon);
+            }
+        }
+    }
+}
+#relatedOccupationsAccordion {
+    .accordion-body {
+        font-size: .875rem;
+    }
+}
+@each $val, $colorName in $custom-search-tag-color {
+    .custom-circle-#{$val} {
+        background-color: $colorName;
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin: {
+            left: 5px;
+            right: 15px;
+        }
+    }
+    .custom-circle-tag-#{$val} {
+        background-color: $colorName;
+        border-radius: 50px;
+        display: inline-block;
+        padding: 2px 8px;
+        margin-right: 15px;
+    }
+}
+.custom-accordion-title-btn {
+    > .content-title {
+        @include media-breakpoint-down(lg) {
+            font-size: 1rem;
+            border-radius: 50px;
+            box-shadow: 0 3px 6px rgba($black, 0.16);
+        }
+    }
+    &:hover {
+        color: var(--bs-dark);
+    }
+}
