@@ -14,6 +14,9 @@ module.exports = {
         'customSelect': './src/js/customSelect.js',
         'search_1_2': './src/js/search_1_2.js',
         'search_1_5': './src/js/search_1_5.js',
+        'diagnose_3_1_3': './src/js/diagnose_3_1_3.js',
+        'diagnose_3_2_3': './src/js/diagnose_3_2_3.js',
+        'diagnose_3_3_3': './src/js/diagnose_3_3_3.js',
         'footer': './src/js/footer.js'
     },
     output: {
@@ -157,6 +160,69 @@ module.exports = {
             filename: 'application/application_2_3_2.html',
             minify: false,
             chunks: ['main', 'sticky', 'footer']
+        }),
+        // 職能診斷-職業興趣探索
+        new HtmlWebpackPlugin({
+            template: './src/html/diagnose/diagnose_3_1_1.html',
+            filename: 'diagnose/diagnose_3_1_1.html',
+            minify: false,
+            chunks: ['main', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/diagnose/diagnose_3_1_2.html',
+            filename: 'diagnose/diagnose_3_1_2.html',
+            minify: false,
+            chunks: ['main', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/diagnose/diagnose_3_1_3.html',
+            filename: 'diagnose/diagnose_3_1_3.html',
+            minify: false,
+            chunks: ['main', 'diagnose_3_1_3', 'footer']
+        }),
+        // 職能診斷-共通職能診斷
+        new HtmlWebpackPlugin({
+            template: './src/html/diagnose/diagnose_3_2_1.html',
+            filename: 'diagnose/diagnose_3_2_1.html',
+            minify: false,
+            chunks: ['main', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/diagnose/diagnose_3_2_2.html',
+            filename: 'diagnose/diagnose_3_2_2.html',
+            minify: false,
+            chunks: ['main', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/diagnose/diagnose_3_2_3.html',
+            filename: 'diagnose/diagnose_3_2_3.html',
+            minify: false,
+            chunks: ['main','diagnose_3_2_3', 'footer']
+        }),
+        // 職能診斷-專業職能診斷
+        new HtmlWebpackPlugin({
+            template: './src/html/diagnose/diagnose_3_3_1.html',
+            filename: 'diagnose/diagnose_3_3_1.html',
+            minify: false,
+            chunks: ['main', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/diagnose/diagnose_3_3_2.html',
+            filename: 'diagnose/diagnose_3_3_2.html',
+            minify: false,
+            chunks: ['main', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/diagnose/diagnose_3_3_3.html',
+            filename: 'diagnose/diagnose_3_3_3.html',
+            minify: false,
+            chunks: ['main','diagnose_3_2_3', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/diagnose/diagnose_3_3_4.html',
+            filename: 'diagnose/diagnose_3_3_4.html',
+            minify: false,
+            chunks: ['main', 'footer']
         }),
         // 認識UCAN
         new HtmlWebpackPlugin({

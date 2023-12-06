@@ -1,9 +1,9 @@
 #goTop {
     background-color: #e5e5e5;
-    width: 60px;
-    height: 60px;
+    width: 64px;
+    height: 64px;
     right: -80px;
-    bottom: 60px;
+    bottom: 6rem;
     transition: .3s ease;
     &:hover, &:focus {
         background-color: var(--bs-primary);
@@ -27,6 +27,6 @@
 
 @include media-breakpoint-up(lg) {
     #goTop.show {
-        right: 30px;
+        right: 1rem;
     } 
 }

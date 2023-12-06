@@ -30,8 +30,19 @@ openModelBtn.forEach(btn => {
         scrollToTargetAdjusted(idName);
     })
 });
+
+// relatedOccupations accordion
+const relatedOccupationsCollapseBtn = document.querySelectorAll('#relatedOccupationsAccordion .accordion-button');
+relatedOccupationsCollapseBtn.forEach((collapse) => {
+    collapse.addEventListener('click', function () {
+        collapse.classList.toggle('collapsed');
+        const id = collapse.getAttribute('data-bs-target');
+        new bootstrap.Collapse(document.querySelector(id)).toggle();
+    });
+});
+
 // 
-var mediaDown = window.matchMedia("(max-width: 992px)");
+const mediaDown = window.matchMedia("(max-width: 992px)");
 const collapseElementList = [].slice.call(document.querySelectorAll('.accordion-wrapper'));
 function offAccordion(mediaDown) {
     if (mediaDown.matches) { 

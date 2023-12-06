@@ -36,7 +36,8 @@ $icons: (
     plus: "\2b",
     minus: "\f068",
     right-triangle: "\e909",
-    circle: "\f111"
+    circle: "\f111",
+    check: "\f00c"
 );
 // 
 $page-header-gradient-bg: linear-gradient(to right, #EBF3FA 0%, #DDEDFA 70%, #CFE8FA 100%);
@@ -99,3 +100,10 @@ $professionalFunctionsNavbarBg: (
 ) !default;
 $professionalFunctionsNavbarBg-pc-color: '%23eae8e8';
 $professionalFunctionsNavbarBg-phone-color: '%23F9F9F9';
+// diagnose
+$diagnose-bg-color: $professionalFunctions-navbar-bg;
+$diagnose-part-color: #7C7B7B;
+$diagnose-part-active-color: $nav-sub-menu-bg;
+$diagnose-table-border-color: $login-button-border-color;
+$diagnose-fraction-gray: #716F6F;
+$diagnose-fraction-number-gray: #909698;

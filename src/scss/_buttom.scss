@@ -3,7 +3,7 @@
     font-family: $font-family-Arial;
     padding: 5px 26px;
     border-radius: 50px;
-    font-weight: bold;
+    font-weight: bolder;
     text-decoration: none !important;
     box-shadow: $custom-box-shadow-bese;
 }
@@ -61,5 +61,16 @@
         background-color: var(--bs-primary);
         color: var(--bs-white);
         outline: 2px dashed $custom-focus-color;
+    }
+}
+// rect botton
+.custom-btn-rect-primary {
+    display: inline-block;
+    background-color: var(--bs-warning);
+    @extend %custom-btn;
+    border-radius: 4px;
+    &:hover, &:focus-visible  {
+        background-color: var(--bs-primary);
+        color: var(--bs-white);
     }
 }

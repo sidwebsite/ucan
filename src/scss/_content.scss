@@ -1,4 +1,6 @@
-
+@import 'aboutUACN';
+@import 'search';
+@import 'diagnose';
 .page-header-bg {
     @include backgroundImage('index_news_bg.jpg');
     margin-top: 80px;
@@ -100,8 +102,6 @@
     background-color: var(--bs-warning);
     padding: 5px 15px;
 }
-@import 'aboutUACN';
-@import 'search';
 @include media-breakpoint-up(lg) {
     .page-header-bg {
         margin-top: 0;

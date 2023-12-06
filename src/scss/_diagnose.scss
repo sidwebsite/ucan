@@ -1,0 +1,257 @@
+.diagnose-warpper,.diagnose-step {
+    background-color: $diagnose-bg-color;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba($black, 0.18);
+}
+.diagnose-step-warpper {
+    > div:not(:last-child) .diagnose-step {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 60px;
+            height: 0;
+            border: 1px dashed var(--bs-dark);
+            top: 50%;
+            transform: translateY(-50%);
+            right: -65px;
+            z-index: -1;
+            @include media-breakpoint-down(lg) {
+                display: none;
+            }
+        }
+    }
+}
+.diagnose-part-wrapper {
+    > div {
+        .diagnose-part {
+            border: 1px solid $diagnose-part-color;
+            border-radius: 12px;
+            color: $diagnose-part-color;
+            position: relative;
+            &.active {
+                background-color: $diagnose-part-active-color;
+                box-shadow: 0 3px 6px rgba($black, 0.18);
+                color: var(--bs-dark);
+                border: 0;
+            }
+        }
+        &:not(:last-child) .diagnose-part {
+            &::before {
+                content: "";
+                position: absolute;
+                width: 60px;
+                height: 0;
+                border: 1px dashed var(--bs-dark);
+                top: 50%;
+                transform: translateY(-50%);
+                right: -65px;
+                z-index: -1;
+                @include media-breakpoint-down(lg) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.diagnose-table {
+    --bs-table-color: $diagnose-table-border-color;
+    // font-size: 1.375rem;
+    > tbody > tr > td:not(:last-child) {
+        border-right: 1px solid $diagnose-table-border-color;
+    }
+}
+.diagnose-custom-checkbox {
+    & + label {
+        position: relative;
+        width: 25px;
+        height: 25px;
+        border: 2px solid var(--bs-dark);
+        &::before {
+            font: var(--fa-font-solid);
+            content: map-get($icons, check);
+            color: transparent;
+            opacity: 0;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .3s ease;
+        }
+    }
+    &:checked + label {
+        &::before {
+            opacity: 1;
+            color: var(--bs-dark);
+        }
+    }
+    &:focus + label {
+        background-color: var(--bs-light);
+    }
+}
+.diagnose-fraction-style {
+    height: 320px;
+    position: relative;
+    &::before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: $diagnose-fraction-gray;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+    }
+    > .fraction {
+        position: relative;
+        padding: {
+            top: 45px;
+            bottom: 45px;
+        };
+        > .number {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bolder;
+            font-size: 1.875rem;
+            position: relative;
+            &::before {
+                content: "";
+                height: 45px;
+                width: 2px;
+                background-image: linear-gradient(to top, $diagnose-fraction-gray 50%, transparent 50%);
+                background-size: 100% 5px;
+                position: absolute;
+            }            
+        }
+        &:nth-child(1) > .number, &:nth-child(2) > .number {
+            background-color: var(--bs-warning);
+        }
+        &:nth-child(3)> .number {
+            background-color: $diagnose-fraction-number-gray;
+            color: var(--bs-white);
+        }
+        &:nth-child(4) > .number, &:nth-child(5) > .number {
+            background-color: var(--bs-primary);
+            color: var(--bs-white);
+        }
+        > .fieldset {
+            position: absolute;
+            min-width: 300px;
+            text-align: center;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &:nth-child(odd) {
+            > .number::before {
+                bottom: -45px;
+            }
+            > .fieldset {
+                top: 100%;
+            }
+        }
+        &:nth-child(even) {
+            > .number::before {
+                top: -45px;
+            }
+            > .fieldset {
+                bottom: 100%;
+            }
+        }
+    }
+}
+.diagnosis-test-content {
+    .diagnosis-test {
+        &.diagnosis-test-active {
+            background-color: #FFFBEF;
+        }
+        border-bottom: 1px solid $login-button-border-color;
+        &:last-child {
+            border-bottom: 0;
+        }
+        .groupoptions-wrapper {
+            max-width: 450px;
+            .groupoptions {
+                > .radio {
+                    label {
+                        position: relative;
+                        width: 31px;
+                        height: 31px;
+                        border-radius: 50%;
+                        border: 2px solid;
+                        border-color: var(--bs-dark);
+                        background-color: transparent;
+                        transition: .3s ease;
+                        &::before {
+                            font: var(--fa-font-solid);
+                            content: "";
+                            width: 31px;
+                            height: 31px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: var(--bs-white);
+                            transition: .3s ease;
+                            opacity: 0;
+                            position: relative;
+                            left: -1px;
+                        }
+                    }
+                    input[type="radio"]:checked + label {
+                        &::before {
+                            content: map-get($icons, check);
+                            opacity: 1;
+                        }
+                    }
+                    &:nth-child(1), &:nth-child(2) {
+                        label {
+                            border-color: var(--bs-warning);
+                            &:hover{
+                                background-color: var(--bs-warning);
+                            }
+                        }
+                        input[type="radio"]:focus + label {
+                            background-color: var(--bs-warning);
+                        }
+                        input[type="radio"]:checked + label {
+                            background-color: var(--bs-warning);
+                        }
+                    }
+                    &:nth-child(3) {
+                        label {
+                            border-color: $diagnose-fraction-number-gray;
+                            &:hover, &:focus {
+                                background-color: $diagnose-fraction-number-gray;
+                            }
+                        }
+                        input[type="radio"]:focus + label {
+                            background-color: $diagnose-fraction-number-gray;
+                        }
+                        input[type="radio"]:checked + label {
+                            background-color: $diagnose-fraction-number-gray;
+                        }
+                    }
+                    &:nth-child(4), &:nth-child(5) {
+                        label {
+                            border-color: var(--bs-primary);
+                            &:hover, &:focus {
+                                background-color: var(--bs-primary);
+                            }
+                        }
+                        input[type="radio"]:focus + label {
+                            background-color: var(--bs-primary);
+                        }
+                        input[type="radio"]:checked + label {
+                            background-color: var(--bs-primary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

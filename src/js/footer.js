@@ -34,9 +34,9 @@
         <div class="col">
             <h4 class="text-white text-decoration-underline mb-3">職能診斷</h4>
             <div class="footer-menu-links">
-                <a href="#" title="職業興趣探索">職業興趣探索</a>
-                <a href="#" title="共通職能診斷">共通職能診斷</a>
-                <a href="#" title="專業職能診斷">專業職能診斷</a>
+            <a href="../diagnose/diagnose_3_1_1.html" title="職業興趣探索">職業興趣探索</a>
+            <a href="../diagnose/diagnose_3_2_1.html" title="共通職能診斷">共通職能診斷</a>
+            <a href="../diagnose/diagnose_3_3_1.html" title="專業職能診斷">專業職能診斷</a>
             </div>
         </div>
         <div class="col">
