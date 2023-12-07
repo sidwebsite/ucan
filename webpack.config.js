@@ -17,6 +17,7 @@ module.exports = {
         'diagnose_3_1_3': './src/js/diagnose_3_1_3.js',
         'diagnose_3_2_3': './src/js/diagnose_3_2_3.js',
         'diagnose_3_3_3': './src/js/diagnose_3_3_3.js',
+        'diagnose_3_3_4': './src/js/diagnose_3_3_4.js',
         'footer': './src/js/footer.js'
     },
     output: {
@@ -216,13 +217,13 @@ module.exports = {
             template: './src/html/diagnose/diagnose_3_3_3.html',
             filename: 'diagnose/diagnose_3_3_3.html',
             minify: false,
-            chunks: ['main','diagnose_3_2_3', 'footer']
+            chunks: ['main','diagnose_3_3_3', 'footer']
         }),
         new HtmlWebpackPlugin({
             template: './src/html/diagnose/diagnose_3_3_4.html',
             filename: 'diagnose/diagnose_3_3_4.html',
             minify: false,
-            chunks: ['main', 'footer']
+            chunks: ['main','diagnose_3_3_4', 'footer']
         }),
         // 認識UCAN
         new HtmlWebpackPlugin({
