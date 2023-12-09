@@ -22,6 +22,7 @@ function scrollToTargetAdjusted(elments) {
 // 
 diagnosisTest.forEach((test, index) => {
     test.querySelectorAll('.radio input[type="radio"]').forEach(radio => {
+        if(radio.checked === true) test.classList.add('opacity-25');
         radio.addEventListener('change', (e) => {
             if(e.target) {
                 test.classList.add('opacity-25');
