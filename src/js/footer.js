@@ -58,7 +58,7 @@
                     <li><a href="../aboutUACN/aboutUACN_5_2.html" title="平台緣起及建置目的">平台緣起及建置目的</a></li>
                     <li><a href="../aboutUACN/aboutUACN_5_3.html" title="平台發展與依據">平台發展與依據</a></li>
                     <li><a href="../aboutUACN/aboutUACN_5_4.html" title="UCAN主要功能簡介">UCAN主要功能簡介</a></li>
-                    <li><a href="#" title="UCAN學校介接功能">UCAN學校介接功能</a></li>
+                    <li><a href="../aboutUACN/aboutUACN_5_5.html" title="UCAN學校介接功能">UCAN學校介接功能</a></li>
                 </ul>
                 <p class="mb-0">職能介紹</p>
                 <ul class="list-unstyled ps-3">

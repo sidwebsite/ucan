@@ -1,0 +1,54 @@
+.contactUs-block {
+    background-color: $login-input-bg-light;
+    border-radius: 12px;
+}
+.contactUsQuestion {
+    .accordion-item {
+        &:first-child {
+            border-top: 0;
+        }
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+}
+.divider {
+    width: 146px;
+    display: flex;
+    justify-content: space-between;
+    > span {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $divider-bg-color;
+    }
+}
+
+#otherTabs {
+    &.nav-tabs {
+        --bs-nav-tabs-border-width: 5px;
+        --bs-nav-tabs-border-color: #DBDADB;
+        --bs-nav-tabs-border-radius: 0;
+        --bs-nav-link-color: #2F2F2F;
+        --bs-nav-tabs-link-active-border-color: var(--bs-warning);
+        .nav-link {            
+            border: 0;
+            border-bottom: var(--bs-nav-tabs-border-width) solid var(--bs-nav-tabs-border-color);
+            font-weight: bolder;
+            &.active {
+                border-color: var(--bs-nav-tabs-link-active-border-color);
+                background-color: transparent;
+            }
+        }
+    }
+}
+#ConsultationRecords {
+    > thead > tr > th {
+        background-color: $login-input-bg-light;
+        white-space: nowrap;
+    }
+    > tbody > tr > td {
+        border-bottom: 2px solid var(--bs-dark);
+    }
+    
+}

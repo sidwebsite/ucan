@@ -3,4 +3,3 @@ const select = document.querySelectorAll(".selectize");
 select.forEach(select => {
     let instance = new NiceSelect(select);
 });
-

@@ -12,12 +12,14 @@ module.exports = {
         'news': './src/js/news.js',
         'sticky': './src/js/sticky.js',
         'customSelect': './src/js/customSelect.js',
+        'search_1_1': './src/js/search_1_1.js',
         'search_1_2': './src/js/search_1_2.js',
         'search_1_5': './src/js/search_1_5.js',
         'diagnose_3_1_3': './src/js/diagnose_3_1_3.js',
         'diagnose_3_2_3': './src/js/diagnose_3_2_3.js',
         'diagnose_3_3_3': './src/js/diagnose_3_3_3.js',
         'diagnose_3_3_4': './src/js/diagnose_3_3_4.js',
+        'contactUs_login': './src/js/contactUs_login.js',
         'footer': './src/js/footer.js'
     },
     output: {
@@ -117,7 +119,7 @@ module.exports = {
             template: './src/html/search/search_1_1.html',
             filename: 'search/search_1_1.html',
             minify: false,
-            chunks: ['main', 'customSelect', 'footer']
+            chunks: ['main', 'search_1_1', 'footer']
         }),
         new HtmlWebpackPlugin({
             template: './src/html/search/search_1_2.html',
@@ -244,6 +246,12 @@ module.exports = {
             minify: false,
             chunks: ['main', 'sticky', 'footer']
         }),
+        new HtmlWebpackPlugin({
+            template: './src/html/aboutUACN/aboutUACN_5_5.html',
+            filename: 'aboutUACN/aboutUACN_5_5.html',
+            minify: false,
+            chunks: ['main', 'sticky', 'footer']
+        }),
         // 職能概念
         new HtmlWebpackPlugin({
             template: './src/html/aboutUACN/aboutUACN_5_6.html',
@@ -252,12 +260,19 @@ module.exports = {
             chunks: ['main', 'sticky', 'footer']
         }),
         
-        // 聯絡我們
+        // 聯絡我們未登入狀態
         new HtmlWebpackPlugin({
             template: './src/html/others/contactUs.html',
             filename: 'others/contactUs.html',
             minify: false,
             chunks: ['main', 'footer']
+        }),
+        // 聯絡我們已登入狀態
+        new HtmlWebpackPlugin({
+            template: './src/html/others/contactUs_login.html',
+            filename: 'others/contactUs_login.html',
+            minify: false,
+            chunks: ['main','contactUs_login', 'footer']
         }),
         // 修改密碼 
         new HtmlWebpackPlugin({
@@ -296,6 +311,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/html/member/forgotAccountAndPassword.html',
             filename: 'member/forgotAccountAndPassword.html',
+            minify: false,
+            chunks: ['main', 'footer']
+        }),
+        // 帳號申請
+        new HtmlWebpackPlugin({
+            template: './src/html/member/account.html',
+            filename: 'member/account.html',
             minify: false,
             chunks: ['main', 'footer']
         }),

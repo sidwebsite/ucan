@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="大專校院就業職能平台的描述">
     <title>大專校院就業職能平台</title>
-<script defer src="../js/main.js"></script><script defer src="../js/customSelect.js"></script><script defer src="../js/footer.js"></script><link href="../css/style_rwd.css" rel="stylesheet"></head>
+<script defer src="../js/main.js"></script><script defer src="../js/search_1_1.js"></script><script defer src="../js/footer.js"></script><link href="../css/style_rwd.css" rel="stylesheet"></head>
 <body>
     <noscript>您的瀏覽器不支援JavaScript功能，若本網站功能無法正常使用，請開啟瀏覽器JavaScript狀態</noscript>
     <div class="warpper">
@@ -190,20 +190,15 @@
                     </div>
                     <div class="row">
                         <div class="col-6 col-lg">
-                            <select class="selectize" aria-label="職涯類型">
-                                <option data-display="select">職涯類型</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
+                            <select class="selectize" id="optionType" aria-label="職涯類型">
+                                <option selected disabled aria-disabled="true">職涯類型</option>
+                                <option value="0">建築營造</option>
+                                <option value="1">選項1</option>
+                                <option value="2">選項2</option>
                             </select>
                         </div>
                         <div class="col-6 col-lg">
-                            <select class="selectize" aria-label="就業途徑">
-                                <option selected>就業途徑</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
+                            <select id="optionTypeClidn" aria-label="就業途徑"></select>
                         </div>
                         <div class="col-4 col-lg">
                             <select class="selectize" aria-label="學科領域">

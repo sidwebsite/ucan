@@ -1,3 +1,5 @@
+// custom color
+
 // button color 
 $btn-font-color: #2A2828;
 // header
@@ -37,7 +39,9 @@ $icons: (
     minus: "\f068",
     right-triangle: "\e909",
     circle: "\f111",
-    check: "\f00c"
+    check: "\f00c",
+    icon-arrow-right: '\e901'
+
 );
 // 
 $page-header-gradient-bg: linear-gradient(to right, #EBF3FA 0%, #DDEDFA 70%, #CFE8FA 100%);
@@ -108,4 +112,7 @@ $diagnose-table-border-color: $login-button-border-color;
 $diagnose-fraction-gray: #716F6F;
 $diagnose-fraction-number-gray: #909698;
 $diagnose-professional-bg-color: $professionalFunctions-navbar-bg;
-$diagnose-block-lightGray-color: #EAEAEA
+$diagnose-block-lightGray-color: #EAEAEA;
+
+// divider
+$divider-bg-color: #A7A5A5;

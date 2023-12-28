@@ -26,5 +26,8 @@
             content: map-get($icons, minus);
             transform: none;
         }
+        &.not-icon::after {
+            content: "";
+        }
     }
 }

@@ -83,6 +83,21 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_nice_select2_dist_js_nice_select2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(112);
 /* harmony import */ var _node_modules_nice_select2_dist_js_nice_select2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_nice_select2_dist_js_nice_select2__WEBPACK_IMPORTED_MODULE_0__);
+// accordion
+const questionAccordionBtn = document.querySelectorAll('.contactUsQuestion .accordion-button')
+const questionAccordion = document.querySelectorAll('.contactUsQuestion .collapse');
+let collapseElementList  = [].slice.call(questionAccordion);
+let collapseList = collapseElementList.map(function (collapseEl) {
+    return new bootstrap.Collapse(collapseEl, {
+        toggle: false
+    });
+});
+questionAccordionBtn.forEach((btn, index) => {
+    btn.addEventListener('click', function() {
+        collapseList[index].toggle();
+    });
+});
+// custom selcet
 
 const select = document.querySelectorAll(".selectize");
 select.forEach(select => {
@@ -92,4 +107,4 @@ select.forEach(select => {
 
 /******/ })()
 ;
-//# sourceMappingURL=customSelect.js.map
+//# sourceMappingURL=contactUs_login.js.map

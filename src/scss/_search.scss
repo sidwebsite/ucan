@@ -236,21 +236,49 @@
         display: block;
     }
 }
+// professional functions style
+.professionalFunctions-content {    
+    .professionalFunctions-item {
+        border-bottom: 1px solid var(--bs-dark);
+        &:last-child {
+            border-bottom: 0;
+        }
+        .btn-light {
+            background-color: $login-input-bg-light;
+            > i {
+                @include media-breakpoint-down(lg) {
+                    transform: rotate(90deg);
+                }
+            }
+        }  
+    }
+}
 .professionalFunctions-accordion {
-    > .accordion-item {
-        border-bottom: 1px solid $custom-accordion-border-color;
-        &:first-child {
-            @include media-breakpoint-up(lg) {
+    background-color: $login-input-bg-light;
+    .custom-accordion {
+        .accordion-item {
+            &:first-child {
                 border-top: 0;
             }
+            &:last-child {
+                border-bottom: 0;
+            }
         }
-        .accordion-button {
-            font-size: inherit;
-        }
-        .accordion-button, .accordion-button:not(.collapsed) {
-            color: var(--bs-dark);
-        } 
-    }
+    } 
+    // > .accordion-item {
+    //     border-bottom: 1px solid $custom-accordion-border-color;
+    //     &:first-child {
+    //         @include media-breakpoint-up(lg) {
+    //             border-top: 0;
+    //         }
+    //     }
+    //     .accordion-button {
+    //         font-size: inherit;
+    //     }
+    //     .accordion-button, .accordion-button:not(.collapsed) {
+    //         color: var(--bs-dark);
+    //     } 
+    // }
 }
 
 .professionalFunctions-item-accordion {

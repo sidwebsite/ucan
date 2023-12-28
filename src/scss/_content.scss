@@ -1,6 +1,8 @@
 @import 'aboutUACN';
 @import 'search';
 @import 'diagnose';
+@import 'account';
+@import 'contactUs';
 .page-header-bg {
     @include backgroundImage('index_news_bg.jpg');
     margin-top: 80px;
@@ -101,6 +103,48 @@
     display: inline-block;
     background-color: var(--bs-warning);
     padding: 5px 15px;
+}
+.content-title-left-outline {
+    border-left: 7px solid var(--bs-warning);
+    background-color: var(--bs-light);
+    padding: {
+        left: 20px;
+        top: 10px;
+        bottom: 10px;
+    };
+}
+.content-title-left-outline-bg-white {
+    border-left: 7px solid var(--bs-warning);
+    background-color: var(--bs-white);
+    padding: {
+        left: 20px;
+        top: 10px;
+        bottom: 10px;
+    };
+}
+.content-h4-left-arrow {
+    position: relative;
+    padding-left: 20px;
+    &::before {
+        content: "\e901";
+        font-family: 'icomoon';
+        position: absolute;
+        left: 0;
+        top: 6px;
+        font-size: 1rem;
+    }
+}
+.content-h5-left-arrow {
+    position: relative;
+    padding-left: 20px;
+    &::before {
+        content: "\e901";
+        font-family: 'icomoon';
+        position: absolute;
+        left: 0;
+        top: 3px;
+        font-size: 1rem;
+    }
 }
 @include media-breakpoint-up(lg) {
     .page-header-bg {
