@@ -17438,6 +17438,16 @@ a:hover {
   text-decoration: underline;
 }
 
+.custom-link-blue {
+  color: #1763F2;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  text-decoration: underline;
+}
+.custom-link-blue:hover, .custom-link-blue:focus {
+  color: var(--bs-primary);
+}
+
 #forgot-tab.nav-pills .nav-link {
   border-radius: 12px 12px 0 0;
   background-color: #E2E0E0;
@@ -19260,20 +19270,43 @@ ol.list-style-cjk-ideographic {
     padding-bottom: 15px;
   }
 }
+.diagnose-fraction-style.diagnose-instructions {
+  height: 170px;
+}
+@media (max-width: 767.98px) {
+  .diagnose-fraction-style.diagnose-instructions {
+    height: auto;
+  }
+}
+.diagnose-fraction-style.diagnose-instructions .fraction > .number::before {
+  top: auto;
+  bottom: -45px;
+}
+@media (max-width: 767.98px) {
+  .diagnose-fraction-style.diagnose-instructions .fraction > .number {
+    margin-right: 3rem;
+  }
+  .diagnose-fraction-style.diagnose-instructions .fraction > .number::before {
+    width: 38px;
+  }
+}
+.diagnose-fraction-style.diagnose-instructions .fraction > .fieldset {
+  top: 100%;
+}
 
-.diagnosis-test-content .diagnosis-test {
+.diagnosis-test-content > div {
   border-bottom: 1px solid #707070;
+}
+.diagnosis-test-content > div:last-child {
+  border-bottom: 0;
 }
 .diagnosis-test-content .diagnosis-test.diagnosis-test-active {
   background-color: #FFFBEF;
 }
-.diagnosis-test-content .diagnosis-test:last-child {
-  border-bottom: 0;
-}
 .diagnosis-test-content .diagnosis-test .groupoptions-wrapper {
   max-width: 450px;
 }
-.diagnosis-test-content .diagnosis-test .groupoptions-wrapper .groupoptions > .radio label {
+.diagnosis-test-content .diagnosis-test .groupoptions > .radio label {
   position: relative;
   width: 31px;
   height: 31px;
@@ -19285,7 +19318,7 @@ ol.list-style-cjk-ideographic {
   transition: 0.3s ease;
   font-size: 0;
 }
-.diagnosis-test-content .diagnosis-test .groupoptions-wrapper .groupoptions > .radio label::before {
+.diagnosis-test-content .diagnosis-test .groupoptions > .radio label::before {
   font: var(--fa-font-solid);
   content: "";
   width: 31px;
@@ -19310,45 +19343,67 @@ ol.list-style-cjk-ideographic {
   left: -1px;
   font-size: 1rem;
 }
-.diagnosis-test-content .diagnosis-test .groupoptions-wrapper .groupoptions > .radio input[type=radio]:checked + label::before {
+.diagnosis-test-content .diagnosis-test .groupoptions > .radio input[type=radio]:checked + label::before {
   content: "\f00c";
   opacity: 1;
 }
-.diagnosis-test-content .diagnosis-test .groupoptions-wrapper .groupoptions > .radio:nth-child(1) label, .diagnosis-test-content .diagnosis-test .groupoptions-wrapper .groupoptions > .radio:nth-child(2) label {
+.diagnosis-test-content .diagnosis-test .groupoptions > .radio:nth-child(1) label, .diagnosis-test-content .diagnosis-test .groupoptions > .radio:nth-child(2) label {
   border-color: var(--bs-warning);
 }
-.diagnosis-test-content .diagnosis-test .groupoptions-wrapper .groupoptions > .radio:nth-child(1) label:hover, .diagnosis-test-content .diagnosis-test .groupoptions-wrapper .groupoptions > .radio:nth-child(2) label:hover {
+.diagnosis-test-content .diagnosis-test .groupoptions > .radio:nth-child(1) label:hover, .diagnosis-test-content .diagnosis-test .groupoptions > .radio:nth-child(2) label:hover {
   background-color: var(--bs-warning);
 }
-.diagnosis-test-content .diagnosis-test .groupoptions-wrapper .groupoptions > .radio:nth-child(1) input[type=radio]:focus + label, .diagnosis-test-content .diagnosis-test .groupoptions-wrapper .groupoptions > .radio:nth-child(2) input[type=radio]:focus + label {
+.diagnosis-test-content .diagnosis-test .groupoptions > .radio:nth-child(1) input[type=radio]:focus + label, .diagnosis-test-content .diagnosis-test .groupoptions > .radio:nth-child(2) input[type=radio]:focus + label {
   background-color: var(--bs-warning);
 }
-.diagnosis-test-content .diagnosis-test .groupoptions-wrapper .groupoptions > .radio:nth-child(1) input[type=radio]:checked + label, .diagnosis-test-content .diagnosis-test .groupoptions-wrapper .groupoptions > .radio:nth-child(2) input[type=radio]:checked + label {
+.diagnosis-test-content .diagnosis-test .groupoptions > .radio:nth-child(1) input[type=radio]:checked + label, .diagnosis-test-content .diagnosis-test .groupoptions > .radio:nth-child(2) input[type=radio]:checked + label {
   background-color: var(--bs-warning);
 }
-.diagnosis-test-content .diagnosis-test .groupoptions-wrapper .groupoptions > .radio:nth-child(3) label {
+.diagnosis-test-content .diagnosis-test .groupoptions > .radio:nth-child(3) label {
   border-color: #909698;
 }
-.diagnosis-test-content .diagnosis-test .groupoptions-wrapper .groupoptions > .radio:nth-child(3) label:hover, .diagnosis-test-content .diagnosis-test .groupoptions-wrapper .groupoptions > .radio:nth-child(3) label:focus {
+.diagnosis-test-content .diagnosis-test .groupoptions > .radio:nth-child(3) label:hover, .diagnosis-test-content .diagnosis-test .groupoptions > .radio:nth-child(3) label:focus {
   background-color: #909698;
 }
-.diagnosis-test-content .diagnosis-test .groupoptions-wrapper .groupoptions > .radio:nth-child(3) input[type=radio]:focus + label {
+.diagnosis-test-content .diagnosis-test .groupoptions > .radio:nth-child(3) input[type=radio]:focus + label {
   background-color: #909698;
 }
-.diagnosis-test-content .diagnosis-test .groupoptions-wrapper .groupoptions > .radio:nth-child(3) input[type=radio]:checked + label {
+.diagnosis-test-content .diagnosis-test .groupoptions > .radio:nth-child(3) input[type=radio]:checked + label {
   background-color: #909698;
 }
-.diagnosis-test-content .diagnosis-test .groupoptions-wrapper .groupoptions > .radio:nth-child(4) label, .diagnosis-test-content .diagnosis-test .groupoptions-wrapper .groupoptions > .radio:nth-child(5) label {
+.diagnosis-test-content .diagnosis-test .groupoptions > .radio:nth-child(4) label, .diagnosis-test-content .diagnosis-test .groupoptions > .radio:nth-child(5) label {
   border-color: var(--bs-primary);
 }
-.diagnosis-test-content .diagnosis-test .groupoptions-wrapper .groupoptions > .radio:nth-child(4) label:hover, .diagnosis-test-content .diagnosis-test .groupoptions-wrapper .groupoptions > .radio:nth-child(4) label:focus, .diagnosis-test-content .diagnosis-test .groupoptions-wrapper .groupoptions > .radio:nth-child(5) label:hover, .diagnosis-test-content .diagnosis-test .groupoptions-wrapper .groupoptions > .radio:nth-child(5) label:focus {
+.diagnosis-test-content .diagnosis-test .groupoptions > .radio:nth-child(4) label:hover, .diagnosis-test-content .diagnosis-test .groupoptions > .radio:nth-child(4) label:focus, .diagnosis-test-content .diagnosis-test .groupoptions > .radio:nth-child(5) label:hover, .diagnosis-test-content .diagnosis-test .groupoptions > .radio:nth-child(5) label:focus {
   background-color: var(--bs-primary);
 }
-.diagnosis-test-content .diagnosis-test .groupoptions-wrapper .groupoptions > .radio:nth-child(4) input[type=radio]:focus + label, .diagnosis-test-content .diagnosis-test .groupoptions-wrapper .groupoptions > .radio:nth-child(5) input[type=radio]:focus + label {
+.diagnosis-test-content .diagnosis-test .groupoptions > .radio:nth-child(4) input[type=radio]:focus + label, .diagnosis-test-content .diagnosis-test .groupoptions > .radio:nth-child(5) input[type=radio]:focus + label {
   background-color: var(--bs-primary);
 }
-.diagnosis-test-content .diagnosis-test .groupoptions-wrapper .groupoptions > .radio:nth-child(4) input[type=radio]:checked + label, .diagnosis-test-content .diagnosis-test .groupoptions-wrapper .groupoptions > .radio:nth-child(5) input[type=radio]:checked + label {
+.diagnosis-test-content .diagnosis-test .groupoptions > .radio:nth-child(4) input[type=radio]:checked + label, .diagnosis-test-content .diagnosis-test .groupoptions > .radio:nth-child(5) input[type=radio]:checked + label {
   background-color: var(--bs-primary);
+}
+.diagnosis-test-content .diagnosis-multiple .form-check-input:focus {
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.18);
+          box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.18);
+}
+.diagnosis-test-content .diagnosis-multiple .form-check-input:checked {
+  background-color: #FFFBEF;
+  border-color: #212020;
+}
+.diagnosis-test-content .diagnosis-multiple .form-check-input:checked[type=checkbox] {
+  --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 20 20%27%3e%3cpath fill=%27none%27 stroke=%27%23212020%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%273%27 d=%27M6 10l3 3l6-6%27/%3e%3c/svg%3e");
+}
+.diagnosis-test-content .diagnosis-multiple .form-check {
+  margin-bottom: 1rem;
+}
+.diagnosis-test-content .diagnosis-multiple .other-input {
+  width: 408px;
+}
+@media (max-width: 767.98px) {
+  .diagnosis-test-content .diagnosis-multiple .other-input {
+    width: 100%;
+  }
 }
 
 .collapse-btn {

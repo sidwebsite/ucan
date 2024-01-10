@@ -116,3 +116,6 @@ $diagnose-block-lightGray-color: #EAEAEA;
 
 // divider
 $divider-bg-color: #A7A5A5;
+
+$custom-form-check-input-checked-color: #212020;
+$custom-form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$custom-form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>"); 

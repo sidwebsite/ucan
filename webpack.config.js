@@ -19,6 +19,7 @@ module.exports = {
         'diagnose_3_2_3': './src/js/diagnose_3_2_3.js',
         'diagnose_3_3_3': './src/js/diagnose_3_3_3.js',
         'diagnose_3_3_4': './src/js/diagnose_3_3_4.js',
+        'diagnoseTest': './src/js/diagnoseTest.js',
         'contactUs_login': './src/js/contactUs_login.js',
         'footer': './src/js/footer.js'
     },
@@ -141,6 +142,30 @@ module.exports = {
         }),
         // 職能應用
         new HtmlWebpackPlugin({
+            template: './src/html/application/application_2_1_1.html',
+            filename: 'application/application_2_1_1.html',
+            minify: false,
+            chunks: ['main', 'sticky', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/application/application_2_1_2.html',
+            filename: 'application/application_2_1_2.html',
+            minify: false,
+            chunks: ['main', 'sticky', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/application/application_2_1_3.html',
+            filename: 'application/application_2_1_3.html',
+            minify: false,
+            chunks: ['main', 'sticky', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/application/application_2_1_4.html',
+            filename: 'application/application_2_1_4.html',
+            minify: false,
+            chunks: ['main', 'sticky', 'footer']
+        }),
+        new HtmlWebpackPlugin({
             template: './src/html/application/application_2_2_1.html',
             filename: 'application/application_2_2_1.html',
             minify: false,
@@ -226,6 +251,36 @@ module.exports = {
             filename: 'diagnose/diagnose_3_3_4.html',
             minify: false,
             chunks: ['main','diagnose_3_3_4', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/diagnose/diagnose_3_4_a.html',
+            filename: 'diagnose/diagnose_3_4_a.html',
+            minify: false,
+            chunks: ['main','diagnoseTest', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/diagnose/diagnose_3_4_a_1.html',
+            filename: 'diagnose/diagnose_3_4_a_1.html',
+            minify: false,
+            chunks: ['main','diagnoseTest', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/diagnose/diagnose_3_4_b.html',
+            filename: 'diagnose/diagnose_3_4_b.html',
+            minify: false,
+            chunks: ['main','diagnoseTest', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/diagnose/diagnose_3_4_b_1.html',
+            filename: 'diagnose/diagnose_3_4_b_1.html',
+            minify: false,
+            chunks: ['main','diagnoseTest', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/diagnose/diagnose_3_4_c.html',
+            filename: 'diagnose/diagnose_3_4_c.html',
+            minify: false,
+            chunks: ['main','diagnoseTest', 'footer']
         }),
         // 認識UCAN
         new HtmlWebpackPlugin({
@@ -323,7 +378,7 @@ module.exports = {
         }),
     ],
     devServer: {
-        host: '192.168.50.10',
+        // host: '192.168.50.10',
         port: '4545',
         open: true
     },

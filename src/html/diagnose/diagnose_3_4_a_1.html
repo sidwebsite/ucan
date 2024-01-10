@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="大專校院就業職能平台的描述">
+    <title>大專校院就業職能平台</title>
+</head>
+<body>
+    <noscript>您的瀏覽器不支援JavaScript功能，若本網站功能無法正常使用，請開啟瀏覽器JavaScript狀態</noscript>
+    <div class="warpper">
+        <a href="#content" title="移到主要內容" class="visually-hidden-focusable" tabindex="0">移到主要內容</a>
+        <!-- header-top start -->
+        <div class="header-top bg-primary d-none d-lg-flex justify-content-between align-items-center px-4 px-xxl-5 py-3 position-relative">
+            <a href="#U" accesskey="U" name="U" class="alt-u d-lg-inline-block position-absolute top-0 start-0" title="上方功能區塊">:::</a>
+            <div class="search">                
+                <!-- <form>
+                    <div class="input-group bg-white rounded-pill overflow-hidden">
+                        <label for="tagsKeyWords" class="visually-hidden" aria-label="關鍵字搜尋">關鍵字</label>
+                        <input type="text" id="tagsKeyWords" class="form-control border-0" placeholder="關鍵字搜尋" >
+                        <button type="button" class="btn" id="search-btn" title="搜尋" aria-label="送出搜尋"><i class="fa-solid fa-magnifying-glass" title="搜尋"></i></button>
+                    </div>
+                </form> -->
+            </div>
+            <div class="d-flex">
+                <a href="../index.html" title="回首頁"><span class="icon-home"></span> 回首頁</a>
+                <a href="#" title="網站導覽"><span class="icon-sitemap"></span> 網站導覽</a>
+                <a href="#" title="UCAN使用指南"><span class="icon-guidance"></span> UCAN使用指南</a>
+                <a href="../others/contactUs.html" title="聯絡我們"><span class="icon-message"></span> 聯絡我們</a>
+                <span class="text-white"><span class="fa-solid fa-user"></span> 王XX</span>
+                <a href="#" class="ms-3" title="登出"><i class="fa-solid fa-right-from-bracket"></i> 登出</a>
+            </div>
+        </div>
+        <!-- header-top end -->
+        <header class="header">            
+            <!-- navbar start -->
+            <nav class="px-4 px-xxl-5 py-3 py-lg-0" id="">
+                <div class="header-main">
+                    <div class="logo">
+                        <a class="navbar-brand d-block" href="../index.html" title="連結到首頁">
+                            <h1><img src="../../images/logo.svg" alt="大專校院就業職能平台logo"></h1>
+                        </a>
+                    </div>
+                    <div class="open-nav-menu">
+                        <!-- <i class="fa-solid fa-bars"></i> -->
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="nav-menu ms-lg-auto">
+                        <!-- <div class="close-nav-menu">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div> -->
+                        <ul class="menu">
+                            <!-- <li class="menu-item px-3 py-4 d-block d-lg-none">
+                                <div class="search">
+                                    <form>
+                                        <div class="input-group bg-white rounded-pill overflow-hidden phone-search">
+                                            <label for="phoneTagsKeyWords" class="visually-hidden" aria-label="關鍵字搜尋">關鍵字</label>
+                                            <input type="text" id="phoneTagsKeyWords" class="form-control border-0" placeholder="關鍵字搜尋" aria-label="關鍵字搜尋" >
+                                            <button type="button" class="btn btn-dark" id="phone-search-btn" title="搜尋" aria-label="關鍵字搜尋"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li> -->
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu" title="職能與職業查詢">職能與職業查詢</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="#" title="職場共通職能查詢">職場共通職能查詢</a></li>
+                                    <li class="menu-item"><a href="#" title="專業職能查詢">專業職能查詢</a></li>
+                                    <li class="menu-item"><a href="#" title="職業查詢">職業查詢</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu" title="職能應用">職能應用</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="#" title="職場共通職能查詢">職場共通職能查詢</a></li>
+                                    <li class="menu-item"><a href="#" title="專業職能查詢">專業職能查詢</a></li>
+                                    <li class="menu-item"><a href="#" title="職業查詢">職業查詢</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu" title="職能診斷">職能診斷</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="#" title="職場共通職能">職場共通職能</a></li>
+                                    <li class="menu-item"><a href="#" title="專業職能">專業職能</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu" title="諮詢及診斷紀錄">診斷紀錄</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="#" title="歷經診斷結果">歷經診斷結果</a></li>
+                                    <li class="menu-item"><a href="#" title="諮詢服務">諮詢服務</a></li>
+                                    <li class="menu-item"><a href="#" title="諮詢紀錄">諮詢紀錄</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu" title="認識UCAN">認識UCAN</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="#" title="平台緣起及建置目的">平台緣起及建置目的</a></li>
+                                    <li class="menu-item"><a href="#" title="平台發展與依據">平台發展與依據</a></li>
+                                    <li class="menu-item"><a href="#" title="主要功能簡介">主要功能簡介</a></li>
+                                </ul>
+                            </li>
+                            <!--  -->
+                            <li class="menu-item d-block d-lg-none"><a href="#" title="網站導覽">網站導覽</a></li>
+                            <li class="menu-item d-block d-lg-none"><a href="#" title="UCAN使用指南">UCAN使用指南</a></li>
+                            <li class="menu-item d-block d-lg-none"><a href="#" title="聯絡我們">聯絡我們</a></li>
+                            <li class="menu-item d-block d-lg-none"><a href="#" title="登入">登入</a></li>
+                            <!--  -->
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- navbar end -->
+        </header>
+        <!-- header end -->
+        <!-- main start -->
+        <main class="main position-relative">
+            <section class="page-header-bg">
+                <div class="container page-header">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="d-md-flex align-items-center h-100 text-center text-md-start">
+                                <h2 class="text-primary d-inline-block mb-5 mb-md-0">職場共通職能</h2>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <figure>
+                                <img src="../../images/page_bg.png" class="img-fluid" alt="頁頭示意圖" aria-hidden="true">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="content">
+                <div class="container">
+                    <div class="row pt-5 d-print-none">
+                        <div class="col-12">
+                            <div class="border-bottom border-3 border-primary breadcrumb-bg p-2">
+                                <div class="row align-items-center flex-md-row flex-column-reverse">
+                                    <div class="col-md">
+                                        <div class="d-flex">
+                                            <a href="#C" title="中央內容區塊" accesskey="C" name="C" class="alt-c me-2">:::</a>
+                                            <nav aria-label="breadcrumb">
+                                                <ol class="breadcrumb mb-0">
+                                                    <li class="breadcrumb-item"><a href="../index.html" title="首頁"><span class="icon-home text-primary"></span> 首頁</a></li>
+                                                    <li class="breadcrumb-item"><a href="#" title="職能診斷">職能診斷</a></li>
+                                                    <li class="breadcrumb-item active" aria-current="page">職場共通職能</li>
+                                                </ol>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-auto">
+                                        <div class="social_share mb-3 mb-md-0">
+                                            <button class="btn font-size" id="font-small" type="button" title="小">小</button>
+                                            <button class="btn font-size active" id="font-normal" type="button" title="中">中</button>
+                                            <button class="btn font-size" id="font-large" type="button" title="大">大</button>
+                                            <button class="btn" type="button" title="列印" id="print" aria-label="列印"><i class="fa-solid fa-print"></i></button>
+                                            <button class="btn sharer" type="button" data-sharer="facebook" aria-label="facebook" data-title="" data-url="" title="facebook"><i class="fa-brands fa-facebook-f"></i></button>
+                                            <button class="btn sharer" type="button" data-sharer="line" aria-label="line" data-title="" data-url="" title="line"><i class="icon-icons8-line"></i></button>
+                                            <button class="btn sharer" type="button" data-sharer="twitter" aria-label="twitter" data-title="" data-url="" title="twitter"><i class="fa-brands fa-twitter"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="pt-3 pt-lg-5 mb-5">
+                                <h2 class="text-primary text-center text-lg-start title"><span>共通職能養成之教學能量回饋問卷</span></h2>
+                            </div>
+                            <div class="row mb-5 justify-content-center">
+                                <div class="col-lg-11">
+                                    <div class="diagnose-test-group">
+                                        <div class="breadcrumb-bg text-center py-3">
+                                            <h4>2. 你目前在學期間以下哪些「學習經驗」對於八大共通職能的養成最有幫助?</h4>
+                                        </div>
+                                        <div class="diagnosis-test-content">
+                                            <!-- checkbox1 -->
+                                            <div class="diagnosis-multiple py-5">
+                                                <h4 class="text-center mb-4"> (1)對<span class="text-primary">溝通表達</span>的養成最有幫助的有那些?(可複選)</h4>
+                                                <div class="groupoptions px-md-3 px-lg-5">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_1_1" name="diagnosismultiple_1" value="專業知識、知能傳授">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_1_1">專業知識、知能傳授</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_1_2" name="diagnosismultiple_1" value="同學及老師人脈">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_1_2">同學及老師人脈</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_1_3" name="diagnosismultiple_1" value="課程實務/實作活動">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_1_3">課程實務/實作活動</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_1_4" name="diagnosismultiple_1" value="業界實習">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_1_4">業界實習</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_1_5" name="diagnosismultiple_1" value="社團活動">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_1_5">社團活動</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_1_6" name="diagnosismultiple_1" value="語言學習">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_1_6">語言學習</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_1_7" name="diagnosismultiple_1" value="參與國際交流活動">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_1_7">參與國際交流活動</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_1_8" name="diagnosismultiple_1" value="志工服務服務學習">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_1_8">志工服務服務學習</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_1_9" name="diagnosismultiple_1" value="研究或教學助理">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_1_9">研究或教學助理</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_1_10" name="diagnosismultiple_1" value="通識課程">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_1_10">通識課程</label>
+                                                    </div>
+                                                    <div class="d-inline-block me-4">
+                                                        <div class="row gx-0 align-items-center mb-3">
+                                                            <div class="col-auto">
+                                                                <div class="form-check form-check-inline mb-0">
+                                                                    <input class="form-check-input other-check" type="checkbox" id="diagnosisCheckbox_1_11" name="diagnosismultiple_1" value="其他能力:請說明">
+                                                                    <label class="form-check-label" for="diagnosisCheckbox_1_11">其他能力:請說明</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-auto">
+                                                                <label for="otherAbilities_1" class="visually-hidden">說明</label>
+                                                                <input id="otherAbilities_1" class="form-control other-input" type="text" placeholder="請輸入說明" aria-label="請輸入說明">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_1_12" name="diagnosismultiple_1" value="都沒有幫助(選此項不得選其他選項)">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_1_12">都沒有幫助(選此項不得選其他選項)</label>
+                                                    </div>                                                    
+                                                </div>
+                                            </div>
+                                            <!-- checkbox2 -->
+                                            <div class="diagnosis-multiple py-5">
+                                                <h4 class="text-center mb-4"> (2)對<span class="text-primary">持續學習</span>的養成最有幫助的有那些?(可複選)</h4>
+                                                <div class="groupoptions px-md-3 px-lg-5">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_2_1" name="diagnosismultiple_2" value="專業知識、知能傳授">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_2_1">專業知識、知能傳授</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_2_2" name="diagnosismultiple_2" value="同學及老師人脈">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_2_2">同學及老師人脈</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_2_3" name="diagnosismultiple_2" value="課程實務/實作活動">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_2_3">課程實務/實作活動</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_2_4" name="diagnosismultiple_2" value="業界實習">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_2_4">業界實習</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_2_5" name="diagnosismultiple_2" value="社團活動">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_2_5">社團活動</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_2_6" name="diagnosismultiple_2" value="語言學習">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_2_6">語言學習</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_2_7" name="diagnosismultiple_2" value="參與國際交流活動">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_2_7">參與國際交流活動</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_2_8" name="diagnosismultiple_2" value="志工服務服務學習">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_2_8">志工服務服務學習</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_2_9" name="diagnosismultiple_2" value="研究或教學助理">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_2_9">研究或教學助理</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_2_10" name="diagnosismultiple_2" value="通識課程">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_2_10">通識課程</label>
+                                                    </div>
+                                                    <div class="d-inline-block me-4">
+                                                        <div class="row gx-0 align-items-center mb-3">
+                                                            <div class="col-auto">
+                                                                <div class="form-check form-check-inline mb-0">
+                                                                    <input class="form-check-input other-check" type="checkbox" id="diagnosisCheckbox_2_11" name="diagnosismultiple_2" value="其他能力:請說明">
+                                                                    <label class="form-check-label" for="diagnosisCheckbox_2_11">其他能力:請說明</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-auto">
+                                                                <label for="otherAbilities_2" class="visually-hidden">說明</label>
+                                                                <input id="otherAbilities_2" class="form-control other-input" type="text" placeholder="請輸入說明" aria-label="請輸入說明">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_2_12" name="diagnosismultiple_2" value="都沒有幫助(選此項不得選其他選項)">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_2_12">都沒有幫助(選此項不得選其他選項)</label>
+                                                    </div>                                                    
+                                                </div>
+                                            </div>
+                                            <!-- checkbox3 -->
+                                            <div class="diagnosis-multiple py-5">
+                                                <h4 class="text-center mb-4"> (3)對<span class="text-primary">人際互動</span>的養成最有幫助的有那些?(可複選)</h4>
+                                                <div class="groupoptions px-md-3 px-lg-5">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_3_1" name="diagnosismultiple_3" value="專業知識、知能傳授">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_3_1">專業知識、知能傳授</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_3_2" name="diagnosismultiple_3" value="同學及老師人脈">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_3_2">同學及老師人脈</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_3_3" name="diagnosismultiple_3" value="課程實務/實作活動">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_3_3">課程實務/實作活動</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_3_4" name="diagnosismultiple_3" value="業界實習">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_3_4">業界實習</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_3_5" name="diagnosismultiple_3" value="社團活動">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_3_5">社團活動</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_3_6" name="diagnosismultiple_3" value="語言學習">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_3_6">語言學習</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_3_7" name="diagnosismultiple_3" value="參與國際交流活動">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_3_7">參與國際交流活動</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_3_8" name="diagnosismultiple_3" value="志工服務服務學習">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_3_8">志工服務服務學習</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_3_9" name="diagnosismultiple_3" value="研究或教學助理">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_3_9">研究或教學助理</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_3_10" name="diagnosismultiple_3" value="通識課程">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_3_10">通識課程</label>
+                                                    </div>
+                                                    <div class="d-inline-block me-4">
+                                                        <div class="row gx-0 align-items-center mb-3">
+                                                            <div class="col-auto">
+                                                                <div class="form-check form-check-inline mb-0">
+                                                                    <input class="form-check-input other-check" type="checkbox" id="diagnosisCheckbox_3_11" name="diagnosismultiple_3" value="其他能力:請說明">
+                                                                    <label class="form-check-label" for="diagnosisCheckbox_3_11">其他能力:請說明</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-auto">
+                                                                <label for="otherAbilities_3" class="visually-hidden">說明</label>
+                                                                <input id="otherAbilities_3" class="form-control other-input" type="text" placeholder="請輸入說明" aria-label="請輸入說明">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_3_12" name="diagnosismultiple_3" value="都沒有幫助(選此項不得選其他選項)">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_3_12">都沒有幫助(選此項不得選其他選項)</label>
+                                                    </div>                                                    
+                                                </div>
+                                            </div>
+                                            <!-- checkbox4 -->
+                                            <div class="diagnosis-multiple py-5">
+                                                <h4 class="text-center mb-4"> (4)對<span class="text-primary">團隊合作</span>的養成最有幫助的有那些?(可複選)</h4>
+                                                <div class="groupoptions px-md-3 px-lg-5">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_4_1" name="diagnosismultiple_4" value="專業知識、知能傳授">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_4_1">專業知識、知能傳授</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_4_2" name="diagnosismultiple_4" value="同學及老師人脈">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_4_2">同學及老師人脈</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_4_3" name="diagnosismultiple_4" value="課程實務/實作活動">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_4_3">課程實務/實作活動</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_4_4" name="diagnosismultiple_4" value="業界實習">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_4_4">業界實習</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_4_5" name="diagnosismultiple_4" value="社團活動">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_4_5">社團活動</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_4_6" name="diagnosismultiple_4" value="語言學習">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_4_6">語言學習</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_4_7" name="diagnosismultiple_4" value="參與國際交流活動">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_4_7">參與國際交流活動</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_4_8" name="diagnosismultiple_4" value="志工服務服務學習">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_4_8">志工服務服務學習</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_4_9" name="diagnosismultiple_4" value="研究或教學助理">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_4_9">研究或教學助理</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_4_10" name="diagnosismultiple_4" value="通識課程">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_4_10">通識課程</label>
+                                                    </div>
+                                                    <div class="d-inline-block me-4">
+                                                        <div class="row gx-0 align-items-center mb-3">
+                                                            <div class="col-auto">
+                                                                <div class="form-check form-check-inline mb-0">
+                                                                    <input class="form-check-input other-check" type="checkbox" id="diagnosisCheckbox_4_11" name="diagnosismultiple_4" value="其他能力:請說明">
+                                                                    <label class="form-check-label" for="diagnosisCheckbox_4_11">其他能力:請說明</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-auto">
+                                                                <label for="otherAbilities_4" class="visually-hidden">說明</label>
+                                                                <input id="otherAbilities_4" class="form-control other-input" type="text" placeholder="請輸入說明" aria-label="請輸入說明">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_4_12" name="diagnosismultiple_4" value="都沒有幫助(選此項不得選其他選項)">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_4_12">都沒有幫助(選此項不得選其他選項)</label>
+                                                    </div>                                                    
+                                                </div>
+                                            </div>
+                                            <!-- checkbox5 -->
+                                            <div class="diagnosis-multiple py-5">
+                                                <h4 class="text-center mb-4"> (5)對<span class="text-primary">問題解決</span>的養成最有幫助的有那些?(可複選)</h4>
+                                                <div class="groupoptions px-md-3 px-lg-5">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_5_1" name="diagnosismultiple_5" value="專業知識、知能傳授">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_5_1">專業知識、知能傳授</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_5_2" name="diagnosismultiple_5" value="同學及老師人脈">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_5_2">同學及老師人脈</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_5_3" name="diagnosismultiple_5" value="課程實務/實作活動">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_5_3">課程實務/實作活動</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_5_4" name="diagnosismultiple_5" value="業界實習">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_5_4">業界實習</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_5_5" name="diagnosismultiple_5" value="社團活動">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_5_5">社團活動</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_5_6" name="diagnosismultiple_5" value="語言學習">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_5_6">語言學習</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_5_7" name="diagnosismultiple_5" value="參與國際交流活動">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_5_7">參與國際交流活動</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_5_8" name="diagnosismultiple_5" value="志工服務服務學習">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_5_8">志工服務服務學習</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_5_9" name="diagnosismultiple_5" value="研究或教學助理">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_5_9">研究或教學助理</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_5_10" name="diagnosismultiple_5" value="通識課程">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_5_10">通識課程</label>
+                                                    </div>
+                                                    <div class="d-inline-block me-4">
+                                                        <div class="row gx-0 align-items-center mb-3">
+                                                            <div class="col-auto">
+                                                                <div class="form-check form-check-inline mb-0">
+                                                                    <input class="form-check-input other-check" type="checkbox" id="diagnosisCheckbox_5_11" name="diagnosismultiple_5" value="其他能力:請說明">
+                                                                    <label class="form-check-label" for="diagnosisCheckbox_5_11">其他能力:請說明</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-auto">
+                                                                <label for="otherAbilities_5" class="visually-hidden">說明</label>
+                                                                <input id="otherAbilities_5" class="form-control other-input" type="text" placeholder="請輸入說明" aria-label="請輸入說明">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_5_12" name="diagnosismultiple_5" value="都沒有幫助(選此項不得選其他選項)">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_5_12">都沒有幫助(選此項不得選其他選項)</label>
+                                                    </div>                                                    
+                                                </div>
+                                            </div>
+                                            <!-- checkbox6 -->
+                                            <div class="diagnosis-multiple py-5">
+                                                <h4 class="text-center mb-4"> (6)對<span class="text-primary">創新</span>的養成最有幫助的有那些?(可複選)</h4>
+                                                <div class="groupoptions px-md-3 px-lg-5">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_6_1" name="diagnosismultiple_6" value="專業知識、知能傳授">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_6_1">專業知識、知能傳授</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_6_2" name="diagnosismultiple_6" value="同學及老師人脈">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_6_2">同學及老師人脈</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_6_3" name="diagnosismultiple_6" value="課程實務/實作活動">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_6_3">課程實務/實作活動</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_6_4" name="diagnosismultiple_6" value="業界實習">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_6_4">業界實習</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_6_5" name="diagnosismultiple_6" value="社團活動">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_6_5">社團活動</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_6_6" name="diagnosismultiple_6" value="語言學習">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_6_6">語言學習</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_6_7" name="diagnosismultiple_6" value="參與國際交流活動">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_6_7">參與國際交流活動</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_6_8" name="diagnosismultiple_6" value="志工服務服務學習">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_6_8">志工服務服務學習</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_6_9" name="diagnosismultiple_6" value="研究或教學助理">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_6_9">研究或教學助理</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_6_10" name="diagnosismultiple_6" value="通識課程">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_6_10">通識課程</label>
+                                                    </div>
+                                                    <div class="d-inline-block me-4">
+                                                        <div class="row gx-0 align-items-center mb-3">
+                                                            <div class="col-auto">
+                                                                <div class="form-check form-check-inline mb-0">
+                                                                    <input class="form-check-input other-check" type="checkbox" id="diagnosisCheckbox_6_11" name="diagnosismultiple_6" value="其他能力:請說明">
+                                                                    <label class="form-check-label" for="diagnosisCheckbox_6_11">其他能力:請說明</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-auto">
+                                                                <label for="otherAbilities_6" class="visually-hidden">說明</label>
+                                                                <input id="otherAbilities_6" class="form-control other-input" type="text" placeholder="請輸入說明" aria-label="請輸入說明">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_6_12" name="diagnosismultiple_6" value="都沒有幫助(選此項不得選其他選項)">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_6_12">都沒有幫助(選此項不得選其他選項)</label>
+                                                    </div>                                                    
+                                                </div>
+                                            </div>
+                                            <!-- checkbox7 -->
+                                            <div class="diagnosis-multiple py-5">
+                                                <h4 class="text-center mb-4"> (7)對<span class="text-primary">工作責任及紀律</span>的養成最有幫助的有那些?(可複選)</h4>
+                                                <div class="groupoptions px-md-3 px-lg-5">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_7_1" name="diagnosismultiple_7" value="專業知識、知能傳授">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_7_1">專業知識、知能傳授</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_7_2" name="diagnosismultiple_7" value="同學及老師人脈">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_7_2">同學及老師人脈</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_7_3" name="diagnosismultiple_7" value="課程實務/實作活動">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_7_3">課程實務/實作活動</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_7_4" name="diagnosismultiple_7" value="業界實習">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_7_4">業界實習</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_7_5" name="diagnosismultiple_7" value="社團活動">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_7_5">社團活動</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_7_6" name="diagnosismultiple_7" value="語言學習">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_7_6">語言學習</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_7_7" name="diagnosismultiple_7" value="參與國際交流活動">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_7_7">參與國際交流活動</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_7_8" name="diagnosismultiple_7" value="志工服務服務學習">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_7_8">志工服務服務學習</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_7_9" name="diagnosismultiple_7" value="研究或教學助理">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_7_9">研究或教學助理</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_7_10" name="diagnosismultiple_7" value="通識課程">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_7_10">通識課程</label>
+                                                    </div>
+                                                    <div class="d-inline-block me-4">
+                                                        <div class="row gx-0 align-items-center mb-3">
+                                                            <div class="col-auto">
+                                                                <div class="form-check form-check-inline mb-0">
+                                                                    <input class="form-check-input other-check" type="checkbox" id="diagnosisCheckbox_7_11" name="diagnosismultiple_7" value="其他能力:請說明">
+                                                                    <label class="form-check-label" for="diagnosisCheckbox_7_11">其他能力:請說明</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-auto">
+                                                                <label for="otherAbilities_7" class="visually-hidden">說明</label>
+                                                                <input id="otherAbilities_7" class="form-control other-input" type="text" placeholder="請輸入說明" aria-label="請輸入說明">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_7_12" name="diagnosismultiple_7" value="都沒有幫助(選此項不得選其他選項)">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_7_12">都沒有幫助(選此項不得選其他選項)</label>
+                                                    </div>                                                    
+                                                </div>
+                                            </div>
+                                            <!-- checkbox8 -->
+                                            <div class="diagnosis-multiple py-5">
+                                                <h4 class="text-center mb-4"> (8)對<span class="text-primary">資訊科技應用</span>的養成最有幫助的有那些?(可複選)</h4>
+                                                <div class="groupoptions px-md-3 px-lg-5">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_8_1" name="diagnosismultiple_8" value="專業知識、知能傳授">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_8_1">專業知識、知能傳授</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_8_2" name="diagnosismultiple_8" value="同學及老師人脈">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_8_2">同學及老師人脈</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_8_3" name="diagnosismultiple_8" value="課程實務/實作活動">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_8_3">課程實務/實作活動</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_8_4" name="diagnosismultiple_8" value="業界實習">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_8_4">業界實習</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_8_5" name="diagnosismultiple_8" value="社團活動">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_8_5">社團活動</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_8_6" name="diagnosismultiple_8" value="語言學習">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_8_6">語言學習</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_8_7" name="diagnosismultiple_8" value="參與國際交流活動">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_8_7">參與國際交流活動</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_8_8" name="diagnosismultiple_8" value="志工服務服務學習">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_8_8">志工服務服務學習</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_8_9" name="diagnosismultiple_8" value="研究或教學助理">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_8_9">研究或教學助理</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_8_10" name="diagnosismultiple_8" value="通識課程">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_8_10">通識課程</label>
+                                                    </div>
+                                                    <div class="d-inline-block me-4">
+                                                        <div class="row gx-0 align-items-center mb-3">
+                                                            <div class="col-auto">
+                                                                <div class="form-check form-check-inline mb-0">
+                                                                    <input class="form-check-input other-check" type="checkbox" id="diagnosisCheckbox_8_11" name="diagnosismultiple_8" value="其他能力:請說明">
+                                                                    <label class="form-check-label" for="diagnosisCheckbox_8_11">其他能力:請說明</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-auto">
+                                                                <label for="otherAbilities_8" class="visually-hidden">說明</label>
+                                                                <input id="otherAbilities_8" class="form-control other-input" type="text" placeholder="請輸入說明" aria-label="請輸入說明">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="diagnosisCheckbox_8_12" name="diagnosismultiple_8" value="都沒有幫助(選此項不得選其他選項)">
+                                                        <label class="form-check-label" for="diagnosisCheckbox_8_12">都沒有幫助(選此項不得選其他選項)</label>
+                                                    </div>                                                    
+                                                </div>
+                                            </div>
+                                            <!-- radio1 -->
+                                            <div class="diagnosis-test py-5">
+                                                <h4 class="text-center mb-4">3. 你對於學校提供之八項共通職能養成教學內容的滿意度為何?</h4>
+                                                <div class="groupoptions-wrapper d-flex justify-content-between align-items-center mx-auto">
+                                                    <span class="fs-5">1分</span>
+                                                    <div class="groupoptions d-flex justify-content-between flex-grow-1 mx-4">
+                                                        <span class="radio">
+                                                            <input type="radio" name="diagnosis-group-3-test-1" id="diagnosis-group-3-test-1-1" class="btn-check" autocomplete="off" value="1分">
+                                                            <label for="diagnosis-group-3-test-1-1" aria-label="1分">1分</label>
+                                                        </span>
+                                                        <span class="radio">
+                                                            <input type="radio" name="diagnosis-group-3-test-1" id="diagnosis-group-3-test-1-2" class="btn-check" autocomplete="off" value="2分">
+                                                            <label for="diagnosis-group-3-test-1-2" aria-label="2分">2分</label>
+                                                        </span>
+                                                        <span class="radio">
+                                                            <input type="radio" name="diagnosis-group-3-test-1" id="diagnosis-group-3-test-1-3" class="btn-check" autocomplete="off" value="3分">
+                                                            <label for="diagnosis-group-3-test-1-3" aria-label="3分">3分</label>
+                                                        </span>
+                                                        <span class="radio">
+                                                            <input type="radio" name="diagnosis-group-3-test-1" id="diagnosis-group-3-test-1-4" class="btn-check" autocomplete="off" value="4分">
+                                                            <label for="diagnosis-group-3-test-1-4" aria-label="4分">4分</label>
+                                                        </span>
+                                                        <span class="radio">
+                                                            <input type="radio" name="diagnosis-group-3-test-1" id="diagnosis-group-3-test-1-5" class="btn-check" autocomplete="off" value="5分">
+                                                            <label for="diagnosis-group-3-test-1-5" aria-label="5分">5分</label>
+                                                        </span>
+                                                    </div>
+                                                    <span class="fs-5">5分</span>
+                                                </div>
+                                            </div>
+                                            <!-- radio2 -->
+                                            <div class="diagnosis-test py-5">
+                                                <h4 class="text-center mb-4">4. 你對於系所提供之八項共通職能養成教學內容的滿意度為何?</h4>
+                                                <div class="groupoptions-wrapper d-flex justify-content-between align-items-center mx-auto">
+                                                    <span class="fs-5">1分</span>
+                                                    <div class="groupoptions d-flex justify-content-between flex-grow-1 mx-4">
+                                                        <span class="radio">
+                                                            <input type="radio" name="diagnosis-group-4-test-1" id="diagnosis-group-4-test-1-1" class="btn-check" autocomplete="off" value="1分">
+                                                            <label for="diagnosis-group-4-test-1-1" aria-label="1分">1分</label>
+                                                        </span>
+                                                        <span class="radio">
+                                                            <input type="radio" name="diagnosis-group-4-test-1" id="diagnosis-group-4-test-1-2" class="btn-check" autocomplete="off" value="2分">
+                                                            <label for="diagnosis-group-4-test-1-2" aria-label="2分">2分</label>
+                                                        </span>
+                                                        <span class="radio">
+                                                            <input type="radio" name="diagnosis-group-4-test-1" id="diagnosis-group-4-test-1-3" class="btn-check" autocomplete="off" value="3分">
+                                                            <label for="diagnosis-group-4-test-1-3" aria-label="3分">3分</label>
+                                                        </span>
+                                                        <span class="radio">
+                                                            <input type="radio" name="diagnosis-group-4-test-1" id="diagnosis-group-4-test-1-4" class="btn-check" autocomplete="off" value="4分">
+                                                            <label for="diagnosis-group-4-test-1-4" aria-label="4分">4分</label>
+                                                        </span>
+                                                        <span class="radio">
+                                                            <input type="radio" name="diagnosis-group-4-test-1" id="diagnosis-group-4-test-1-5" class="btn-check" autocomplete="off" value="5分">
+                                                            <label for="diagnosis-group-4-test-1-5" aria-label="5分">5分</label>
+                                                        </span>
+                                                    </div>
+                                                    <span class="fs-5">5分</span>
+                                                </div>
+                                            </div>
+                                            <!-- radio3 -->
+                                            <div class="diagnosis-test py-5">
+                                                <h4 class="text-center mb-4">5. 你清楚你在校內所參加的各門課程或活動與哪些共通職能的養成有關嗎?</h4>
+                                                <div class="groupoptions-wrapper d-flex justify-content-between align-items-center mx-auto">
+                                                    <span class="fs-5">1分</span>
+                                                    <div class="groupoptions d-flex justify-content-between flex-grow-1 mx-4">
+                                                        <span class="radio">
+                                                            <input type="radio" name="diagnosis-group-5-test-1" id="diagnosis-group-5-test-1-1" class="btn-check" autocomplete="off" value="1分">
+                                                            <label for="diagnosis-group-5-test-1-1" aria-label="1分">1分</label>
+                                                        </span>
+                                                        <span class="radio">
+                                                            <input type="radio" name="diagnosis-group-5-test-1" id="diagnosis-group-5-test-1-2" class="btn-check" autocomplete="off" value="2分">
+                                                            <label for="diagnosis-group-5-test-1-2" aria-label="2分">2分</label>
+                                                        </span>
+                                                        <span class="radio">
+                                                            <input type="radio" name="diagnosis-group-5-test-1" id="diagnosis-group-5-test-1-3" class="btn-check" autocomplete="off" value="3分">
+                                                            <label for="diagnosis-group-5-test-1-3" aria-label="3分">3分</label>
+                                                        </span>
+                                                        <span class="radio">
+                                                            <input type="radio" name="diagnosis-group-5-test-1" id="diagnosis-group-5-test-1-4" class="btn-check" autocomplete="off" value="4分">
+                                                            <label for="diagnosis-group-5-test-1-4" aria-label="4分">4分</label>
+                                                        </span>
+                                                        <span class="radio">
+                                                            <input type="radio" name="diagnosis-group-5-test-1" id="diagnosis-group-5-test-1-5" class="btn-check" autocomplete="off" value="5分">
+                                                            <label for="diagnosis-group-5-test-1-5" aria-label="5分">5分</label>
+                                                        </span>
+                                                    </div>
+                                                    <span class="fs-5">5分</span>
+                                                </div>
+                                            </div>
+                                            <!-- radio4 -->
+                                            <div class="diagnosis-test py-5">
+                                                <h4 class="text-center mb-4">6. 你認為自己的整體就業準備度如何? (註:只問應屆畢業生)</h4>
+                                                <div class="groupoptions-wrapper d-flex justify-content-between align-items-center mx-auto">
+                                                    <span class="fs-5">1分</span>
+                                                    <div class="groupoptions d-flex justify-content-between flex-grow-1 mx-4">
+                                                        <span class="radio">
+                                                            <input type="radio" name="diagnosis-group-6-test-1" id="diagnosis-group-6-test-1-1" class="btn-check" autocomplete="off" value="1分">
+                                                            <label for="diagnosis-group-6-test-1-1" aria-label="1分">1分</label>
+                                                        </span>
+                                                        <span class="radio">
+                                                            <input type="radio" name="diagnosis-group-6-test-1" id="diagnosis-group-6-test-1-2" class="btn-check" autocomplete="off" value="2分">
+                                                            <label for="diagnosis-group-6-test-1-2" aria-label="2分">2分</label>
+                                                        </span>
+                                                        <span class="radio">
+                                                            <input type="radio" name="diagnosis-group-6-test-1" id="diagnosis-group-6-test-1-3" class="btn-check" autocomplete="off" value="3分">
+                                                            <label for="diagnosis-group-6-test-1-3" aria-label="3分">3分</label>
+                                                        </span>
+                                                        <span class="radio">
+                                                            <input type="radio" name="diagnosis-group-6-test-1" id="diagnosis-group-6-test-1-4" class="btn-check" autocomplete="off" value="4分">
+                                                            <label for="diagnosis-group-6-test-1-4" aria-label="4分">4分</label>
+                                                        </span>
+                                                        <span class="radio">
+                                                            <input type="radio" name="diagnosis-group-6-test-1" id="diagnosis-group-6-test-1-5" class="btn-check" autocomplete="off" value="5分">
+                                                            <label for="diagnosis-group-6-test-1-5" aria-label="5分">5分</label>
+                                                        </span>
+                                                    </div>
+                                                    <span class="fs-5">5分</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="text-center">
+                                <button class="btn custom-btn-rect-primary me-4" title="上一頁" aria-label="上一頁"><span class="icon-arrow-angles-left" aria-hidden="true"></span> 上一頁</button>
+                                <button class="btn custom-btn-rect-primary" title="完成作答並送出" aria-label="完成作答並送出">完成作答並送出 <span class="icon-arrow-angles-right" aria-hidden="true"></span></button>
+                            </div>
+                            <!-- content end -->
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+            </section>
+        </main>
+        <!-- main end -->
+        <!-- footer start -->
+        <footer class="footer position-relative">
+            <a href="#B" title="下方功能區塊" accesskey="B" name="B" class="alt-b position-absolute top-0 start-0">:::</a>
+            <!-- footer menu start -->
+            <div class="footer-menu-wrapper d-none d-lg-block">
+                <div class="footer-menu-btn border-bottom border-6 border-primary text-center">
+                    <button type="button" id="footerMenuBtn" class="btn btn-primary px-5">點選收合 <i class="fa-solid fa-circle-arrow-down"></i></button>
+                </div>
+                <div class="collapse" id="footerMenu">
+                    <div class="bg-primary footer-menu"></div>
+                </div>
+            </div>
+            <!-- footer menu end -->
+            <!-- footer Information start -->
+            <div class="footer-Information">
+                <div class="container px-5 px-md-0">
+                    <div class="row">
+                        <div class="col-md mb-lg-0 mb-4">
+                            <figure>
+                                <img src="../../images/footer_logo.svg" alt="" class="img-fluid">
+                            </figure>
+                        </div>
+                        <div class="col-md pe-3 pe-xxl-4 mb-5 mb-lg-0">
+                            <h3 class="mb-4 text-center text-md-start">UCAN計畫辦公室</h3>
+                            <address class="border-start border-4 border-dark ps-3 mb-3">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">諮詢信箱：</li>
+                                    <li class="list-inline-item"><a href="mailto:ucan@itri.org.tw" title="寄信至ucan@itri.org.tw">ucan@itri.org.tw</a></li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">諮詢專線：</li>
+                                    <li class="list-inline-item">02-2701-6565#343</li>
+                                </ul>
+                            </address>
+                            <div class="text-center text-md-start">
+                                <a href="#" title="或填寫聯絡表單" class="footer-btn px-4">或填寫聯絡表單 <i class="fa-solid fa-circle-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md mb-5 mb-lg-0">
+                            <h3 class="mb-4 text-center text-md-start">服務時間</h3>
+                            <div class="border-start border-4 border-dark ps-3 mb-3">
+                                <p>周一~周五(非假日)</p>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">上午8:30-12:00</li>
+                                    <li class="list-inline-item">下午13:00-17:30</li>
+                                </ul>
+                            </div>
+                            <a href="#" class="text-center text-md-start d-block" target="_blank" title="本網站通過無障礙AA檢測(另開新視窗)">
+                                <img src="../../images/accessibility.png" alt="本網站通過無障礙AA檢測" title="本網站通過無障礙AA檢測(另開新視窗)">
+                            </a>
+                        </div>
+                        <div class="col-lg d-none d-lg-block">
+                            <figure>
+                                <img src="../../images/footer_img.svg" alt="" class="img-fluid">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer Information end -->
+        </footer>
+        <!-- footer end -->
+    </div>
+    <!-- go top start -->
+    <button type="button" title="回頂部" id="goTop" class="btn d-flex flex-column justify-content-center align-items-center position-fixed rounded-circle border-0">
+        <span class="icon-top-up fs-4"></span>
+        <span>TOP</span>
+    </button>
+    <!-- go top end -->
+</body>
+</html>

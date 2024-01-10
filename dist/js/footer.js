@@ -18,8 +18,10 @@ var __webpack_exports__ = {};
             <div class="footer-menu-links">
                 <p class="mb-0">職涯面</p>
                 <ul class="list-unstyled ps-3">
-                    <li><a href="#" title="團測帶領">團測帶領</a></li>
-                    <li><a href="#" title="測驗解讀">測驗解讀</a></li>
+                    <li><a href="../application/application_2_1_1.html" title="團測帶領">團測帶領</a></li>
+                    <li><a href="../application/application_2_1_2.html" title="職業興趣探索引導">職業興趣探索引導</a></li>
+                    <li><a href="../application/application_2_1_3.html" title="共通職能診斷引導">共通職能診斷引導</a></li>
+                    <li><a href="../application/application_2_1_4.html" title="專業職能診斷引導">專業職能診斷引導</a></li>
                 </ul>
                 <p class="mb-0">教務面</p>
                 <ul class="list-unstyled ps-3">
@@ -49,7 +51,6 @@ var __webpack_exports__ = {};
                 <a href="#" title="共通職能能力養成">共通職能能力養成</a>
                 <a href="#" title="專業職能診斷結果">專業職能診斷結果</a>
                 <a href="#" title="專業職能能力養成">專業職能能力養成</a>
-                <a href="#" title="匯出診斷報告">匯出診斷報告</a>
             </div>
         </div>
         <div class="col">

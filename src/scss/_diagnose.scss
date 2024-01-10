@@ -113,7 +113,6 @@
 }
 .diagnose-fraction-style {
     height: 320px;
-    
     position: relative;
     &::before {
         content: "";
@@ -228,95 +227,149 @@
             };
         }
     }
+    &.diagnose-instructions {
+        height: 170px;
+        @include media-breakpoint-down(md) {
+            height: auto;
+        }
+        .fraction {
+            > .number {
+                &::before {
+                    top: auto;
+                    bottom: -45px;
+                }
+                @include media-breakpoint-down(md) {
+                    margin-right: 3rem;
+                    &::before {
+                        width: 38px;
+                    }
+                }
+            }
+            
+            > .fieldset {
+                top: 100%;
+            }
+        }
+    }
 }
 .diagnosis-test-content {
+    > div {
+        border-bottom: 1px solid $login-button-border-color;
+        &:last-child {
+            border-bottom: 0;
+        }  
+    }
+
     .diagnosis-test {
         &.diagnosis-test-active {
             background-color: #FFFBEF;
         }
-        border-bottom: 1px solid $login-button-border-color;
-        &:last-child {
-            border-bottom: 0;
-        }
         .groupoptions-wrapper {
             max-width: 450px;
-            .groupoptions {
-                > .radio {
-                    label {
-                        position: relative;
+        }
+        .groupoptions {
+            > .radio {
+                label {
+                    position: relative;
+                    width: 31px;
+                    height: 31px;
+                    border-radius: 50%;
+                    border: 2px solid;
+                    border-color: var(--bs-dark);
+                    background-color: transparent;
+                    transition: .3s ease;
+                    font-size: 0;
+                    &::before {
+                        font: var(--fa-font-solid);
+                        content: "";
                         width: 31px;
                         height: 31px;
-                        border-radius: 50%;
-                        border: 2px solid;
-                        border-color: var(--bs-dark);
-                        background-color: transparent;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: var(--bs-white);
                         transition: .3s ease;
-                        font-size: 0;
-                        &::before {
-                            font: var(--fa-font-solid);
-                            content: "";
-                            width: 31px;
-                            height: 31px;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            color: var(--bs-white);
-                            transition: .3s ease;
-                            opacity: 0;
-                            position: relative;
-                            left: -1px;
-                            font-size: 1rem;
-                        }
-                    }
-                    input[type="radio"]:checked + label {
-                        &::before {
-                            content: map-get($icons, check);
-                            opacity: 1;
-                        }
-                    }
-                    &:nth-child(1), &:nth-child(2) {
-                        label {
-                            border-color: var(--bs-warning);
-                            &:hover{
-                                background-color: var(--bs-warning);
-                            }
-                        }
-                        input[type="radio"]:focus + label {
-                            background-color: var(--bs-warning);
-                        }
-                        input[type="radio"]:checked + label {
-                            background-color: var(--bs-warning);
-                        }
-                    }
-                    &:nth-child(3) {
-                        label {
-                            border-color: $diagnose-fraction-number-gray;
-                            &:hover, &:focus {
-                                background-color: $diagnose-fraction-number-gray;
-                            }
-                        }
-                        input[type="radio"]:focus + label {
-                            background-color: $diagnose-fraction-number-gray;
-                        }
-                        input[type="radio"]:checked + label {
-                            background-color: $diagnose-fraction-number-gray;
-                        }
-                    }
-                    &:nth-child(4), &:nth-child(5) {
-                        label {
-                            border-color: var(--bs-primary);
-                            &:hover, &:focus {
-                                background-color: var(--bs-primary);
-                            }
-                        }
-                        input[type="radio"]:focus + label {
-                            background-color: var(--bs-primary);
-                        }
-                        input[type="radio"]:checked + label {
-                            background-color: var(--bs-primary);
-                        }
+                        opacity: 0;
+                        position: relative;
+                        left: -1px;
+                        font-size: 1rem;
                     }
                 }
+                input[type="radio"]:checked + label {
+                    &::before {
+                        content: map-get($icons, check);
+                        opacity: 1;
+                    }
+                }
+                &:nth-child(1), &:nth-child(2) {
+                    label {
+                        border-color: var(--bs-warning);
+                        &:hover{
+                            background-color: var(--bs-warning);
+                        }
+                    }
+                    input[type="radio"]:focus + label {
+                        background-color: var(--bs-warning);
+                    }
+                    input[type="radio"]:checked + label {
+                        background-color: var(--bs-warning);
+                    }
+                }
+                &:nth-child(3) {
+                    label {
+                        border-color: $diagnose-fraction-number-gray;
+                        &:hover, &:focus {
+                            background-color: $diagnose-fraction-number-gray;
+                        }
+                    }
+                    input[type="radio"]:focus + label {
+                        background-color: $diagnose-fraction-number-gray;
+                    }
+                    input[type="radio"]:checked + label {
+                        background-color: $diagnose-fraction-number-gray;
+                    }
+                }
+                &:nth-child(4), &:nth-child(5) {
+                    label {
+                        border-color: var(--bs-primary);
+                        &:hover, &:focus {
+                            background-color: var(--bs-primary);
+                        }
+                    }
+                    input[type="radio"]:focus + label {
+                        background-color: var(--bs-primary);
+                    }
+                    input[type="radio"]:checked + label {
+                        background-color: var(--bs-primary);
+                    }
+                }
+            }
+        }
+    }
+    .diagnosis-multiple {
+        .form-check-input {
+            &:focus {
+                box-shadow: 0 0 0 0.25rem rgba($black, 0.18)
+            }
+            &:checked {
+                background-color: #FFFBEF;
+                border-color: #212020;
+                &[type="checkbox"] {
+                    @if $enable-gradients {
+                        --#{$prefix}form-check-bg-image: #{escape-svg($custom-form-check-input-checked-bg-image)}, var(--#{$prefix}gradient);
+                    } @else {
+                        --#{$prefix}form-check-bg-image: #{escape-svg($custom-form-check-input-checked-bg-image)};
+                    }
+                }
+            }
+        }
+        .form-check {
+            margin-bottom: 1rem;
+        }
+        .other-input {
+            width: 408px;
+            @include media-breakpoint-down(md) {
+                width: 100%;
             }
         }
     }

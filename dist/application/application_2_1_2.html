@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="大專校院就業職能平台的描述">
+    <title>大專校院就業職能平台</title>
+<script defer src="../js/main.js"></script><script defer src="../js/sticky.js"></script><script defer src="../js/footer.js"></script><link href="../css/style_rwd.css" rel="stylesheet"></head>
+<body>
+    <noscript>您的瀏覽器不支援JavaScript功能，若本網站功能無法正常使用，請開啟瀏覽器JavaScript狀態</noscript>
+    <div class="warpper">
+        <a href="#content" title="移到主要內容" class="visually-hidden-focusable" tabindex="0">移到主要內容</a>
+        <!-- header-top start -->
+        <div class="header-top bg-primary d-none d-lg-flex justify-content-between align-items-center px-4 px-xxl-5 py-3 position-relative">
+            <a href="#U" accesskey="U" name="U" class="alt-u d-lg-inline-block position-absolute top-0 start-0" title="上方功能區塊">:::</a>
+            <div class="search">                
+                <!-- <form>
+                    <div class="input-group bg-white rounded-pill overflow-hidden">
+                        <label for="tagsKeyWords" class="visually-hidden" aria-label="關鍵字搜尋">關鍵字</label>
+                        <input type="text" id="tagsKeyWords" class="form-control border-0" placeholder="關鍵字搜尋" >
+                        <button type="button" class="btn" id="search-btn" title="搜尋" aria-label="送出搜尋"><i class="fa-solid fa-magnifying-glass" title="搜尋"></i></button>
+                    </div>
+                </form> -->
+            </div>
+            <div class="d-flex">
+                <a href="../index.html" title="回首頁"><span class="icon-home"></span> 回首頁</a>
+                <a href="#" title="網站導覽"><span class="icon-sitemap"></span> 網站導覽</a>
+                <a href="#" title="UCAN使用指南"><span class="icon-guidance"></span> UCAN使用指南</a>
+                <a href="../others/contactUs.html" title="聯絡我們"><span class="icon-message"></span> 聯絡我們</a>
+                <span class="text-white"><span class="fa-solid fa-user"></span> 王XX</span>
+                <a href="#" class="ms-3" title="登出"><i class="fa-solid fa-right-from-bracket"></i> 登出</a>
+            </div>
+        </div>
+        <!-- header-top end -->
+        <header class="header">            
+            <!-- navbar start -->
+            <nav class="px-4 px-xxl-5 py-3 py-lg-0" id="">
+                <div class="header-main">
+                    <div class="logo">
+                        <a class="navbar-brand d-block" href="../index.html" title="連結到首頁">
+                            <h1><img src="../images/logo.svg" alt="大專校院就業職能平台logo"></h1>
+                        </a>
+                    </div>
+                    <div class="open-nav-menu">
+                        <!-- <i class="fa-solid fa-bars"></i> -->
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="nav-menu ms-lg-auto">
+                        <!-- <div class="close-nav-menu">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div> -->
+                        <ul class="menu">
+                            <!-- <li class="menu-item px-3 py-4 d-block d-lg-none">
+                                <div class="search">
+                                    <form>
+                                        <div class="input-group bg-white rounded-pill overflow-hidden phone-search">
+                                            <label for="phoneTagsKeyWords" class="visually-hidden" aria-label="關鍵字搜尋">關鍵字</label>
+                                            <input type="text" id="phoneTagsKeyWords" class="form-control border-0" placeholder="關鍵字搜尋" aria-label="關鍵字搜尋" >
+                                            <button type="button" class="btn btn-dark" id="phone-search-btn" title="搜尋" aria-label="關鍵字搜尋"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li> -->
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu" title="職能與職業查詢">職能與職業查詢</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="#" title="職場共通職能查詢">職場共通職能查詢</a></li>
+                                    <li class="menu-item"><a href="#" title="專業職能查詢">專業職能查詢</a></li>
+                                    <li class="menu-item"><a href="#" title="職業查詢">職業查詢</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu" title="職能應用">職能應用</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="#" title="職場共通職能查詢">職場共通職能查詢</a></li>
+                                    <li class="menu-item"><a href="#" title="專業職能查詢">專業職能查詢</a></li>
+                                    <li class="menu-item"><a href="#" title="職業查詢">職業查詢</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu" title="職能診斷">職能診斷</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="#" title="職場共通職能">職場共通職能</a></li>
+                                    <li class="menu-item"><a href="#" title="專業職能">專業職能</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu" title="諮詢及診斷紀錄">診斷紀錄</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="#" title="歷經診斷結果">歷經診斷結果</a></li>
+                                    <li class="menu-item"><a href="#" title="諮詢服務">諮詢服務</a></li>
+                                    <li class="menu-item"><a href="#" title="諮詢紀錄">諮詢紀錄</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu" title="認識UCAN">認識UCAN</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="#" title="平台緣起及建置目的">平台緣起及建置目的</a></li>
+                                    <li class="menu-item"><a href="#" title="平台發展與依據">平台發展與依據</a></li>
+                                    <li class="menu-item"><a href="#" title="主要功能簡介">主要功能簡介</a></li>
+                                </ul>
+                            </li>
+                            <!--  -->
+                            <li class="menu-item d-block d-lg-none"><a href="#" title="網站導覽">網站導覽</a></li>
+                            <li class="menu-item d-block d-lg-none"><a href="#" title="UCAN使用指南">UCAN使用指南</a></li>
+                            <li class="menu-item d-block d-lg-none"><a href="#" title="聯絡我們">聯絡我們</a></li>
+                            <li class="menu-item d-block d-lg-none"><a href="#" title="登入">登入</a></li>
+                            <!--  -->
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- navbar end -->
+        </header>
+        <!-- header end -->
+        <!-- main start -->
+        <main class="main position-relative">
+            <section class="page-header-bg">
+                <div class="container page-header">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="d-md-flex align-items-center h-100 text-center text-md-start">
+                                <h2 class="text-primary d-inline-block mb-5 mb-md-0">職能應用</h2>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <figure>
+                                <img src="../images/page_bg.png" class="img-fluid" alt="頁頭示意圖">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="content">
+                <div class="container">
+                    <div class="row pt-5 d-print-none">
+                        <div class="col-12">
+                            <div class="border-bottom border-3 border-primary breadcrumb-bg p-2">
+                                <div class="row align-items-center flex-md-row flex-column-reverse">
+                                    <div class="col-md">
+                                        <div class="d-flex">
+                                            <a href="#C" title="中央內容區塊" accesskey="C" name="C" class="alt-c me-2">:::</a>
+                                            <nav aria-label="breadcrumb">
+                                                <ol class="breadcrumb mb-0">
+                                                    <li class="breadcrumb-item"><a href="../index.html" title="首頁"><span class="icon-home text-primary"></span> 首頁</a></li>
+                                                    <li class="breadcrumb-item"><a href="#" title="職能應用">職能應用</a></li>
+                                                    <li class="breadcrumb-item active" aria-current="page">職業興趣探索引導</li>
+                                                </ol>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-auto">
+                                        <div class="social_share mb-3 mb-md-0">
+                                            <button class="btn font-size" id="font-small" type="button" title="小">小</button>
+                                            <button class="btn font-size active" id="font-normal" type="button" title="中">中</button>
+                                            <button class="btn font-size" id="font-large" type="button" title="大">大</button>
+                                            <button class="btn" type="button" title="列印" id="print" aria-label="列印"><i class="fa-solid fa-print"></i></button>
+                                            <button class="btn sharer" type="button" data-sharer="facebook" aria-label="facebook" data-title="" data-url="" title="facebook"><i class="fa-brands fa-facebook-f"></i></button>
+                                            <button class="btn sharer" type="button" data-sharer="line" aria-label="line" data-title="" data-url="" title="line"><i class="icon-icons8-line"></i></button>
+                                            <button class="btn sharer" type="button" data-sharer="twitter" aria-label="twitter" data-title="" data-url="" title="twitter"><i class="fa-brands fa-twitter"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="row" data-sticky-container>
+                        <div class="col-12">
+                            <div class="py-3 py-lg-5">
+                                <h2 class="text-primary text-center text-lg-start title"><span>職業興趣探索引導</span></h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 order-2 order-lg-1">
+                            <div class="sticky-content" data-bs-spy="scroll" data-bs-target="#navbarRight" data-bs-offset="0">
+                                <div id="item-1" class="item">
+                                    <h4 class="content-title-left-outline mb-3">職業興趣探索施測的注意事項</h4>
+                                    <p>在引導學生施測時，可以先帶領學生討論或思考，何謂真正的興趣？究竟是喜歡做？還是單純喜歡享受呢？</p>
+                                    <h5 class="text-primary">指導語</h5>
+                                    <p>請想像各項活動行為，每天都發生在您的工作活動，您喜歡嗎？請勾選您喜歡在工作中進行的活動。</p>
+                                    <h5 class="text-primary">作答方式</h5>
+                                    <ol class="ps-3 mb-5">
+                                        <li>測驗結果是作為自我瞭解的途徑與參考。</li>
+                                        <li>請依照自己的「真實狀況」與「直覺」作答，結果才較具參考價值。</li>
+                                        <li>集中注意力作答！</li>
+                                    </ol>
+                                </div>                                
+                                <div id="item-2" class="item">
+                                    <h4 class="content-title-left-outline mb-3">職業興趣探索診斷的測驗解讀</h4>
+                                    <h5 class="text-primary">測驗結果的意義</h5>
+                                    <ol class="ps-3 mb-5">
+                                        <li>測驗結果的分數高低，都是「反映自己某個面向的狀態」，沒有好壞之分。</li>
+                                        <li>不給別人貼標籤，也不給自己貼標籤。</li>
+                                        <li>測驗結果不代表真正的人生，而是從中更認識自己，釐清和確認自己當下的狀態。</li>
+                                        <li>測驗結果具有時效性，會依據當下的心境、引導語、外在環境和生命累積而變化。</li>
+                                        <li>最重要的是如何運用到「行動」上。</li>
+                                    </ol>
+                                    <h5 class="text-primary">測驗結果的解讀</h5>
+                                    <ol class="ps-3 mb-5">
+                                        <li>發現自己關於『16種職涯類型』的興趣高低排列，找出前三高的排名。</li>
+                                        <li>看最高與最低分的Holland code，找出自己的前三高分。</li>
+                                    </ol>
+                                    <h5 class="text-primary">測驗結果的應用</h5>
+                                    <ol class="ps-3 mb-5">
+                                        <li>理解RIASEC的興趣性格呈現，對應到目前所讀的科系發展、研究所或未來工作，找到自己在團隊中的角色。</li>
+                                        <li>瞭解自己對於『16種職涯類型』的興趣高低之排列，參考與對應未來的職涯發展方向。</li>
+                                        <li>將職業興趣探索的診斷結果，寫進I am, I can, I will的三架構，可做為未來撰寫履歷自傳的參考。</li>
+                                    </ol>
+                                    <h5 class="text-primary">測驗後的注意事項</h5>
+                                    <p>生涯重要抉擇來自於綜合考量，例如，價值觀、家庭因素、能力、就業市場機會、未來發展性…等，請勿以單一測驗來做決定。</p>
+                                </div>
+                                <div id="item-3" class="item">
+                                    <h4 class="content-title-left-outline mb-3">常見問題Q&A</h4>
+                                    <h5 class="text-primary">這個結果根本不準～  跟我想像的不一樣！</h5>
+                                    <div class="mb-5 text-center"> 
+                                        <figure class="figure">
+                                            <img src="../images/application/application_2_1_2_img_01.png" class="figure-img img-fluid" alt="結合學生學習歷程檔案">
+                                        </figure>
+                                    </div>
+                                    <h5 class="text-primary">我的各項職類興趣分數都很低耶……</h5>
+                                    <div class="text-center">
+                                        <figure class="figure mb-5">
+                                            <img src="../images/application/application_2_1_2_img_02.png" class="figure-img img-fluid" alt="我的各項職類興趣分數都很低耶">
+                                        </figure>
+                                        <figure class="figure mb-5">
+                                            <img src="../images/application/application_2_1_2_img_03.png" class="figure-img img-fluid" alt="職業興趣探索測驗解讀案例">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div id="item-4" class="item">
+                                    <h4 class="content-title-left-outline mb-3">職業興趣探索測驗解讀案例</h4>
+                                    <p>就讀心理系王小涵同學的施測結果解讀</p>
+                                    <figure class="figure">
+                                        <img src="../images/application/application_2_1_2_img_04.png" class="figure-img img-fluid" alt="對應16種職涯類型">
+                                    </figure>
+                                    <h5 class="text-primary">對應16種職涯類型：</h5>
+                                    <p>依職業興趣探索原始分數所對應的16種職涯類型，有各別興趣程度分數。其中前三高職涯類別為「個人及社會服務」、「教育與訓練」、「醫療保健」和「休閒觀光旅遊」。王同學可依個人興趣來多了解此四個職涯類型中，不同的就業途徑和職業角色，從中了解工作世界樣貌以及不同職位的工作內容與能力需求。</p>
+                                    <h5 class="text-primary">描繪未來職涯想像：</h5>
+                                    <p>進階引導目前就讀心理系王同學，將上述高度興趣程度的職涯類型，進行興趣憧憬整合。王同學此四個職涯類型的興趣憧憬，為造福他人、行動講師、預防治療並進、有趣好玩的學習情境，將此發揮創意，綜整至心理系相關的職業，例如，諮商心理師/醫院病患心理紓壓講師。</p>
+                                    <h5 class="text-primary">採取實際養成行動：</h5>
+                                    <p>王同學同時可依據目前大學修課現況，選擇適合的雙主修、輔修或旁聽課程，透過實際學習來釐清真實興趣喜好，也同時累積跨領域知識與技能。</p>
+                                    <figure class="figure">
+                                        <img src="../images/application/application_2_1_2_img_05.png" class="figure-img img-fluid" alt="結合學生學習歷程檔案">
+                                    </figure>
+                                    <h5 class="text-primary">觀看Holland code前三高分：</h5>
+                                    <p>依王同學Holland 六碼的原始分數，前三高分代碼，也就是興趣代碼為SIC，此三個代碼在Holland六角型位置，並無在對角位置，顯示王同學的性格特質上，並無極端矛盾之處。</p>
+                                    <h5 class="text-primary">觀看Holland code最高與最低分：</h5>
+                                    <p>最高分為社會型S，為10分，最低分為企業型E，為5分，其最高分減去最低分為5分(小於7分)，顯示王同學的興趣相對較不明顯，較容易隨著時間而有所變動。各代碼的PR值顯示</p>
+                                    <h5 class="text-primary">進行自我對話，確認性格與測驗的貼近程度：</h5>
+                                    <p>引導王同學依代碼分數最高至最低，依序看過每個代碼的性格描述、問題解決方式、價值觀等特質，並依據個人自我反思覺察，同時透過親朋好友的反饋，王同學自覺自己的性格非常符合SIC代碼，而E企業型特質則是當下情境，來決定是否呈現此性格特質。</p>
+                                    <h5 class="text-primary">運用多元特質組合來做決定：</h5>
+                                    <p>王同學特別提到有時不確定該用C事務型特質，或是A藝術型特質來做決定，有時感到很矛盾。建議王同學在發現此矛盾時，不忘鼓勵自己有多元性格特質，可在不同情境進行轉換與應對，並適當自我設定做抉擇的截止日期，在此之前，鼓勵自己主動多元收集資訊，幫助自己下決定。而一旦下確定後，便勇與承擔後果，或因情況變化來進行調整應對策略。</p>
+                                    <h5 class="text-primary">發掘自己在產業團隊中的角色定位：</h5>
+                                    <p class="mb-2">心理系大三王同學，經過前兩大學修課與活動體驗，同時了解職場工作世界內容，確定自己畢業後想留在心理諮商產業，王同學可依照自己的興趣代碼SIC來思考在心理諮詢產業的角色定位，例如：</p>
+                                    <ul class="custom-arrow-right-list">
+                                        <li>善用S特質的助人者，擔任服務、協調、教育訓練等角色。</li>
+                                        <li>善用I特質的思考者，擔任研發、改善優化、問題解決等角色。</li>
+                                        <li>善用C特質的組織者，擔任流程管理、專案規劃、品質管理等角色。</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-lg-3 order-1 order-lg-2 column float-md-end">
+                            <nav id="navbarRight" class="navbar flex-column align-items-stretch py-0" data-sticky data-margin-top="100">
+                                <p>職業興趣探索引導 <a href="#R" title="右方功能區塊" accesskey="R" name="R" class="alt-r">:::</a></p>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#item-1" title="職業興趣探索施測的注意事項">職業興趣探索施測的注意事項</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#item-2" title="職業興趣探索診斷的測驗解讀">職業興趣探索診斷的測驗解讀</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#item-3" title="常見問題Q&A">常見問題Q&A</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#item-4" title="職業興趣探索測驗解讀案例">職業興趣探索測驗解讀案例</a></li>
+                                </ul>
+                            </nav>
+                        </div> 
+                    </div>
+                    <!--  -->
+                </div>
+            </section>
+        </main>
+        <!-- main end -->
+        <!-- footer start -->
+        <footer class="footer position-relative">
+            <a href="#B" title="下方功能區塊" accesskey="B" name="B" class="alt-b position-absolute top-0 start-0">:::</a>
+            <!-- footer menu start -->
+            <div class="footer-menu-wrapper d-none d-lg-block">
+                <div class="footer-menu-btn border-bottom border-6 border-primary text-center">
+                    <button type="button" id="footerMenuBtn" class="btn btn-primary px-5">點選收合 <i class="fa-solid fa-circle-arrow-down"></i></button>
+                </div>
+                <div class="collapse" id="footerMenu">
+                    <div class="bg-primary footer-menu"></div>
+                </div>
+            </div>
+            <!-- footer menu end -->
+            <!-- footer Information start -->
+            <div class="footer-Information">
+                <div class="container px-5 px-md-0">
+                    <div class="row">
+                        <div class="col-md mb-lg-0 mb-4">
+                            <figure>
+                                <img src="../images/footer_logo.svg" alt="" class="img-fluid">
+                            </figure>
+                        </div>
+                        <div class="col-md pe-3 pe-xxl-4 mb-5 mb-lg-0">
+                            <h3 class="mb-4 text-center text-md-start">UCAN計畫辦公室</h3>
+                            <address class="border-start border-4 border-dark ps-3 mb-3">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">諮詢信箱：</li>
+                                    <li class="list-inline-item"><a href="mailto:ucan@itri.org.tw" title="寄信至ucan@itri.org.tw">ucan@itri.org.tw</a></li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">諮詢專線：</li>
+                                    <li class="list-inline-item">02-2701-6565#343</li>
+                                </ul>
+                            </address>
+                            <div class="text-center text-md-start">
+                                <a href="#" title="或填寫聯絡表單" class="footer-btn px-4">或填寫聯絡表單 <i class="fa-solid fa-circle-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md mb-5 mb-lg-0">
+                            <h3 class="mb-4 text-center text-md-start">服務時間</h3>
+                            <div class="border-start border-4 border-dark ps-3 mb-3">
+                                <p>周一~周五(非假日)</p>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">上午8:30-12:00</li>
+                                    <li class="list-inline-item">下午13:00-17:30</li>
+                                </ul>
+                            </div>
+                            <a href="#" class="text-center text-md-start d-block" target="_blank" title="本網站通過無障礙AA檢測(另開新視窗)">
+                                <img src="../images/accessibility.png" alt="本網站通過無障礙AA檢測" title="本網站通過無障礙AA檢測(另開新視窗)">
+                            </a>
+                        </div>
+                        <div class="col-lg d-none d-lg-block">
+                            <figure>
+                                <img src="../images/footer_img.svg" alt="" class="img-fluid">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer Information end -->
+        </footer>
+        <!-- footer end -->
+    </div>
+    <!-- go top start -->
+    <button type="button" title="回頂部" id="goTop" class="btn d-flex flex-column justify-content-center align-items-center position-fixed rounded-circle border-0">
+        <span class="icon-top-up fs-4"></span>
+        <span>TOP</span>
+    </button>
+    <!-- go top end -->
+</body>
+</html>

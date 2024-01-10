@@ -3,3 +3,11 @@
     text-decoration-color: $custom-small-color;
     text-decoration: underline;
 }
+.custom-link-blue {
+    color: #1763F2;
+    transition: .3s ease;
+    text-decoration: underline;
+    &:hover, &:focus {
+        color: var(--bs-primary);
+    }
+}
