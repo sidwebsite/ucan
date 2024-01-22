@@ -343,6 +343,21 @@
                         background-color: var(--bs-primary);
                     }
                 }
+                &.radioLabel {
+                    text-align: center;
+                    width: calc(100% / 5) + 'px';
+                    label {
+                        font-size: inherit;
+                        position: relative;
+                        > span {
+                            position: absolute;
+                            left: -50%;
+                            width: 82px;
+                            transform: translateX(-13px);
+                            bottom: -30px;
+                        }
+                    }
+                }
             }
         }
     }

@@ -47,10 +47,13 @@ var __webpack_exports__ = {};
             <h4 class="text-white text-decoration-underline mb-3">診斷紀錄</h4>
             <div class="footer-menu-links">
                 <a href="#" title="職業興趣探索診斷結果">職業興趣探索診斷結果</a>
-                <a href="#" title="共通職能診斷結果">共通職能診斷結果</a>
-                <a href="#" title="共通職能能力養成">共通職能能力養成</a>
+                <a href="#" title="職場共通職能診斷結果">職場共通職能診斷結果</a>
                 <a href="#" title="專業職能診斷結果">專業職能診斷結果</a>
-                <a href="#" title="專業職能能力養成">專業職能能力養成</a>
+                <p class="mb-0 mt-3">能力養成計畫</p>
+                <ul class="list-unstyled ps-3">
+                    <li><a href="../recode/recode_4_3_1.html" title="職場共通職能能力養成計畫">職場共通職能能力養成計畫</a></li>
+                    <li><a href="../recode/recode_4_5_1.html" title="專業職能能力養成計畫">專業職能能力養成計畫</a></li>
+                </ul>
             </div>
         </div>
         <div class="col">

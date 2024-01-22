@@ -123,12 +123,12 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="d-md-flex align-items-center h-100 text-center text-md-start">
-                                <h2 class="text-primary d-inline-block mb-5 mb-md-0">職業興趣探索測驗</h2>
+                                <h2 class="text-primary d-inline-block mb-5 mb-md-0">診斷紀錄</h2>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <figure>
-                                <img src="../../images/page_bg.png" class="img-fluid" alt="頁頭示意圖" aria-hidden="true">
+                                <img src="../../images/page_bg.png" class="img-fluid" alt="頁頭示意圖">
                             </figure>
                         </div>
                     </div>
@@ -146,8 +146,8 @@
                                             <nav aria-label="breadcrumb">
                                                 <ol class="breadcrumb mb-0">
                                                     <li class="breadcrumb-item"><a href="../index.html" title="首頁"><span class="icon-home text-primary"></span> 首頁</a></li>
-                                                    <li class="breadcrumb-item"><a href="#" title="職能診斷">職能診斷</a></li>
-                                                    <li class="breadcrumb-item active" aria-current="page">職業興趣探索測驗</li>
+                                                    <li class="breadcrumb-item"><a href="#" title="診斷紀錄">診斷紀錄</a></li>
+                                                    <li class="breadcrumb-item active" aria-current="page">共通職能能力養成</li>
                                                 </ol>
                                             </nav>
                                         </div>
@@ -167,64 +167,136 @@
                             </div>
                         </div>
                     </div>
-                    <!--  -->
+                    <!-- start -->
                     <div class="row">
                         <div class="col-12">
                             <div class="py-3 py-lg-5">
-                                <h2 class="text-primary text-center text-lg-start title"><span>職業興趣探索測驗</span></h2>
+                                <h2 class="text-primary text-center text-lg-start title"><span>選擇養成項目</span></h2>
                             </div>
-                            <!-- content start -->
-                            <div class="px-3">
-                                <div class="row diagnose-part-wrapper gx-lg-6">
-                                    <div class="col-md-4 mb-4">
-                                        <div class="diagnose-part active px-4 py-2 fs-5 fw-bold h-100">
-                                            Part 1.<br />你喜歡哪些活動？
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 mb-4">
-                                        <div class="diagnose-part px-4 py-2 fs-5 fw-bold h-100">
-                                            Part 2.<br />你認為自己有這樣的特質嗎？
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 mb-4">
-                                        <div class="diagnose-part px-4 py-2 fs-5 fw-bold h-100">
-                                            Part 3.<br />以往的學習經驗中你最喜歡哪些科目？
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="mb-3">此單元共有102種活動，請勾選你喜歡的項目(勾選數目不限)。</p>
-                                <div class="table-responsive">
-                                    <div class="border border-2 border-primary">
-                                        <table class="table mb-0 custom-table diagnose-table">
-                                            <tbody>
-                                                <tr>
-                                                    <td width="1" class="text-nowrap pe-3">1</td>
-                                                    <td>觀察生物如何生長與生存</td>
-                                                    <td width="1" class="text-nowrap">
-                                                        <input type="checkbox" class="diagnose-custom-checkbox btn-check" aria-checked="true" autocomplete="off" value="勾選/取消"  title="勾選/取消" aria-label="勾選/取消" checked="checked">                                                        
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td width="1" class="text-nowrap pe-3">2</td>
-                                                    <td>日常生活中能時常注意愛惜地球自然資源</td>
-                                                    <td width="1" class="text-nowrap">
-                                                        <input type="checkbox" class="diagnose-custom-checkbox btn-check" aria-checked="false" autocomplete="off" value="勾選/取消">                                                   
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="text-center mt-4">
-                                    <button class="btn custom-btn-rect-primary me-3 mb-3" title="1/5  上一頁" aria-label="1/5  上一頁"><span class="icon-arrow-angles-left" aria-hidden="true"></span> 1/5  上一頁</button>
-                                    <button class="btn custom-btn-rect-primary me-3 mb-3" title="1/5  下一頁" aria-label="1/5  下一頁">1/5  下一頁 <span class="icon-arrow-angles-right" aria-hidden="true"></span></button>
-                                    <a href="#" class="btn custom-btn-rect-primary mb-3" title="確認" aria-label="確認">確認 <span class="icon-arrow-angles-right" aria-hidden="true"></span></a>
-                                </div>
+                            <!-- table start -->
+                            <div class="table-responsive mb-5">
+                                <table class="table text-center recode-table">
+                                    <thead>
+                                        <tr class="table-secondary">
+                                            <th class="text-nowrap" width="1">編輯<br />項目</th>
+                                            <th class="text-nowrap">職場共通職能項目</th>
+                                            <th class="text-nowrap" width="1">診斷結果<br />(平均分數)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <button type="button" class="btn recode-btn-sm p-0" title="刪除"><img src="../../images/recode/delete.svg" class="w-100" alt="刪除icon"></button>
+                                            </td>
+                                            <td class="text-start">
+                                                <h5>溝通表達</h5>
+                                                <p>透過口頭、書面等方式，表達自己的想法使他人瞭解，並努力理解他人所傳達的資訊。<button type="button" class="btn p-0 ms-2 h-100 recode-collapse-btn" aria-label="開啟/關閉下面內容"><img src="../../images/recode/circle-chevron-down.svg" alt="icon" aria-hidden="true"></button></p>
+                                                <div class="collapse">
+                                                    <div class="body">....</div>
+                                                </div>
+                                            </td>
+                                            <td>4.57</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>                            
+                            <!-- table end -->
+                            <p>請勾選你要進行養成的項目:</p>
+                            <div class="table-responsive mb-5">
+                                <table class="table text-center recode-table">
+                                    <thead>
+                                        <tr class="table-secondary">
+                                            <th class="text-nowrap" width="1">勾選</th>
+                                            <th class="text-nowrap">職場共通職能項目</th>
+                                            <th class="text-nowrap" width="1">診斷結果<br />(平均分數)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input class="form-check-input recode-check-input" type="checkbox" aria-checked="false" autocomplete="off" value="勾選/取消" aria-label="勾選/取消" title="勾選/取消">
+                                            </td>
+                                            <td class="text-start">
+                                                <h5>持續學習</h5>
+                                                <p>了解能力發展的重要性，並能探索、規劃和有效管理自身的能力，並保持繼續成⻑的企圖心。<button type="button" class="btn p-0 ms-2 h-100 recode-collapse-btn" aria-label="開啟/關閉下面內容"><img src="../../images/recode/circle-chevron-down.svg" alt="icon" aria-hidden="true"></button></p>
+                                                <div class="collapse">
+                                                    <div class="body">
+                                                        <ol class="ps-4">
+                                                            <li>能夠持續表現出對學習新事物及知識技能的好奇心。 </li>
+                                                            <li>能明確掌握個人職涯發展所需知識、技能和必要條件。 </li>
+                                                            <li>能夠對自己能力的成⻑訂定具體目標 。</li>
+                                                            <li>了解並進行職涯發展上所需的持續學習和訓練。</li>
+                                                            <li>能夠持續因應產業趨勢進行專業能力發展 。</li>
+                                                            <li>能從與他人的互動中，汲取正面有益的經驗。</li>
+                                                            <li>持續應用各種方法及管道提升自己的能力。</li>
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>4.57</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input class="form-check-input recode-check-input" type="checkbox" aria-checked="false" autocomplete="off" value="勾選/取消" aria-label="勾選/取消" title="勾選/取消">
+                                            </td>
+                                            <td class="text-start">
+                                                <h5>人際互動</h5>
+                                                <p>依不同情境，運用適當方法及個人風格，與他人互動或共事。<button type="button" class="btn p-0 ms-2 h-100 recode-collapse-btn" aria-label="開啟/關閉下面內容"><img src="../../images/recode/circle-chevron-down.svg" alt="icon" aria-hidden="true"></button></p>
+                                                <div class="collapse">
+                                                    <div class="body">....</div>
+                                                </div>
+                                            </td>
+                                            <td>4.57</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input class="form-check-input recode-check-input" type="checkbox" aria-checked="false" autocomplete="off" value="勾選/取消" aria-label="勾選/取消" title="勾選/取消">
+                                            </td>
+                                            <td class="text-start">
+                                                <h5>團隊合作</h5>
+                                                <p>能積極參與團隊任務，並與團隊成員有良好互動，以共同完成目標。<button type="button" class="btn p-0 ms-2 h-100 recode-collapse-btn" aria-label="開啟/關閉下面內容"><img src="../../images/recode/circle-chevron-down.svg" alt="icon" aria-hidden="true"></button></p>
+                                                <div class="collapse">
+                                                    <div class="body">....</div>
+                                                </div>
+                                            </td>
+                                            <td>4.57</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input class="form-check-input recode-check-input" type="checkbox" aria-checked="false" autocomplete="off" value="勾選/取消" aria-label="勾選/取消" title="勾選/取消">
+                                            </td>
+                                            <td class="text-start">
+                                                <h5>問題解決</h5>
+                                                <p>遇到狀況時能釐清問題，透過系統化的資訊蒐集與分析，提出解決方案。<button type="button" class="btn p-0 ms-2 h-100 recode-collapse-btn" aria-label="開啟/關閉下面內容"><img src="../../images/recode/circle-chevron-down.svg" alt="icon" aria-hidden="true"></button></p>
+                                                <div class="collapse">
+                                                    <div class="body">....</div>
+                                                </div>
+                                            </td>
+                                            <td>4.57</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input class="form-check-input recode-check-input" type="checkbox" aria-checked="false" autocomplete="off" value="勾選/取消" aria-label="勾選/取消" title="勾選/取消">
+                                            </td>
+                                            <td class="text-start">
+                                                <h5>創新</h5>
+                                                <p>在有限的資源下，不侷限既有的工作模式，能夠主動提出新的建議或想法，並落實於工作中。<button type="button" class="btn p-0 ms-2 h-100 recode-collapse-btn" aria-label="開啟/關閉下面內容"><img src="../../images/recode/circle-chevron-down.svg" alt="icon" aria-hidden="true"></button></p>
+                                                <div class="collapse">
+                                                    <div class="body">....</div>
+                                                </div>
+                                            </td>
+                                            <td>4.57</td>
+                                        </tr>
+                                    </tbody>
+                                </table>                                
                             </div>
-                            <!-- content end -->
                         </div>
                     </div>
-                    <!--  -->
+                    <!-- end -->
+                    <div class="text-center">
+                        <a href="recode_4_3_3.html" class="btn custom-btn-rect-primary me-2" title="新增" aria-label="新增">新增 <span class="icon-arrow-angles-right" aria-hidden="true"></span></a>
+                        <button type="button" class="btn custom-btn-rect-primary" title="返回" aria-label="返回"><i class="fa-solid fa-reply" aria-hidden="true"></i> 返回</button>
+                    </div>
                 </div>
             </section>
         </main>

@@ -20,6 +20,8 @@ module.exports = {
         'diagnose_3_3_3': './src/js/diagnose_3_3_3.js',
         'diagnose_3_3_4': './src/js/diagnose_3_3_4.js',
         'diagnoseTest': './src/js/diagnoseTest.js',
+        'recode_4_3_2': './src/js/recode_4_3_2.js',
+        'recode_4_5_3': './src/js/recode_4_5_3.js',
         'contactUs_login': './src/js/contactUs_login.js',
         'footer': './src/js/footer.js'
     },
@@ -281,6 +283,49 @@ module.exports = {
             filename: 'diagnose/diagnose_3_4_c.html',
             minify: false,
             chunks: ['main','diagnoseTest', 'footer']
+        }),
+        // 診斷紀錄
+        new HtmlWebpackPlugin({
+            template: './src/html/recode/recode_4_3_1.html',
+            filename: 'recode/recode_4_3_1.html',
+            minify: false,
+            chunks: ['main', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/recode/recode_4_3_2.html',
+            filename: 'recode/recode_4_3_2.html',
+            minify: false,
+            chunks: ['main', 'recode_4_3_2', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/recode/recode_4_3_3.html',
+            filename: 'recode/recode_4_3_3.html',
+            minify: false,
+            chunks: ['main', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/recode/recode_4_5_1.html',
+            filename: 'recode/recode_4_5_1.html',
+            minify: false,
+            chunks: ['main', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/recode/recode_4_5_2.html',
+            filename: 'recode/recode_4_5_2.html',
+            minify: false,
+            chunks: ['main', 'customSelect', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/recode/recode_4_5_3.html',
+            filename: 'recode/recode_4_5_3.html',
+            minify: false,
+            chunks: ['main', 'recode_4_5_3', 'footer']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/recode/recode_4_5_4.html',
+            filename: 'recode/recode_4_5_4.html',
+            minify: false,
+            chunks: ['main', 'footer']
         }),
         // 認識UCAN
         new HtmlWebpackPlugin({

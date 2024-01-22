@@ -19383,6 +19383,23 @@ ol.list-style-cjk-ideographic {
 .diagnosis-test-content .diagnosis-test .groupoptions > .radio:nth-child(4) input[type=radio]:checked + label, .diagnosis-test-content .diagnosis-test .groupoptions > .radio:nth-child(5) input[type=radio]:checked + label {
   background-color: var(--bs-primary);
 }
+.diagnosis-test-content .diagnosis-test .groupoptions > .radio.radioLabel {
+  text-align: center;
+  width: "20%px";
+}
+.diagnosis-test-content .diagnosis-test .groupoptions > .radio.radioLabel label {
+  font-size: inherit;
+  position: relative;
+}
+.diagnosis-test-content .diagnosis-test .groupoptions > .radio.radioLabel label > span {
+  position: absolute;
+  left: -50%;
+  width: 82px;
+  -webkit-transform: translateX(-13px);
+      -ms-transform: translateX(-13px);
+          transform: translateX(-13px);
+  bottom: -30px;
+}
 .diagnosis-test-content .diagnosis-multiple .form-check-input:focus {
   -webkit-box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.18);
           box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.18);
@@ -19440,6 +19457,46 @@ ol.list-style-cjk-ideographic {
 
 .diagnosis-select + .nice-select {
   background-color: var(--bs-white);
+}
+
+.recode-table > :not(caption) > * > * {
+  padding: 1rem 1.5rem;
+  vertical-align: middle;
+  border-bottom-width: 2px;
+  border-color: var(--bs-dark);
+}
+.recode-table > thead > tr > th {
+  border-bottom-width: 0;
+}
+
+.recode-check-input {
+  width: 26px;
+  height: 26px;
+  border-color: #383636;
+}
+
+.recode-collapse-btn {
+  position: relative;
+}
+.recode-collapse-btn.recode-btn-rotate {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transform-origin: center center;
+      -ms-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.recode-btn-sm {
+  width: 35px;
+}
+
+.recode-alert-red {
+  color: #FA0202;
 }
 
 #accountApplication .col-form-label {

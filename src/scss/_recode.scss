@@ -1,0 +1,33 @@
+.recode-table {
+    > :not(caption) > * > * {
+        padding: 1rem 1.5rem;
+        vertical-align: middle;
+        border-bottom-width: 2px;
+        border-color: var(--bs-dark);
+
+    }
+    
+    > thead > tr > th {
+        border-bottom-width: 0;
+    }
+}
+.recode-check-input {
+    width: 26px;
+    height: 26px;
+    border-color: #383636;
+}
+.recode-collapse-btn {
+    position: relative;
+    
+    &.recode-btn-rotate {
+        transform: rotate(180deg);
+        transform-origin: center center;
+        transition: transform .3s ease;
+    }
+}
+.recode-btn-sm {
+    width: 35px;
+}
+.recode-alert-red {
+    color: $alert-red;
+}
