@@ -402,3 +402,111 @@
         color: var(--bs-dark);
     }
 }
+.professionalCharacter-number {
+    font-size: 5.625rem;
+    font-weight: bolder;
+}
+.professionalCharacter-block {
+    border-bottom: 1px solid $ela-border-color;
+    border-right: 0;
+    @include media-breakpoint-up(md) {
+        border-bottom: 0;
+        border-right: 1px solid $ela-border-color;
+    }
+}
+.professionalCharacter-accordion {
+    .accordion-item {
+        &:first-child {
+            border-top: 0;
+        }
+        background-color: transparent;
+    }
+    .accordion-button, .accordion-button:not(.collapsed) {
+        color: var(--bs-dark);
+    }
+    .accordion-button {
+        font-size: 1.5rem;
+        background-color: transparent;
+        &:not(.collapsed) {
+            background-color: transparent;
+        }
+    }    
+}
+.recode_4_2-accordion {
+    .accordion-item {
+        margin-bottom: 1.5rem;
+        background-color: transparent;
+        &:first-child {
+            border-top: 0;
+        }
+        &:last-child {
+            border-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    .accordion-button {
+        background-color: transparent;
+        &:not(.collapsed) {
+            background-color: transparent;
+        }
+        &::after {
+            color: var(--bs-primary);
+        }
+    }
+}
+.icon-width {
+    display: inline-block;
+    width: 45px;
+}
+.search-table {
+    > thead > tr {
+        border-bottom: 2px solid var(--bs-dark);
+        > th {
+            text-align: center;
+        }
+    }
+    > tbody > tr > td {
+        &:last-child {
+            width: 1%;
+        }
+    }
+    .table-active {
+        --bs-table-bg-state: #{$search-table-active};
+    }
+}
+.search-progress {
+    background-color: $diagnose-block-lightGray-color;
+    border-radius: 0;
+    height: 22px;
+}
+
+@each $name, $color in $progress-colors {
+    .search-progress-bar-#{$name} {
+        background-color: $color;
+    }
+}
+.search-progress-rounded {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.search-rect {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: var(--bs-dark);
+    margin-right: 8px;
+}
+.search-inline {
+    .list-inline-item {
+        &:nth-child(1) > .search-rect {
+            background-color: $progress-green;
+        }
+        &:nth-child(2) > .search-rect {
+            background-color: $progress-orange;
+        }
+        &:nth-child(3) > .search-rect {
+            background-color: $progress-red;
+        }
+    }
+}

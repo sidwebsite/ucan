@@ -15,6 +15,7 @@
         &::after {
             background-image: none;
             font: var(--fa-font-solid);
+            font-size: 1rem;
             content: map-get($icons, plus);
             color: $login-button-border-color;
         }

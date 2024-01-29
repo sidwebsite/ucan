@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="大專校院就業職能平台的描述">
+    <title>大專校院就業職能平台</title>
+</head>
+<body>
+    <noscript>您的瀏覽器不支援JavaScript功能，若本網站功能無法正常使用，請開啟瀏覽器JavaScript狀態</noscript>
+    <div class="warpper">
+        <a href="#content" title="移到主要內容" class="visually-hidden-focusable" tabindex="0">移到主要內容</a>
+        <!-- header-top start -->
+        <div class="header-top bg-primary d-none d-lg-flex justify-content-between align-items-center px-4 px-xxl-5 py-3 position-relative">
+            <a href="#U" accesskey="U" name="U" class="alt-u d-lg-inline-block position-absolute top-0 start-0" title="上方功能區塊">:::</a>
+            <div class="search">                
+                <!-- <form>
+                    <div class="input-group bg-white rounded-pill overflow-hidden">
+                        <label for="tagsKeyWords" class="visually-hidden" aria-label="關鍵字搜尋">關鍵字</label>
+                        <input type="text" id="tagsKeyWords" class="form-control border-0" placeholder="關鍵字搜尋" >
+                        <button type="button" class="btn" id="search-btn" title="搜尋" aria-label="送出搜尋"><i class="fa-solid fa-magnifying-glass" title="搜尋"></i></button>
+                    </div>
+                </form> -->
+            </div>
+            <div class="d-flex">
+                <a href="../index.html" title="回首頁"><span class="icon-home"></span> 回首頁</a>
+                <a href="../others/sitemap_6_1.html" title="網站導覽"><span class="icon-sitemap"></span> 網站導覽</a>
+                <a href="#" title="UCAN使用指南(另開新視窗)" target="_blank"><span class="icon-guidance"></span> UCAN使用指南</a>                <a href="../others/contactUs.html" title="聯絡我們"><span class="icon-message"></span> 聯絡我們</a>
+                <span class="text-white"><span class="fa-solid fa-user"></span> 王XX</span>
+                <a href="#" class="ms-3" title="登出"><i class="fa-solid fa-right-from-bracket"></i> 登出</a>
+            </div>
+        </div>
+        <!-- header-top end -->
+        <header class="header">            
+            <!-- navbar start -->
+            <nav class="px-4 px-xxl-5 py-3 py-lg-0" id="">
+                <div class="header-main">
+                    <div class="logo">
+                        <a class="navbar-brand d-block" href="../index.html" title="連結到首頁">
+                            <h1><img src="../../images/logo.svg" alt="大專校院就業職能平台logo"></h1>
+                        </a>
+                    </div>
+                    <div class="open-nav-menu">
+                        <!-- <i class="fa-solid fa-bars"></i> -->
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="nav-menu ms-lg-auto">
+                        <!-- <div class="close-nav-menu">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div> -->
+                        <ul class="menu"></ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- navbar end -->
+        </header>
+        <!-- header end -->
+        <!-- main start -->
+        <main class="main position-relative">
+            <section class="page-header-bg">
+                <div class="container page-header">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="d-md-flex align-items-center h-100 text-center text-md-start">
+                                <h2 class="text-primary d-inline-block mb-5 mb-md-0">診斷紀錄</h2>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <figure>
+                                <img src="../../images/page_bg.png" class="img-fluid" alt="頁頭示意圖">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="content">
+                <div class="container">
+                    <div class="row pt-5 d-print-none">
+                        <div class="col-12">
+                            <div class="border-bottom border-3 border-primary breadcrumb-bg p-2">
+                                <div class="row align-items-center flex-md-row flex-column-reverse">
+                                    <div class="col-md">
+                                        <div class="d-flex">
+                                            <a href="#C" title="中央內容區塊" accesskey="C" name="C" class="alt-c me-2">:::</a>
+                                            <nav aria-label="breadcrumb">
+                                                <ol class="breadcrumb mb-0">
+                                                    <li class="breadcrumb-item"><a href="../index.html" title="首頁"><span class="icon-home text-primary"></span> 首頁</a></li>
+                                                    <li class="breadcrumb-item">診斷紀錄</li>
+                                                    <li class="breadcrumb-item active" aria-current="page">職業興趣探索結果</li>
+                                                </ol>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-auto">
+                                        <div class="social_share mb-3 mb-md-0">
+                                            <button class="btn font-size" id="font-small" type="button" title="小">小</button>
+                                            <button class="btn font-size active" id="font-normal" type="button" title="中">中</button>
+                                            <button class="btn font-size" id="font-large" type="button" title="大">大</button>
+                                            <button class="btn" type="button" title="列印" id="print" aria-label="列印"><i class="fa-solid fa-print"></i></button>
+                                            <button class="btn sharer" type="button" data-sharer="facebook" aria-label="facebook" data-title="" data-url="" title="facebook"><i class="fa-brands fa-facebook-f"></i></button>
+                                            <button class="btn sharer" type="button" data-sharer="line" aria-label="line" data-title="" data-url="" title="line"><i class="icon-icons8-line"></i></button>
+                                            <button class="btn sharer" type="button" data-sharer="twitter" aria-label="twitter" data-title="" data-url="" title="twitter"><i class="fa-brands fa-twitter"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- start -->
+                    <div class="row" data-sticky-container>
+                        <div class="col-12">
+                            <div class="py-3 py-lg-5">
+                                <h2 class="text-primary text-center text-lg-start title"><span>共通職能能力養成</span></h2>
+                            </div>
+                        </div>
+                        <!-- content -->
+                        <div class="col-lg-9 order-2 order-lg-1">
+                            <p>職業興趣探索以 States‘ Career Clusters Initiative 的 The Career Clusters Interest Survey 為基礎，找出個人對不同職涯類型的興趣強弱。並與John Holland的人境適配論中的職業性格系統進行關聯分析，對應出16個職涯類型適切的職業性格。</p>
+                            <p class="mb-5">本診斷結果以「16種職涯類型」與「職業性格」兩個部分來解釋您在職業選擇的偏好，提供您在職涯選擇過程中的參考依據。</p>
+                            <!-- 職涯類型 -->
+                            <h4 class="content-title-left-outline mb-3">職涯類型</h4>
+                            <p>16種職涯類型是由同一領域、或所需知識技能相近的工作所組成，可以提供給教育體系運用於職涯或學習發展規劃，有系統的養成相近的知識與技能。分數代表的是您的興趣表現，而非工作技巧或能力。</p>
+                            <!-- table start -->
+                            <div class="table-responsive-lg mb-4">
+                                <table class="table search-table align-middle text-nowrap">
+                                    <caption class="visually-hidden">職涯類型</caption>
+                                    <thead>
+                                        <tr>
+                                            <th width="25%">16職涯類型</th>
+                                            <th class="position-relative"><span class="position-absolute top-50 start-0 translate-middle">0</span>興趣強度分數<span class="position-absolute top-50 start-100 translate-middle">99</span></th>
+                                            <th width="10%">PR值</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>建築營造</td>
+                                            <td class="border-start border-end px-0">
+                                                <div class="progress search-progress bg-transparent">
+                                                    <div class="progress-bar search-progress-bar-bluegreen" role="progressbar" style="width: 76%" aria-valuenow="76" aria-valuemin="0" aria-valuemax="5"></div>
+                                                    <span class="px-1 fs-6">3.8</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">92</td>
+                                        </tr>
+                                        <tr>
+                                            <td>天然資源、食品與農業</td>
+                                            <td class="border-start border-end px-0">
+                                                <div class="progress search-progress bg-transparent">
+                                                    <div class="progress-bar search-progress-bar-bluegreen" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="5"></div>
+                                                    <span class="px-1 fs-6">3.3</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">92</td>
+                                        </tr>
+                                        <tr>
+                                            <td>藝文與影音傳播</td>
+                                            <td class="border-start border-end px-0">
+                                                <div class="progress search-progress bg-transparent">
+                                                    <div class="progress-bar search-progress-bar-bluegreen" role="progressbar" style="width: 64%" aria-valuenow="64" aria-valuemin="0" aria-valuemax="5"></div>
+                                                    <span class="px-1 fs-6">3.2</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">92</td>
+                                        </tr>
+                                        <tr>
+                                            <td>企業經營管理</td>
+                                            <td class="border-start border-end px-0">
+                                                <div class="progress search-progress bg-transparent">
+                                                    <div class="progress-bar search-progress-bar-bluegreen" role="progressbar" style="width: 64%" aria-valuenow="64" aria-valuemin="0" aria-valuemax="5"></div>
+                                                    <span class="px-1 fs-6">3.2</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">92</td>
+                                        </tr>
+                                        <tr>
+                                            <td>教育與訓練</td>
+                                            <td class="border-start border-end px-0">
+                                                <div class="progress search-progress bg-transparent">
+                                                    <div class="progress-bar search-progress-bar-bluegreen" role="progressbar" style="width: 64%" aria-valuenow="64" aria-valuemin="0" aria-valuemax="5"></div>
+                                                    <span class="px-1 fs-6">3.2</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">92</td>
+                                        </tr>
+                                        <tr>
+                                            <td>金融財務</td>
+                                            <td class="border-start border-end px-0">
+                                                <div class="progress search-progress bg-transparent">
+                                                    <div class="progress-bar search-progress-bar-lightbluegreen" role="progressbar" style="width: 41%" aria-valuenow="41" aria-valuemin="0" aria-valuemax="5"></div>
+                                                    <span class="px-1 fs-6">2.05</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">82</td>
+                                        </tr>
+                                        <tr>
+                                            <td>政府公共事務</td>
+                                            <td class="border-start border-end px-0">
+                                                <div class="progress search-progress bg-transparent">
+                                                    <div class="progress-bar search-progress-bar-lightbluegreen" role="progressbar" style="width: 41%" aria-valuenow="41" aria-valuemin="0" aria-valuemax="5"></div>
+                                                    <span class="px-1 fs-6">2.05</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">82</td>
+                                        </tr>
+                                        <tr>
+                                            <td>醫療保健</td>
+                                            <td class="border-start border-end px-0">
+                                                <div class="progress search-progress bg-transparent">
+                                                    <div class="progress-bar search-progress-bar-lightbluegreen" role="progressbar" style="width: 41%" aria-valuenow="41" aria-valuemin="0" aria-valuemax="5"></div>
+                                                    <span class="px-1 fs-6">2.05</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">82</td>
+                                        </tr>
+                                        <tr>
+                                            <td>個人及社會服務</td>
+                                            <td class="border-start border-end px-0">
+                                                <div class="progress search-progress bg-transparent">
+                                                    <div class="progress-bar search-progress-bar-lightbluegreen" role="progressbar" style="width: 41%" aria-valuenow="41" aria-valuemin="0" aria-valuemax="5"></div>
+                                                    <span class="px-1 fs-6">2.05</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">82</td>
+                                        </tr>
+                                        <tr>
+                                            <td>休閒與觀光旅遊</td>
+                                            <td class="border-start border-end px-0">
+                                                <div class="progress search-progress bg-transparent">
+                                                    <div class="progress-bar search-progress-bar-lightbluegreen" role="progressbar" style="width: 41%" aria-valuenow="41" aria-valuemin="0" aria-valuemax="5"></div>
+                                                    <span class="px-1 fs-6">2.05</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">82</td>
+                                        </tr>
+                                        <tr>
+                                            <td>資訊科技</td>
+                                            <td class="border-start border-end px-0">
+                                                <div class="progress search-progress bg-transparent">
+                                                    <div class="progress-bar search-progress-bar-lightbluegreen" role="progressbar" style="width: 41%" aria-valuenow="41" aria-valuemin="0" aria-valuemax="5"></div>
+                                                    <span class="px-1 fs-6">2.05</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">82</td>
+                                        </tr>
+                                        <tr>
+                                            <td>司法、法律與公共安全</td>
+                                            <td class="border-start border-end px-0">
+                                                <div class="progress search-progress bg-transparent">
+                                                    <div class="progress-bar search-progress-bar-lightbluegreen" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="5"></div>
+                                                    <span class="px-1 fs-6">1</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">32</td>
+                                        </tr>
+                                        <tr>
+                                            <td>行銷與銷售</td>
+                                            <td class="border-start border-end px-0">
+                                                <div class="progress search-progress bg-transparent">
+                                                    <div class="progress-bar search-progress-bar-lightbluegreen" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="5"></div>
+                                                    <span class="px-1 fs-6">1</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">32</td>
+                                        </tr>
+                                        <tr>
+                                            <td>製造</td>
+                                            <td class="border-start border-end px-0">
+                                                <div class="progress search-progress bg-transparent">
+                                                    <div class="progress-bar search-progress-bar-lightbluegreen" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="5"></div>
+                                                    <span class="px-1 fs-6">1</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">32</td>
+                                        </tr>
+                                        <tr>
+                                            <td>科學、技術、工程、數學</td>
+                                            <td class="border-start border-end px-0">
+                                                <div class="progress search-progress bg-transparent">
+                                                    <div class="progress-bar search-progress-bar-lightbluegreen" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="5"></div>
+                                                    <span class="px-1 fs-6">1</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">32</td>
+                                        </tr>
+                                        <tr>
+                                            <td>物流運輸</td>
+                                            <td class="border-start border-end px-0">
+                                                <div class="progress search-progress bg-transparent">
+                                                    <div class="progress-bar search-progress-bar-lightbluegreen" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="5"></div>
+                                                    <span class="px-1 fs-6">1</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">32</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- table end -->
+                            <ol class="ps-4">
+                                <li>全體PR值是將您的測驗結果與UCAN平台全體學生進行比較，例如您在建築營造的百分等級是PR92，意思是您對於建築營造職涯類型的興趣程度在100人裡面位居92。</li>
+                                <li>深色項目為興趣度相對高分的4~6種職涯類型，若同分的職涯類型過多，則僅取最高分的類型。</li>
+                            </ol>
+                            <h5 class="content-h5-left-arrow text-primary">興趣度相對高的職涯類型</h5>
+                            <p class="mb-0">您在16種職涯類型中，興趣度最高的前5名依序是：</p>
+                            <p>
+                                <span class="border-bottom border-3 border-warning">建築營造</span>、<span class="border-bottom border-3 border-warning">天然資源、食品與農業</span>、<span class="border-bottom border-3 border-warning">藝文與影音傳播</span>、<span class="border-bottom border-3 border-warning">企業經營管理</span>、<span class="border-bottom border-3 border-warning">教育與訓練</span>。
+                            </p>
+                            <p class="mb-5">興趣度高，代表您會比較喜歡在這些類型的工作環境中工作，這些類型的工作中可能有比較多您喜歡接觸的活動。您可以點選興趣度較高的類型連結，瞭解這些職涯類型的介紹、就業途徑、職能以及相關的職業，作進一步探索與瞭解。</p>
+                            <h5 class="content-h5-left-arrow text-primary">興趣度相對低的職涯類型</h5>
+                            <p class="mb-5">其他得分相對較低的項目不代表您無法勝任該職涯類型，可能是對該職類工作或活動的興趣度相對較低，也可能是因為不夠瞭解該職類，所以得分較低。</p>
+                            <!-- 職業性格 -->
+                            <h4 class="content-title-left-outline mb-3">職業性格</h4>
+                            <p>職業性格分為實用型R、研究型I、藝術型A、社會型S、企業型E及事務型C六大職業性格類型。每個類型的職業性格傾向，皆有其適配的職業環境(參考16種職涯類型)。各類型滿分為12分，以下是您在職業性格類型的診斷分數與剖面圖：</p>
+                            <!--  -->
+                            <div class="table-responsive-lg mb-4">
+                                <table class="table search-table align-middle text-nowrap">
+                                    <caption class="visually-hidden">職涯類型</caption>
+                                    <thead>
+                                        <tr>
+                                            <th width="1%">職業性格</th>
+                                            <th width="15%">職業性格</th>
+                                            <th class="position-relative w-auto"><span class="position-absolute top-50 start-0 translate-middle">0</span>興趣強度分數<span class="position-absolute top-50 start-100 translate-middle">12</span></th>
+                                            <th width="10%">PR值</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center w-auto">企業型</td>
+                                            <td class="text-center">E</td>
+                                            <td class="border-start border-end px-0">
+                                                <div class="progress search-progress bg-transparent">
+                                                    <div class="progress-bar search-progress-bar-orange" role="progressbar" style="width: 67%" aria-valuenow="67" aria-valuemin="0" aria-valuemax="12"></div>
+                                                    <span class="px-1 fs-6">8</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">91</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">研究型</td>
+                                            <td class="text-center">I</td>
+                                            <td class="border-start border-end px-0 w-75">
+                                                <div class="progress search-progress bg-transparent">
+                                                    <div class="progress-bar search-progress-bar-orange" role="progressbar" style="width: 58%" aria-valuenow="58" aria-valuemin="0" aria-valuemax="12"></div>
+                                                    <span class="px-1 fs-6">7</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">77</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">藝術型</td>
+                                            <td class="text-center">A</td>
+                                            <td class="border-start border-end px-0 w-75">
+                                                <div class="progress search-progress bg-transparent">
+                                                    <div class="progress-bar search-progress-bar-orange" role="progressbar" style="width: 57%" aria-valuenow="57" aria-valuemin="0" aria-valuemax="12"></div>
+                                                    <span class="px-1 fs-6">6.8</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">68</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">社會型</td>
+                                            <td class="text-center">S</td>
+                                            <td class="border-start border-end px-0 w-75">
+                                                <div class="progress search-progress bg-transparent">
+                                                    <div class="progress-bar search-progress-bar-lightorange" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="12"></div>
+                                                    <span class="px-1 fs-6">6</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">45</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">事務型</td>
+                                            <td class="text-center">C</td>
+                                            <td class="border-start border-end px-0 w-75">
+                                                <div class="progress search-progress bg-transparent">
+                                                    <div class="progress-bar search-progress-bar-lightorange" role="progressbar" style="width: 42%" aria-valuenow="42" aria-valuemin="0" aria-valuemax="12"></div>
+                                                    <span class="px-1 fs-6">5</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">34</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">實用型</td>
+                                            <td class="text-center">R</td>
+                                            <td class="border-start border-end px-0 w-75">
+                                                <div class="progress search-progress bg-transparent">
+                                                    <div class="progress-bar search-progress-bar-lightorange" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="12"></div>
+                                                    <span class="px-1 fs-6">4</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">32</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--  -->
+                            <ol class="ps-4 mb-3">
+                                <li>全體PR值是將您的測驗結果與UCAN平台全體學生進行比較，例如您在建築營造的百分等級是PR92，意思是您對於建築營造職涯類型的興趣程度在100人裡面位居92。</li>
+                                <li>職業性格代碼是分數較高的2到4種職業性格。透過2到4種職業性格類型的結合，能夠較為完善地描述個人的職業性格與所屬類型。</li>
+                            </ol>
+                            <div class="bg-light p-4 p-lg-5 rounded-20 mb-5">
+                                <div class="row gx-lg-5">
+                                    <div class="col-md-auto professionalCharacter-block">
+                                        <h4 class="mb-4">您的職業性格代碼</h4>
+                                        <div class="professionalCharacter-number">EIA</div>
+                                        <p>企業型、研究型、藝術型</p>
+                                    </div>
+                                    <div class="col-md">
+                                        <p class="mb-5 mt-3 mt-md-0">您的職業性格代碼主要為E企業型、I研究型。在各類型滿分為12分的評分標準下，企業型的分數是9分、研究型的分數是7分。您對企業型、研究型的職業興趣相較於對其他類型的興趣有明顯的區分。</p>
+                                        <p>若以職業性格碼來描述您的職業性格，企業型的特質是喜歡選擇具有冒險性、支配性、需要熱忱與精力的工作，喜歡進行策劃與領導；研究型的特質是喜歡運用頭腦，善於觀察、思考、分析與推理，喜歡與符號、概念、文字有關的工作。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-light p-4 p-lg-5 rounded-20 mb-5">
+                                <div class="accordion custom-accordion professionalCharacter-accordion">
+                                    <!-- accordion item -->
+                                    <div class="accordion-item">
+                                        <h4 class="accordion-header">
+                                            <button class="accordion-button collapsed px-0" type="button" aria-labelledby="E 企業型" data-bs-toggle="collapse" data-bs-target="#collapse_01" aria-expanded="false">
+                                                E 企業型
+                                            </button>
+                                        </h4>
+                                        <div id="collapse_01" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <h5>簡介</h5>
+                                                <p class="text-primary mb-4">企業型的人是典型的實作者(Doer)，性格特徵為情緒穩定、坦誠直率、獨立實際、謙虛有禮、穩健節儉。</p>
+                                                <h5>職業性格傾向</h5>
+                                                <p class="mb-4">在職業性格傾向上，喜歡講求實際、動手操作、按部就班完成實際用途物品等技術性、體力性的工作，例如操作機械、工具、運動設備或養育動物等工作，寧願實際動手作而不喜歡多言，比較喜歡獨立做事，避免主觀性、學術性、富想像力或人際互動的工作類型。</p>
+                                                <h5>價值觀</h5>
+                                                <p class="mb-4">實用型的人的價值觀是重視傳統的，將雄心與自我控制視為重要的價值觀，講求實事求是而非寬容的態度，形成較封閉的價值觀系統。</p>
+                                                <h5>問題解決策略</h5>
+                                                <p class="mb-4">在問題解決策略上，偏好於具體、實際和有架構的解決方案或策略，而非學術性、富想像力或人際互動的行動。</p>
+                                                <h5>典型職業</h5>
+                                                <p>實用型適合從事技術性、體力性之典型職業例如：機械維護師、電器工程人員、太空人、塔台工程師、飛行員、廚師、工匠、農業工作、汽車修護員、警察、消防員等。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- accordion item -->
+                                    <div class="accordion-item">
+                                        <h4 class="accordion-header">
+                                            <button class="accordion-button collapsed px-0" type="button" aria-labelledby="I 研究型" data-bs-toggle="collapse" data-bs-target="#collapse_02" aria-expanded="false">
+                                                I 研究型
+                                            </button>
+                                        </h4>
+                                        <div id="collapse_02" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <h5>簡介</h5>
+                                                <p class="text-primary mb-4">企業型的人是典型的實作者(Doer)，性格特徵為情緒穩定、坦誠直率、獨立實際、謙虛有禮、穩健節儉。</p>
+                                                <h5>職業性格傾向</h5>
+                                                <p class="mb-4">在職業性格傾向上，喜歡講求實際、動手操作、按部就班完成實際用途物品等技術性、體力性的工作，例如操作機械、工具、運動設備或養育動物等工作，寧願實際動手作而不喜歡多言，比較喜歡獨立做事，避免主觀性、學術性、富想像力或人際互動的工作類型。</p>
+                                                <h5>價值觀</h5>
+                                                <p class="mb-4">實用型的人的價值觀是重視傳統的，將雄心與自我控制視為重要的價值觀，講求實事求是而非寬容的態度，形成較封閉的價值觀系統。</p>
+                                                <h5>問題解決策略</h5>
+                                                <p class="mb-4">在問題解決策略上，偏好於具體、實際和有架構的解決方案或策略，而非學術性、富想像力或人際互動的行動。</p>
+                                                <h5>典型職業</h5>
+                                                <p>實用型適合從事技術性、體力性之典型職業例如：機械維護師、電器工程人員、太空人、塔台工程師、飛行員、廚師、工匠、農業工作、汽車修護員、警察、消防員等。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- accordion item -->
+                                    <div class="accordion-item">
+                                        <h4 class="accordion-header">
+                                            <button class="accordion-button collapsed px-0" type="button" aria-labelledby="A 藝術型" data-bs-toggle="collapse" data-bs-target="#collapse_03" aria-expanded="false">
+                                                A 藝術型
+                                            </button>
+                                        </h4>
+                                        <div id="collapse_03" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <h5>簡介</h5>
+                                                <p class="text-primary mb-4">企業型的人是典型的實作者(Doer)，性格特徵為情緒穩定、坦誠直率、獨立實際、謙虛有禮、穩健節儉。</p>
+                                                <h5>職業性格傾向</h5>
+                                                <p class="mb-4">在職業性格傾向上，喜歡講求實際、動手操作、按部就班完成實際用途物品等技術性、體力性的工作，例如操作機械、工具、運動設備或養育動物等工作，寧願實際動手作而不喜歡多言，比較喜歡獨立做事，避免主觀性、學術性、富想像力或人際互動的工作類型。</p>
+                                                <h5>價值觀</h5>
+                                                <p class="mb-4">實用型的人的價值觀是重視傳統的，將雄心與自我控制視為重要的價值觀，講求實事求是而非寬容的態度，形成較封閉的價值觀系統。</p>
+                                                <h5>問題解決策略</h5>
+                                                <p class="mb-4">在問題解決策略上，偏好於具體、實際和有架構的解決方案或策略，而非學術性、富想像力或人際互動的行動。</p>
+                                                <h5>典型職業</h5>
+                                                <p>實用型適合從事技術性、體力性之典型職業例如：機械維護師、電器工程人員、太空人、塔台工程師、飛行員、廚師、工匠、農業工作、汽車修護員、警察、消防員等。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 給您的建議 -->
+                            <h4 class="content-title-left-outline mb-3">給您的建議</h4>
+                            <h5 class="text-primary">Q：興趣偏好程度高的職涯類型的未來發展方向以及相關職業有哪些？</h5>
+                            <article class="mb-5">
+                                <p class="mb-0">可以透過以下管道瞭解與接觸您有興趣的職涯類型、相關職業與出路，增加您對於工作世界的認識：</p>
+                                <ol class="ps-4">
+                                    <li>蒐集職業資訊：您可從16種職涯類型的診斷分數與剖面圖中，點選職涯類型的名稱，即可得知該職涯類型之簡介、就業途徑、職能以及相關職業。</li>
+                                    <li>進行職業訪談：請教實際從事相關工作的師長朋友，例如訪問從事某個職業的人。</li>
+                                    <li>嘗試實習與工讀：嘗試在該領域相關工作找尋短期工作機會（例如計時人員、工讀生），實際觀察這類型職務職業的實際狀況，以降低未來適應的困難。</li>
+                                </ol>
+                                <p>如果發現此職務不是那麼吸引您，別放棄！您可以再查詢其他職涯類型或就業途徑。</p>
+                            </article>
+                            <h5 class="text-primary">Q：自己職場上共通能力的準備度夠不夠？</h5>
+                            <article class="mb-5">
+                                <p>想要從事一份工作，除了興趣的考量外，還必須盤點自己是否具備該工作所需要的共通職能與專業職能。<br />職場共通能力是從事各種不同的職業類型都需要具備的能力，UCAN平臺將共通職能分為9個項目，包括：溝通表達、持續學習、人際互動、團隊合作、問題解決、創新思維、自律當責、數位能力、多元共融。<br />您可以進行職場共通職能診斷，檢視自己在各項職場共通能力的具備程度。</p>
+                                <a href="../diagnose/diagnose_3_2_1.html" class="custom-link-primary" title="請進入職場共通職能診斷">請進入職場共通職能診斷</a>
+                            </article>
+                            <h5 class="text-primary">Q：自己對該職涯類型的能力準備度夠不夠？</h5>
+                            <article class="mb-5">
+                                <p>想要從事一份工作，除了興趣的考量外，還必須盤點自己是否具備該工作所需要的共通職能與專業職能。<br />您可以進行專業職能診斷，檢視自己不同就業路徑中所具備的專業技能水準。<br />一般而言，興趣高且能力均較高者，能幫助您規劃成功且滿意的職業生涯。</p>
+                                <a href="../diagnose/diagnose_3_3_1.html" class="custom-link-primary" title="請進入專業職能診斷">請進入專業職能診斷</a>
+                            </article>
+                            <!-- 歷次職業興趣探索診斷結果 -->
+                            <h4 class="content-title-left-outline mb-3">歷次職業興趣探索診斷結果</h4>
+                            <!-- 16種職涯類型歷次診斷分數 -->
+                            <h5 class="content-h5-left-arrow text-primary">16種職涯類型歷次診斷分數</h5>
+                            <!-- 職業性格歷次診斷分數 -->
+                            <h5 class="content-h5-left-arrow text-primary">職業性格歷次診斷分數</h5>
+                            
+                        </div>
+                        <!-- right -->
+                        <div class="col-lg-3 order-1 order-lg-2 mb-4 column">
+                            <div class="bg-light p-4" data-sticky data-margin-top="100">
+                                <h5 class="text-primary mb-3">職業興趣探索結果 <a href="#R" title="右方功能區塊" accesskey="R" name="R" class="alt-r">:::</a></h5>
+                                <dl class="d-flex mb-0">
+                                    <dt>姓名：</dt>
+                                    <dd>王xx</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>學校：</dt>
+                                    <dd>國立臺灣大學</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>系級：</dt>
+                                    <dd>企管系</dd>
+                                </dl>
+                                <dl class="d-flex mb-0">
+                                    <dt>學號：</dt>
+                                    <dd>12345678A </dd>
+                                </dl>
+                                <hr class="my-3">
+                                <dl class="d-flex">
+                                    <dt>施測日期：</dt>
+                                    <dd>2023年12月25日</dd>
+                                </dl>
+                                <a href="#" class="btn btn-primary d-block rounded-0" download="" title="下載診斷結果">下載診斷結果</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end -->
+                </div>
+            </section>
+        </main>
+        <!-- main end -->
+        <!-- footer start -->
+        <footer class="footer position-relative">
+            <a href="#B" title="下方功能區塊" accesskey="B" name="B" class="alt-b position-absolute top-0 start-0">:::</a>
+            <!-- footer menu start -->
+            <div class="footer-menu-wrapper d-none d-lg-block">
+                <div class="footer-menu-btn border-bottom border-6 border-primary text-center">
+                    <button type="button" id="footerMenuBtn" class="btn btn-primary px-5">點選收合 <i class="fa-solid fa-circle-arrow-down"></i></button>
+                </div>
+                <div class="collapse" id="footerMenu">
+                    <div class="bg-primary footer-menu"></div>
+                </div>
+            </div>
+            <!-- footer menu end -->
+            <!-- footer Information start -->
+            <div class="footer-Information">
+                <div class="container px-5 px-md-0">
+                    <div class="row">
+                        <div class="col-md mb-lg-0 mb-4">
+                            <figure>
+                                <img src="../../images/footer_logo.svg" alt="" class="img-fluid">
+                            </figure>
+                        </div>
+                        <div class="col-md pe-3 pe-xxl-4 mb-5 mb-lg-0">
+                            <h3 class="mb-4 text-center text-md-start">UCAN計畫辦公室</h3>
+                            <address class="border-start border-4 border-dark ps-3 mb-3">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">諮詢信箱：</li>
+                                    <li class="list-inline-item"><a href="mailto:ucan@itri.org.tw" title="寄信至ucan@itri.org.tw">ucan@itri.org.tw</a></li>
+                                </ul>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">諮詢專線：</li>
+                                    <li class="list-inline-item">02-2701-6565#343</li>
+                                </ul>
+                            </address>
+                            <div class="text-center text-md-start">
+                                <a href="#" title="或填寫聯絡表單" class="footer-btn px-4">或填寫聯絡表單 <i class="fa-solid fa-circle-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md mb-5 mb-lg-0">
+                            <h3 class="mb-4 text-center text-md-start">服務時間</h3>
+                            <div class="border-start border-4 border-dark ps-3 mb-3">
+                                <p>周一~周五(非假日)</p>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">上午8:30-12:00</li>
+                                    <li class="list-inline-item">下午13:00-17:30</li>
+                                </ul>
+                            </div>
+                            <a href="#" class="text-center text-md-start d-block" target="_blank" title="本網站通過無障礙AA檢測(另開新視窗)">
+                                <img src="../../images/accessibility.png" alt="本網站通過無障礙AA檢測" title="本網站通過無障礙AA檢測(另開新視窗)">
+                            </a>
+                        </div>
+                        <div class="col-lg d-none d-lg-block">
+                            <figure>
+                                <img src="../../images/footer_img.svg" alt="" class="img-fluid">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer Information end -->
+        </footer>
+        <!-- footer end -->
+    </div>
+    <!-- go top start -->
+    <button type="button" title="回頂部" id="goTop" class="btn d-flex flex-column justify-content-center align-items-center position-fixed rounded-circle border-0">
+        <span class="icon-top-up fs-4"></span>
+        <span>TOP</span>
+    </button>
+    <!-- go top end -->
+</body>
+</html>

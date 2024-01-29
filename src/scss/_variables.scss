@@ -121,3 +121,25 @@ $custom-form-check-input-checked-color: #212020;
 $custom-form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$custom-form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>");
 // 
 $alert-red: #FA0202;
+// 
+$ela-border-color: #C3BCBC;
+// search progress color
+$progress-bluegreen: #4C97B7;
+$progress-lightbluegreen: #93CAE2;
+$progress-orange: #F7B709;
+$progress-lightorange: #FFE698;
+$progress-green: #71AD47;
+$progress-red: #F85858;
+$progress-gray: #A7A7A7;
+
+
+$progress-colors: (
+    'bluegreen': $progress-bluegreen,
+    'lightbluegreen': $progress-lightbluegreen,
+    'orange': $progress-orange,
+    'lightorange': $progress-lightorange,
+    'green': $progress-green,
+    'red': $progress-red,
+    'gray': $progress-gray
+);
+$search-table-active: #D6D3D3;
