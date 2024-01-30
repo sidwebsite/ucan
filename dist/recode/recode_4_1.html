@@ -130,8 +130,8 @@
                                     <thead>
                                         <tr>
                                             <th width="25%">16職涯類型</th>
-                                            <th class="position-relative"><span class="position-absolute top-50 start-0 translate-middle">0</span>興趣強度分數<span class="position-absolute top-50 start-100 translate-middle">99</span></th>
-                                            <th width="10%">PR值</th>
+                                            <th class="position-relative px-7 px-md-0"><span class="position-absolute top-50 start-0 translate-middle">0</span>興趣強度分數<span class="position-absolute top-50 start-100 translate-middle">99</span></th>
+                                            <th class="px-4 px-md-0" width="10%">PR值</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -321,9 +321,9 @@
                                     <thead>
                                         <tr>
                                             <th width="1%">職業性格</th>
-                                            <th width="15%">職業性格</th>
-                                            <th class="position-relative w-auto"><span class="position-absolute top-50 start-0 translate-middle">0</span>興趣強度分數<span class="position-absolute top-50 start-100 translate-middle">12</span></th>
-                                            <th width="10%">PR值</th>
+                                            <th class="px-5 px-md-0" width="15%">職業性格</th>
+                                            <th class="position-relative w-auto px-7 px-md-0"><span class="position-absolute top-50 start-0 translate-middle">0</span>興趣強度分數<span class="position-absolute top-50 start-100 translate-middle">12</span></th>
+                                            <th class="px-5 px-md-0" width="10%">PR值</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -506,13 +506,17 @@
                                 <p>想要從事一份工作，除了興趣的考量外，還必須盤點自己是否具備該工作所需要的共通職能與專業職能。<br />您可以進行專業職能診斷，檢視自己不同就業路徑中所具備的專業技能水準。<br />一般而言，興趣高且能力均較高者，能幫助您規劃成功且滿意的職業生涯。</p>
                                 <a href="../diagnose/diagnose_3_3_1.html" class="custom-link-primary" title="請進入專業職能診斷">請進入專業職能診斷</a>
                             </article>
-                            <!-- 歷次職業興趣探索診斷結果 -->
                             <h4 class="content-title-left-outline mb-3">歷次職業興趣探索診斷結果</h4>
                             <!-- 16種職涯類型歷次診斷分數 -->
                             <h5 class="content-h5-left-arrow text-primary">16種職涯類型歷次診斷分數</h5>
+                            <div class="mb-5">
+                                <canvas id="careerTypeChart" height="480" alt="16種職涯類型歷次診斷分數長條圖"></canvas>
+                            </div>
                             <!-- 職業性格歷次診斷分數 -->
                             <h5 class="content-h5-left-arrow text-primary">職業性格歷次診斷分數</h5>
-                            
+                            <div>
+                                <canvas id="professionalCharacterChart" height="180" ait="職業性格歷次診斷分數長條圖"></canvas>
+                            </div>
                         </div>
                         <!-- right -->
                         <div class="col-lg-3 order-1 order-lg-2 mb-4 column">
