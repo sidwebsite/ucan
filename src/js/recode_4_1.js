@@ -164,7 +164,7 @@ const careerTypeConfig = {
             },
             x: {
                 beginAtZero: true,
-                suggestedMax: 4,
+                suggestedMax: 5,
                 ticks: {
                     stepSize: 0.5,
                 },
@@ -277,7 +277,7 @@ const professionalCharacterConfig = {
             },
             x: {
                 beginAtZero: true,
-                suggestedMax: 4,
+                suggestedMax: 12,
                 ticks: {
                     stepSize: 1,
                 },

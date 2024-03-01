@@ -31,3 +31,8 @@
 .recode-alert-red {
     color: $alert-red;
 }
+@media print {
+    .break-before {
+        break-before: page;
+    }
+}

@@ -17431,7 +17431,7 @@ const specialtyConfig = {
             },
             x: {
                 beginAtZero: true,
-                suggestedMax: 4,
+                suggestedMax: 5,
                 ticks: {
                     stepSize: 0.5,
                 },
