@@ -25,7 +25,7 @@ const bannerSwiper = new Swiper(".bannerSwiper", {
             slidesPerView: 1,
         },
         1024: {
-            slidesPerView: 1.5,            
+            slidesPerView: 1.8,            
         },
     },
     effect: "coverflow",
@@ -36,7 +36,7 @@ const bannerSwiper = new Swiper(".bannerSwiper", {
         stretch: 0,
         depth: 100,
         modifier: 1,
-        scale: .85,
+        scale: 0.8,
         slideShadows: false,
     },
     navigation: {

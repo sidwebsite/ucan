@@ -1,9 +1,9 @@
-@mixin professionalFunctionsNavbar($imgContent) {
+@mixin searchfunctionsNavbar($imgContent, $pc-color, $phone-color) {
     @include media-breakpoint-up(lg) {
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" #{$imgContent} fill="#{$professionalFunctionsNavbarBg-pc-color}"/></svg>');
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" #{$imgContent} fill="#{$pc-color}"/></svg>');
     }
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" #{$imgContent} fill="#{$professionalFunctionsNavbarBg-phone-color}"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" #{$imgContent} fill="#{$phone-color}"/></svg>');
     &:hover {
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" #{$imgContent} fill="%23FCE3C6"/></svg>');
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" #{$imgContent} fill="#{$search-icon-bg-hover}"/></svg>');
     }
 }

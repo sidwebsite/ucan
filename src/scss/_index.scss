@@ -127,6 +127,10 @@
             background-color: #E8E8E8;
             font-weight: $font-weight-bolder;
         }
+        &:focus {
+            outline: 2px solid var(--bs-primary);
+            background-color: transparent;
+        }
     }
 }
 

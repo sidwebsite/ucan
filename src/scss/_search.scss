@@ -24,9 +24,23 @@
             img {
                 filter: grayscale(100%);
             }
-            &.active, &:hover {
-                img {
-                    filter: grayscale(0);
+            .common-img-icon {    
+                width: 92px;
+                height: 86px;
+                background-repeat: no-repeat;
+            }
+            @for $i from 1 through 9 {
+                .common-img-icon-#{$i} {
+                    @include searchfunctionsNavbar(map-get($commonFunctionsNavbarBg, img#{$i}), $commonFunctionsNavbarBg-pc-color, $commonFunctionsNavbarBg-phone-color);
+                }
+            }
+        }
+        @for $i from 1 through 9 {
+            .col:nth-child(#{$i}) {
+                .nav-link.active {
+                    .common-img-icon-#{$i} {
+                        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" #{map-get($commonFunctionsNavbarBg, img#{$i})} fill="#{$search-icon-bg-hover}"/></svg>');
+                    }
                 }
             }
         }
@@ -34,7 +48,7 @@
             @include row-cols(4);
         }
         @include media-breakpoint-up(lg) {
-            @include row-cols(8);
+            @include row-cols(9);
         }
         
     }
@@ -221,13 +235,14 @@
     height: 65px;
     background-repeat: no-repeat;
 }
+
+
 // icon
 @for $i from 1 through 16 {
     .img-icon-#{$i} {
-        @include professionalFunctionsNavbar(map-get($professionalFunctionsNavbarBg, img#{$i}));
+        @include searchfunctionsNavbar(map-get($professionalFunctionsNavbarBg, img#{$i}), $professionalFunctionsNavbarBg-pc-color, $professionalFunctionsNavbarBg-phone-color);
     }
 }
-
 .professionalFunctions-navbar {
     @include media-breakpoint-up(lg) {
         background-color: $professionalFunctions-navbar-bg;
@@ -238,8 +253,9 @@
 }
 // professional functions style
 .professionalFunctions-content {    
+    border: 1px solid $professionalFunctions-border-color;
     .professionalFunctions-item {
-        border-bottom: 1px solid var(--bs-dark);
+        border-bottom: 1px solid $professionalFunctions-border-color;
         &:last-child {
             border-bottom: 0;
         }
@@ -257,6 +273,7 @@
     background-color: $login-input-bg-light;
     .custom-accordion {
         .accordion-item {
+            background-color: transparent;
             &:first-child {
                 border-top: 0;
             }
@@ -312,21 +329,33 @@
         content: "";
     }
 }
+.accordion-button {
+    background-color: transparent;
+}
+.custom-accordion .accordion-button:not(.collapsed) {
+    background-color: transparent;
+}
 .links-group {
-    > a {
-        display: block;
-        color: $custom-accordion-header-color;
-        padding: {
-            top: 8px;
-            bottom: 8px;
-        };
-        &:not(:last-child) {
-            border-bottom: 1px solid var(--bs-dark);
-        }
-        &:hover {
+    > li {
+        margin-bottom: 1rem;
+        > a {
             color: var(--bs-primary);
+            background-color: transparent;
+            border-radius: 30px;
+            padding: 8px 15px;
+            transition: .3s ease;
+            // &:not(:last-child) {
+            //     border-bottom: 1px solid var(--bs-dark);
+            // }
+            &:hover {
+                color: var(--bs-primary);
+                background-color: $search-links-group-bg-hover;
+            }
         }
-    }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    } 
 }
 .relatedOccupationsList {
     list-style: none;

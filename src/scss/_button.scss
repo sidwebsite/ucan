@@ -1,0 +1,76 @@
+// custom button style
+%custom-btn {
+    font-family: $font-family-Arial;
+    padding: 5px 26px;
+    border-radius: 50px;
+    font-weight: bolder;
+    text-decoration: none !important;
+    box-shadow: $custom-box-shadow-bese;
+}
+.custom-btn-primary {
+    display: inline-block;
+    @extend %custom-btn;
+    background-color: var(--bs-warning);
+    color: $btn-font-color;
+    &:hover, &:focus-visible  {
+        background-color: var(--bs-primary);
+        color: var(--bs-white);
+    }
+}
+.custom-link-primary {
+    display: inline-block;
+    @extend %custom-btn;
+    background-color: var(--bs-primary);
+    color: var(--bs-white);
+    &:hover {
+        background-color: var(--bs-warning);
+        color: $btn-font-color;
+    }
+}
+.custom-btn-red {
+    @extend %custom-btn;
+    background-color: var(--bs-danger);
+    &:hover {
+        background-color: var(--bs-primary);
+    }
+}
+// download
+.download-link {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--bs-dark);
+    color: var(--bs-white); 
+    &:hover {
+        background-color: var(--bs-primary);
+        color: var(--bs-white); 
+    }
+}
+// submit
+.custom-btn-submit {
+    border-radius: 0;
+    background-color: var(--bs-warning);
+    color: var(--bs-dark);
+    font-weight: bold;
+    &:hover, &:focus:not(:focus-visible) {
+        background-color: var(--bs-primary);
+        color: var(--bs-white);
+    }
+    &:focus {
+        background-color: var(--bs-primary);
+        color: var(--bs-white);
+        outline: 2px dashed $custom-focus-color;
+    }
+}
+// rect botton
+.custom-btn-rect-primary {
+    display: inline-block;
+    background-color: var(--bs-warning);
+    @extend %custom-btn;
+    border-radius: 4px;
+    &:hover, &:focus-visible  {
+        background-color: var(--bs-primary);
+        color: var(--bs-white);
+    }
+}

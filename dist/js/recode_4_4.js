@@ -1,7 +1,7 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 127:
+/***/ 128:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -9,9 +9,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ plugin)
 /* harmony export */ });
-/* harmony import */ var chart_js_helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(128);
-/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(124);
-/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(125);
+/* harmony import */ var chart_js_helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(129);
+/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(125);
+/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(126);
 /*!
  * chartjs-plugin-datalabels v2.2.0
  * https://chartjs-plugin-datalabels.netlify.app
@@ -1882,7 +1882,7 @@ module.exports = Sticky;
 
 /***/ }),
 
-/***/ 126:
+/***/ 127:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2503,7 +2503,7 @@ function index_esm(input) {
 
 /***/ }),
 
-/***/ 123:
+/***/ 124:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2558,7 +2558,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   registry: () => (/* reexport safe */ _dist_chart_js__WEBPACK_IMPORTED_MODULE_0__.registry),
 /* harmony export */   scales: () => (/* reexport safe */ _dist_chart_js__WEBPACK_IMPORTED_MODULE_0__.scales)
 /* harmony export */ });
-/* harmony import */ var _dist_chart_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(124);
+/* harmony import */ var _dist_chart_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(125);
 
 
 _dist_chart_js__WEBPACK_IMPORTED_MODULE_0__.Chart.register(..._dist_chart_js__WEBPACK_IMPORTED_MODULE_0__.registerables);
@@ -2569,7 +2569,7 @@ _dist_chart_js__WEBPACK_IMPORTED_MODULE_0__.Chart.register(..._dist_chart_js__WE
 
 /***/ }),
 
-/***/ 124:
+/***/ 125:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2623,7 +2623,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   registry: () => (/* binding */ registry),
 /* harmony export */   scales: () => (/* binding */ scales)
 /* harmony export */ });
-/* harmony import */ var _chunks_helpers_segment_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(125);
+/* harmony import */ var _chunks_helpers_segment_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(126);
 /*!
  * Chart.js v4.4.1
  * https://www.chartjs.org
@@ -14083,7 +14083,7 @@ const registerables = [
 
 /***/ }),
 
-/***/ 125:
+/***/ 126:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -14215,7 +14215,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   y: () => (/* binding */ _parseObjectDataRadialScale),
 /* harmony export */   z: () => (/* binding */ getRelativePosition)
 /* harmony export */ });
-/* harmony import */ var _kurkle_color__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(126);
+/* harmony import */ var _kurkle_color__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(127);
 /*!
  * Chart.js v4.4.1
  * https://www.chartjs.org
@@ -16966,7 +16966,7 @@ function styleChanged(style, prevStyle) {
 
 /***/ }),
 
-/***/ 129:
+/***/ 130:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -17094,7 +17094,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   unlistenArrayEvents: () => (/* reexport safe */ _chunks_helpers_segment_js__WEBPACK_IMPORTED_MODULE_0__.u),
 /* harmony export */   valueOrDefault: () => (/* reexport safe */ _chunks_helpers_segment_js__WEBPACK_IMPORTED_MODULE_0__.v)
 /* harmony export */ });
-/* harmony import */ var _chunks_helpers_segment_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(125);
+/* harmony import */ var _chunks_helpers_segment_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(126);
 /*!
  * Chart.js v4.4.1
  * https://www.chartjs.org
@@ -17108,7 +17108,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 128:
+/***/ 129:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -17236,7 +17236,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   unlistenArrayEvents: () => (/* reexport safe */ _dist_helpers_js__WEBPACK_IMPORTED_MODULE_0__.unlistenArrayEvents),
 /* harmony export */   valueOrDefault: () => (/* reexport safe */ _dist_helpers_js__WEBPACK_IMPORTED_MODULE_0__.valueOrDefault)
 /* harmony export */ });
-/* harmony import */ var _dist_helpers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(129);
+/* harmony import */ var _dist_helpers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(130);
 
 
 
@@ -17317,8 +17317,8 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_nice_select2_dist_js_nice_select2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(113);
 /* harmony import */ var _node_modules_nice_select2_dist_js_nice_select2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_nice_select2_dist_js_nice_select2__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var chart_js_auto__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(123);
-/* harmony import */ var chartjs_plugin_datalabels__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(127);
+/* harmony import */ var chart_js_auto__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(124);
+/* harmony import */ var chartjs_plugin_datalabels__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(128);
 // Sticky
 const Sticky = __webpack_require__(110);
 if(window.innerWidth > 992) {const sticky = new Sticky('[data-sticky]', {})};
