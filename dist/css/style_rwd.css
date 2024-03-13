@@ -18594,7 +18594,15 @@ ol.list-style-cjk-ideographic {
   right: 15px;
 }
 
+.career-inquiry {
+  background-color: var(--bs-white);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
 .career-inquiry-title {
+  --bs-table-color: var(--bs-dark);
+  --bs-table-bg: #D9D8D8;
   background-color: #D9D8D8;
   border-radius: 10px;
   -webkit-box-align: center;
@@ -18604,8 +18612,12 @@ ol.list-style-cjk-ideographic {
   font-weight: bolder;
 }
 
+.career-inquiry-content .table > thead > tr > th, .career-inquiry-content .table > tbody > tr > td {
+  padding: 1rem;
+  vertical-align: middle;
+}
 .career-inquiry-content .grid {
-  --bs-columns: 6;
+  grid-template-columns: 1fr 1fr 1fr 130px 125px 85px;
 }
 .career-inquiry-content .career-inquiry-link {
   color: #0581B4;
@@ -18628,6 +18640,7 @@ ol.list-style-cjk-ideographic {
   }
   .career-inquiry-content .tr .td:nth-child(1) {
     display: block;
+    width: 300px;
   }
   .career-inquiry-content .tr .td:nth-child(1) > a {
     color: var(--bs-dark);
@@ -18960,10 +18973,13 @@ ol.list-style-cjk-ideographic {
 }
 
 .professionalFunctions-content {
-  border: 1px solid #AFACAC;
+  border: 1px solid #dedede;
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .professionalFunctions-content .professionalFunctions-item {
-  border-bottom: 1px solid #AFACAC;
+  border-bottom: 1px solid #dedede;
 }
 .professionalFunctions-content .professionalFunctions-item:last-child {
   border-bottom: 0;
@@ -18982,6 +18998,14 @@ ol.list-style-cjk-ideographic {
 .professionalFunctions-accordion {
   background-color: #efefef;
 }
+.professionalFunctions-accordion .accordion-item:first-of-type .accordion-button {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.professionalFunctions-accordion .accordion-item:last-of-type .accordion-button.collapsed {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
 .professionalFunctions-accordion .custom-accordion .accordion-item {
   background-color: transparent;
 }
@@ -18990,6 +19014,24 @@ ol.list-style-cjk-ideographic {
 }
 .professionalFunctions-accordion .custom-accordion .accordion-item:last-child {
   border-bottom: 0;
+}
+.professionalFunctions-accordion .custom-accordion .accordion-item .accordion-body {
+  color: #716F6F;
+}
+.professionalFunctions-accordion .custom-accordion .accordion-item .accordion-button {
+  font-size: 1.125rem;
+  font-weight: bolder;
+}
+.professionalFunctions-accordion .custom-accordion .accordion-item .accordion-button:focus {
+  outline: 2px solid var(--bs-primary);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.professionalFunctions-accordion .custom-accordion .accordion-button {
+  background-color: transparent;
+}
+.professionalFunctions-accordion .custom-accordion .custom-accordion .accordion-button:not(.collapsed) {
+  background-color: transparent;
 }
 
 .professionalFunctions-item-accordion > .accordion-item {
@@ -19018,14 +19060,6 @@ ol.list-style-cjk-ideographic {
 }
 .professionalFunctions-item-accordion .no-icon:not(.collapsed)::after {
   content: "";
-}
-
-.accordion-button {
-  background-color: transparent;
-}
-
-.custom-accordion .accordion-button:not(.collapsed) {
-  background-color: transparent;
 }
 
 .links-group > li {
@@ -19792,6 +19826,10 @@ ol.list-style-cjk-ideographic {
     -webkit-column-break-before: page;
        -moz-column-break-before: page;
             break-before: page;
+  }
+  .column div[data-sticky] {
+    width: 100% !important;
+    position: inherit !important;
   }
 }
 #accountApplication .col-form-label {

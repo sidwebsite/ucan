@@ -126,15 +126,27 @@
         right: 15px;
     }
 }
+.career-inquiry {
+    background-color: var(--bs-white);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
 .career-inquiry-title {
+    --bs-table-color: var(--bs-dark);
+    --bs-table-bg: #D9D8D8;
     background-color: #D9D8D8;
     border-radius: 10px;
     align-items: center;
     font-weight: bolder;
 }
 .career-inquiry-content {
+    .table > thead > tr > th, .table > tbody > tr > td {
+        padding: 1rem;
+        vertical-align: middle;
+    }
+    // 
     .grid {
-        --bs-columns: 6;        
+        grid-template-columns: 1fr 1fr 1fr 130px 125px 85px;
     }
     .career-inquiry-link {
         color: $custom-search-link-colr;
@@ -154,6 +166,7 @@
             }
             .td:nth-child(1) {
                 display: block;
+                width: 300px;
                 > a {
                     color: var(--bs-dark);
                     text-decoration: underline;
@@ -253,9 +266,11 @@
 }
 // professional functions style
 .professionalFunctions-content {    
-    border: 1px solid $professionalFunctions-border-color;
+    border: 1px solid #dedede;
+    outline: 0;
+    box-shadow: none;
     .professionalFunctions-item {
-        border-bottom: 1px solid $professionalFunctions-border-color;
+        border-bottom: 1px solid #dedede;
         &:last-child {
             border-bottom: 0;
         }
@@ -271,6 +286,14 @@
 }
 .professionalFunctions-accordion {
     background-color: $login-input-bg-light;
+    .accordion-item:first-of-type .accordion-button {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    .accordion-item:last-of-type .accordion-button.collapsed {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
     .custom-accordion {
         .accordion-item {
             background-color: transparent;
@@ -280,6 +303,23 @@
             &:last-child {
                 border-bottom: 0;
             }
+            .accordion-body {
+                color: $diagnose-fraction-gray;
+            }
+            .accordion-button {
+                font-size: 1.125rem;
+                font-weight: bolder;
+                &:focus {
+                    outline: 2px solid var(--bs-primary);
+                    box-shadow: none;
+                }
+            }
+        }
+        .accordion-button {
+            background-color: transparent;
+        }
+        .custom-accordion .accordion-button:not(.collapsed) {
+            background-color: transparent;
         }
     } 
     // > .accordion-item {
@@ -299,6 +339,7 @@
 }
 
 .professionalFunctions-item-accordion {
+    
     > .accordion-item {
         border-color: var(--bs-border-color);
         &:first-child {
@@ -328,12 +369,6 @@
     .no-icon:not(.collapsed)::after {
         content: "";
     }
-}
-.accordion-button {
-    background-color: transparent;
-}
-.custom-accordion .accordion-button:not(.collapsed) {
-    background-color: transparent;
 }
 .links-group {
     > li {

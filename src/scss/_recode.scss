@@ -35,4 +35,13 @@
     .break-before {
         break-before: page;
     }
+    .column {
+        div[data-sticky] {
+            width: 100% !important;
+            position: inherit !important;
+        }
+    }
+    // .mb-print-0 {
+    //     margin-bottom: 0 !important;
+    // }
 }

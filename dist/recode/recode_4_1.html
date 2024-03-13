@@ -15,7 +15,7 @@
             const careerType = [
                 {
                     professionType: '建築營造',
-                    one: 3.2,
+                    one: 5,
                     two: 3.3,
                     three: 3.4,
                     four: 3.5
@@ -64,14 +64,14 @@
                 },
                 {
                     professionType: '醫療保健',
-                    one: 2.05,
+                    one: 5,
                     two: 2.1,
                     three: 2.15,
                     four: 2.2
                 },
                 {
                     professionType: '個人及社會服務',
-                    one: 2.05,
+                    one: 5,
                     two: 2.1,
                     three: 2.15,
                     four: 2.2
@@ -151,7 +151,7 @@
                 },
                 {
                     type: '社會型 S',
-                    one: 9,
+                    one: 12,
                     two: 8,
                     three: 9,
                     four: 9
@@ -201,6 +201,19 @@
                     }
                 ],
             };
+            // legend marg in right
+            const legendMargInRight = {
+                id: 'legendMargInRight',
+                afterInit(chart, args, options) {
+                    // console.log(chart.legend.fit);
+                    const fitValue = chart.legend.fit;
+                    chart.legend.fit = function fit() {
+                        fitValue.bind(chart.legend)();
+                        let width = this.width += 30;
+                        return width;
+                    }
+                }
+            };
             // config
             const careerTypeConfig = {
                 type: "bar",
@@ -227,6 +240,10 @@
                         legend: {
                             display: true,
                             position: 'right',
+                            rtl: true,
+                            labels: {
+                                textAlign: 'left'
+                            }
                         },
                         datalabels: {
                             color: '#6B6B6B',
@@ -235,7 +252,7 @@
                         }
                     }
                 },
-                plugins: [ChartDataLabels],
+                plugins: [ChartDataLabels, legendMargInRight],
             };
             const careerTypeElement = document.querySelector('#careerTypeChart');
             const careerTypeChart = new Chart(careerTypeElement, careerTypeConfig);
@@ -296,6 +313,10 @@
                         legend: {
                             display: true,
                             position: 'right',
+                            rtl: true,
+                            labels: {
+                                textAlign: 'left'
+                            }
                         },
                         datalabels: {
                             color: '#6B6B6B',
@@ -304,7 +325,7 @@
                         }
                     }
                 },
-                plugins: [ChartDataLabels],
+                plugins: [ChartDataLabels, legendMargInRight],
             };
             const professionalCharacterChartElement = document.querySelector('#professionalCharacterChart');
             const professionalCharacterChart = new Chart(professionalCharacterChartElement, professionalCharacterConfig);
@@ -842,12 +863,14 @@
                                     <dt>學號：</dt>
                                     <dd>12345678A </dd>
                                 </dl>
-                                <hr class="my-3">
+                                <hr class="my-3">                                
                                 <dl class="d-flex">
                                     <dt>施測日期：</dt>
                                     <dd>2023年12月25日</dd>
                                 </dl>
-                                <a href="#" class="btn btn-primary d-block rounded-0" download="" title="下載診斷結果">下載診斷結果</a>
+                                <!-- 2024/03/07修改 start -->
+                                <a href="#" class="btn btn-primary d-block d-print-none rounded-0" title="下載診斷結果">下載診斷結果</a>
+                                <!-- 2024/03/07修改 end -->
                             </div>
                         </div>
                     </div>
