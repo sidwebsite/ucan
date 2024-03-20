@@ -17289,6 +17289,16 @@ a:hover {
   border-right: 1px solid #A8A7A7;
 }
 
+.td-w-300 {
+  width: 300px;
+  display: block;
+}
+@media (min-width: 768px) {
+  .td-w-300 {
+    display: table-cell;
+  }
+}
+
 .page-item {
   margin-right: 10px;
 }
@@ -17717,6 +17727,48 @@ ol.list-style-cjk-ideographic {
 .admin-form {
   background-color: #efefef;
   border-radius: 12px;
+}
+
+.login-link-group > li {
+  display: block;
+  border-bottom: 1px solid #ADACAC;
+}
+.login-link-group > li:last-child {
+  border-bottom: 0;
+}
+.login-link-group > li > a {
+  display: block;
+  color: #3D3C3C;
+  text-align: center;
+  margin-right: 0;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.login-link-group > li > a:hover {
+  color: var(--bs-primary);
+  text-decoration: none;
+}
+
+#loginBtn:not(.show) > i {
+  -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+          transform: rotate(0);
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+#loginBtn.show > i {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .header {

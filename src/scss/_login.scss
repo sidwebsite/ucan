@@ -79,3 +79,37 @@
     background-color: $login-input-bg-light;
     border-radius: 12px;
 }
+.login-link-group {
+    > li {
+        display: block;
+        border-bottom: 1px solid $login-link-border-color;
+        &:last-child {
+            border-bottom: 0;
+        }
+        > a {
+            display: block;
+            color: $login-link-color;
+            text-align: center;
+            margin-right: 0;
+            transition: .3s ease;
+            &:hover {
+                color: var(--bs-primary);
+                text-decoration: none;
+            }
+        }
+    }
+}
+#loginBtn:not(.show) {
+    > i {
+        transform: rotate(0);
+        transform-origin: center;
+        transition: .3s ease;
+    }
+}
+#loginBtn.show {
+    > i {
+        transform: rotate(180deg);
+        transform-origin: center;
+        transition: .3s ease;
+    }
+}

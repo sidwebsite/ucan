@@ -28,8 +28,19 @@
                 <a href="../others/sitemap_6_1.html" title="網站導覽"><span class="icon-sitemap"></span> 網站導覽</a>
                 <a href="#" title="UCAN使用指南(另開新視窗)" target="_blank"><span class="icon-guidance"></span> UCAN使用指南</a>
                 <a href="../others/contactUs.html" title="聯絡我們"><span class="icon-message"></span> 聯絡我們</a>
-                <span class="text-white"><span class="fa-solid fa-user"></span> 王XX</span>
-                <a href="#" class="ms-3" title="登出"><i class="fa-solid fa-right-from-bracket"></i> 登出</a>
+                <div class="position-relative d-flex align-items-center">
+                    <button type="button" id="loginBtn" class="btn text-warning p-0" data-bs-toggle="dropdown" aria-expanded="false" aria-label="會員導覽列"><span class="text-white me-2"><span class="fa-solid fa-user"></span> 王XX</span><i class="fa-solid fa-circle-down"></i></button>
+                    <div class="login w-auto dropdown-menu" id="loginNavbar">
+                        <div class="login-form">
+                            <ul class="list-unstyled login-link-group mb-0">
+                                <li><a href="" title="我的帳戶">我的帳戶</a></li>
+                                <li><a href="" title="修改密碼">修改密碼</a></li>
+                                <li><a href="" title="登出">登出</a></li>
+                                <li><a href="" title="後台管理">後台管理</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- header-top end -->

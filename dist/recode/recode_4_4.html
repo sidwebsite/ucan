@@ -6,6 +6,175 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="大專校院就業職能平台的描述">
     <title>大專校院就業職能平台</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script>
+        $(document).ready(function() {
+            const specialty = [
+                {
+                    item: '掌握企業營運與交易法規',
+                    one: 3.2,
+                    two: 3.3,
+                    three: 3.4,
+                    four: 3.5
+                },
+                {
+                    item: '分析經營環境，擬定經營策略與模式',
+                    one: 2.9,
+                    two: 2.9,
+                    three: 2.9,
+                    four: 2.9
+                },
+                {
+                    item: '擬定行銷計畫及業務流程',
+                    one: 2.6,
+                    two: 2.7,
+                    three: 2.8,
+                    four: 2.9
+                },
+                {
+                    item: '訂立生產流程與作業計畫',
+                    one: 2.6,
+                    two: 2.7,
+                    three: 2.8,
+                    four: 2.9
+                },
+                {
+                    item: '規劃並執行人力資源管理',
+                    one: 2.35,
+                    two: 2.3,
+                    three: 2.25,
+                    four: 2.2
+                },
+                {
+                    item: '進行財務分析與管理',
+                    one: 2.05,
+                    two: 2.1,
+                    three: 2.15,
+                    four: 2.2
+                },
+                {
+                    item: '「企業經營管理>一般管理」平均數',
+                    one: 2.05,
+                    two: 2.1,
+                    three: 2.15,
+                    four: 2.2
+                }
+            ];
+            // 
+            const labelArray = specialty.map(label => label.item);
+            const labelString = [];
+            // 
+            String.prototype.StrCut2Arr = function(n){
+                let str = this;
+                let arr = [];
+                let len = Math.ceil(str.length / n);
+                for(let i=0;i < len;i++){
+                    if(str.length >= n){
+                        let strCut = str.substring(0,n);
+                        arr.push(strCut);
+                        str = str.substring(n);
+                    }else{
+                        str = str;
+                        arr.push(str);
+                    }
+                }
+                return arr;
+            }
+            // 
+            const substringNum = 7;
+            // 
+            labelArray.forEach( arr => {
+                labelString.push(arr.StrCut2Arr(substringNum));
+            });
+            // 
+            const specialtyData = {    
+                labels: labelString,
+                datasets: [
+                    {
+                        label: '110/04/22第一次',
+                        data: specialty.map(data => data.one),
+                        backgroundColor: ['#CBEBB7','#CBEBB7','#CBEBB7','#CBEBB7','#CBEBB7','#CBEBB7', '#DDDEDB'],
+                        borderWidth: 0
+                    },
+                    {
+                        label: '111/10/28第二次',
+                        data: specialty.map(data => data.two),
+                        backgroundColor: ['#9BD376','#9BD376','#9BD376','#9BD376','#9BD376','#9BD376', '#C4C6C3'],
+                        borderWidth: 0
+                    },
+                    {
+                        label: '112/07/26第三次',
+                        data: specialty.map(data => data.three),
+                        backgroundColor: ['#82C450','#82C450','#82C450','#82C450','#82C450','#82C450', '#A7A7A7'],
+                        borderWidth: 0
+                    },
+                    {
+                        label: '113/01/03第四次',
+                        data: specialty.map(data => data.four),
+                        backgroundColor: ['#71AD47','#71AD47','#71AD47','#71AD47','#71AD47','#71AD47', '#888B88'],
+                        borderWidth: 0
+                    }
+                ],
+            };
+            // legend marg in right
+            const legendMargInRight = {
+                id: 'legendMargInRight',
+                afterInit(chart, args, options) {
+                    // console.log(chart.legend.fit);
+                    const fitValue = chart.legend.fit;
+                    chart.legend.fit = function fit() {
+                        fitValue.bind(chart.legend)();
+                        let width = this.width += 30;
+                        return width;
+                    }
+                }
+            };
+            // config
+            const specialtyConfig = {
+                type: "bar",
+                data: specialtyData,
+                options: {
+                    categoryPercentage: 0.8,
+                    barPercentage: 1,
+                    indexAxis: 'y',
+                    scales: {
+                        y: {
+                            grid: {
+                                display: false
+                            }
+                        },
+                        x: {
+                            beginAtZero: true,
+                            suggestedMax: 5,
+                            ticks: {
+                                stepSize: 0.5,
+                            },
+                        },
+                    },
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'right',
+                            rtl: true,
+                            labels: {
+                                textAlign: 'left'
+                            }
+                        },
+                        datalabels: {
+                            color: '#6B6B6B',
+                            anchor: 'end',
+                            align: 'right',
+                        }
+                    }
+                },
+                plugins: [ChartDataLabels, legendMargInRight],
+            };
+            const specialtyElement = document.querySelector('#specialtChart');
+            const specialtChart = new Chart(specialtyElement, specialtyConfig);
+        });
+    </script>
 <script defer src="../js/main.js"></script><script defer src="../js/menu.js"></script><script defer src="../js/recode_4_4.js"></script><script defer src="../js/footer.js"></script><link href="../css/style_rwd.css" rel="stylesheet"></head>
 <body>
     <noscript>您的瀏覽器不支援JavaScript功能，若本網站功能無法正常使用，請開啟瀏覽器JavaScript狀態</noscript>
@@ -139,18 +308,18 @@
                             </div>
                             <!-- table start -->
                             <div class="table-responsive-lg mb-4">
-                                <table class="table search-table align-middle text-nowrap">
+                                <table class="table search-table align-middle">
                                     <caption class="visually-hidden">職涯類型</caption>
                                     <thead>
                                         <tr>
-                                            <th width="30%">專業職能</th>
-                                            <th class="position-relative px-7 px-md-0"><span class="position-absolute top-50 start-0 translate-middle">0</span>能力強度PR值<span class="position-absolute top-50 start-100 translate-middle">99</span></th>
+                                            <th>專業職能</th>
+                                            <th class="position-relative px-7 px-md-0 text-nowrap"><span class="position-absolute top-50 start-0 translate-middle">0</span>能力強度PR值<span class="position-absolute top-50 start-100 translate-middle">99</span></th>
                                             <th class="px-4 px-md-0" width="10%">分數</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>掌握企業營運與交易法規</td>
+                                            <td class="td-w-300">掌握企業營運與交易法規掌握企業營運與交易法規掌握企業營運與交易法規</td>
                                             <td class="border-start px-0">
                                                 <div class="progress search-progress search-progress-rounded">
                                                     <div class="progress-bar search-progress-bar-orange text-end pe-3 search-progress-rounded" role="progressbar" style="width: 68%" aria-valuenow="68" aria-valuemin="0" aria-valuemax="99">68</div>
