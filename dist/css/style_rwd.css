@@ -17682,6 +17682,11 @@ ol.list-style-cjk-ideographic {
   -webkit-appearance: none;
   margin: 0;
 }
+.login .login-form input[type=number]::-webkit-outer-spin-button,
+.login .login-form input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 .login .login-form input[type=number] {
   -moz-appearance: textfield;
 }
@@ -17769,6 +17774,17 @@ ol.list-style-cjk-ideographic {
           transform-origin: center;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+}
+
+#captcha[type=number]::-webkit-outer-spin-button,
+#captcha[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+#captcha[type=number] {
+  -moz-appearance: textfield;
 }
 
 .header {
@@ -18160,6 +18176,10 @@ ol.list-style-cjk-ideographic {
     left: 15px;
     color: var(--bs-primary);
     font-size: 0.875rem;
+  }
+  .header-main .nav-menu .menu > .menu-item > a.loginUser::before {
+    font: var(--fa-font-solid);
+    content: "\f007";
   }
   .header-main .nav-menu .menu > .menu-item-has-children > a {
     display: -webkit-box;

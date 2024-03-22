@@ -34,6 +34,11 @@
                 margin: 0;
             }
         }
+        input[type=number]::-webkit-outer-spin-button,
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
         input[type="number"] {
             -moz-appearance: textfield;
         }
@@ -112,4 +117,14 @@
         transform-origin: center;
         transition: .3s ease;
     }
+}
+#captcha[type=number]::-webkit-outer-spin-button,
+#captcha[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+#captcha[type=number] {
+    -moz-appearance: textfield;
 }

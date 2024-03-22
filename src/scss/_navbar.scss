@@ -261,6 +261,10 @@
                             color: var(--bs-primary);
                             font-size: 0.875rem;
                         }
+                        &.loginUser::before {
+                            font: var(--fa-font-solid);
+                            content: map-get($icons, user);
+                        }
                     }
                     
                 }

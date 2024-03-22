@@ -467,7 +467,14 @@ module.exports = {
             filename: 'others/sitemap_6_1.html',
             minify: false,
             chunks: ['main', 'menu', 'footer']
-        })
+        }),
+        // 手機板登入
+        new HtmlWebpackPlugin({
+            template: './src/html/others/login_phone.html',
+            filename: 'others/login_phone.html',
+            minify: false,
+            chunks: ['main', 'menu', 'footer']
+        }),
     ],
     devServer: {
         // host: '192.168.50.10',

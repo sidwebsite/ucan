@@ -70,7 +70,15 @@ var __webpack_exports__ = {};
 <li class="menu-item d-block d-lg-none"><a href="../others/sitemap_6_1.html" title="網站導覽">網站導覽</a></li>
 <li class="menu-item d-block d-lg-none"><a href="#" target="_blank" title="UCAN使用指南(另開新視窗)">UCAN使用指南</a></li>
 <li class="menu-item d-block d-lg-none"><a href="../others/contactUs.html" title="聯絡我們">聯絡我們</a></li>
-<li class="menu-item d-block d-lg-none"><a href="#" title="登入">登入</a></li>`;
+<li class="menu-item d-block d-lg-none menu-item-has-children">
+    <a href="#" class="loginUser" data-toggle="sub-menu" title="王XX">王XX</a>
+    <ul class="sub-menu">
+        <li class="menu-item"><a href="#" title="我的帳戶">我的帳戶</a></li>
+        <li class="menu-item"><a href="#" title="修改密碼">修改密碼</a></li>
+        <li class="menu-item"><a href="#" title="登出">登出</a></li>
+        <li class="menu-item"><a href="#" title="後台管理">後台管理</a></li>
+    </ul>
+</li>`;
 })();
 /******/ })()
 ;
