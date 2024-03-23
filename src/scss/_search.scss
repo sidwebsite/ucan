@@ -94,7 +94,10 @@
     width: 100%;
     background-color: $custom-search-bg;
     border-radius: 50px;
-    
+    @include media-breakpoint-up(md) {
+        margin-top: 0;
+    }
+    margin-top: -10px;
     .nice-select-dropdown {
         width: 100%;
         border: 1px solid $custom-search-border;
@@ -339,7 +342,6 @@
 }
 
 .professionalFunctions-item-accordion {
-    
     > .accordion-item {
         border-color: var(--bs-border-color);
         &:first-child {

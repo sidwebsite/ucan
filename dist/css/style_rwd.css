@@ -18636,6 +18636,12 @@ ol.list-style-cjk-ideographic {
   width: 100%;
   background-color: #ECEFEF;
   border-radius: 50px;
+  margin-top: -10px;
+}
+@media (min-width: 768px) {
+  .nice-select {
+    margin-top: 0;
+  }
 }
 .nice-select .nice-select-dropdown {
   width: 100%;
