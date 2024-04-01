@@ -3,9 +3,10 @@
     justify-content: space-between;
     align-items: center;
     .logo {
-        width: 347px;
+        width: 280px;
         transform: scale(1);
         transition: .3s ease;
+        margin-top: 8px;
         img {
             width: 100%;
         }
@@ -239,6 +240,7 @@
             z-index: 1000;
             transition: all 0.5s ease;
             .menu {
+                margin-bottom: 4rem;
                 padding-left: 0;
                 > .menu-item {
                     overflow: hidden;
@@ -249,7 +251,7 @@
                     > a {
                         display: block;
                         color: var(--white);
-                        padding: 24px 40px;
+                        padding: 10px 40px;
                         border-bottom: $nav-menu-phone-border;
                         &::before {
                             font-family: 'icomoon';

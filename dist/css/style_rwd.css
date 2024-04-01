@@ -17888,12 +17888,13 @@ ol.list-style-cjk-ideographic {
           align-items: center;
 }
 .header-main .logo {
-  width: 347px;
+  width: 280px;
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+  margin-top: 8px;
 }
 .header-main .logo img {
   width: 100%;
@@ -18150,6 +18151,7 @@ ol.list-style-cjk-ideographic {
     transition: all 0.5s ease;
   }
   .header-main .nav-menu .menu {
+    margin-bottom: 4rem;
     padding-left: 0;
   }
   .header-main .nav-menu .menu > .menu-item {
@@ -18162,7 +18164,7 @@ ol.list-style-cjk-ideographic {
   .header-main .nav-menu .menu > .menu-item > a {
     display: block;
     color: var(--white);
-    padding: 24px 40px;
+    padding: 10px 40px;
     border-bottom: 1px solid #AFAFAF;
   }
   .header-main .nav-menu .menu > .menu-item > a::before {
@@ -19416,6 +19418,15 @@ ol.list-style-cjk-ideographic {
 .search-font-small {
   font-size: 0.875rem;
   color: #716F6F;
+}
+
+.canvas-container {
+  width: 680px;
+}
+@media (min-width: 768px) {
+  .canvas-container {
+    width: 100%;
+  }
 }
 
 .diagnose-warpper, .diagnose-step {

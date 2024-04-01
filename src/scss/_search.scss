@@ -580,3 +580,10 @@
     font-size: 0.875rem;
     color: $diagnose-fraction-gray;
 }
+.canvas-container {
+    @include media-breakpoint-up(md) {
+        width: 100%;
+    }    
+    width: 680px;
+    
+}
