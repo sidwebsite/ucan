@@ -1,7 +1,7 @@
 #accountApplication {
     .col-form-label {
         @include media-breakpoint-up(md) {
-            max-width: 130px;
+            max-width: 145px;
             text-align: right;
         }
         max-width: 100%;

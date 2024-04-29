@@ -226,13 +226,25 @@
                         y: {
                             grid: {
                                 display: false
+                            },
+                            // 2024/4/29修改 start
+                            ticks: {
+                                font: {
+                                    size: 14,
+                                }
                             }
+                            // 2024/4/29修改 end
                         },
                         x: {
                             beginAtZero: true,
                             suggestedMax: 5,
                             ticks: {
                                 stepSize: 0.5,
+                                // 2024/4/29修改 start
+                                font: {
+                                    size: 14,
+                                }
+                                // 2024/4/29修改 end
                             },
                         },
                     },
@@ -249,14 +261,18 @@
                             color: '#6B6B6B',
                             anchor: 'end',
                             align: 'right',
+                            // 2024/4/29修改 start
+                            font: {
+                                size: 14,
+                            }
+                            // 2024/4/29修改 end
                         }
                     }
                 },
                 plugins: [ChartDataLabels, legendMargInRight],
             };
             const careerTypeElement = document.querySelector('#careerTypeChart');
-            const careerTypeChart = new Chart(careerTypeElement, careerTypeConfig);
-
+            let careerTypeChart = new Chart(careerTypeElement, careerTypeConfig);
             // 職業性格歷次診斷分數圖表
             const professionalCharacterChartData = {    
                 labels: professionalCharacter.map(label => label.type),
@@ -299,13 +315,25 @@
                         y: {
                             grid: {
                                 display: false
+                            },
+                            // 2024/4/29修改 start
+                            ticks: {
+                                font: {
+                                    size: 14,
+                                }
                             }
+                            // 2024/4/29修改 end
                         },
                         x: {
                             beginAtZero: true,
                             suggestedMax: 12,
                             ticks: {
                                 stepSize: 1,
+                                // 2024/4/29修改 start
+                                font: {
+                                    size: 14,
+                                }
+                                // 2024/4/29修改 end
                             },
                         },
                     },
@@ -322,16 +350,32 @@
                             color: '#6B6B6B',
                             anchor: 'end',
                             align: 'right',
+                            // 2024/4/29修改 start
+                            font: {
+                                size: 14,
+                            }
+                            // 2024/4/29修改 end
                         }
                     }
                 },
                 plugins: [ChartDataLabels, legendMargInRight],
             };
             const professionalCharacterChartElement = document.querySelector('#professionalCharacterChart');
-            const professionalCharacterChart = new Chart(professionalCharacterChartElement, professionalCharacterConfig);
-        });
+            let professionalCharacterChart = new Chart(professionalCharacterChartElement, professionalCharacterConfig);
+            // print 
+            // 2024/04/18修改 start
+            window.addEventListener('beforeprint', () => {
+                careerTypeChart.resize(1800, 1400);
+                professionalCharacterChart.resize(1050, 700);
+            });
+            window.addEventListener('afterprint', () => {
+                careerTypeChart.resize();
+                professionalCharacterChart.resize();
+            });
+            // 2024/04/18修改 end
+        });        
     </script>
-<script defer src="../js/main.js"></script><script defer src="../js/menu.js"></script><script defer src="../js/recode_4_1.js"></script><script defer src="../js/footer.js"></script><link href="../css/style_rwd.css" rel="stylesheet"></head>
+<script defer src="../js/main.js"></script><script defer src="../js/recode_4_1.js"></script><link href="../css/style_rwd.css" rel="stylesheet"></head>
 <body>
     <noscript>您的瀏覽器不支援JavaScript功能，若本網站功能無法正常使用，請開啟瀏覽器JavaScript狀態</noscript>
     <div class="warpper">
@@ -352,8 +396,19 @@
                 <a href="../index.html" title="回首頁"><span class="icon-home"></span> 回首頁</a>
                 <a href="../others/sitemap_6_1.html" title="網站導覽"><span class="icon-sitemap"></span> 網站導覽</a>
                 <a href="#" title="UCAN使用指南(另開新視窗)" target="_blank"><span class="icon-guidance"></span> UCAN使用指南</a>                <a href="../others/contactUs.html" title="聯絡我們"><span class="icon-message"></span> 聯絡我們</a>
-                <span class="text-white"><span class="fa-solid fa-user"></span> 王XX</span>
-                <a href="#" class="ms-3" title="登出"><i class="fa-solid fa-right-from-bracket"></i> 登出</a>
+                <div class="position-relative d-flex align-items-center">
+                    <button type="button" id="loginBtn" class="btn text-warning p-0" data-bs-toggle="dropdown" aria-expanded="false" aria-label="會員導覽列"><span class="text-white me-2"><span class="fa-solid fa-user"></span> 王XX</span><i class="fa-solid fa-circle-down"></i></button>
+                    <div class="login w-auto dropdown-menu" id="loginNavbar">
+                        <div class="login-form">
+                            <ul class="list-unstyled login-link-group mb-0">
+                                <li><a href="" title="我的帳戶">我的帳戶</a></li>
+                                <li><a href="" title="修改密碼">修改密碼</a></li>
+                                <li><a href="" title="登出">登出</a></li>
+                                <li><a href="" title="後台管理">後台管理</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- header-top end -->
@@ -376,7 +431,106 @@
                         <!-- <div class="close-nav-menu">
                             <i class="fa-solid fa-xmark"></i>
                         </div> -->
-                        <ul class="menu"></ul>
+                        <ul class="menu">
+                            <!-- <li class="menu-item px-3 py-4 d-block d-lg-none">
+                                <div class="search">
+                                    <form>
+                                        <div class="input-group bg-white rounded-pill overflow-hidden phone-search">
+                                            <label for="phoneTagsKeyWords" class="visually-hidden" aria-label="關鍵字搜尋">關鍵字</label>
+                                            <input type="text" id="phoneTagsKeyWords" class="form-control border-0" placeholder="關鍵字搜尋" aria-label="關鍵字搜尋" >
+                                            <button type="button" class="btn btn-dark" id="phone-search-btn" title="搜尋" aria-label="關鍵字搜尋"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li> -->
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu" title="職能與職業查詢">職能與職業查詢</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="../search/search_1_1.html" title="職業查詢">職業查詢</a></li>
+                                    <li class="menu-item"><a href="../search/search_1_2.html" title="職業性格類型查詢">職業性格類型查詢</a></li>
+                                    <li class="menu-item"><a href="../search/search_1_3.html" title="共通職能查詢">共通職能查詢</a></li>
+                                    <li class="menu-item"><a href="../search/search_1_4.html" title="專業職能查詢">專業職能查詢</a></li>
+                                </ul>
+                            </li>
+                            <!-- 2024/04/18修改 start -->
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu" title="職能應用">職能應用</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item">
+                                        <a href="#" class="navbar-collapsed collapsed" role="button" aria-expanded="false" aria-controls="sub-menu-children-1" title="職涯面">職涯面</a>
+                                        <ul class="sub-menu collapse">
+                                            <li class="menu-item"><a href="../application/application_2_1_1.html" title="團測帶領">團測帶領</a></li>
+                                            <li class="menu-item"><a href="../application/application_2_1_2.html" title="職業興趣探索診斷解讀">職業興趣探索診斷解讀</a></li>
+                                            <li class="menu-item"><a href="../application/application_2_1_3.html" title="職場共通職能診斷解讀">職場共通職能診斷解讀</a></li>
+                                            <li class="menu-item"><a href="../application/application_2_1_4.html" title="專業職能診斷解讀">專業職能診斷解讀</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="navbar-collapsed collapsed" role="button" aria-expanded="false" aria-controls="sub-menu-children-2" title="教務面">教務面</a>
+                                        <ul class="sub-menu collapse">
+                                            <li class="menu-item"><a href="../application/application_2_2_1.html" title="教學規劃發展">教學規劃發展</a></li>
+                                            <li class="menu-item"><a href="../application/application_2_2_2.html" title="教學評估改革">教學評估改革</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#" class="navbar-collapsed collapsed" role="button" aria-expanded="false" aria-controls="sub-menu-children-3" title="校務面">校務面</a>
+                                        <ul class="sub-menu collapse">
+                                            <li class="menu-item"><a href="../application/application_2_3_1.html" title="運用UCAN於校務研究">運用UCAN於校務研究</a></li>
+                                            <li class="menu-item"><a href="../application/application_2_3_2.html" title="UCAN結合畢業生流向追蹤">UCAN結合畢業生流向追蹤</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- 2024/04/18修改 end -->
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu" title="職能診斷">職能診斷</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="../diagnose/diagnose_3_1_1.html" title="職業興趣探索診斷">職業興趣探索診斷</a></li>
+                                    <li class="menu-item"><a href="../diagnose/diagnose_3_2_1.html" title="職場共通職能診斷">職場共通職能診斷</a></li>
+                                    <li class="menu-item"><a href="../diagnose/diagnose_3_3_1.html" title="專業職能診斷">專業職能診斷</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu" title="諮詢及診斷紀錄">診斷紀錄</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="../recode/recode_4_1.html" title="職業興趣探索診斷結果">職業興趣探索診斷結果</a></li>
+                                    <li class="menu-item"><a href="../recode/recode_4_2.html" title="職場共通職能診斷結果">職場共通職能診斷結果</a></li>
+                                    <li class="menu-item"><a href="../recode/recode_4_4.html" title="專業職能診斷結果">專業職能診斷結果</a></li>
+                                    <!-- 2024/04/18修改 start -->
+                                    <li class="menu-item">
+                                        <a href="#" class="navbar-collapsed collapsed" role="button" aria-expanded="false" aria-controls="sub-menu-children-3" title="能力養成計畫">能力養成計畫</a>
+                                        <ul class="sub-menu collapse">
+                                            <li class="menu-item"><a href="../recode/recode_4_3_1.html" title="職場共通職能能力養成計畫">職場共通職能能力養成計畫</a></li>
+                                            <li class="menu-item"><a href="../recode/recode_4_5_1.html" title="專業職能能力養成計畫">專業職能能力養成計畫</a></li>
+                                        </ul>
+                                    </li>
+                                    <!-- 2024/04/18修改 end -->
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu" title="認識UCAN">認識UCAN</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="../aboutUACN/aboutUACN_5_2.html" title="平台緣起及建置目的">平台緣起及建置目的</a></li>
+                                    <li class="menu-item"><a href="../aboutUACN/aboutUACN_5_3.html" title="平台發展及依據">平台發展及依據</a></li>
+                                    <li class="menu-item"><a href="../aboutUACN/aboutUACN_5_4.html" title="UCAN主要功能簡介">UCAN主要功能簡介</a></li>
+                                    <li class="menu-item"><a href="../aboutUACN/aboutUACN_5_5.html" title="UCAN學校介接功能">UCAN學校介接功能</a></li>
+                                    <!-- 2024/04/18修改 start -->
+                                    <li class="menu-item">
+                                        <a href="#" class="navbar-collapsed collapsed" role="button" aria-expanded="false" aria-controls="sub-menu-children-3" title="職能介紹">職能介紹</a>
+                                        <ul class="sub-menu collapse">
+                                            <li class="menu-item"><a href="../aboutUACN/aboutUACN_5_6.html" title="職能概念">職能概念</a></li>
+                                        </ul>
+                                    </li>
+                                    <!-- 2024/04/18修改 end -->
+                                </ul>
+                            </li>
+                            <!--  -->
+                            <li class="menu-item d-block d-lg-none"><a href="others/sitemap_6_1.html" title="網站導覽">網站導覽</a></li>
+                            <li class="menu-item d-block d-lg-none"><a href="#" target="_blank" title="UCAN使用指南(另開新視窗)">UCAN使用指南</a></li>
+                            <li class="menu-item d-block d-lg-none"><a href="others/contactUs.html" title="聯絡我們">聯絡我們</a></li>
+                            <li class="menu-item d-block d-lg-none"><a href="others/login_phone.html" title="登入">登入</a></li>
+                            <!--  -->
+                        </ul>
                     </div>
                 </div>
             </nav>
@@ -455,7 +609,9 @@
                                     <thead>
                                         <tr>
                                             <th width="25%">16職涯類型</th>
-                                            <th class="position-relative px-7 px-md-0"><span class="position-absolute top-50 start-0 translate-middle">0</span>興趣強度分數<span class="position-absolute top-50 start-100 translate-middle">99</span></th>
+                                            <!-- 2024/04/18修改 start -->
+                                            <th class="position-relative px-7 px-md-0"><span class="position-absolute top-50 start-0 translate-middle">0</span>興趣強度分數<span class="position-absolute top-50 start-100 translate-middle">5</span></th>
+                                            <!-- 2024/04/18修改 end -->
                                             <th class="px-4 px-md-0" width="10%">PR值</th>
                                         </tr>
                                     </thead>
@@ -868,9 +1024,9 @@
                                     <dt>施測日期：</dt>
                                     <dd>2023年12月25日</dd>
                                 </dl>
-                                <!-- 2024/03/07修改 start -->
-                                <a href="#" class="btn btn-primary d-block d-print-none rounded-0" title="下載診斷結果">下載診斷結果</a>
-                                <!-- 2024/03/07修改 end -->
+                                <!-- 2024/04/18修改 start -->
+                                <button type="button" onclick="window.print();" class="btn btn-primary d-block d-print-none rounded-0 w-100" title="下載診斷結果">下載診斷結果</button>
+                                <!-- 2024/04/18修改 end -->
                             </div>
                         </div>
                     </div>
@@ -888,7 +1044,80 @@
                     <button type="button" id="footerMenuBtn" class="btn btn-primary px-5">點選收合 <i class="fa-solid fa-circle-arrow-down"></i></button>
                 </div>
                 <div class="collapse" id="footerMenu">
-                    <div class="bg-primary footer-menu"></div>
+                    <div class="bg-primary footer-menu">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <h4 class="text-white text-decoration-underline mb-3">職能與職業查詢</h4>
+                                    <div class="footer-menu-links">
+                                        <a href="../search/search_1_1.html" title="職業查詢">職業查詢</a>
+                                        <a href="../search/search_1_2.html" title="職業性格類型查詢">職業性格類型查詢</a>
+                                        <a href="../search/search_1_3.html" title="共通職能查詢">共通職能查詢</a>
+                                        <a href="../search/search_1_4.html" title="專業職能查詢">專業職能查詢</a>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h4 class="text-white text-decoration-underline mb-3">職能應用</h4>
+                                    <div class="footer-menu-links">
+                                        <p class="mb-0">職涯面</p>
+                                        <ul class="list-unstyled ps-3">
+                                            <li><a href="../application/application_2_1_1.html" title="團測帶領">團測帶領</a></li>
+                                            <li><a href="../application/application_2_1_2.html" title="職業興趣探索引導">職業興趣探索引導</a></li>
+                                            <li><a href="../application/application_2_1_3.html" title="共通職能診斷引導">共通職能診斷引導</a></li>
+                                            <li><a href="../application/application_2_1_4.html" title="專業職能診斷引導">專業職能診斷引導</a></li>
+                                        </ul>
+                                        <p class="mb-0">教務面</p>
+                                        <ul class="list-unstyled ps-3">
+                                            <li><a href="../application/application_2_2_1.html" title="教學規劃發展">教學規劃發展</a></li>
+                                            <li><a href="../application/application_2_2_2.html" title="教學評估改革">教學評估改革</a></li>
+                                        </ul>
+                                        <p class="mb-0">校務面</p>
+                                        <ul class="list-unstyled ps-3">
+                                            <li><a href="../application/application_2_3_1.html" title="運用UCAN於校務研究">運用UCAN於校務研究</a></li>
+                                            <li><a href="../application/application_2_3_2.html" title=" UCAN結合畢業生流向追蹤"> UCAN結合畢業生流向追蹤</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h4 class="text-white text-decoration-underline mb-3">職能診斷</h4>
+                                    <div class="footer-menu-links">
+                                    <a href="../diagnose/diagnose_3_1_1.html" title="職業興趣探索">職業興趣探索</a>
+                                    <a href="../diagnose/diagnose_3_2_1.html" title="共通職能診斷">共通職能診斷</a>
+                                    <a href="../diagnose/diagnose_3_3_1.html" title="專業職能診斷">專業職能診斷</a>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h4 class="text-white text-decoration-underline mb-3">診斷紀錄</h4>
+                                    <div class="footer-menu-links">
+                                        <a href="../recode/recode_4_1.html" title="職業興趣探索診斷結果">職業興趣探索診斷結果</a>
+                                        <a href="../recode/recode_4_2.html" title="職場共通職能診斷結果">職場共通職能診斷結果</a>
+                                        <a href="../recode/recode_4_4.html" title="專業職能診斷結果">專業職能診斷結果</a>
+                                        <p class="mb-0 mt-3">能力養成計畫</p>
+                                        <ul class="list-unstyled ps-3">
+                                            <li><a href="../recode/recode_4_3_1.html" title="職場共通職能能力養成計畫">職場共通職能能力養成計畫</a></li>
+                                            <li><a href="../recode/recode_4_5_1.html" title="專業職能能力養成計畫">專業職能能力養成計畫</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h4 class="text-white text-decoration-underline mb-3">認識UCAN</h4>
+                                    <div class="footer-menu-links">
+                                        <p class="mb-0">認識UCAN</p>
+                                        <ul class="list-unstyled ps-3">
+                                            <li><a href="../aboutUACN/aboutUACN_5_2.html" title="平台緣起及建置目的">平台緣起及建置目的</a></li>
+                                            <li><a href="../aboutUACN/aboutUACN_5_3.html" title="平台發展與依據">平台發展與依據</a></li>
+                                            <li><a href="../aboutUACN/aboutUACN_5_4.html" title="UCAN主要功能簡介">UCAN主要功能簡介</a></li>
+                                            <li><a href="../aboutUACN/aboutUACN_5_5.html" title="UCAN學校介接功能">UCAN學校介接功能</a></li>
+                                        </ul>
+                                        <p class="mb-0">職能介紹</p>
+                                        <ul class="list-unstyled ps-3">
+                                            <li><a href="../aboutUACN/aboutUACN_5_6.html" title="職能概念">職能概念</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- footer menu end -->

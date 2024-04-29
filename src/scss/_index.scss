@@ -46,6 +46,9 @@
 // import styles bundle
 @import 'swiper/css/bundle';
 // swiper
+.swiper-pagination-horizontal {
+    bottom: 0;
+}
 .swiper-pagination-bullet {
     width: 22px;
     height: 6px;
@@ -79,8 +82,7 @@
 .swiper-slide  a:focus {
     outline: 2px dashed $custom-focus-color;
 }
-@include swiperButton('banner',rgba($swiper-button-color, 0.6) , 45px);
-// 
+
 .index-backstage {
     span {
         strong {
@@ -133,7 +135,7 @@
         }
     }
 }
-
+@include swiperButton('banner',rgba($swiper-button-color, 0.7) , 45px);
 // news
 .index-news {
     @include backgroundImage('index_news_bg.jpg');

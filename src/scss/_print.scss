@@ -1,0 +1,13 @@
+.print-container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+@media print{
+    #goTop {
+        display: none !important;
+    }
+    .collapse:not(.show) {
+        display: block;
+    }
+}

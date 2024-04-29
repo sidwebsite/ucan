@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>職業興趣探索結果</title>
+    <style>
+        .print_container {
+            width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .professionalCharacter > .item:not(:last-child) {
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #B9B2B2;
+        }
+        /* 2024/04/25修改 start */
+        .professionalCharacter-block {
+            display: inline-block;
+            white-space: nowrap;
+            padding-right: 15px;
+        }
+        .professionalCharacter-body {
+            display: inline-block;
+            padding-left: 15px;
+        }
+        /* 2024/04/25修改 end */
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script>
+        $(document).ready(function() {
+            // 16種職涯類型歷次診斷分數
+            const careerType = [
+                {
+                    professionType: '建築營造',
+                    one: 5,
+                    two: 3.3,
+                    three: 3.4,
+                    four: 3.5
+                },
+                {
+                    professionType: '天然資源、食品與農業',
+                    one: 2.9,
+                    two: 2.9,
+                    three: 2.9,
+                    four: 2.9
+                },
+                {
+                    professionType: '藝文與影音傳播',
+                    one: 2.6,
+                    two: 2.7,
+                    three: 2.8,
+                    four: 2.9
+                },
+                {
+                    professionType: '企業經營管理',
+                    one: 2.6,
+                    two: 2.7,
+                    three: 2.8,
+                    four: 2.9
+                },
+                {
+                    professionType: '教育與訓練',
+                    one: 2.35,
+                    two: 2.3,
+                    three: 2.25,
+                    four: 2.2
+                },
+                {
+                    professionType: '金融財務',
+                    one: 2.05,
+                    two: 2.1,
+                    three: 2.15,
+                    four: 2.2
+                },
+                {
+                    professionType: '政府公共事務',
+                    one: 2.05,
+                    two: 2.1,
+                    three: 2.15,
+                    four: 2.2
+                },
+                {
+                    professionType: '醫療保健',
+                    one: 5,
+                    two: 2.1,
+                    three: 2.15,
+                    four: 2.2
+                },
+                {
+                    professionType: '個人及社會服務',
+                    one: 5,
+                    two: 2.1,
+                    three: 2.15,
+                    four: 2.2
+                },
+                {
+                    professionType: '休閒與觀光旅遊',
+                    one: 3,
+                    two: 3.2,
+                    three: 3.4,
+                    four: 3
+                },
+                {
+                    professionType: '資訊科技',
+                    one: 2.8,
+                    two: 2.85,
+                    three: 2.9,
+                    four: 2.95
+                },
+                {
+                    professionType: '司法、法律與公共安全',
+                    one: 2.6,
+                    two: 2.55,
+                    three: 2.5,
+                    four: 2.45
+                },
+                {
+                    professionType: '行銷與銷售',
+                    one: 2.6,
+                    two: 2.7,
+                    three: 2.8,
+                    four: 2.9
+                },
+                {
+                    professionType: '製造',
+                    one: 2.35,
+                    two: 2.4,
+                    three: 2.45,
+                    four: 2.5
+                },
+                {
+                    professionType: '科學、技術、工程、數學',
+                    one: 2.6,
+                    two: 2.7,
+                    three: 2.8,
+                    four: 2.9
+                },
+                {
+                    professionType: '物流運輸',
+                    one: 2.35,
+                    two: 2.45,
+                    three: 2.55,
+                    four: 2.65
+                }
+            ];
+            // 職業性格歷次診斷分數
+            const professionalCharacter = [
+                {
+                    type: '實用型 R',
+                    one: 4,
+                    two: 5,
+                    three: 4,
+                    four: 3
+                },
+                {
+                    type: '研究型 I',
+                    one: 3,
+                    two: 3,
+                    three: 4,
+                    four: 3
+                },
+                {
+                    type: '藝術型 A',
+                    one: 5,
+                    two: 4,
+                    three: 4,
+                    four: 5
+                },
+                {
+                    type: '社會型 S',
+                    one: 12,
+                    two: 8,
+                    three: 9,
+                    four: 9
+                },
+                {
+                    type: '企業型 E',
+                    one: 3,
+                    two: 4,
+                    three: 5,
+                    four: 5
+                },
+                {
+                    type: '事務型 C',
+                    one: 6,
+                    two: 6,
+                    three: 7,
+                    four: 8
+                }
+            ];
+            // 16種職涯類型歷次診斷分數圖表
+            const careerTypeData = {    
+                labels: careerType.map(label => label.professionType),
+                datasets: [
+                    {
+                        label: '110/04/22第一次',
+                        data: careerType.map(data => data.one),
+                        backgroundColor: '#BBE2F4',
+                        borderWidth: 0
+                    },
+                    {
+                        label: '111/10/28第二次',
+                        data: careerType.map(data => data.two),
+                        backgroundColor: '#93CAE2',
+                        borderWidth: 0
+                    },
+                    {
+                        label: '112/07/26第三次',
+                        data: careerType.map(data => data.three),
+                        backgroundColor: '#62B0D1',
+                        borderWidth: 0
+                    },
+                    {
+                        label: '113/01/03第四次',
+                        data: careerType.map(data => data.four),
+                        backgroundColor: '#4C97B7',
+                        borderWidth: 0
+                    }
+                ],
+            };
+            // legend marg in right
+            const legendMargInRight = {
+                id: 'legendMargInRight',
+                afterInit(chart, args, options) {
+                    // console.log(chart.legend.fit);
+                    const fitValue = chart.legend.fit;
+                    chart.legend.fit = function fit() {
+                        fitValue.bind(chart.legend)();
+                        let width = this.width += 30;
+                        return width;
+                    }
+                }
+            };
+            // config
+            const careerTypeConfig = {
+                type: "bar",
+                data: careerTypeData,
+                options: {
+                    categoryPercentage: 0.8,
+                    barPercentage: 1,
+                    indexAxis: 'y',
+                    // 2024/04/25修改 start
+                    layout: {
+                        padding: {
+                            right: 30
+                        }
+                    },
+                    // 2024/04/25修改 end
+                    scales: {
+                        y: {
+                            grid: {
+                                display: false
+                            },
+                            // 2024/4/29修改 start
+                            ticks: {
+                                font: {
+                                    size: 14,
+                                }
+                            }
+                            // 2024/4/29修改 end
+                        },
+                        x: {
+                            beginAtZero: true,
+                            suggestedMax: 5,
+                            ticks: {
+                                stepSize: 0.5,
+                                // 2024/4/29修改 start
+                                font: {
+                                    size: 14,
+                                },
+                                // 2024/4/29修改 end
+                            },
+                        },
+                    },
+                    plugins: {
+                        // 2024/04/25修改 start
+                        legend: {
+                            display: true
+                        },
+                        // 2024/04/25修改 end
+                        datalabels: {
+                            color: '#6B6B6B',
+                            anchor: 'end',
+                            align: 'right',
+                            // 2024/4/29修改 start
+                            font: {
+                                size: 14,
+                            }
+                            // 2024/4/29修改 end
+                        }
+                    }
+                },
+                plugins: [ChartDataLabels, legendMargInRight],
+            };
+            const careerTypeElement = document.querySelector('#careerTypeChart');
+            let careerTypeChart = new Chart(careerTypeElement, careerTypeConfig);
+            // 職業性格歷次診斷分數圖表
+            const professionalCharacterChartData = {    
+                labels: professionalCharacter.map(label => label.type),
+                datasets: [
+                    {
+                        label: '110/04/22第一次',
+                        data: professionalCharacter.map(data => data.one),
+                        backgroundColor: '#FFF2CC',
+                        borderWidth: 0
+                    },
+                    {
+                        label: '111/10/28第二次',
+                        data: professionalCharacter.map(data => data.two),
+                        backgroundColor: '#FFE698',
+                        borderWidth: 0
+                    },
+                    {
+                        label: '112/07/26第三次',
+                        data: professionalCharacter.map(data => data.three),
+                        backgroundColor: '#FFD966',
+                        borderWidth: 0
+                    },
+                    {
+                        label: '113/01/03第四次',
+                        data: professionalCharacter.map(data => data.four),
+                        backgroundColor: '#FFC001',
+                        borderWidth: 0
+                    }
+                ],
+            };
+
+            const professionalCharacterConfig = {
+                type: "bar",
+                data: professionalCharacterChartData,
+                options: {
+                    categoryPercentage: 0.8,
+                    barPercentage: 1,
+                    indexAxis: 'y',
+                    // 2024/04/25修改 start
+                    layout: {
+                        padding: {
+                            right: 30
+                        }
+                    },
+                    // 2024/04/25修改 end
+                    scales: {
+                        y: {
+                            grid: {
+                                display: false
+                            },
+                            // 2024/4/29修改 start
+                            ticks: {
+                                font: {
+                                    size: 14,
+                                },
+                            }
+                            // 2024/4/29修改 end
+                        },
+                        x: {
+                            beginAtZero: true,
+                            suggestedMax: 12,
+                            ticks: {
+                                stepSize: 1,
+                                // 2024/4/29修改 start
+                                font: {
+                                    size: 14,
+                                },
+                                // 2024/4/29修改 end
+                            },
+                        },
+                    },
+                    plugins: {
+                        // 2024/04/25修改 start
+                        legend: {
+                            display: true,
+                        },
+                        // 2024/04/25修改 end
+                        datalabels: {
+                            color: '#6B6B6B',
+                            anchor: 'end',
+                            align: 'right',
+                            // 2024/4/29修改 start
+                            font: {
+                                size: 14,
+                            }
+                            // 2024/4/29修改 end
+                        }
+                    }
+                },
+                plugins: [ChartDataLabels, legendMargInRight],
+            };
+            const professionalCharacterChartElement = document.querySelector('#professionalCharacterChart');
+            let professionalCharacterChart = new Chart(professionalCharacterChartElement, professionalCharacterConfig);
+            // print 
+            // 2024/04/25修改 start
+            window.addEventListener('beforeprint', () => {
+                careerTypeChart.resize(1800, 1400);
+                professionalCharacterChart.resize(1050, 700);
+            });
+            window.addEventListener('afterprint', () => {
+                careerTypeChart.resize();
+                professionalCharacterChart.resize();
+            });
+            // 2024/04/25修改 end
+        });        
+    </script>
+    <link href="css/style_print.css" rel="stylesheet"></head>
+<body>
+    <main class="print_container">
+        <h2 class="text-primary text-center title mb-4">職業興趣探索結果</h2>
+        <div class="bg-light p-4" >
+            <dl class="d-flex mb-0">
+                <dt>姓名：</dt>
+                <dd>王xx</dd>
+            </dl>
+            <dl class="d-flex mb-0">
+                <dt>學校：</dt>
+                <dd>國立臺灣大學</dd>
+            </dl>
+            <dl class="d-flex mb-0">
+                <dt>系級：</dt>
+                <dd>企管系</dd>
+            </dl>
+            <dl class="d-flex mb-0">
+                <dt>學號：</dt>
+                <dd>12345678A </dd>
+            </dl>
+            <hr class="my-3">                                
+            <dl class="d-flex mb-0">
+                <dt>施測日期：</dt>
+                <dd>2023年12月25日</dd>
+            </dl>
+        </div>
+        <div class="mt-4">
+            <p>職業興趣探索以 States‘ Career Clusters Initiative 的 The Career Clusters Interest Survey 為基礎，找出個人對不同職涯類型的興趣強弱。並與John Holland的人境適配論中的職業性格系統進行關聯分析，對應出16個職涯類型適切的職業性格。</p>
+            <p class="mb-5">本診斷結果以「16種職涯類型」與「職業性格」兩個部分來解釋您在職業選擇的偏好，提供您在職涯選擇過程中的參考依據。</p>
+            <!-- 職涯類型 -->
+            <h4 class="content-title-left-outline mb-3">職涯類型</h4>
+            <p>16種職涯類型是由同一領域、或所需知識技能相近的工作所組成，可以提供給教育體系運用於職涯或學習發展規劃，有系統的養成相近的知識與技能。分數代表的是您的興趣表現，而非工作技巧或能力。</p>
+            <!-- table start -->
+            <div class="mb-4">
+                <table class="table search-table align-middle text-nowrap">
+                    <caption class="visually-hidden">職涯類型</caption>
+                    <thead>
+                        <tr>
+                            <th width="25%">16職涯類型</th>
+                            <th class="position-relative px-7 px-md-0"><span class="position-absolute top-50 start-0 translate-middle">0</span>興趣強度分數<span class="position-absolute top-50 start-100 translate-middle">5</span></th>
+                            <th class="px-4 px-md-0" width="10%">PR值</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>建築營造</td>
+                            <td class="border-start border-end px-0">
+                                <div class="progress search-progress bg-transparent">
+                                    <div class="progress-bar search-progress-bar-bluegreen" role="progressbar" style="width: 76%" aria-valuenow="76" aria-valuemin="0" aria-valuemax="5"></div>
+                                    <span class="px-1 fs-6">3.8</span>
+                                </div>
+                            </td>
+                            <td class="text-center">92</td>
+                        </tr>
+                        <tr>
+                            <td>天然資源、食品與農業</td>
+                            <td class="border-start border-end px-0">
+                                <div class="progress search-progress bg-transparent">
+                                    <div class="progress-bar search-progress-bar-bluegreen" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="5"></div>
+                                    <span class="px-1 fs-6">3.3</span>
+                                </div>
+                            </td>
+                            <td class="text-center">92</td>
+                        </tr>
+                        <tr>
+                            <td>藝文與影音傳播</td>
+                            <td class="border-start border-end px-0">
+                                <div class="progress search-progress bg-transparent">
+                                    <div class="progress-bar search-progress-bar-bluegreen" role="progressbar" style="width: 64%" aria-valuenow="64" aria-valuemin="0" aria-valuemax="5"></div>
+                                    <span class="px-1 fs-6">3.2</span>
+                                </div>
+                            </td>
+                            <td class="text-center">92</td>
+                        </tr>
+                        <tr>
+                            <td>企業經營管理</td>
+                            <td class="border-start border-end px-0">
+                                <div class="progress search-progress bg-transparent">
+                                    <div class="progress-bar search-progress-bar-bluegreen" role="progressbar" style="width: 64%" aria-valuenow="64" aria-valuemin="0" aria-valuemax="5"></div>
+                                    <span class="px-1 fs-6">3.2</span>
+                                </div>
+                            </td>
+                            <td class="text-center">92</td>
+                        </tr>
+                        <tr>
+                            <td>教育與訓練</td>
+                            <td class="border-start border-end px-0">
+                                <div class="progress search-progress bg-transparent">
+                                    <div class="progress-bar search-progress-bar-bluegreen" role="progressbar" style="width: 64%" aria-valuenow="64" aria-valuemin="0" aria-valuemax="5"></div>
+                                    <span class="px-1 fs-6">3.2</span>
+                                </div>
+                            </td>
+                            <td class="text-center">92</td>
+                        </tr>
+                        <tr>
+                            <td>金融財務</td>
+                            <td class="border-start border-end px-0">
+                                <div class="progress search-progress bg-transparent">
+                                    <div class="progress-bar search-progress-bar-lightbluegreen" role="progressbar" style="width: 41%" aria-valuenow="41" aria-valuemin="0" aria-valuemax="5"></div>
+                                    <span class="px-1 fs-6">2.05</span>
+                                </div>
+                            </td>
+                            <td class="text-center">82</td>
+                        </tr>
+                        <tr>
+                            <td>政府公共事務</td>
+                            <td class="border-start border-end px-0">
+                                <div class="progress search-progress bg-transparent">
+                                    <div class="progress-bar search-progress-bar-lightbluegreen" role="progressbar" style="width: 41%" aria-valuenow="41" aria-valuemin="0" aria-valuemax="5"></div>
+                                    <span class="px-1 fs-6">2.05</span>
+                                </div>
+                            </td>
+                            <td class="text-center">82</td>
+                        </tr>
+                        <tr>
+                            <td>醫療保健</td>
+                            <td class="border-start border-end px-0">
+                                <div class="progress search-progress bg-transparent">
+                                    <div class="progress-bar search-progress-bar-lightbluegreen" role="progressbar" style="width: 41%" aria-valuenow="41" aria-valuemin="0" aria-valuemax="5"></div>
+                                    <span class="px-1 fs-6">2.05</span>
+                                </div>
+                            </td>
+                            <td class="text-center">82</td>
+                        </tr>
+                        <tr>
+                            <td>個人及社會服務</td>
+                            <td class="border-start border-end px-0">
+                                <div class="progress search-progress bg-transparent">
+                                    <div class="progress-bar search-progress-bar-lightbluegreen" role="progressbar" style="width: 41%" aria-valuenow="41" aria-valuemin="0" aria-valuemax="5"></div>
+                                    <span class="px-1 fs-6">2.05</span>
+                                </div>
+                            </td>
+                            <td class="text-center">82</td>
+                        </tr>
+                        <tr>
+                            <td>休閒與觀光旅遊</td>
+                            <td class="border-start border-end px-0">
+                                <div class="progress search-progress bg-transparent">
+                                    <div class="progress-bar search-progress-bar-lightbluegreen" role="progressbar" style="width: 41%" aria-valuenow="41" aria-valuemin="0" aria-valuemax="5"></div>
+                                    <span class="px-1 fs-6">2.05</span>
+                                </div>
+                            </td>
+                            <td class="text-center">82</td>
+                        </tr>
+                        <tr>
+                            <td>資訊科技</td>
+                            <td class="border-start border-end px-0">
+                                <div class="progress search-progress bg-transparent">
+                                    <div class="progress-bar search-progress-bar-lightbluegreen" role="progressbar" style="width: 41%" aria-valuenow="41" aria-valuemin="0" aria-valuemax="5"></div>
+                                    <span class="px-1 fs-6">2.05</span>
+                                </div>
+                            </td>
+                            <td class="text-center">82</td>
+                        </tr>
+                        <tr>
+                            <td>司法、法律與公共安全</td>
+                            <td class="border-start border-end px-0">
+                                <div class="progress search-progress bg-transparent">
+                                    <div class="progress-bar search-progress-bar-lightbluegreen" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="5"></div>
+                                    <span class="px-1 fs-6">1</span>
+                                </div>
+                            </td>
+                            <td class="text-center">32</td>
+                        </tr>
+                        <tr>
+                            <td>行銷與銷售</td>
+                            <td class="border-start border-end px-0">
+                                <div class="progress search-progress bg-transparent">
+                                    <div class="progress-bar search-progress-bar-lightbluegreen" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="5"></div>
+                                    <span class="px-1 fs-6">1</span>
+                                </div>
+                            </td>
+                            <td class="text-center">32</td>
+                        </tr>
+                        <tr>
+                            <td>製造</td>
+                            <td class="border-start border-end px-0">
+                                <div class="progress search-progress bg-transparent">
+                                    <div class="progress-bar search-progress-bar-lightbluegreen" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="5"></div>
+                                    <span class="px-1 fs-6">1</span>
+                                </div>
+                            </td>
+                            <td class="text-center">32</td>
+                        </tr>
+                        <tr>
+                            <td>科學、技術、工程、數學</td>
+                            <td class="border-start border-end px-0">
+                                <div class="progress search-progress bg-transparent">
+                                    <div class="progress-bar search-progress-bar-lightbluegreen" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="5"></div>
+                                    <span class="px-1 fs-6">1</span>
+                                </div>
+                            </td>
+                            <td class="text-center">32</td>
+                        </tr>
+                        <tr>
+                            <td>物流運輸</td>
+                            <td class="border-start border-end px-0">
+                                <div class="progress search-progress bg-transparent">
+                                    <div class="progress-bar search-progress-bar-lightbluegreen" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="5"></div>
+                                    <span class="px-1 fs-6">1</span>
+                                </div>
+                            </td>
+                            <td class="text-center">32</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- table end -->
+            <ol class="ps-4 search-font-small">
+                <li>全體PR值是將您的測驗結果與UCAN平台全體學生進行比較，例如您在建築營造的百分等級是PR92，意思是您對於建築營造職涯類型的興趣程度在100人裡面位居92。</li>
+                <li>深色項目為興趣度相對高分的4~6種職涯類型，若同分的職涯類型過多，則僅取最高分的類型。</li>
+            </ol>
+            <h5 class="content-h5-left-arrow text-primary">興趣度相對高的職涯類型</h5>
+            <p class="mb-0">您在16種職涯類型中，興趣度最高的前5名依序是：</p>
+            <p>
+                <span class="border-bottom border-3 border-warning">建築營造</span>、<span class="border-bottom border-3 border-warning">天然資源、食品與農業</span>、<span class="border-bottom border-3 border-warning">藝文與影音傳播</span>、<span class="border-bottom border-3 border-warning">企業經營管理</span>、<span class="border-bottom border-3 border-warning">教育與訓練</span>。
+            </p>
+            <p class="mb-5">興趣度高，代表您會比較喜歡在這些類型的工作環境中工作，這些類型的工作中可能有比較多您喜歡接觸的活動。您可以點選興趣度較高的類型連結，瞭解這些職涯類型的介紹、就業途徑、職能以及相關的職業，作進一步探索與瞭解。</p>
+            <h5 class="content-h5-left-arrow text-primary">興趣度相對低的職涯類型</h5>
+            <p class="mb-5">其他得分相對較低的項目不代表您無法勝任該職涯類型，可能是對該職類工作或活動的興趣度相對較低，也可能是因為不夠瞭解該職類，所以得分較低。</p>
+            <!-- 職業性格 -->
+            <h4 class="content-title-left-outline mb-3">職業性格</h4>
+            <p>職業性格分為實用型R、研究型I、藝術型A、社會型S、企業型E及事務型C六大職業性格類型。每個類型的職業性格傾向，皆有其適配的職業環境(參考16種職涯類型)。各類型滿分為12分，以下是您在職業性格類型的診斷分數與剖面圖：</p>
+            <!-- table start -->
+            <div class="mb-4">
+                <table class="table search-table align-middle text-nowrap">
+                    <caption class="visually-hidden">職涯類型</caption>
+                    <thead>
+                        <tr>
+                            <th width="1%">職業性格</th>
+                            <th class="px-5 px-md-0" width="15%">職業性格</th>
+                            <th class="position-relative w-auto px-7 px-md-0"><span class="position-absolute top-50 start-0 translate-middle">0</span>興趣強度分數<span class="position-absolute top-50 start-100 translate-middle">12</span></th>
+                            <th class="px-5 px-md-0" width="10%">PR值</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center w-auto">企業型</td>
+                            <td class="text-center">E</td>
+                            <td class="border-start border-end px-0">
+                                <div class="progress search-progress bg-transparent">
+                                    <div class="progress-bar search-progress-bar-orange" role="progressbar" style="width: 67%" aria-valuenow="67" aria-valuemin="0" aria-valuemax="12"></div>
+                                    <span class="px-1 fs-6">8</span>
+                                </div>
+                            </td>
+                            <td class="text-center">91</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">研究型</td>
+                            <td class="text-center">I</td>
+                            <td class="border-start border-end px-0 w-75">
+                                <div class="progress search-progress bg-transparent">
+                                    <div class="progress-bar search-progress-bar-orange" role="progressbar" style="width: 58%" aria-valuenow="58" aria-valuemin="0" aria-valuemax="12"></div>
+                                    <span class="px-1 fs-6">7</span>
+                                </div>
+                            </td>
+                            <td class="text-center">77</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">藝術型</td>
+                            <td class="text-center">A</td>
+                            <td class="border-start border-end px-0 w-75">
+                                <div class="progress search-progress bg-transparent">
+                                    <div class="progress-bar search-progress-bar-orange" role="progressbar" style="width: 57%" aria-valuenow="57" aria-valuemin="0" aria-valuemax="12"></div>
+                                    <span class="px-1 fs-6">6.8</span>
+                                </div>
+                            </td>
+                            <td class="text-center">68</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">社會型</td>
+                            <td class="text-center">S</td>
+                            <td class="border-start border-end px-0 w-75">
+                                <div class="progress search-progress bg-transparent">
+                                    <div class="progress-bar search-progress-bar-lightorange" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="12"></div>
+                                    <span class="px-1 fs-6">6</span>
+                                </div>
+                            </td>
+                            <td class="text-center">45</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">事務型</td>
+                            <td class="text-center">C</td>
+                            <td class="border-start border-end px-0 w-75">
+                                <div class="progress search-progress bg-transparent">
+                                    <div class="progress-bar search-progress-bar-lightorange" role="progressbar" style="width: 42%" aria-valuenow="42" aria-valuemin="0" aria-valuemax="12"></div>
+                                    <span class="px-1 fs-6">5</span>
+                                </div>
+                            </td>
+                            <td class="text-center">34</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">實用型</td>
+                            <td class="text-center">R</td>
+                            <td class="border-start border-end px-0 w-75">
+                                <div class="progress search-progress bg-transparent">
+                                    <div class="progress-bar search-progress-bar-lightorange" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="12"></div>
+                                    <span class="px-1 fs-6">4</span>
+                                </div>
+                            </td>
+                            <td class="text-center">32</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- table end -->
+            <ol class="ps-4 mb-3 search-font-small">
+                <li>全體PR值是將您的測驗結果與UCAN平台全體學生進行比較，例如您在建築營造的百分等級是PR92，意思是您對於建築營造職涯類型的興趣程度在100人裡面位居92。</li>
+                <li>職業性格代碼是分數較高的2到4種職業性格。透過2到4種職業性格類型的結合，能夠較為完善地描述個人的職業性格與所屬類型。</li>
+            </ol>
+            <div class="bg-light p-4 p-lg-5 rounded-20 mb-5">
+                <!-- 2024/04/25修改 start -->
+                <div class="d-flex">
+                    <div class="professionalCharacter-block">
+                        <h4 class="mb-4">您的職業性格代碼</h4>
+                        <div class="professionalCharacter-number">EIA</div>
+                        <p>企業型、研究型、藝術型</p>
+                    </div>
+                    <div class="professionalCharacter-body">
+                        <p class="mb-3">您的職業性格代碼主要為E企業型、I研究型。在各類型滿分為12分的評分標準下，企業型的分數是9分、研究型的分數是7分。您對企業型、研究型的職業興趣相較於對其他類型的興趣有明顯的區分。</p>
+                        <p class="mb-0">若以職業性格碼來描述您的職業性格，企業型的特質是喜歡選擇具有冒險性、支配性、需要熱忱與精力的工作，喜歡進行策劃與領導；研究型的特質是喜歡運用頭腦，善於觀察、思考、分析與推理，喜歡與符號、概念、文字有關的工作。</p>
+                    </div>
+                </div>
+                <!-- 2024/04/25修改 end -->
+            </div>
+            <div class="bg-light p-4 p-lg-5 rounded-20 mb-5 professionalCharacter">
+                <!-- item -->
+                <div class="item">
+                    <h4>E 企業型</h4>
+                    <div class="mt-4">
+                        <h5>簡介</h5>
+                        <p class="text-primary mb-4">企業型的人是典型的實作者(Doer)，性格特徵為情緒穩定、坦誠直率、獨立實際、謙虛有禮、穩健節儉。</p>
+                        <h5>職業性格傾向</h5>
+                        <p class="mb-4">在職業性格傾向上，喜歡講求實際、動手操作、按部就班完成實際用途物品等技術性、體力性的工作，例如操作機械、工具、運動設備或養育動物等工作，寧願實際動手作而不喜歡多言，比較喜歡獨立做事，避免主觀性、學術性、富想像力或人際互動的工作類型。</p>
+                        <h5>價值觀</h5>
+                        <p class="mb-4">實用型的人的價值觀是重視傳統的，將雄心與自我控制視為重要的價值觀，講求實事求是而非寬容的態度，形成較封閉的價值觀系統。</p>
+                        <h5>問題解決策略</h5>
+                        <p class="mb-4">在問題解決策略上，偏好於具體、實際和有架構的解決方案或策略，而非學術性、富想像力或人際互動的行動。</p>
+                        <h5>典型職業</h5>
+                        <p>實用型適合從事技術性、體力性之典型職業例如：機械維護師、電器工程人員、太空人、塔台工程師、飛行員、廚師、工匠、農業工作、汽車修護員、警察、消防員等。</p>
+                    </div>
+                </div>
+                <!-- item -->
+                <div class="item">
+                    <h4>I 研究型</h4>
+                    <div class="mt-4">
+                        <h5>簡介</h5>
+                        <p class="text-primary mb-4">企業型的人是典型的實作者(Doer)，性格特徵為情緒穩定、坦誠直率、獨立實際、謙虛有禮、穩健節儉。</p>
+                        <h5>職業性格傾向</h5>
+                        <p class="mb-4">在職業性格傾向上，喜歡講求實際、動手操作、按部就班完成實際用途物品等技術性、體力性的工作，例如操作機械、工具、運動設備或養育動物等工作，寧願實際動手作而不喜歡多言，比較喜歡獨立做事，避免主觀性、學術性、富想像力或人際互動的工作類型。</p>
+                        <h5>價值觀</h5>
+                        <p class="mb-4">實用型的人的價值觀是重視傳統的，將雄心與自我控制視為重要的價值觀，講求實事求是而非寬容的態度，形成較封閉的價值觀系統。</p>
+                        <h5>問題解決策略</h5>
+                        <p class="mb-4">在問題解決策略上，偏好於具體、實際和有架構的解決方案或策略，而非學術性、富想像力或人際互動的行動。</p>
+                        <h5>典型職業</h5>
+                        <p>實用型適合從事技術性、體力性之典型職業例如：機械維護師、電器工程人員、太空人、塔台工程師、飛行員、廚師、工匠、農業工作、汽車修護員、警察、消防員等。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <h4>A 藝術型</h4>
+                    <h5>簡介</h5>
+                    <p class="text-primary mb-4">企業型的人是典型的實作者(Doer)，性格特徵為情緒穩定、坦誠直率、獨立實際、謙虛有禮、穩健節儉。</p>
+                    <h5>職業性格傾向</h5>
+                    <p class="mb-4">在職業性格傾向上，喜歡講求實際、動手操作、按部就班完成實際用途物品等技術性、體力性的工作，例如操作機械、工具、運動設備或養育動物等工作，寧願實際動手作而不喜歡多言，比較喜歡獨立做事，避免主觀性、學術性、富想像力或人際互動的工作類型。</p>
+                    <h5>價值觀</h5>
+                    <p class="mb-4">實用型的人的價值觀是重視傳統的，將雄心與自我控制視為重要的價值觀，講求實事求是而非寬容的態度，形成較封閉的價值觀系統。</p>
+                    <h5>問題解決策略</h5>
+                    <p class="mb-4">在問題解決策略上，偏好於具體、實際和有架構的解決方案或策略，而非學術性、富想像力或人際互動的行動。</p>
+                    <h5>典型職業</h5>
+                    <p>實用型適合從事技術性、體力性之典型職業例如：機械維護師、電器工程人員、太空人、塔台工程師、飛行員、廚師、工匠、農業工作、汽車修護員、警察、消防員等。</p>
+                </div>
+            </div>
+            <h4 class="content-title-left-outline mb-3">給您的建議</h4>
+            <h5 class="text-primary">Q：興趣偏好程度高的職涯類型的未來發展方向以及相關職業有哪些？</h5>
+            <article class="mb-5">
+                <p class="mb-0">可以透過以下管道瞭解與接觸您有興趣的職涯類型、相關職業與出路，增加您對於工作世界的認識：</p>
+                <ol class="ps-4">
+                    <li>蒐集職業資訊：您可從16種職涯類型的診斷分數與剖面圖中，點選職涯類型的名稱，即可得知該職涯類型之簡介、就業途徑、職能以及相關職業。</li>
+                    <li>進行職業訪談：請教實際從事相關工作的師長朋友，例如訪問從事某個職業的人。</li>
+                    <li>嘗試實習與工讀：嘗試在該領域相關工作找尋短期工作機會（例如計時人員、工讀生），實際觀察這類型職務職業的實際狀況，以降低未來適應的困難。</li>
+                </ol>
+                <p>如果發現此職務不是那麼吸引您，別放棄！您可以再查詢其他職涯類型或就業途徑。</p>
+            </article>
+            <h5 class="text-primary">Q：自己職場上共通能力的準備度夠不夠？</h5>
+            <article class="mb-5">
+                <p>想要從事一份工作，除了興趣的考量外，還必須盤點自己是否具備該工作所需要的共通職能與專業職能。<br />職場共通能力是從事各種不同的職業類型都需要具備的能力，UCAN平臺將共通職能分為9個項目，包括：溝通表達、持續學習、人際互動、團隊合作、問題解決、創新思維、自律當責、數位能力、多元共融。<br />您可以進行職場共通職能診斷，檢視自己在各項職場共通能力的具備程度。</p>
+            </article>
+            <h5 class="text-primary">Q：自己對該職涯類型的能力準備度夠不夠？</h5>
+            <article class="mb-5">
+                <p>想要從事一份工作，除了興趣的考量外，還必須盤點自己是否具備該工作所需要的共通職能與專業職能。<br />您可以進行專業職能診斷，檢視自己不同就業路徑中所具備的專業技能水準。<br />一般而言，興趣高且能力均較高者，能幫助您規劃成功且滿意的職業生涯。</p>
+            </article>
+            <h4 class="content-title-left-outline mb-3 break-before">歷次職業興趣探索診斷結果</h4>
+            <!-- 16種職涯類型歷次診斷分數 -->
+            <h5 class="content-h5-left-arrow text-primary">16種職涯類型歷次診斷分數</h5>
+            <div class="mb-5">
+                <canvas id="careerTypeChart" height="390" alt="16種職涯類型歷次診斷分數長條圖"></canvas>
+            </div>
+            <!-- 職業性格歷次診斷分數 -->
+            <h5 class="content-h5-left-arrow text-primary">職業性格歷次診斷分數</h5>
+            <div>
+                <canvas id="professionalCharacterChart" height="180" ait="職業性格歷次診斷分數長條圖"></canvas>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

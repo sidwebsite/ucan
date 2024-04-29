@@ -8,7 +8,6 @@ window.addEventListener('load', Marquee('.marquee', 15))
 import Swiper from 'swiper/bundle';
 // banner
 const bannerSwiper = new Swiper(".bannerSwiper", {
-    lazy: true,
     loop: true,
     autoplay: {
         delay: 9000,
@@ -24,8 +23,8 @@ const bannerSwiper = new Swiper(".bannerSwiper", {
         768: {
             slidesPerView: 1,
         },
-        1024: {
-            slidesPerView: 1.8,            
+        1200: {
+            slidesPerView: 2.6,            
         },
     },
     effect: "coverflow",
@@ -35,9 +34,13 @@ const bannerSwiper = new Swiper(".bannerSwiper", {
         rotate: 0,
         stretch: 0,
         depth: 100,
-        modifier: 1,
-        scale: 0.8,
+        modifier: .75,
+        scale: 0.75,
         slideShadows: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
     },
     navigation: {
         nextEl: ".banner-button-next",

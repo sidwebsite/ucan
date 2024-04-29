@@ -301,12 +301,15 @@
                         font-size: 1rem;
                     }
                 }
+                input[type="radio"]:disabled + label {
+                    background-color: var(--bs-white);
+                }
                 input[type="radio"]:checked + label {
                     &::before {
                         content: map-get($icons, check);
                         opacity: 1;
                     }
-                }
+                }                
                 &:nth-child(1), &:nth-child(2) {
                     label {
                         border-color: var(--bs-warning);

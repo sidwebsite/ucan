@@ -21,9 +21,27 @@ export default function navbar() {
                     collapseSubMenu();
                 };
                 menuItmeHasChildren.classList.add('active');
-                const subMenu = menuItmeHasChildren.querySelector('.sub-menu');
-                subMenu.style.maxHeight = subMenu.scrollHeight + 'px';
             };
         };
+    });
+    // 
+    const collapsedBtn = document.querySelectorAll('.menu .navbar-collapsed')
+    const collapse = document.querySelectorAll('.menu .collapse');
+    let collapseElementList  = [].slice.call(collapse);
+    let collapseList = collapseElementList.map(function (collapseEl) {
+        return new bootstrap.Collapse(collapseEl, {
+            toggle: false
+        });
+    });
+    collapsedBtn.forEach((btn, index) => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.target.classList.toggle('collapsed');
+            collapseList[index].toggle();
+        });
+        btn.addEventListener('focus', function(e) {
+            e.preventDefault();
+            collapseList[index].toggle();
+        });
     });
 }

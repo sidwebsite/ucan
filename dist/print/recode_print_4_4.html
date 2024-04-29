@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>專業職能診斷結果</title>
+    <style>
+        .print_container {
+            width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script>
+        $(document).ready(function() {
+            const specialty = [
+                {
+                    item: '掌握企業營運與交易法規掌握企業營運與交易法規掌握企業營運與交易法規掌握企業營運與交易法',
+                    one: 5,
+                    two: 5,
+                    three: 5,
+                    four: 5
+                },
+                {
+                    item: '掌握企業營運與交易法規掌握企業營運與交易法規掌握企業營運與交易法規掌握企業營運與交',
+                    one: 2.9,
+                    two: 2.9,
+                    three: 2.9,
+                    four: 2.9
+                },
+                {
+                    item: '擬定行銷計畫及業務流程擬定行銷計畫及業務流程擬定行銷計畫及業務流程',
+                    one: 2.6,
+                    two: 2.7,
+                    three: 2.8,
+                    four: 2.9
+                },
+                {
+                    item: '訂立生產流程與作業計畫訂立生產流程與作業計畫訂立生產流程與作業計畫訂立生產流程與作業計',
+                    one: 2.6,
+                    two: 2.7,
+                    three: 2.8,
+                    four: 2.9
+                },
+                {
+                    item: '規劃並執行人力資源管理',
+                    one: 2.35,
+                    two: 2.3,
+                    three: 2.25,
+                    four: 2.2
+                },
+                {
+                    item: '進行財務分析與管理',
+                    one: 2.05,
+                    two: 2.1,
+                    three: 2.15,
+                    four: 2.2
+                },
+                {
+                    item: '「企業經營管理>一般管理」平均數',
+                    one: 2.05,
+                    two: 2.1,
+                    three: 2.15,
+                    four: 2.2
+                }
+            ];
+            // 
+            const labelArray = specialty.map(label => label.item);
+            const labelString = [];
+            // 
+            String.prototype.StrCut2Arr = function(n){
+                let str = this;
+                let arr = [];
+                let len = Math.ceil(str.length / n);
+                for(let i=0;i < len;i++){
+                    if(str.length >= n){
+                        let strCut = str.substring(0,n);
+                        arr.push(strCut);
+                        str = str.substring(n);
+                    }else{
+                        str = str;
+                        arr.push(str);
+                    }
+                }
+                return arr;
+            }
+            // 
+            const substringNum = 10; // 2024/4/29修改
+            // 
+            labelArray.forEach( arr => {
+                labelString.push(arr.StrCut2Arr(substringNum));
+            });
+            // 
+            const specialtyData = {    
+                labels: labelString,
+                datasets: [
+                    {
+                        label: '110/04/22第一次',
+                        data: specialty.map(data => data.one),
+                        backgroundColor: ['#CBEBB7','#CBEBB7','#CBEBB7','#CBEBB7','#CBEBB7','#CBEBB7', '#DDDEDB'],
+                        borderWidth: 0
+                    },
+                    {
+                        label: '111/10/28第二次',
+                        data: specialty.map(data => data.two),
+                        backgroundColor: ['#9BD376','#9BD376','#9BD376','#9BD376','#9BD376','#9BD376', '#C4C6C3'],
+                        borderWidth: 0
+                    },
+                    {
+                        label: '112/07/26第三次',
+                        data: specialty.map(data => data.three),
+                        backgroundColor: ['#82C450','#82C450','#82C450','#82C450','#82C450','#82C450', '#A7A7A7'],
+                        borderWidth: 0
+                    },
+                    {
+                        label: '113/01/03第四次',
+                        data: specialty.map(data => data.four),
+                        backgroundColor: ['#71AD47','#71AD47','#71AD47','#71AD47','#71AD47','#71AD47', '#888B88'],
+                        borderWidth: 0
+                    }
+                ],
+            };
+            // legend marg in right
+            const legendMargInRight = {
+                id: 'legendMargInRight',
+                afterInit(chart, args, options) {
+                    // console.log(chart.legend.fit);
+                    const fitValue = chart.legend.fit;
+                    chart.legend.fit = function fit() {
+                        fitValue.bind(chart.legend)();
+                        let width = this.width += 30;
+                        return width;
+                    }
+                }
+            };
+            // config
+            const specialtyConfig = {
+                type: "bar",
+                data: specialtyData,
+                options: {
+                    categoryPercentage: 0.8,
+                    barPercentage: 1,
+                    indexAxis: 'y',
+                    layout: {
+                        padding: {
+                            right: 50
+                        }
+                    },
+                    scales: {
+                        y: {
+                            grid: {
+                                display: false
+                            },
+                            // 2024/4/29修改 start
+                            ticks: {
+                                font: {
+                                    size: 14,
+                                },
+                                crossAlign: 'far'
+                            }
+                            // 2024/4/29修改 end
+                        },
+                        x: {
+                            beginAtZero: true,
+                            suggestedMax: 5,
+                            ticks: {
+                                stepSize: 0.5,
+                                // 2024/4/29修改 start
+                                font: {
+                                    size: 14,
+                                }
+                                // 2024/4/29修改 end
+                            },
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: true,
+                            labels: {
+                                font: {
+                                    size: 14
+                                }
+                            }
+                        },
+                        datalabels: {
+                            color: '#6B6B6B',
+                            anchor: 'end',
+                            align: 'right',
+                            // 2024/4/29修改 start
+                            font: {
+                                size: 14,
+                            }
+                            // 2024/4/29修改 end
+                        }
+                    }
+                },
+                plugins: [ChartDataLabels, legendMargInRight],
+            };
+            const specialtyElement = document.querySelector('#specialtChart');
+            const specialtChart = new Chart(specialtyElement, specialtyConfig);
+             // print 
+            // 2024/04/25修改 start
+            window.addEventListener('beforeprint', () => {
+                specialtChart.resize(2400, 1200);
+            });
+            window.addEventListener('afterprint', () => {
+                specialtChart.resize();
+            });
+             // 2024/04/25修改 end
+        });
+    </script>
+    <link href="css/style_print.css" rel="stylesheet"></head>
+<body>
+    <main class="print_container">
+        <h2 class="text-primary text-center title mb-4">專業職能診斷結果</h2>
+        <div class="bg-light p-4" >
+            <dl class="d-flex mb-0">
+                <dt>姓名：</dt>
+                <dd>王xx</dd>
+            </dl>
+            <dl class="d-flex mb-0">
+                <dt>學校：</dt>
+                <dd>國立臺灣大學</dd>
+            </dl>
+            <dl class="d-flex mb-0">
+                <dt>系級：</dt>
+                <dd>企管系</dd>
+            </dl>
+            <dl class="d-flex mb-0">
+                <dt>學號：</dt>
+                <dd>12345678A </dd>
+            </dl>
+            <hr class="my-3">          
+            <dl class="d-flex mb-0">
+                <dt>職涯類型：</dt>
+                <dd>企業經營管理</dd>
+            </dl>
+            <dl class="d-flex mb-0">
+                <dt>就業途徑：</dt>
+                <dd>一般管理</dd>
+            </dl>                      
+            <dl class="d-flex mb-0">
+                <dt>施測日期：</dt>
+                <dd>2023年12月25日</dd>
+            </dl>
+        </div>
+        <div class="mt-4">
+            <p>專業職能是指從事一項職業所需具備的各種知識與技能。UCAN以中華民國行業標準分類，以及聯合國等國際職業分類標準，並依產業概況與領域專家意見，歸納出16個職涯類型及66個就業途徑。本測驗則是針對這66個就業途徑提供各途徑之專業知識與技能的診斷。</p>
+            <!-- 專業職能診斷剖面圖 -->
+            <h4 class="content-title-left-outline mb-3">專業職能診斷剖面圖</h4>
+            <p class="mb-0">專業職能的診斷是您對特定就業途徑之專業職能的自我評估，每個項目滿分為5分。從診斷結果可以得知您在特定就業途徑的專業職能的具備程度，關乎於您在執行工作和任務的能力程度：</p>
+            <ol class="ps-4">
+                <li>優勢能力代表該項目是您可以發揮的強項，建議您在未來工作要充分展現。</li>
+                <li>中等能力代表該項目是您具備基礎的能力，有潛力能勝任該任務，可以再更精進，成為您的優勢能力。</li>
+                <li>尚待加強代表該項目是您需要透過學習和經驗的累積，才能把該任務做好。</li>
+            </ol>
+            <div class="bg-light p-4 rounded-7 mb-4">
+                <dl class="d-flex mb-0">
+                    <dt>職涯類型：</dt>
+                    <dd>企業經營管理</dd>
+                </dl>
+                <dl class="d-flex mb-0">
+                    <dt>就業途徑：</dt>
+                    <dd>一般管理</dd>
+                </dl>
+            </div>
+            <!-- table start -->
+            <div class="table-responsive-lg mb-4">
+                <table class="table search-table align-middle">
+                    <caption class="visually-hidden">職涯類型</caption>
+                    <thead>
+                        <tr>
+                            <th>專業職能</th>
+                            <th class="position-relative px-7 px-md-0 text-nowrap"><span class="position-absolute top-50 start-0 translate-middle">0</span>能力強度PR值<span class="position-absolute top-50 start-100 translate-middle">99</span></th>
+                            <th class="px-4 px-md-0" width="10%">分數</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="td-w-300">掌握企業營運與交易法規掌握企業營運與交易法規掌握企業營運與交易法規</td>
+                            <td class="border-start px-0">
+                                <div class="progress search-progress search-progress-rounded">
+                                    <div class="progress-bar search-progress-bar-orange text-end pe-3 search-progress-rounded" role="progressbar" style="width: 68%" aria-valuenow="68" aria-valuemin="0" aria-valuemax="99">68</div>
+                                </div>
+                            </td>
+                            <td class="text-center">3</td>
+                        </tr>
+                        <tr>
+                            <td>分析經營環境，擬定經營策略與模式</td>
+                            <td class="border-start px-0">
+                                <div class="progress search-progress search-progress-rounded">
+                                    <div class="progress-bar search-progress-bar-orange text-end pe-3 search-progress-rounded" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="99">60</div>
+                                </div>
+                            </td>
+                            <td class="text-center">2.8</td>
+                        </tr>
+                        <tr>
+                            <td>擬定行銷計畫及業務流程</td>
+                            <td class="border-start px-0">
+                                <div class="progress search-progress search-progress-rounded">
+                                    <div class="progress-bar search-progress-bar-orange text-end pe-3 search-progress-rounded" role="progressbar" style="width: 59%" aria-valuenow="59" aria-valuemin="0" aria-valuemax="99">59</div>
+                                </div>
+                            </td>
+                            <td class="text-center">2.6</td>
+                        </tr>
+                        <tr>
+                            <td>訂立生產流程與作業計畫</td>
+                            <td class="border-start px-0">
+                                <div class="progress search-progress search-progress-rounded">
+                                    <div class="progress-bar search-progress-bar-orange text-end pe-3 search-progress-rounded" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="99">89</div>
+                                </div>
+                            </td>
+                            <td class="text-center">4</td>
+                        </tr>
+                        <tr>
+                            <td>規劃並執行人力資源管理</td>
+                            <td class="border-start px-0">
+                                <div class="progress search-progress search-progress-rounded">
+                                    <div class="progress-bar search-progress-bar-orange text-end pe-3 search-progress-rounded" role="progressbar" style="width: 68%" aria-valuenow="68" aria-valuemin="0" aria-valuemax="99">68</div>
+                                </div>
+                            </td>
+                            <td class="text-center">3</td>
+                        </tr>
+                        <tr>
+                            <td>進行財務分析與管理</td>
+                            <td class="border-start px-0">
+                                <div class="progress search-progress search-progress-rounded">
+                                    <div class="progress-bar search-progress-bar-green text-end pe-3 search-progress-rounded" role="progressbar" style="width: 99%" aria-valuenow="99" aria-valuemin="0" aria-valuemax="99">99</div>
+                                </div>
+                            </td>
+                            <td class="text-center">5</td>
+                        </tr>
+                        <tr class="table-active">
+                            <td class="fw-bolder">「企業經營管理 > 一般管理」平均數</td>
+                            <td class="border-start px-0">
+                                <div class="progress search-progress search-progress-rounded">
+                                    <div class="progress-bar search-progress-bar-gray text-end pe-3 search-progress-rounded" role="progressbar" style="width: 68%" aria-valuenow="68" aria-valuemin="0" aria-valuemax="99">68</div>
+                                </div>
+                            </td>
+                            <td class="text-center">3.4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- table end -->
+            <div class="text-center">
+                <ul class="list-inline search-inline">
+                    <li class="list-inline-item"><span class="search-rect"></span>優勢能力(4.5分以上)</li>
+                    <li class="list-inline-item"><span class="search-rect"></span>中等能力(1.5~4.4分)</li>
+                    <li class="list-inline-item"><span class="search-rect"></span>尚待加強(1.4分以下)</li>
+                </ul>
+            </div>
+            <p class="mb-5">全體PR值是將您的測驗結果與UCAN平台全體學生進行比較，假如您在進行財務分析與管理的百分等級是PR99，意思是您對於進行財務分析與管理的能力強度在100人裡面位居99。</p>
+            <!-- 專業職能診斷摘要 -->
+            <h4 class="content-title-left-outline mb-3">專業職能診斷摘要</h4>
+            <h5 class="content-h5-left-arrow text-primary">優勢職能</h5>
+            <p>這些是您可以發揮的強項，建議您充分運用這些專業職能上的優勢，與共通職能結合，可以讓自己在某些任務上的表現更為優秀。</p>
+            <div class="bg-light p-4 rounded-7 mb-5">
+                <ul class="mb-0">
+                    <li>進行財務分析與管理</li>
+                </ul>
+            </div>
+            <h5 class="content-h5-left-arrow text-primary">中等能力</h5>
+            <p>您在這些專業職能上具備基礎的能力，善用這些專業職能有助於順利完成工作。若想要在職場上更進一步，您可以透過經驗的累積和學習，將這些專業職能再提升和精進。</p>
+            <div class="bg-light p-4 rounded-7 mb-5">
+                <ul class="mb-0">
+                    <li>掌握企業營運與交易相關法規</li>
+                    <li>分析經營環境，擬定經營策略與模式</li>
+                    <li>擬訂行銷計畫及業務流程</li>
+                    <li>訂定生產流程與作業計畫</li>
+                    <li>規劃並執行人力資源管理</li>
+                </ul>
+            </div>
+            <h5 class="content-h5-left-arrow text-primary">尚待加強</h5>
+            <p>這些是相對而言比較弱，還需要再加強的專業職能。較弱的專業職能可能會阻礙您執行某些類型的任務，建議您可以透過觀摩他人、實務的操練、請教師長專家，加強您在這幾個項目的專業職能。</p>
+            <div class="bg-light p-4 rounded-7 mb-5">
+                <ul class="mb-0">
+                    <li>進行新產品的開發</li>
+                </ul>
+            </div>
+            <!-- 給您的建議 -->
+            <h4 class="content-title-left-outline mb-3">給您的建議</h4>
+            <ol class="ps-4 mb-5">
+                <li>分數高的項目是您可以在職場上好好發揮的能力，可以好好利用這些優勢！</li>
+                <li>關於中等、以及尚待加強的項目，建議您可以參考該項能力應具備的相關知識、技能，規劃能力養成計畫，像是著手選修相關課程、利用課餘時間多參與相關學習活動、觀察及學習在該項能力有優異表現的師長和朋友或實際從事該領域的工作者，請教他們的作法加以學習。</li>
+                <li>若您已經選定特定的職業作為未來的發展方向，可以參考就業途徑中的各項能力，向教師長、實際從事該領域的工作者、以及專家請教，進一步瞭解哪些是關鍵職能，加入您的能力養成計畫中。</li>
+                <li>專業能力的養成需要對產業和環境的相關趨勢保持關注，需要不斷地累積與學習，您可以透過能力養成計畫來管理您的能力發展狀況。</li>
+            </ol>
+            <!-- 歷次專業職能診斷結果 -->
+            <h4 class="content-title-left-outline mb-3 break-before">歷次專業職能診斷結果</h4>
+            <div class="mb-5">
+                <div class="table-responsive-sm">
+                    <div class="canvas-container">
+                        <!-- 2024/4/29修改 start -->
+                        <canvas id="specialtChart" height="400" alt="歷次專業職能診斷結果長條圖"></canvas>
+                        <!-- 2024/4/29修改 end -->
+                    </div>
+                </div>
+            </div>
+            <!-- 各項職能項目診斷結果PR值 -->
+            <h5 class="content-h5-left-arrow text-primary">各項職能項目診斷結果PR值</h5>
+            <div class="bg-light p-4 rounded-7 mb-5">
+                <dl class="d-flex mb-0">
+                    <dt>職涯類型：</dt>
+                    <dd>企業經營管理</dd>
+                </dl>
+                <dl class="d-flex mb-0">
+                    <dt>就業途徑：</dt>
+                    <dd>一般管理</dd>
+                </dl>
+            </div>
+            <!-- 專業職能歷次診斷結果總表 -->
+            <h5 class="content-h5-left-arrow text-primary">專業職能歷次診斷結果總表</h5>
+            <div class="table-responsive">
+                <table class="table text-center align-middle">
+                    <caption class="visually-hidden">專業職能歷次診斷結果總表</caption>
+                    <thead>
+                        <tr class="table-secondary">
+                            <th class="text-start">職涯類型</th>
+                            <th>就業途徑</th>
+                            <th>第一次</th>
+                            <th>第二次</th>
+                            <th>第三次</th>
+                            <th>第四次</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-start">企業經營管理</td>
+                            <td>一般管理</td>
+                            <td><strong>2.2分 / PR73</strong><br />2020-11-17</td>
+                            <td><strong>3.2分 / PR96</strong><br />2020-11-17</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="text-start">政府與公共事務</td>
+                            <td>公共行政</td>
+                            <td><strong>2.2分 / PR73</strong><br />2020-11-17</td>
+                            <td><strong>3.2分 / PR96</strong><br />2020-11-17</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
