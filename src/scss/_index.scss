@@ -44,7 +44,7 @@
 }
 
 // import styles bundle
-@import 'swiper/css/bundle';
+// @import 'swiper/css/bundle';
 // swiper
 .swiper-pagination-horizontal {
     bottom: 0;
@@ -59,7 +59,7 @@
     background: var(--bs-primary);
 }
 .bannerSwiper {
-    .swiper-slide {        
+    .swiper-slide {
         > a {
             display: block;
             border-radius: 0;
@@ -228,7 +228,7 @@
         }
     }
 }
-@include swiperButton('feedback',$swiper-button-color , -45px);
+@include swiperButton('feedback',$swiper-button-color , 0);
 .feedback-button-prev.swiper-button-disabled, .feedback-button-next.swiper-button-disabled, .links-button-prev.swiper-button-disabled, .links-button-next.swiper-button-disabled {
     opacity: 0;
     cursor: auto;
@@ -311,7 +311,7 @@
         }
     }
 }
-@include swiperButton('links',$swiper-button-color , -60px);
+@include swiperButton('links',$swiper-button-color , 0);
 // Application sharing
 #ApplicationSharing-tab {
     --bs-nav-link-color: #2F2F2F;

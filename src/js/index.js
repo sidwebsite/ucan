@@ -1,51 +1,52 @@
 // aos
-import AOS from 'aos';
+import AOS from "aos";
 AOS.init();
 // marquee
-import Marquee from './modules/marquee';
-window.addEventListener('load', Marquee('.marquee', 15))
+import Marquee from "./modules/marquee";
+window.addEventListener("load", Marquee(".marquee", 15));
 // Swiper
-import Swiper from 'swiper/bundle';
+// import Swiper from "swiper/bundle";
 // banner
-const bannerSwiper = new Swiper(".bannerSwiper", {
+let bannerSwiper = new Swiper(".bannerSwiper", {
     loop: true,
+    slidesPerView: 3,
+    centeredSlides: true,
     autoplay: {
         delay: 9000,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: ".swiper-pagination"
-    },
-    breakpoints: {
-        640: {
-            slidesPerView: 1,            
-        },
-        768: {
-            slidesPerView: 1,
-        },
-        1200: {
-            slidesPerView: 2.6,            
-        },
     },
     effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
     coverflowEffect: {
-        rotate: 0,
+        rotate: -1,
         stretch: 0,
-        depth: 100,
-        modifier: .75,
-        scale: 0.75,
+        depth: 0,
+        modifier: 1,
+        scale: 0.8,
         slideShadows: false,
+    },
+
+    navigation: {
+        nextEl: ".banner-button-next",
+        prevEl: ".banner-button-prev",
     },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
+        type: "bullets",
     },
-    navigation: {
-        nextEl: ".banner-button-next",
-        prevEl: ".banner-button-prev",
-    }
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        576: {
+            slidesPerView: 1,
+        },
+        992: {
+            slidesPerView: 1,
+        },
+        1200: {
+            slidesPerView: 2.7,
+        },
+    },
 });
 
 // Share and Feedback
@@ -73,35 +74,34 @@ const feedbackSwiper = new Swiper(".feedbackSwiper", {
 
 // links
 const linksSwiper = new Swiper(".linksSwiper", {
-    loop: true,    
+    loop: true,
     navigation: {
         nextEl: ".links-button-next",
         prevEl: ".links-button-prev",
     },
     pagination: {
-        el: ".swiper-pagination"
+        el: ".swiper-pagination",
     },
     centeredSlides: true,
     breakpoints: {
         640: {
-            slidesPerView: 1,       
-            loopedSlides: 0,     
+            slidesPerView: 1,
+            loopedSlides: 0,
         },
         768: {
             slidesPerView: 3,
-
         },
         1024: {
             slidesPerView: 5,
             loopedSlides: 2,
         },
-    }
+    },
 });
 
 // function
-// function tabsFoucs(tabNavId, tabContentId) {    
+// function tabsFoucs(tabNavId, tabContentId) {
 //     const tabNav = document.querySelector(tabNavId);
-//     const tabContent = document.querySelector(tabContentId);        
+//     const tabContent = document.querySelector(tabContentId);
 //     const tabNavLinks = tabNav.querySelectorAll('.nav-link');
 //     const links = tabContent.querySelectorAll('.tab-pane');
 
@@ -131,10 +131,10 @@ const linksSwiper = new Swiper(".linksSwiper", {
 //                     };
 //                 }
 //             });
-//         }); 
+//         });
 //     });
 // };
-// // 
+// //
 // tabsFoucs('#indexTabs', '#indexTabContent');
 // // 最新消息
 // tabsFoucs('#newsTabs', '#newsTabContent');

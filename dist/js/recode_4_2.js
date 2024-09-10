@@ -1,7 +1,7 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 110:
+/***/ 77:
 /***/ (function(module) {
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -498,11 +498,11 @@ var Sticky = /*#__PURE__*/function () {
 
 /***/ }),
 
-/***/ 109:
+/***/ 76:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 
-var Sticky = __webpack_require__(110);
+var Sticky = __webpack_require__(77);
 
 module.exports = Sticky;
 
@@ -540,7 +540,7 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 // Sticky
-const Sticky = __webpack_require__(109);
+const Sticky = __webpack_require__(76);
 if(window.innerWidth > 992) {const sticky = new Sticky('[data-sticky]', {})};
 
 })();
