@@ -175,7 +175,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="d-md-flex align-items-center h-100 text-center text-md-start">
-                                <h2 class="text-primary d-inline-block mb-5 mb-md-0">職能職業查詢</h2>
+                                <div class="h2 text-primary d-inline-block mb-5 mb-md-0">職能職業查詢</div>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -236,9 +236,6 @@
                                 <span class="input-group-text" aria-hidden="true"><i class="fa-solid fa-magnifying-glass" title="搜尋"></i></span>
                             </div>
                         </div>
-                        <div class="col-auto d-none d-md-block">
-                            <button type="button" class="btn custom-btn-primary shadow-none" aria-label="搜尋" title="搜尋">搜尋</button>
-                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-lg">
@@ -277,7 +274,7 @@
                                 <option value="3">3</option>
                             </select>
                         </div>
-                        <div class="col-12 d-md-none d-block text-center mt-3">
+                        <div class="col-lg-auto col-12 text-center mt-4">
                             <button type="button" class="btn custom-btn-primary shadow-none" aria-label="搜尋" title="搜尋">搜尋</button>
                         </div>
                     </div>
@@ -287,57 +284,88 @@
                         <p class="mb-2">目前查詢條件：輸入關鍵字：建築，勾選欲符合條件：勞動部職能基準</p>
                         <p>查詢結果：共有25筆</p>
                     </div>
-                    <div class="career-inquiry-warapper p-lg-4 mt-lg-5">
+                    <div class="career-inquiry-warapper table-responsive p-lg-4 mt-lg-5">
+                        <table class="table table-borderless career-inquiry align-middle">
+                            <caption class="visually-hidden">職能職業查詢表格</caption>
+                            <thead class="career-inquiry-title">
+                                <tr>
+                                    <th>職業名稱</th>
+                                    <th>所屬職涯類型</th>
+                                    <th>所屬就業途徑</th>
+                                    <th width="1px" class="text-nowrap">iCAP職能基準</th>
+                                    <th width="1px" class="text-nowrap">iPAS能力鑑定</th>
+                                    <th width="1px" class="text-nowrap">O*NET職業</th>
+                                </tr>
+                            </thead>
+                            <tbody class="career-inquiry-content">
+                                <tr>
+                                    <td><a href="#" class="career-inquiry-link profession-link" title="建築師" role="button" data-bs-toggle="modal" data-bs-target="#professionModal">建築師</a></td>
+                                    <td><span class="">建築營造</span></td>
+                                    <td><a href="#" class="career-inquiry-link" title="建築規劃設計">建築規劃設計</a></td>
+                                    <td><a href="#" class="search-tag-lightOrangeIcon" title="iCAP職能基準">iCAP職能基準</a></td>
+                                    <td class="tag-null"><span class="search-tag-null">無</span></td>
+                                    <td>無</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="career-inquiry-link profession-link" title="庫存及訂貨人員" role="button" data-bs-toggle="modal" data-bs-target="#professionModal">庫存及訂貨人員</a></td>
+                                    <td><span class="">企業經營管理</span></td>
+                                    <td><a href="#" class="career-inquiry-link" title="行政支援">行政支援</a></td>
+                                    <td class="tag-null"><span class="search-tag-null">無</span></td>
+                                    <td class="tag-null"><span class="search-tag-null">無</span></td>
+                                    <td>是</td>
+                                </tr>
+                            </tbody>
+                        </table>
                         <!-- 2024/03/06修改 start -->
                         <div class="career-inquiry">
-                            <div class="career-inquiry-content">
-                                <div class="grid career-inquiry-title px-4 py-3 d-none d-lg-grid">
-                                    <div>職業名稱</div>
-                                    <div>所屬職涯類型</div>
-                                    <div>所屬就業途徑</div>
-                                    <div>iCAP職能基準</div>
-                                    <div>iPAS能力鑑定</div>
-                                    <div>O*NET職業</div>
+                            <div class="career-inquiry-content" role="table">
+                                <div class="grid career-inquiry-title px-4 py-3 d-none d-lg-grid" role="row">
+                                    <div role="columnheader">職業名稱</div>
+                                    <div role="columnheader">所屬職涯類型</div>
+                                    <div role="columnheader">所屬就業途徑</div>
+                                    <div role="columnheader">iCAP職能基準</div>
+                                    <div role="columnheader">iPAS能力鑑定</div>
+                                    <div role="columnheader">O*NET職業</div>
                                 </div>
-                                <div class="grid px-4 py-3 mb-4 mb-lg-0 tr">
-                                    <div class="td"><a href="#" class="career-inquiry-link profession-link" title="建築師" role="button" data-bs-toggle="modal" data-bs-target="#professionModal">建築師</a></div>
-                                    <div class="td"><span class="">建築營造</span></div>
-                                    <div class="td"><a href="#" class="career-inquiry-link" title="建築規劃設計">建築規劃設計</a></div>
-                                    <div class="td"><a href="#" class="search-tag-lightOrangeIcon" title="iCAP職能基準">iCAP職能基準</a></div>
-                                    <div class="td tag-null"><span class="search-tag-null">無</span></div>
-                                    <div class="td">無</div>
+                                <div class="grid px-4 py-3 mb-4 mb-lg-0 tr" role="row">
+                                    <div role="cell" class="td"><a href="#" class="career-inquiry-link profession-link" title="建築師" role="button" data-bs-toggle="modal" data-bs-target="#professionModal">建築師</a></div>
+                                    <div role="cell" class="td"><span class="">建築營造</span></div>
+                                    <div role="cell" class="td"><a href="#" class="career-inquiry-link" title="建築規劃設計">建築規劃設計</a></div>
+                                    <div role="cell" class="td"><a href="#" class="search-tag-lightOrangeIcon" title="iCAP職能基準">iCAP職能基準</a></div>
+                                    <div role="cell" class="td tag-null"><span class="search-tag-null">無</span></div>
+                                    <div role="cell" class="td">無</div>
                                 </div>
-                                <div class="grid px-4 py-3 mb-4 mb-lg-0 tr">
-                                    <div class="td"><a href="#" class="career-inquiry-link profession-link" title="庫存及訂貨人員" role="button" data-bs-toggle="modal" data-bs-target="#professionModal">庫存及訂貨人員</a></div>
-                                    <div class="td"><span class="">企業經營管理</span></div>
-                                    <div class="td"><a href="#" class="career-inquiry-link" title="行政支援">行政支援</a></div>
-                                    <div class="td tag-null"><span class="search-tag-null">無</span></div>
-                                    <div class="td tag-null"><span class="search-tag-null">無</span></div>
-                                    <div class="td">是</div>
+                                <div class="grid px-4 py-3 mb-4 mb-lg-0 tr" role="row">
+                                    <div role="cell" class="td"><a href="#" class="career-inquiry-link profession-link" title="庫存及訂貨人員" role="button" data-bs-toggle="modal" data-bs-target="#professionModal">庫存及訂貨人員</a></div>
+                                    <div role="cell" class="td"><span class="">企業經營管理</span></div>
+                                    <div role="cell" class="td"><a href="#" class="career-inquiry-link" title="行政支援">行政支援</a></div>
+                                    <div role="cell" class="td tag-null"><span class="search-tag-null">無</span></div>
+                                    <div role="cell" class="td tag-null"><span class="search-tag-null">無</span></div>
+                                    <div role="cell" class="td">是</div>
                                 </div>
-                                <div class="grid px-4 py-3 mb-4 mb-lg-0 tr">
-                                    <div class="td"><a href="#" class="career-inquiry-link profession-link" title="物聯網應用工程師" role="button" data-bs-toggle="modal" data-bs-target="#professionModal">物聯網應用工程師</a></div>
-                                    <div class="td"><span class="">資訊科技</span></div>
-                                    <div class="td"><a href="#" class="career-inquiry-link" title="網路規劃與建置管理">網路規劃與建置管理</a></div>
-                                    <div class="td tag-null"><span class="search-tag-null">無</span></div>
-                                    <div class="td"><a href="#" class="search-tag-lightPurpleIcon" title="iPAS能力鑑定">iPAS能力鑑定</a></div>
-                                    <div class="td">無</div>
+                                <div class="grid px-4 py-3 mb-4 mb-lg-0 tr" role="row">
+                                    <div role="cell" class="td"><span class="">資訊科技</span></div>
+                                    <div role="cell" class="td"><a href="#" class="career-inquiry-link profession-link" title="物聯網應用工程師" role="button" data-bs-toggle="modal" data-bs-target="#professionModal">物聯網應用工程師</a></div>
+                                    <div role="cell" class="td"><a href="#" class="career-inquiry-link" title="網路規劃與建置管理">網路規劃與建置管理</a></div>
+                                    <div role="cell" class="td tag-null"><span class="search-tag-null">無</span></div>
+                                    <div role="cell" class="td"><a href="#" class="search-tag-lightPurpleIcon" title="iPAS能力鑑定">iPAS能力鑑定</a></div>
+                                    <div role="cell" class="td">無</div>
                                 </div>
-                                <div class="grid px-4 py-3 mb-4 mb-lg-0 tr">
-                                    <div class="td"><a href="#" class="career-inquiry-link profession-link" title="庫存及訂貨人員" role="button" data-bs-toggle="modal" data-bs-target="#professionModal">庫存及訂貨人員</a></div>
-                                    <div class="td"><span class="">企業經營管理</span></div>
-                                    <div class="td"><a href="#" class="career-inquiry-link" title="行政支援">行政支援</a></div>
-                                    <div class="td tag-null"><span class="search-tag-null">無</span></div>
-                                    <div class="td tag-null"><span class="search-tag-null">無</span></div>
-                                    <div class="td">是</div>
+                                <div class="grid px-4 py-3 mb-4 mb-lg-0 tr" role="cell">
+                                    <div role="cell" class="td"><a href="#" class="career-inquiry-link profession-link" title="庫存及訂貨人員" role="button" data-bs-toggle="modal" data-bs-target="#professionModal">庫存及訂貨人員</a></div>
+                                    <div role="cell" class="td"><span class="">企業經營管理</span></div>
+                                    <div role="cell" class="td"><a href="#" class="career-inquiry-link" title="行政支援">行政支援</a></div>
+                                    <div role="cell" class="td tag-null"><span class="search-tag-null">無</span></div>
+                                    <div role="cell" class="td tag-null"><span class="search-tag-null">無</span></div>
+                                    <div role="cell" class="td">是</div>
                                 </div>
-                                <div class="grid px-4 py-3 mb-4 mb-lg-0 tr">
-                                    <div class="td"><a href="#" class="career-inquiry-link profession-link" title="物聯網應用工程師" role="button" data-bs-toggle="modal" data-bs-target="#professionModal">物聯網應用工程師</a></div>
-                                    <div class="td"><span class="">資訊科技</span></div>
-                                    <div class="td"><a href="#" class="career-inquiry-link" title="網路規劃與建置管理">網路規劃與建置管理</a></div>
-                                    <div class="td"><a href="#" class="search-tag-lightOrangeIcon" title="iCAP職能基準">iCAP職能基準</a></div>
-                                    <div class="td"><a href="#" class="search-tag-lightPurpleIcon" title="iPAS能力鑑定">iPAS能力鑑定</a></div>
-                                    <div class="td">無</div>
+                                <div class="grid px-4 py-3 mb-4 mb-lg-0 tr" role="row">
+                                    <div role="cell" class="td"><a href="#" class="career-inquiry-link profession-link" title="物聯網應用工程師" role="button" data-bs-toggle="modal" data-bs-target="#professionModal">物聯網應用工程師</a></div>
+                                    <div role="cell" class="td"><span class="">資訊科技</span></div>
+                                    <div role="cell" class="td"><a href="#" class="career-inquiry-link" title="網路規劃與建置管理">網路規劃與建置管理</a></div>
+                                    <div role="cell" class="td"><a href="#" class="search-tag-lightOrangeIcon" title="iCAP職能基準">iCAP職能基準</a></div>
+                                    <div role="cell" class="td"><a href="#" class="search-tag-lightPurpleIcon" title="iPAS能力鑑定">iPAS能力鑑定</a></div>
+                                    <div role="cell" class="td">無</div>
                                 </div>
                             </div>
                         </div>
@@ -375,7 +403,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col">
-                                    <h4 class="text-white text-decoration-underline mb-3">職能與職業查詢</h4>
+                                    <div class="h4 text-white text-decoration-underline mb-3">職能與職業查詢</div>
                                     <div class="footer-menu-links">
                                         <a href="../search/search_1_1.html" title="職業查詢">職業查詢</a>
                                         <a href="../search/search_1_2.html" title="職業性格類型查詢">職業性格類型查詢</a>
@@ -384,7 +412,7 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <h4 class="text-white text-decoration-underline mb-3">職能應用</h4>
+                                    <div class="h4 text-white text-decoration-underline mb-3">職能應用</div>
                                     <div class="footer-menu-links">
                                         <p class="mb-0">職涯面</p>
                                         <ul class="list-unstyled ps-3">
@@ -406,7 +434,7 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <h4 class="text-white text-decoration-underline mb-3">職能診斷</h4>
+                                    <div class="h4 text-white text-decoration-underline mb-3">職能診斷</div>
                                     <div class="footer-menu-links">
                                     <a href="../diagnose/diagnose_3_1_1.html" title="職業興趣探索">職業興趣探索</a>
                                     <a href="../diagnose/diagnose_3_2_1.html" title="共通職能診斷">共通職能診斷</a>
@@ -414,7 +442,7 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <h4 class="text-white text-decoration-underline mb-3">診斷紀錄</h4>
+                                    <div class="h4 text-white text-decoration-underline mb-3">診斷紀錄</div>
                                     <div class="footer-menu-links">
                                         <a href="../recode/recode_4_1.html" title="職業興趣探索診斷結果">職業興趣探索診斷結果</a>
                                         <a href="../recode/recode_4_2.html" title="職場共通職能診斷結果">職場共通職能診斷結果</a>
@@ -427,7 +455,7 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <h4 class="text-white text-decoration-underline mb-3">認識UCAN</h4>
+                                    <div class="h4 text-white text-decoration-underline mb-3">認識UCAN</div>
                                     <div class="footer-menu-links">
                                         <p class="mb-0">認識UCAN</p>
                                         <ul class="list-unstyled ps-3">
@@ -452,35 +480,46 @@
             <div class="footer-Information">
                 <div class="container px-5 px-md-0">
                     <div class="row">
-                        <div class="col-md mb-lg-0 mb-4">
+                        <div class="col-lg mb-lg-0 mb-4">
                             <figure>
                                 <img src="../images/footer_logo.svg" alt="" class="img-fluid">
                             </figure>
                         </div>
-                        <div class="col-md pe-3 pe-xxl-4 mb-5 mb-lg-0">
-                            <h3 class="mb-4 text-center text-md-start">UCAN計畫辦公室</h3>
+                        <div class="col-lg pe-3 pe-xxl-4 mb-5 mb-lg-0">
+                            <div class="h3 mb-4 text-center text-md-start">UCAN計畫辦公室</div>
                             <address class="border-start border-4 border-dark ps-3 mb-3">
                                 <ul class="list-inline">
-                                    <li class="list-inline-item">諮詢信箱：</li>
+                                    <li class="list-inline-item me-0">諮詢信箱：</li>
                                     <li class="list-inline-item"><a href="mailto:ucan@itri.org.tw" title="寄信至ucan@itri.org.tw">ucan@itri.org.tw</a></li>
                                 </ul>
                                 <ul class="list-inline">
-                                    <li class="list-inline-item">諮詢專線：</li>
+                                    <li class="list-inline-item me-0">諮詢專線：</li>
                                     <li class="list-inline-item">02-2701-6565#343</li>
+                                </ul>
+                                <ul class="list-inline d-flex">
+                                    <li class="list-inline-item text-nowrap me-0">服務時間：</li>
+                                    <li class="list-inline-item">
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">周一~周五(非假日)</li>
+                                            <li class="list-inline-item text-nowrap">上午8:30-12:00、下午13:00-17:30</li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </address>
                             <div class="text-center text-md-start">
                                 <a href="#" title="或填寫聯絡表單" class="footer-btn px-4">或填寫聯絡表單 <i class="fa-solid fa-circle-arrow-right"></i></a>
                             </div>
                         </div>
-                        <div class="col-md mb-5 mb-lg-0">
-                            <h3 class="mb-4 text-center text-md-start">服務時間</h3>
+                        <div class="col-lg mb-5 mb-lg-0">
+                            <div class="h3 mb-4 text-center text-md-start">服務時間</div>
                             <div class="border-start border-4 border-dark ps-3 mb-3">
-                                <p>周一~周五(非假日)</p>
+                                <p class="text-nowrap">版權所有 ©教育部 All Rights Reserved.</p>
                                 <ul class="list-inline">
-                                    <li class="list-inline-item">上午8:30-12:00</li>
-                                    <li class="list-inline-item">下午13:00-17:30</li>
+                                    <li class="list-inline-item me-0">維運單位：</li>
+                                    <li class="list-inline-item">UCAN計畫辦公室</li>
                                 </ul>
+                                <p>建議使用IE11.0以上或Edge、Firefox、Chrome瀏覽器，</p>
+                                <p>最佳瀏覽解析度為1024*768</p>
                             </div>
                             <a href="#" class="text-center text-md-start d-block" target="_blank" title="本網站通過無障礙AA檢測(另開新視窗)">
                                 <img src="../images/accessibility.png" alt="本網站通過無障礙AA檢測" title="本網站通過無障礙AA檢測(另開新視窗)">
@@ -509,7 +548,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content p-4">
                 <div class="modal-header border-0">
-                    <h4 class="modal-title">建築師</h4>
+                    <div class="h4 modal-title">建築師</div>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">

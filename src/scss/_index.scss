@@ -32,6 +32,7 @@
     border-right: 1px solid #BCB8B8;
 }
 .marquee {
+    position: relative;
     overflow: hidden;
     display: flex;
     > p {
@@ -41,6 +42,13 @@
             margin-right: 100px;
         }
     }
+    
+}
+.marquee-btn-group {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 // import styles bundle

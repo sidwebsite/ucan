@@ -94,10 +94,10 @@
     width: 100%;
     background-color: $custom-search-bg;
     border-radius: 50px;
-    @include media-breakpoint-up(md) {
-        margin-top: 0;
-    }
-    margin-top: -10px;
+    // @include media-breakpoint-up(md) {
+    //     margin-top: 0;
+    // }
+    margin-top: 1.5rem;
     .nice-select-dropdown {
         width: 100%;
         border: 1px solid $custom-search-border;
@@ -129,23 +129,30 @@
         right: 15px;
     }
 }
+
 .career-inquiry {
     background-color: var(--bs-white);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    overflow: hidden;
 }
 .career-inquiry-title {
     --bs-table-color: var(--bs-dark);
     --bs-table-bg: #D9D8D8;
     background-color: #D9D8D8;
-    border-radius: 10px;
     align-items: center;
     font-weight: bolder;
-}
-.career-inquiry-content {
-    .table > thead > tr > th, .table > tbody > tr > td {
+    > tr > th {
         padding: 1rem;
         vertical-align: middle;
+    }
+}
+.career-inquiry-content {
+    > tr > td {
+        padding: 1rem;
+    }
+    .table > thead > tr > th, .table > tbody > tr > td {
+        padding: 1rem;
     }
     // 
     .grid {
@@ -224,6 +231,7 @@
         border-color: $color;
         border-radius: 50px;
         padding: 5px 12px;
+        white-space: nowrap;
         transition: .3s ease;
         &:hover {
             background-color: $color;
@@ -265,6 +273,7 @@
     }
     .navbar-link {
         display: block;
+        
     }
 }
 // professional functions style

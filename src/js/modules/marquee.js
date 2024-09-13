@@ -39,4 +39,10 @@ export default function Marquee(selector, speed) {
     // mouse
     el.addEventListener('mouseover', marqueeStop);
     el.addEventListener('mouseout', marqueePlay);
+
+    el.querySelector('a').addEventListener('focus', marqueeStop);
+    const btnPlay = document.querySelector('#marquee-play');
+    const btnPause =document.querySelector('#marquee-pause');
+    btnPlay.addEventListener('click', marqueePlay);
+    btnPause.addEventListener('click', marqueeStop)
 }

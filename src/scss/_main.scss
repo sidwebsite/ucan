@@ -3,7 +3,7 @@
 @import 'navbarRight';
 @import 'content';
 @import 'footer';
-.form-control:focus, button:focus:not(:focus-visible), a:focus-visible {
+.form-control:focus,.btn:focus-visible, button:focus:not(:focus-visible), a:focus-visible {
     border: 0;
     outline: 2px dashed $custom-focus-color;
 }

@@ -95,12 +95,14 @@
                             <h1><img src="images/logo.svg" alt="大專校院就業職能平台logo"></h1>
                         </a>
                     </div>
-                    <div class="open-nav-menu">
-                        <!-- <i class="fa-solid fa-bars"></i> -->
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+                    <a href="#" class="open-nav-menu" title="選單" aria-label="選單">
+                        <div class="">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        
+                    </a>
                     <div class="nav-menu ms-lg-auto">
                         <!-- <div class="close-nav-menu">
                             <i class="fa-solid fa-xmark"></i>
@@ -214,7 +216,7 @@
         <!-- main start -->
         <main class="main position-relative" id="content">
             <a href="#C" title="中央內容區塊" accesskey="C" name="C" class="alt-c position-absolute top-0 start-0">:::</a>
-            <section class="message">
+            <section class="message position-relative">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -224,8 +226,13 @@
                                     <a href="" title="★報名已截止★【活動通知】112年UCAN應用交流研習會-「運用UCAN評估學習成效」開放報名！惠請各校派員參加~" class="link-primary">★報名已截止★【活動通知】112年UCAN應用交流研習會-「運用UCAN評估學習成效」開放報名！惠請各校派員參加~</a>
                                 </p>
                             </div>
+                            
                         </div>
                     </div>
+                </div>
+                <div class="marquee-btn-group">
+                    <button type="button" id="marquee-play" class="btn btn-light" title="播放" aria-label="播放"><i class="fa-solid fa-play"></i></button>
+                    <button type="button" id="marquee-pause" class="btn btn-light" title="暫停" aria-label="暫停"><i class="fa-solid fa-pause"></i></button>
                 </div>
             </section>
             <!-- banner start -->
@@ -409,7 +416,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                
                             </div>
                         </div>
                     </div>
@@ -928,7 +934,7 @@
             <!-- footer menu start -->
             <div class="footer-menu-wrapper d-none d-lg-block">
                 <div class="footer-menu-btn border-bottom border-6 border-primary text-center">
-                    <button type="button" id="footerMenuBtn" class="btn btn-primary px-5">點選收合 <i class="fa-solid fa-circle-arrow-down"></i></button>
+                    <button type="button" id="footerMenuBtn" class="btn btn-primary px-5" title="點選展開" aria-label="點選展開"><span>點選展開</span> <i class="fa-solid fa-circle-arrow-down" aria-hidden="true"></i></button>
                 </div>
                 <div class="collapse" id="footerMenu">
                     <div class="bg-primary footer-menu">
@@ -1013,39 +1019,53 @@
             <div class="footer-Information">
                 <div class="container px-5 px-md-0">
                     <div class="row">
-                        <div class="col-md mb-lg-0 mb-4">
+                        <div class="col-lg-2 mb-lg-0 mb-4">
                             <figure>
                                 <img src="images/footer_logo.svg" alt="" class="img-fluid">
                             </figure>
                         </div>
-                        <div class="col-md pe-3 pe-xxl-4 mb-5 mb-lg-0">
-                            <h3 class="mb-4 text-center text-md-start">UCAN計畫辦公室</h3>
-                            <address class="border-start border-4 border-dark ps-3 mb-3">
-                                <ul class="list-inline">
-                                    <li class="list-inline-item">諮詢信箱：</li>
-                                    <li class="list-inline-item"><a href="mailto:ucan@itri.org.tw" title="寄信至ucan@itri.org.tw">ucan@itri.org.tw</a></li>
-                                </ul>
-                                <ul class="list-inline">
-                                    <li class="list-inline-item">諮詢專線：</li>
-                                    <li class="list-inline-item">02-2701-6565#343</li>
-                                </ul>
-                            </address>
-                            <div class="text-center text-md-start">
-                                <a href="#" title="或填寫聯絡表單" class="footer-btn px-4">或填寫聯絡表單 <i class="fa-solid fa-circle-arrow-right"></i></a>
+                        <div class="col-lg-8 pe-3 pe-xxl-4 mb-5 mb-lg-0">
+                            <div class="h3 mb-4 text-center text-md-start">UCAN計畫辦公室</div>
+                            <div class="row">
+                                <div class="col-lg-6 md-4 md-lg-0 ">
+                                    <address class="border-start border-4 border-dark ps-3 mb-3">
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item me-0">諮詢信箱：</li>
+                                            <li class="list-inline-item"><a href="mailto:ucan@itri.org.tw" title="寄信至ucan@itri.org.tw">ucan@itri.org.tw</a></li>
+                                        </ul>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item me-0">諮詢專線：</li>
+                                            <li class="list-inline-item">02-2701-6565#343</li>
+                                        </ul>
+                                        <ul class="list-inline d-flex">
+                                            <li class="list-inline-item text-nowrap me-0">服務時間：</li>
+                                            <li class="list-inline-item">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item">周一~周五(非假日)</li>
+                                                    <li class="list-inline-item text-nowrap">上午8:30-12:00、下午13:00-17:30</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </address>
+                                    <div class="text-center text-md-start">
+                                        <a href="#" title="或填寫聯絡表單" class="footer-btn px-4">或填寫聯絡表單 <i class="fa-solid fa-circle-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="border-start border-4 border-dark ps-3 mb-3">
+                                        <p class="text-nowrap">版權所有 ©教育部 All Rights Reserved.</p>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item me-0">維運單位：</li>
+                                            <li class="list-inline-item">UCAN計畫辦公室</li>
+                                        </ul>
+                                        <p>建議使用IE11.0以上或Edge、Firefox、Chrome瀏覽器，</p>
+                                        <p>最佳瀏覽解析度為1024*768</p>
+                                    </div>
+                                    <a href="#" class="text-center text-md-start d-block" target="_blank" title="本網站通過無障礙AA檢測(另開新視窗)">
+                                        <img src="images/accessibility.png" alt="本網站通過無障礙AA檢測" title="本網站通過無障礙AA檢測(另開新視窗)">
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md mb-5 mb-lg-0">
-                            <h3 class="mb-4 text-center text-md-start">服務時間</h3>
-                            <div class="border-start border-4 border-dark ps-3 mb-3">
-                                <p>周一~周五(非假日)</p>
-                                <ul class="list-inline">
-                                    <li class="list-inline-item">上午8:30-12:00</li>
-                                    <li class="list-inline-item">下午13:00-17:30</li>
-                                </ul>
-                            </div>
-                            <a href="#" class="text-center text-md-start d-block" target="_blank" title="本網站通過無障礙AA檢測(另開新視窗)">
-                                <img src="images/accessibility.png" alt="本網站通過無障礙AA檢測" title="本網站通過無障礙AA檢測(另開新視窗)">
-                            </a>
                         </div>
                         <div class="col-lg d-none d-lg-block">
                             <figure>
