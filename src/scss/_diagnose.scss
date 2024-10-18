@@ -109,13 +109,11 @@
         //     transition: .3s ease;
         //     font-size: 1rem;
         // }
+        
     }
-    &:checked + label {
-        background-color: $login-button-hover-bg;
+    &:checked + label, &:focus + label {
+        background-color: $login-button-hover-bg !important;
     }
-    // &:focus + label {
-    //     background-color: var(--bs-light);
-    // }
 }
 .diagnose-fraction-style {
     height: 320px;

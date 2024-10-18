@@ -85,6 +85,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_nice_select2_dist_js_nice_select2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_nice_select2_dist_js_nice_select2__WEBPACK_IMPORTED_MODULE_0__);
 
 const select = document.querySelectorAll(".selectize");
+// 2024/10/18修改 start
+const addRole = () => {
+    document.querySelectorAll('.nice-select li').forEach((li) => {
+        li.setAttribute('role', 'button');
+    });
+}
+addRole();
+// 2024/09/18修改 end
 select.forEach(select => {
     let instance = new (_node_modules_nice_select2_dist_js_nice_select2__WEBPACK_IMPORTED_MODULE_0___default())(select);
 });

@@ -22,8 +22,8 @@
     @extend %custom-btn;
     background-color: var(--bs-primary);
     color: var(--bs-white);
-    &:hover {
-        background-color: var(--bs-warning);
+    &:hover, &:focus  {
+        background-color: var(--bs-warning) !important;
         color: $btn-font-color;
     }
 }

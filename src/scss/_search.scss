@@ -94,10 +94,11 @@
     width: 100%;
     background-color: $custom-search-bg;
     border-radius: 50px;
-    // @include media-breakpoint-up(md) {
-    //     margin-top: 0;
-    // }
+    display: block;
     margin-top: 1.5rem;
+    @include media-breakpoint-up(md) {
+        margin-top: 0;
+    }
     .nice-select-dropdown {
         width: 100%;
         border: 1px solid $custom-search-border;
@@ -158,13 +159,7 @@
     .grid {
         grid-template-columns: 1fr 1fr 1fr 130px 125px 85px;
     }
-    .career-inquiry-link {
-        color: $custom-search-link-colr;
-        &:hover {
-            color: var(--bs-primary);
-            text-decoration: underline;
-        }
-    }
+    
     .tr {
         @include media-breakpoint-down(lg) {
             --bs-gap:1rem;
@@ -215,6 +210,13 @@
                 display: none;
             }
         }
+    }
+}
+.career-inquiry-link {
+    color: $custom-search-link-colr;
+    &:hover {
+        color: var(--bs-primary);
+        text-decoration: underline;
     }
 }
 // tag color class

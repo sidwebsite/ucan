@@ -6,7 +6,7 @@ let testAlertModal = new bootstrap.Modal(document.getElementById('testAlert'), {
 window.addEventListener('load', () => testAlertModal.show());
 // collapse
 const collapseBtn = document.querySelectorAll('.collapse-btn');
-const collapse = document.querySelectorAll('.test-collapse'); // 2024/4/25修改
+const collapse = document.querySelectorAll('.test-collapse');
 
 collapseBtn.forEach((btn, index) => {
     btn.addEventListener('click', () => {
@@ -46,7 +46,7 @@ for (let i = 0; i < diagnosisTest.length; i++) {
     radios.forEach(radio => {
         if(radio.checked === true) {
             element.dataset.switch = 'true';
-            element.classList.add('opacity-25');
+            // element.classList.add('opacity-25');// 2024/10/18修改
             switchFun(element.dataset.switch, radios);
         } else {
             radio.addEventListener('click', () => {
@@ -56,7 +56,7 @@ for (let i = 0; i < diagnosisTest.length; i++) {
                 // 開啟一下題效果
                 if(element.dataset.switch === 'false') {
                     element.dataset.switch = 'true';
-                    element.classList.add('opacity-25');
+                    // element.classList.add('opacity-25');// 2024/10/18修改
                     element.classList.remove('diagnosis-test-active');
                     scrollToTargetAdjusted(element);
                     if(i !== testEnd) {

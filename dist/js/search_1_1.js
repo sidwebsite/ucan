@@ -84,6 +84,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_nice_select2_dist_js_nice_select2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(79);
 /* harmony import */ var _node_modules_nice_select2_dist_js_nice_select2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_nice_select2_dist_js_nice_select2__WEBPACK_IMPORTED_MODULE_0__);
 
+// 2024/09/20修改 start
+const addRole = () => {
+    document.querySelectorAll('.nice-select li').forEach((li) => {
+        li.setAttribute('role', 'button');
+    });
+}
+// 2024/09/20修改 end
 const select = document.querySelectorAll(".selectize");
 select.forEach(select => {
     let instance = new (_node_modules_nice_select2_dist_js_nice_select2__WEBPACK_IMPORTED_MODULE_0___default())(select);
@@ -112,6 +119,9 @@ for (let i = 0; i < optionsInit.length; i++) {
     optionTypeClidn.options[optionTypeClidn.options.length] = new Option(optionsInit[i], optionsInit[i]);
 }
 optionTypeClidnSelect.update();
+// 2024/09/20修改 start
+addRole();
+// 2024/09/20修改 end
 // optionType change
 optionType.addEventListener('change', (e) => {
     let optionElement = options[e.target.value].option;
@@ -120,7 +130,11 @@ optionType.addEventListener('change', (e) => {
         optionTypeClidn.options[optionTypeClidn.options.length] = new Option(optionElement[i], optionElement[i]);
     }
     optionTypeClidnSelect.update();
+    // 2024/09/20修改 start
+    addRole();
+    // 2024/09/20修改 end
 });
+
 })();
 
 /******/ })()

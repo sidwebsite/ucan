@@ -313,6 +313,13 @@
                             font: var(--fa-font-solid);
                             content: map-get($icons, user);
                         }
+                        &:focus {
+                            background-color: var(--bs-primary);
+                            color: var(--bs-white) !important;
+                            &::after, &::before {
+                                color: var(--bs-white) !important;
+                            }
+                        }
                     }
                     
                 }
@@ -323,6 +330,13 @@
                         align-items: center;
                         &::after {                            
                             content: map-get($icons, plus);
+                        }
+                        &:focus {
+                            background-color: var(--bs-primary);
+                            color: var(--bs-white) !important;
+                            &::after, &::before {
+                                color: var(--bs-white) !important;
+                            }
                         }
                     }
                     > .sub-menu {
@@ -373,6 +387,13 @@
                                 }
                                 border-bottom: $nav-menu-phone-border;
                                 padding-left: 75px;
+                                &:focus {
+                                    background-color: var(--bs-primary);
+                                    color: var(--bs-white) !important;
+                                    &::after, &::before {
+                                        color: var(--bs-white) !important;
+                                    }
+                                }
                             }
                         }
                     }

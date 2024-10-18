@@ -97,12 +97,22 @@ questionAccordionBtn.forEach((btn, index) => {
         collapseList[index].toggle();
     });
 });
+// 2024/09/24修改 start
+const addRole = () => {
+    document.querySelectorAll('.nice-select li').forEach((li) => {
+        li.setAttribute('role', 'button');
+    });
+}
+// 2024/09/24修改 end
 // custom selcet
-
+;
 const select = document.querySelectorAll(".selectize");
 select.forEach(select => {
     let instance = new (_node_modules_nice_select2_dist_js_nice_select2__WEBPACK_IMPORTED_MODULE_0___default())(select);
 });
+// 2024/09/24修改 start
+addRole();
+// 2024/09/24修改 end
 })();
 
 /******/ })()
