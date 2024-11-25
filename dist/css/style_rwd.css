@@ -18790,6 +18790,7 @@ ol.list-style-cjk-ideographic {
   border-radius: 11px;
 }
 .nice-select .nice-select-dropdown .list {
+  margin-top: 15px;
   padding: 15px;
 }
 .nice-select .nice-select-dropdown .list > li {
@@ -18800,8 +18801,8 @@ ol.list-style-cjk-ideographic {
   line-height: normal;
 }
 .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
-  background-color: #ECEFEF;
-  border-radius: 50px;
+  background-color: #ECEFEF !important;
+  border-radius: 50px !important;
 }
 .nice-select:focus {
   border-color: transparent;
@@ -19579,6 +19580,10 @@ ol.list-style-cjk-ideographic {
   }
 }
 
+.search-select {
+  background-color: #ECEFEF;
+}
+
 .diagnose-warpper, .diagnose-step {
   background-color: #F8F8F8;
   border-radius: 12px;
@@ -19670,6 +19675,10 @@ ol.list-style-cjk-ideographic {
 .diagnose-table > tbody > tr > td:not(:last-child) {
   border-right: 1px solid #707070;
 }
+.diagnose-table > tbody > tr:hover {
+  --bs-table-bg: #FFF9E8;
+  --bs-table-border-color: $diagnose-table-border-color;
+}
 .diagnose-table .table-warning {
   --bs-table-bg: #FFF9E8;
   --bs-table-border-color: $diagnose-table-border-color;
@@ -19682,8 +19691,11 @@ ol.list-style-cjk-ideographic {
   width: 26px;
   height: 26px;
 }
-.diagnose-custom-checkbox:checked + label, .diagnose-custom-checkbox:focus + label {
+.diagnose-custom-checkbox:checked + label {
   background-color: #707070 !important;
+}
+.diagnose-custom-checkbox:focus + label {
+  outline: 2px dashed #ff5900;
 }
 
 .diagnose-fraction-style {
@@ -19861,6 +19873,12 @@ ol.list-style-cjk-ideographic {
 .diagnosis-test-content > div:last-child {
   border-bottom: 0;
 }
+.diagnosis-test-content .diagnosis-test > button {
+  display: block;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 .diagnosis-test-content .diagnosis-test.diagnosis-test-active {
   background-color: #FFFBEF;
 }
@@ -19907,7 +19925,7 @@ ol.list-style-cjk-ideographic {
 .diagnosis-test-content .diagnosis-test .groupoptions > .radio input[type=radio]:disabled + label {
   background-color: var(--bs-white);
 }
-.diagnosis-test-content .diagnosis-test .groupoptions > .radio input[type=radio]:checked + label::before {
+.diagnosis-test-content .diagnosis-test .groupoptions > .radio input[type=radio]:focus + label::before, .diagnosis-test-content .diagnosis-test .groupoptions > .radio input[type=radio]:checked + label::before {
   content: "\f00c";
   opacity: 1;
 }

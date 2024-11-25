@@ -124,7 +124,7 @@ module.exports = {
             template: './src/html/search/search_1_1.html',
             filename: 'search/search_1_1.html',
             minify: false,
-            chunks: ['main', 'search_1_1']
+            chunks: ['main']
         }),
         new HtmlWebpackPlugin({
             template: './src/html/search/search_1_2.html',
@@ -266,7 +266,7 @@ module.exports = {
             template: './src/html/diagnose/diagnose_3_3_4.html',
             filename: 'diagnose/diagnose_3_3_4.html',
             minify: false,
-            chunks: ['main','diagnose_3_3_4']
+            chunks: ['main']
         }),
         new HtmlWebpackPlugin({
             template: './src/html/diagnose/diagnose_3_4_a.html',
@@ -345,7 +345,7 @@ module.exports = {
             template: './src/html/recode/recode_4_5_2.html',
             filename: 'recode/recode_4_5_2.html',
             minify: false,
-            chunks: ['main', 'customSelect']
+            chunks: ['main']
         }),
         new HtmlWebpackPlugin({
             template: './src/html/recode/recode_4_5_3.html',

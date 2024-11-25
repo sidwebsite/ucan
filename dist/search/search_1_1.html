@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="大專校院就業職能平台的描述">
     <title>大專校院就業職能平台</title>
-<script defer src="../js/main.js"></script><script defer src="../js/search_1_1.js"></script><link href="../css/style_rwd.css" rel="stylesheet"></head>
+<script defer src="../js/main.js"></script><link href="../css/style_rwd.css" rel="stylesheet"></head>
 <body>
     <noscript>您的瀏覽器不支援JavaScript功能，若本網站功能無法正常使用，請開啟瀏覽器JavaScript狀態</noscript>
     <div class="warpper">
@@ -237,20 +237,26 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <!-- 2024/11/21修改 start -->
+                    <div class="row mt-4">
                         <div class="col-md-6 col-lg">
-                            <select class="selectize" id="optionType" aria-label="職涯類型">
-                                <option selected disabled aria-disabled="true">職涯類型</option>
+                            <select class="form-select rounded-pill search-select" aria-label="職涯類型">
+                                <option value="" selected disabled aria-disabled="true">職涯類型</option>
                                 <option value="0">建築營造</option>
                                 <option value="1">選項1</option>
                                 <option value="2">選項2</option>
                             </select>
                         </div>
                         <div class="col-md-6 col-lg">
-                            <select id="optionTypeClidn" aria-label="就業途徑"></select>
+                            <select class="form-select rounded-pill search-select" aria-label="就業途徑">
+                                <option value="" selected disabled aria-disabled="true">就業途徑</option>
+                                <option value="0">建築營造</option>
+                                <option value="1">選項1</option>
+                                <option value="2">選項2</option>
+                            </select>
                         </div>
                         <div class="col-md-4 col-lg">
-                            <select class="selectize" aria-label="學科領域">
+                            <select class="form-select rounded-pill search-select" aria-label="學科領域">
                                 <option selected>學科領域</option>
                                 <option value="1">建築營造</option>
                                 <option value="2">天然資源、食品與農業</option>
@@ -259,7 +265,7 @@
                             </select>
                         </div>
                         <div class="col-md-4 col-lg">
-                            <select class="selectize" aria-label="學門">
+                            <select class="form-select rounded-pill search-select" aria-label="學門">
                                 <option selected>學門</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -267,17 +273,18 @@
                             </select>
                         </div>
                         <div class="col-md-4 col-lg">
-                            <select class="selectize" aria-label="學類">
+                            <select class="form-select rounded-pill search-select" aria-label="學類">
                                 <option selected>學類</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                             </select>
                         </div>
-                        <div class="col-lg-auto col-12 text-center mt-4">
+                        <div class="col-lg-auto col-12 text-center">
                             <button type="button" class="btn custom-btn-primary shadow-none" aria-label="搜尋" title="搜尋">搜尋</button>
                         </div>
                     </div>
+                    <!-- 2024/11/21修改 end -->
                     <!-- search end -->
                     <div class="mt-4">
                         <h3 class="text-center text-md-start">查詢結果</h3>

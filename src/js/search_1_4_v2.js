@@ -29,3 +29,23 @@ openModelBtn.forEach(btn => {
         scrollToTargetAdjusted(idName);
     })
 });
+// 2024/05/06修改
+const relatedOccupationsAccordionBtn = document.querySelectorAll('#relatedOccupationsAccordion .accordion-collapsed');
+const relatedOccupationsAccordion = document.querySelectorAll('#relatedOccupationsAccordion .collapse');
+let collapseElementList = [].slice.call(relatedOccupationsAccordion);
+let collapseList = collapseElementList.map(function (collapseEl) {
+    return new bootstrap.Collapse(collapseEl, {
+        toggle: false
+    });
+});
+
+relatedOccupationsAccordionBtn.forEach((btn, index) => {
+    btn.addEventListener('click', (e) => {
+        if(e.target.nodeName === "A") {
+            e.stopPropagation();
+        } else {
+            e.target.classList.toggle('collapsed');
+            collapseList[index].toggle();
+        }        
+    });
+});

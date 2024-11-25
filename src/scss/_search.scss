@@ -104,6 +104,7 @@
         border: 1px solid $custom-search-border;
         border-radius: 11px;
         .list {
+            margin-top: 15px;
             padding: 15px;
             > li {
                 padding: {
@@ -116,8 +117,8 @@
     .option {
         line-height: normal;
         &:hover, &.focus, &.selected.focus {
-            background-color: $custom-search-bg;
-            border-radius: 50px;
+            background-color: $custom-search-bg !important;
+            border-radius: 50px !important;
         }
     }
     &:focus {
@@ -597,4 +598,7 @@
     }    
     width: 680px;
     
+}
+.search-select {
+    background-color: #ECEFEF;
 }

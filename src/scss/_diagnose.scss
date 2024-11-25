@@ -77,11 +77,17 @@
     vertical-align: middle;
     --bs-table-color: $diagnose-table-border-color;
     // font-size: 1.375rem;
-    > tbody > tr > td {
-        padding: 1rem;
-        border-bottom: 1px solid $diagnose-table-border-color;
-        &:not(:last-child) {
-            border-right: 1px solid $diagnose-table-border-color;
+    > tbody > tr {
+        > td {
+            padding: 1rem;
+            border-bottom: 1px solid $diagnose-table-border-color;
+            &:not(:last-child) {
+                border-right: 1px solid $diagnose-table-border-color;
+            }
+        }
+        &:hover {
+            --bs-table-bg: #{$diagnose-table-checked-bg};
+            --bs-table-border-color: $diagnose-table-border-color;
         }
     }
     .table-warning {
@@ -111,8 +117,11 @@
         // }
         
     }
-    &:checked + label, &:focus + label {
+    &:checked + label {
         background-color: $login-button-hover-bg !important;
+    }
+    &:focus + label {
+        outline: 2px dashed $custom-focus-color;
     }
 }
 .diagnose-fraction-style {
@@ -265,6 +274,12 @@
     }
 
     .diagnosis-test {
+        > button {
+            display: block;
+            width: 100%;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
         &.diagnosis-test-active {
             background-color: #FFFBEF;
         }
@@ -302,7 +317,7 @@
                 input[type="radio"]:disabled + label {
                     background-color: var(--bs-white);
                 }
-                input[type="radio"]:checked + label {
+                input[type="radio"]:focus + label, input[type="radio"]:checked + label {
                     &::before {
                         content: map-get($icons, check);
                         opacity: 1;
@@ -317,6 +332,7 @@
                     }
                     input[type="radio"]:focus + label {
                         background-color: var(--bs-warning);
+                        
                     }
                     input[type="radio"]:checked + label {
                         background-color: var(--bs-warning);
