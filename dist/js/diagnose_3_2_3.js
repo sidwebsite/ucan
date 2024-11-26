@@ -1,11 +1,5 @@
 /******/ (() => { // webpackBootstrap
 var __webpack_exports__ = {};
-// Modal
-let testAlertModal = new bootstrap.Modal(document.getElementById('testAlert'), {
-    keyboard: false,
-    backdrop: 'static'
-});
-window.addEventListener('load', () => testAlertModal.show());
 // elements
 const diagnosisTest = document.querySelectorAll('.diagnosis-test');
 const testAlert = document.querySelectorAll('.alert');
@@ -43,14 +37,9 @@ const testEffect = (el, index) => {
         }
     }
 }
-const testArr = [...diagnosisTest];
-
+const testArr = [...diagnosisTest]
 for (let i = 0; i < diagnosisTest.length; i++) {
-    const element = diagnosisTest[i];
-    // focus
-    diagnosisTest[i].querySelector('button').addEventListener('focus', () => {
-        testEffect(element.dataset.switch, i)
-    })
+    const element = diagnosisTest[i]
     const radios = element.querySelectorAll('.radio > input[type="radio"]');
     if(i === 0) {
         radios.forEach(r => r.disabled = false)
@@ -58,11 +47,10 @@ for (let i = 0; i < diagnosisTest.length; i++) {
     } else {
         radios.forEach(r => r.disabled = true)
     };
-    // change 
+    // // change 
     radios.forEach((radio) => {
         if(radio.checked === true) {
             element.dataset.switch = 'true';
-            switchFun(element.dataset.switch, radios);
         } else {
             // keydown
             radio.addEventListener('keydown', (e) => {
@@ -79,6 +67,7 @@ for (let i = 0; i < diagnosisTest.length; i++) {
                 element.dataset.switch = 'true'
                 testEffect(element.dataset.switch, i)
             });
+            // focus
             radio.addEventListener('focus', () => {
                 testEffect(element.dataset.switch, i)
             })
