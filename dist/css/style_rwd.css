@@ -20390,9 +20390,14 @@ ol.list-style-cjk-ideographic {
     display: none;
   }
 }
-.form-control:focus, .btn:focus-visible, button:focus:not(:focus-visible), a:focus-visible {
+div:focus-visible, p:focus-visible, .form-control:focus, .form-select:focus, .btn:focus-visible, button:focus:not(:focus-visible), a:focus-visible {
   border: 0;
   outline: 2px dashed #ff5900;
+}
+
+.form-control:focus, .form-select:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .main {

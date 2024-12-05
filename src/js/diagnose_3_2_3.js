@@ -1,3 +1,9 @@
+// Modal
+let testAlertModal = new bootstrap.Modal(document.getElementById('testAlert'), {
+    keyboard: false,
+    backdrop: 'static'
+});
+window.addEventListener('load', () => testAlertModal.show());
 // elements
 const diagnosisTest = document.querySelectorAll('.diagnosis-test');
 const testAlert = document.querySelectorAll('.alert');
@@ -26,8 +32,10 @@ const testEffect = (el, index) => {
     const testEnd = diagnosisTest.length - 1;
     // block alert
     !testAlert[index].classList.contains('visually-hidden') ? testAlert[index].classList.add('visually-hidden') : false;
+    
     // 開啟一下題radio
-    if(el === 'true') {
+    if(el === 'false') {
+        el = 'true'
         if(index !== testEnd) {
             const nextElement = diagnosisTest[index + 1];
             const nextElementRadios = nextElement.querySelectorAll('.radio > input[type="radio"]');
@@ -49,15 +57,13 @@ for (let i = 0; i < diagnosisTest.length; i++) {
     radios.forEach((radio) => {
         if(radio.checked === true) {
             element.dataset.switch = 'true';
+            switchFun(element.dataset.switch, radios);
         } else {
             // keydown
             radio.addEventListener('keydown', (e) => {
                 if(e.key === 'Tab') {
-                    radio.checked = true
                     element.dataset.switch = 'true';
                     testEffect(element.dataset.switch, i)
-                } else if (e.key === 'ArrowLeft' || e.key === 'ArrowRight')  {
-                    radio.checked = true
                 }
             })
             // click
@@ -67,6 +73,7 @@ for (let i = 0; i < diagnosisTest.length; i++) {
             });
             // focus
             radio.addEventListener('focus', () => {
+                radio.checked = true
                 testEffect(element.dataset.switch, i)
             })
         }

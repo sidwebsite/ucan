@@ -76,12 +76,9 @@ for (let i = 0; i < diagnosisTest.length; i++) {
             // keydown
             radio.addEventListener('keydown', (e) => {
                 if(e.key === 'Tab') {
-                    radio.checked = true
                     element.dataset.switch = 'true';
                     testEffect(element.dataset.switch, i)
-                } else if (e.key === 'ArrowLeft' || e.key === 'ArrowRight')  {
-                    radio.checked = true
-                }
+                } 
             })
             // click
             radio.addEventListener('click', () => {
@@ -89,6 +86,7 @@ for (let i = 0; i < diagnosisTest.length; i++) {
                 testEffect(element.dataset.switch, i)
             });
             radio.addEventListener('focus', () => {
+                radio.checked = true
                 testEffect(element.dataset.switch, i)
             })
         }

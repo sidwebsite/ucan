@@ -239,13 +239,15 @@
                                     </div>
                                 </div>
                                 <!-- 2024/11/26修改 start -->
-                                <p class="text-center h5 text-danger mt-3"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> 請依照題目順序填寫!</p>
+                                <p class="text-center h5 text-danger mt-3" tabindex="0"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> 請依照題目順序填寫!</p>
                                 <!-- 2024/11/26修改 end -->
                             </div>
                             <div class="diagnosis-test-wrapper">
-                                <div class="breadcrumb-bg text-center py-3">
+                                <div class="breadcrumb-bg text-center py-3" tabindex="0">
+                                    <!-- 2024/11/26修改 start -->
                                     <p class="h3">持續學習</p>
                                     <p class="mb-0">了解能力發展的重要性，並能探索、規劃和有效管理自身的能力，並保持繼續成長的企圖心。</p>
+                                    <!-- 2024/11/26修改 end -->
                                 </div>
                                 <!-- 2024/11/26修改 start -->
                                 <div class="diagnosis-test-content">
@@ -364,11 +366,11 @@
                                 <!-- 2024/11/26修改 end -->
                             </div>
                             <div class="diagnosis-test-wrapper">
-                                <div class="breadcrumb-bg text-center py-3">
+                                <div class="breadcrumb-bg text-center py-3" tabindex="0">
                                     <!-- 2024/11/24修改 start -->
                                     <p class="h3">11持續學習</p>
-                                    <!-- 2024/11/24修改 end -->
                                     <p class="mb-0">11了解能力發展的重要性，並能探索、規劃和有效管理自身的能力，並保持繼續成長的企圖心。</p>
+                                    <!-- 2024/11/24修改 end -->
                                 </div>
                                 <!-- 2024/11/26修改 start -->
                                 <div class="diagnosis-test-content">
@@ -647,5 +649,19 @@
         <span>TOP</span>
     </button>
     <!-- go top end -->
+    <!-- Modal -->
+    <div class="modal fade" id="testAlert" tabindex="-1" aria-labelledby="staticBackdropLabel">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <!-- <div class="modal-header border-bottom-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div> -->
+                <div class="modal-body text-danger fs-5"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> 請依照題目順序填寫!</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="確定">確定</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
